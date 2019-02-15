@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amonxu.com/"/>
-  <updated>2019-01-16T07:14:22.975Z</updated>
+  <updated>2019-02-15T07:05:53.173Z</updated>
   <id>http://amonxu.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《亿级流量网站核心技术》读书总结</title>
+    <link href="http://amonxu.com/2019/02/15/2019-02-15-Read/"/>
+    <id>http://amonxu.com/2019/02/15/2019-02-15-Read/</id>
+    <published>2019-02-15T07:00:03.000Z</published>
+    <updated>2019-02-15T07:05:53.173Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Technology" scheme="http://amonxu.com/categories/Technology/"/>
+    
+    
+      <category term="架构" scheme="http://amonxu.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>地铁里的孤独鸟</title>
@@ -499,31 +517,6 @@
     
     
       <category term="Blog" scheme="http://amonxu.com/tags/Blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub 奇怪的样式</title>
-    <link href="http://amonxu.com/2018/05/18/2018-05-18-GitHub-Style/"/>
-    <id>http://amonxu.com/2018/05/18/2018-05-18-GitHub-Style/</id>
-    <published>2018-05-18T02:05:11.000Z</published>
-    <updated>2019-01-16T07:47:27.788Z</updated>
-    
-    <content type="html"><![CDATA[<p>早上打开 GitHub 发现首页改版，左右栏目调换了。<br>一行代码恢复原样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.dashboard-sidebar &#123; </span><br><span class="line">float: right; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;早上打开 GitHub 发现首页改版，左右栏目调换了。&lt;br&gt;一行代码恢复原样：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span
-      
-    
-    </summary>
-    
-      <category term="Technology" scheme="http://amonxu.com/categories/Technology/"/>
-    
-    
-      <category term="GitHub" scheme="http://amonxu.com/tags/GitHub/"/>
     
   </entry>
   
