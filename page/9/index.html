@@ -195,6 +195,100 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-e8-a7-a3-e5-86-b3oracle-e5-88-86-e9-a1-b5-e6-9f-a5-e8-af-a2-e6-95-b0-e6-8d-ae-e9-87-8d-e5-a4-8d-e9-97-ae-e9-a2-98" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/24/e8-a7-a3-e5-86-b3oracle-e5-88-86-e9-a1-b5-e6-9f-a5-e8-af-a2-e6-95-b0-e6-8d-ae-e9-87-8d-e5-a4-8d-e9-97-ae-e9-a2-98/">解决oracle分页查询数据重复问题</a>
+    </h1>
+  
+
+        
+        <a href="/2012/10/24/e8-a7-a3-e5-86-b3oracle-e5-88-86-e9-a1-b5-e6-9f-a5-e8-af-a2-e6-95-b0-e6-8d-ae-e9-87-8d-e5-a4-8d-e9-97-ae-e9-a2-98/" class="archive-article-date">
+  	<time datetime="2012-10-24T02:22:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-10-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>oracle分页查询时，会遇到数据重复的问题，下面就教您一个解决oracle分页查询数据重复问题的方法，希望对您能够有所帮助。</p>
+<p>在oracle分页查询中，我们采用类似以下所示的公认的比较高效的数据库分页查询语句（Effective Oracle by Design中有描述、众多oracle使用者也做过测试）。</p>
+<p>写道</p>
+<p>SELECT <em> FROM<br>(<br>SELECT A.</em>, ROWNUM RN<br>FROM (SELECT * FROM TABLE_NAME) A<br>WHERE ROWNUM &lt;= n)<br>WHERE RN &gt; m<br>这里的ROWNUM是一个伪列，它是oracle为查询结果所编的一个号，第一行的 ROWNUM为1，第二行为2，以此类推。</p>
+<p>因为oracle是按块进行读取数据的，如果数据按顺序存储，则可能使读取出来的数据是按顺序的，给用户误解为默认排序。事实上，oracle没有进行任何排序操作，如果sql没有要求排序，oracle会顺序的从数据块中读取符合条件的数据返回到客户端。所以在没有使用排序sql的时候，分页返回的数据可能是按顺序的，也可能是杂乱无章的，这都取决与数据的存储位置。在oracle分页查询过程中，如果数据的物理位置发生了改变，就可能会引起分页数据重复的现象。</p>
+<p>所以，要正确使用oracle分页查询，sql语句中必须有排序条件。</p>
+<p>但是，在有排序条件的时候，仍然会出现数据重复的现象，这是为什么呢？</p>
+<p>通过了解oracle的排序机理就会明白，出现这种情况的原因是因为排序列值的不唯一性。 Oracle这里使用的排序算法不具有稳定性，也就是说，对于键值相等的数据，这种算法完成排序后，不保证这些键值相等的数据保持排序前的顺序。</p>
+<p>解决的方法是在后边增加一个唯一性列，比如主键。</p>
+<p>所以解决方法如下（两个条件必须同时满足）：<br>**<br>1.sql语句中需要有排序条件。</p>
+<p>2.排序条件如果没有唯一性，那么必须在后边跟上一个唯一性的条件，比如主键。**</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/10/24/e8-a7-a3-e5-86-b3oracle-e5-88-86-e9-a1-b5-e6-9f-a5-e8-af-a2-e6-95-b0-e6-8d-ae-e9-87-8d-e5-a4-8d-e9-97-ae-e9-a2-98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-e5-8d-81-e4-b8-80-e8-bd-b6-e4-ba-8b" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1006,90 +1100,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-20120819-e9-9a-8f-e7-ac-94" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/08/09/20120819-e9-9a-8f-e7-ac-94/">20120819随笔</a>
-    </h1>
-  
-
-        
-        <a href="/2012/08/09/20120819-e9-9a-8f-e7-ac-94/" class="archive-article-date">
-  	<time datetime="2012-08-09T11:58:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-08-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>苦比的日子更需努力！！！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/鬼画弧//" class="article-tag-list-link color4">鬼画弧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/08/09/20120819-e9-9a-8f-e7-ac-94/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
@@ -1207,11 +1217,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
+                <a href="javascript:void(0)" class="js-tag color5">War3</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">War3</a>
+                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
               </li>
              
               <li class="article-tag-list-item">
