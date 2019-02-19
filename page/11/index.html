@@ -195,6 +195,103 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-tomcatcpu-e4-bd-bf-e7-94-a8-e7-8e-87-e9-ab-98-e7-9a-84-e5-8e-9f-e5-9b-a0-e5-88-86-e6-9e-90" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/07/26/tomcatcpu-e4-bd-bf-e7-94-a8-e7-8e-87-e9-ab-98-e7-9a-84-e5-8e-9f-e5-9b-a0-e5-88-86-e6-9e-90/">tomcat CPU使用率高的原因分析</a>
+    </h1>
+  
+
+        
+        <a href="/2012/07/26/tomcatcpu-e4-bd-bf-e7-94-a8-e7-8e-87-e9-ab-98-e7-9a-84-e5-8e-9f-e5-9b-a0-e5-88-86-e6-9e-90/" class="archive-article-date">
+  	<time datetime="2012-07-26T09:33:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-07-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>tomcat使用的是电脑的80端口。&nbsp;</p>
+<p>当客户端访问的时候就会，会和服务器端的80端口建立连接。&nbsp;</p>
+<p>现在在做压力测试。当多个用户访问的时候，服务器端的80端口就会被一直被连接占用着，导致服务器端的CPU很容易就飙升到100%。&nbsp;</p>
+<p>连接数据库用的是tomcat连接池。&nbsp;</p>
+<p>可能性分析：<br>80被长期占用，因为tomcat会启动连接池，注意是tomcat的连接池，不是数据库连接池，</p>
+<p>这个连接池用来处理外面访问tomcat的链接，默认是25个&nbsp;<br>你可以到 tomcat/conf/server.xml里面看到</p>
+<p>至于服务器端的CPU很容易就飙升到100%&nbsp;<br>这个是&nbsp;<br>1 你的程序运行速度慢，导致一直使用cpu,一般是算法问题&nbsp;<br>2 你的程序有死循环&nbsp;<br>3 数据库有问题，不过一般都是设计或者编码的问题&nbsp;<br>4 硬件太差了，内存太小，(可能行不大)&nbsp;<br>5 负载过高</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>ps:</p>
+<p>1:&nbsp; 首先把JDK Linux版本上传到服务器上.<br>2:&nbsp; 使用命令 jstack PID 命令打印出CPU占用过高进程的线程栈.<br>3: 使用top -H -p PID 命令查看对应进程是哪个线程占用CPU过高.&nbsp;</p>
+<p>4. 把第三步占用CPU过高的pid值转换为 16 进制, 然后在第2步打印的</p>
+<p>线程栈中进行搜索, 就可以知道这个线程栈是做什么的了.</p>
+<p>&nbsp;</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/07/26/tomcatcpu-e4-bd-bf-e7-94-a8-e7-8e-87-e9-ab-98-e7-9a-84-e5-8e-9f-e5-9b-a0-e5-88-86-e6-9e-90/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-eclipse-e4-b8-adant-e7-bc-96-e8-af-91-e9-a1-b9-e7-9b-ae-e6-8e-a7-e5-88-b6-e5-8f-b0-e4-b8-8d-e8-be-93-e5-87-ba-e6-97-a5-e5-bf-97-e4-ba-86" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1124,92 +1221,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-e5-8f-91-e7-8e-b0-e4-b8-80-e4-b8-aa-e9-97-ae-e9-a2-98" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/05/27/e5-8f-91-e7-8e-b0-e4-b8-80-e4-b8-aa-e9-97-ae-e9-a2-98/">发现一个问题</a>
-    </h1>
-  
-
-        
-        <a href="/2012/05/27/e5-8f-91-e7-8e-b0-e4-b8-80-e4-b8-aa-e9-97-ae-e9-a2-98/" class="archive-article-date">
-  	<time datetime="2012-05-27T12:54:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-05-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.周末在家是不是太无聊了，如果没有地方玩的话，为什么不去公司加班呢？？？？</p>
-<p>2.住的离公司已经这么近了，为什么不在公司多加点班再走呢？？？？</p>
-<p>3.要么看书，要么上班，为什么要浪费宝贵的时间？？？？</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/鬼画弧//" class="article-tag-list-link color4">鬼画弧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/05/27/e5-8f-91-e7-8e-b0-e4-b8-80-e4-b8-aa-e9-97-ae-e9-a2-98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/12/">Next &raquo;</a>
@@ -1359,11 +1370,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ES</a>
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+                <a href="javascript:void(0)" class="js-tag color3">ES</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1383,15 +1394,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">架构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">架构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1411,15 +1422,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Flex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
