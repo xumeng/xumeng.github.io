@@ -264,32 +264,6 @@
   </entry>
   
   <entry>
-    <title>平安高级 Java 面试题</title>
-    <link href="http://amonxu.com/2018/10/10/2018-10-10-PingAn/"/>
-    <id>http://amonxu.com/2018/10/10/2018-10-10-PingAn/</id>
-    <published>2018-10-10T13:22:23.000Z</published>
-    <updated>2019-01-16T07:47:27.798Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="前注"><a href="#前注" class="headerlink" title="前注"></a>前注</h4><blockquote><p>本文原创作者 <strong>逐鹿 IT (Amon Xu)</strong> 的小老弟张桐，首发于<a href="http://amonxu.com/">逐鹿 IT (http://amonxu.com)</a>，转载请注明作者与链接，谢谢:D</p></blockquote><hr><h5 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h5><ul><li>String，StringBuffer，StringBuilder 区别<blockquote><p><a href="https://www.cnblogs.com/xudong-bupt/p/3961159.html" target="_blank" rel="noopener">https://www.cnblogs.com/xudong-bupt/p/3961159.html</a></p></blockquote></li><li>final 修饰符的作用，能修饰什么，分别的作用，不可变是指什么，不可变类设计<blockquote><p><a href="https://www.cnblogs.com/qq188380780/p/6607578.html" target="_blank" rel="noopener">https://www.cnblogs.com/qq188380780/p/6607578.html</a><br><a href="https://www.cnblogs.com/jaylon/p/5721571.html" target="_blank" rel="noopener">https://www.cnblogs.com/jaylon/p/5721571.html</a></p></blockquote></li><li>单例模式有几种写法<blockquote><p><a href="https://www.cnblogs.com/dongyu666/p/6971783.html" target="_blank" rel="noopener">https://www.cnblogs.com/dongyu666/p/6971783.html</a></p></blockquote></li><li>深拷贝浅拷贝<blockquote><p><a href="https://www.cnblogs.com/shakinghead/p/7651502.html" target="_blank" rel="noopener">https://www.cnblogs.com/shakinghead/p/7651502.html</a></p></blockquote></li><li>Error 和 Exception 区别<blockquote><p><a href="https://blog.csdn.net/xuchonghao/article/details/80516450" target="_blank" rel="noopener">https://blog.csdn.net/xuchonghao/article/details/80516450</a></p></blockquote></li><li>说说线程池<blockquote><p><a href="https://www.cnblogs.com/dolphin0520/p/3932921.html" target="_blank" rel="noopener">https://www.cnblogs.com/dolphin0520/p/3932921.html</a></p></blockquote></li><li>说说 HashMap<blockquote><p><a href="https://blog.csdn.net/qq_18661793/article/details/81161193" target="_blank" rel="noopener">https://blog.csdn.net/qq_18661793/article/details/81161193</a></p></blockquote></li><li>解决 hash 冲突<blockquote><p><a href="https://blog.csdn.net/qq_27093465/article/details/52269862" target="_blank" rel="noopener">https://blog.csdn.net/qq_27093465/article/details/52269862</a></p></blockquote></li><li>说说 Java IO<blockquote><p><a href="https://www.cnblogs.com/ylspace/p/8128112.html" target="_blank" rel="noopener">https://www.cnblogs.com/ylspace/p/8128112.html</a></p></blockquote></li><li>NIO/AIO/BIO 区别<blockquote><p><a href="https://blog.csdn.net/u013851082/article/details/53942947" target="_blank" rel="noopener">https://blog.csdn.net/u013851082/article/details/53942947</a></p></blockquote></li><li>如何实现多路复用<blockquote><p><a href="https://blog.csdn.net/tanzhe2017/article/details/80997437" target="_blank" rel="noopener">https://blog.csdn.net/tanzhe2017/article/details/80997437</a></p></blockquote></li><li>说说 JVM<blockquote><p><a href="http://www.ityouknow.com/jvm.html" target="_blank" rel="noopener">http://www.ityouknow.com/jvm.html</a></p></blockquote></li><li>乐观锁和悲观锁<blockquote><p><a href="https://www.cnblogs.com/qjjazry/p/6581568.html" target="_blank" rel="noopener">https://www.cnblogs.com/qjjazry/p/6581568.html</a></p></blockquote></li><li>MySQL 事务隔离级别<br><a href="https://www.cnblogs.com/huanongying/p/7021555.html" target="_blank" rel="noopener">https://www.cnblogs.com/huanongying/p/7021555.html</a></li><li>Redis 数据类型（高级数据类型）<blockquote><p><a href="http://www.cnblogs.com/mrhgw/p/6278619.html" target="_blank" rel="noopener">http://www.cnblogs.com/mrhgw/p/6278619.html</a></p></blockquote></li><li>说说 Redis 分布式锁<blockquote><p><a href="https://www.jianshu.com/p/e72baf5e5617" target="_blank" rel="noopener">https://www.jianshu.com/p/e72baf5e5617</a></p></blockquote></li><li>画一下系统架构图</li><li>针对画的系统架构图说说</li><li>说说 ELK</li></ul><p>欢迎交流补充。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;前注&quot;&gt;&lt;a href=&quot;#前注&quot; class=&quot;headerlink&quot; title=&quot;前注&quot;&gt;&lt;/a&gt;前注&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;本文原创作者 &lt;strong&gt;逐鹿 IT (Amon Xu)&lt;/strong&gt; 的小老弟张桐，首发于&lt;a href
-      
-    
-    </summary>
-    
-      <category term="Technology" scheme="http://amonxu.com/categories/Technology/"/>
-    
-    
-      <category term="面试" scheme="http://amonxu.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Charles 抓 HTTPS 包设置</title>
     <link href="http://amonxu.com/2018/09/28/2018-09-28-iOS-Setting/"/>
     <id>http://amonxu.com/2018/09/28/2018-09-28-iOS-Setting/</id>
@@ -515,6 +489,33 @@
     
     
       <category term="随笔" scheme="http://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两个评论组件</title>
+    <link href="http://amonxu.com/2018/05/22/2018-05-22-Disqus/"/>
+    <id>http://amonxu.com/2018/05/22/2018-05-22-Disqus/</id>
+    <published>2018-05-22T10:51:12.000Z</published>
+    <updated>2019-01-16T07:47:27.790Z</updated>
+    
+    <content type="html"><![CDATA[<p>博客的评论组件，由多说，转Disqus，再转Gitment。</p><p>前两天上网时，忽然发现Disqus的评论框和Gitment并存在一起。</p><p>想到应该是虽然配置了Gitment，但是并没有把Disqus关掉，因为平时上网比较低调，所以压根看不到Disqus。</p><p>看到Disqus备感亲切，虽然自接入Disqus以来，未曾收到一条评论，但忽然要将其关闭了，也有些不舍。</p><p>Disqus应该是世界上最好用的评论系统了，可惜我们用不了。</p><p>GG！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;博客的评论组件，由多说，转Disqus，再转Gitment。&lt;/p&gt;
+&lt;p&gt;前两天上网时，忽然发现Disqus的评论框和Gitment并存在一起。&lt;/p&gt;
+&lt;p&gt;想到应该是虽然配置了Gitment，但是并没有把Disqus关掉，因为平时上网比较低调，所以压根看不到Disqu
+      
+    
+    </summary>
+    
+      <category term="Technology" scheme="http://amonxu.com/categories/Technology/"/>
+    
+    
+      <category term="Blog" scheme="http://amonxu.com/tags/Blog/"/>
     
   </entry>
   
