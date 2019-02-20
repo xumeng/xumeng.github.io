@@ -8,18 +8,20 @@
   <link rel="dns-prefetch" href="http://amonxu.com">
   <title>《亿级流量网站架构核心技术》读书笔记 | 逐鹿 IT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一部分 概述1. 交易型系统设计的一些原则1.1 高并发原则 无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存、">
+  <meta name="description" content="第一部分 概述1. 交易型系统设计的一些原则1.1 高并发原则 无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存">
 <meta name="keywords" content="架构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《亿级流量网站架构核心技术》读书笔记">
 <meta property="og:url" content="http://amonxu.com/2019/02/20/2019-02-20-Reading-Note/index.html">
 <meta property="og:site_name" content="逐鹿 IT">
-<meta property="og:description" content="第一部分 概述1. 交易型系统设计的一些原则1.1 高并发原则 无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存、">
+<meta property="og:description" content="第一部分 概述1. 交易型系统设计的一些原则1.1 高并发原则 无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-02-20T13:56:37.970Z">
+<meta property="og:image" content="https://img1.doubanio.com/view/subject/l/public/s29404197.jpg">
+<meta property="og:updated_time" content="2019-02-20T14:02:19.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《亿级流量网站架构核心技术》读书笔记">
-<meta name="twitter:description" content="第一部分 概述1. 交易型系统设计的一些原则1.1 高并发原则 无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存、">
+<meta name="twitter:description" content="第一部分 概述1. 交易型系统设计的一些原则1.1 高并发原则 无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存">
+<meta name="twitter:image" content="https://img1.doubanio.com/view/subject/l/public/s29404197.jpg">
   
     <link rel="alternative" href="/atom.xml" title="逐鹿 IT" type="application/atom+xml">
   
@@ -214,7 +216,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="第一部分-概述"><a href="#第一部分-概述" class="headerlink" title="第一部分 概述"></a>第一部分 概述</h1><h3 id="1-交易型系统设计的一些原则"><a href="#1-交易型系统设计的一些原则" class="headerlink" title="1. 交易型系统设计的一些原则"></a>1. 交易型系统设计的一些原则</h3><h5 id="1-1-高并发原则"><a href="#1-1-高并发原则" class="headerlink" title="1.1 高并发原则"></a>1.1 高并发原则</h5><ul>
+        <p><img src="https://img1.doubanio.com/view/subject/l/public/s29404197.jpg" alt="cover"></p>
+<h1 id="第一部分-概述"><a href="#第一部分-概述" class="headerlink" title="第一部分 概述"></a>第一部分 概述</h1><h3 id="1-交易型系统设计的一些原则"><a href="#1-交易型系统设计的一些原则" class="headerlink" title="1. 交易型系统设计的一些原则"></a>1. 交易型系统设计的一些原则</h3><h5 id="1-1-高并发原则"><a href="#1-1-高并发原则" class="headerlink" title="1.1 高并发原则"></a>1.1 高并发原则</h5><ul>
 <li>无状态</li>
 <li>拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度）</li>
 <li>服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单）</li>
@@ -633,10 +636,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
@@ -645,11 +644,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">War3</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -657,11 +656,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+                <a href="javascript:void(0)" class="js-tag color5">War3</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -681,19 +684,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ES</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -709,10 +712,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">作品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
@@ -722,6 +721,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">作品</a>
               </li>
              
               <li class="article-tag-list-item">
