@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://amonxu.com">
   <title>《亿级流量网站架构核心技术》读书笔记 | 逐鹿 IT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一部分 概述1. 交易型系统设计的一些原则 高并发原则  无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存、分布">
-<meta name="keywords" content="Note">
+  <meta name="description" content="第一部分 概述1. 交易型系统设计的一些原则1.1 高并发原则 无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存、">
+<meta name="keywords" content="架构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《亿级流量网站架构核心技术》读书笔记">
 <meta property="og:url" content="http://amonxu.com/2019/02/20/2019-02-20-Reading-Note/index.html">
 <meta property="og:site_name" content="逐鹿 IT">
-<meta property="og:description" content="第一部分 概述1. 交易型系统设计的一些原则 高并发原则  无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存、分布">
+<meta property="og:description" content="第一部分 概述1. 交易型系统设计的一些原则1.1 高并发原则 无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存、">
 <meta property="og:locale" content="Chinese">
-<meta property="og:updated_time" content="2019-02-20T13:36:19.057Z">
+<meta property="og:updated_time" content="2019-02-20T13:56:37.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《亿级流量网站架构核心技术》读书笔记">
-<meta name="twitter:description" content="第一部分 概述1. 交易型系统设计的一些原则 高并发原则  无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存、分布">
+<meta name="twitter:description" content="第一部分 概述1. 交易型系统设计的一些原则1.1 高并发原则 无状态 拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度） 服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单） 消息队列 数据异构（数据异构、数据闭环） 缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存、">
   
     <link rel="alternative" href="/atom.xml" title="逐鹿 IT" type="application/atom+xml">
   
@@ -214,9 +214,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="第一部分-概述"><a href="#第一部分-概述" class="headerlink" title="第一部分 概述"></a>第一部分 概述</h1><h3 id="1-交易型系统设计的一些原则"><a href="#1-交易型系统设计的一些原则" class="headerlink" title="1. 交易型系统设计的一些原则"></a>1. 交易型系统设计的一些原则</h3><ol>
-<li><p><strong>高并发原则</strong></p>
-<ul>
+        <h1 id="第一部分-概述"><a href="#第一部分-概述" class="headerlink" title="第一部分 概述"></a>第一部分 概述</h1><h3 id="1-交易型系统设计的一些原则"><a href="#1-交易型系统设计的一些原则" class="headerlink" title="1. 交易型系统设计的一些原则"></a>1. 交易型系统设计的一些原则</h3><h5 id="1-1-高并发原则"><a href="#1-1-高并发原则" class="headerlink" title="1.1 高并发原则"></a>1.1 高并发原则</h5><ul>
 <li>无状态</li>
 <li>拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度）</li>
 <li>服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单）</li>
@@ -225,17 +223,13 @@ var _hmt = _hmt || [];
 <li>缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存、分布式缓存）</li>
 <li>并发化</li>
 </ul>
-</li>
-<li><p><strong>高可用原则</strong></p>
-<ul>
+<h5 id="2-高可用原则"><a href="#2-高可用原则" class="headerlink" title="2. 高可用原则"></a>2. 高可用原则</h5><ul>
 <li>降级</li>
 <li>限流</li>
 <li>切流量</li>
 <li>可回滚</li>
 </ul>
-</li>
-<li><p><strong>业务设计原则</strong></p>
-<ul>
+<h5 id="3-业务设计原则"><a href="#3-业务设计原则" class="headerlink" title="3. 业务设计原则"></a>3. 业务设计原则</h5><ul>
 <li>防重设计(防重 Key、防重表)</li>
 <li>幂等设计（消息中间件）</li>
 <li>流程可定义</li>
@@ -245,8 +239,6 @@ var _hmt = _hmt || [];
 <li>文档和注释</li>
 <li>备份</li>
 </ul>
-</li>
-</ol>
 <h1 id="第二部分-高可用"><a href="#第二部分-高可用" class="headerlink" title="第二部分 高可用"></a>第二部分 高可用</h1><h3 id="2-负载均衡与反向代理"><a href="#2-负载均衡与反向代理" class="headerlink" title="2. 负载均衡与反向代理"></a>2. 负载均衡与反向代理</h3><p>对于一般应用来说，有 Nginx 就可以了，但 Nginx 一般用于七层负载均衡，吞吐量有一定限制，为了提升整体吞吐量，会在 DNS 和 Nginx 之间引入接入层，如使用 LVS(软件负载均衡器)、F5(硬负载均衡器)可以做四层负载均衡，即首先 DNS 解析到 LVS/F5，然后 LVS/F5转发给 Nginx，再由 Nginx 转发给后端 Server。</p>
 <p><strong>负载均衡主要关注几个方面：</strong></p>
 <ul>
@@ -310,41 +302,24 @@ var _hmt = _hmt || [];
 <p><strong>节流</strong></p>
 <p>防止多个相同事件连续重复执行，主要有throttleFirst、throttleLast、throttleWithTimeout</p>
 <h3 id="5-降级特技"><a href="#5-降级特技" class="headerlink" title="5. 降级特技"></a>5. 降级特技</h3><p>降级的最终目的是保证核心服务可用，即使是有损的。<br>降级需要根据系统的吞吐量、响应时间、可用率等条件进行手工降级或自动降级。</p>
-<ol>
-<li><p><strong>降级预案</strong></p>
-<p> 自动开关降级/人工开关降级，读服务降级/写服务降级，多级降级，页面降级/页面片段降级/页面异步请求降级/服务功能降级/读降级/写降级/爬虫降级/风控降级</p>
-</li>
-<li><p><strong>自动开关降级</strong></p>
-<ul>
+<h5 id="5-1-降级预案"><a href="#5-1-降级预案" class="headerlink" title="5.1 降级预案"></a>5.1 <strong>降级预案</strong></h5><p>自动开关降级/人工开关降级，读服务降级/写服务降级，多级降级，页面降级/页面片段降级/页面异步请求降级/服务功能降级/读降级/写降级/爬虫降级/风控降级</p>
+<h5 id="5-2-自动开关降级"><a href="#5-2-自动开关降级" class="headerlink" title="5.2 自动开关降级"></a>5.2 <strong>自动开关降级</strong></h5><ul>
 <li>超时降级</li>
 <li>统计失败次数降级</li>
 <li>故障降级</li>
 <li>限流降级</li>
 </ul>
-</li>
-<li><p><strong>人工开关降级</strong></p>
-</li>
-<li><strong>读服务降级</strong></li>
-<li><strong>写服务降级</strong></li>
-<li><p><strong>多级降级</strong></p>
-<ul>
+<h5 id="5-3-人工开关降级"><a href="#5-3-人工开关降级" class="headerlink" title="5.3 人工开关降级"></a>5.3 <strong>人工开关降级</strong></h5><h5 id="5-4-读服务降级"><a href="#5-4-读服务降级" class="headerlink" title="5.4 读服务降级"></a>5.4 <strong>读服务降级</strong></h5><h5 id="5-5-写服务降级"><a href="#5-5-写服务降级" class="headerlink" title="5.5 写服务降级"></a>5.5 <strong>写服务降级</strong></h5><h5 id="5-6-多级降级"><a href="#5-6-多级降级" class="headerlink" title="5.6 多级降级"></a>5.6 <strong>多级降级</strong></h5><ul>
 <li>页面 js 降级开关</li>
 <li>接入层降级开关</li>
 <li>应用层降级开关</li>
 </ul>
-</li>
-<li><p><strong>配置中心</strong>（通过配置方式动态开启/关闭降级开关）</p>
-<ul>
+<h5 id="5-7-配置中心（通过配置方式动态开启-关闭降级开关）"><a href="#5-7-配置中心（通过配置方式动态开启-关闭降级开关）" class="headerlink" title="5.7. 配置中心（通过配置方式动态开启/关闭降级开关）"></a>5.7. <strong>配置中心</strong>（通过配置方式动态开启/关闭降级开关）</h5><ul>
 <li>应用层 API 封装</li>
 <li>使用配置文件实现开关配置</li>
 <li>使用配置中心实现开关配置</li>
 </ul>
-</li>
-<li><p><strong>使用 Hystrix 实现降级</strong></p>
-</li>
-<li><strong>使用 Hystrix 实现熔断</strong></li>
-</ol>
-<h3 id="6-超时与重试机制"><a href="#6-超时与重试机制" class="headerlink" title="6. 超时与重试机制"></a>6. 超时与重试机制</h3><p><strong>代理层超时与重试</strong></p>
+<h5 id="5-8-使用-Hystrix-实现降级"><a href="#5-8-使用-Hystrix-实现降级" class="headerlink" title="5.8. 使用 Hystrix 实现降级"></a>5.8. <strong>使用 Hystrix 实现降级</strong></h5><h5 id="5-9-使用-Hystrix-实现熔断"><a href="#5-9-使用-Hystrix-实现熔断" class="headerlink" title="5.9. 使用 Hystrix 实现熔断"></a>5.9. <strong>使用 Hystrix 实现熔断</strong></h5><h3 id="6-超时与重试机制"><a href="#6-超时与重试机制" class="headerlink" title="6. 超时与重试机制"></a>6. 超时与重试机制</h3><p><strong>代理层超时与重试</strong></p>
 <p>如Haproxy/Nginx/Twemproxy，需设置代理与后端真实服务器之间的网络连接/读/写超时时间</p>
 <p><strong>Web 容器超时</strong></p>
 <p>提供HTTP服务运行环境的，如Tomcat/Jetty，需设置客户端与容器之间的网络连接/读/写超时时间，和在此容器中默认 socket 网络连接/读/写超时时间</p>
@@ -363,38 +338,26 @@ var _hmt = _hmt || [];
 <p>最重要的是网络相关的超时设置。<br>    超时后应该有相应的处理策略，如重试(稍后再试、尝试其它分组服务、尝试其它机房服务)、摘掉不存活节点(负载均衡/分布式缓存场景下)、托底(返回历史数据/静态数据/缓存数据)、等待页或错误页。<br>    对于非幂等写服务应避免重试，可以提前生成唯一流水号保证写服务操作通过流水号来实现幂等操作。<br>    在进行DB/缓存服务器操作时，需经常检查慢查询，同时在超时严重时，可以直接将该服务降级。<br>    对于有负载均衡的中间件，考虑配置心跳/存活检查。</p>
 </blockquote>
 <h3 id="7-回滚机制"><a href="#7-回滚机制" class="headerlink" title="7. 回滚机制"></a>7. 回滚机制</h3><p>回滚是指当程序或数据出错时，将程序和数据恢复到最近的一个正确版本的行为。常见的如事务回滚、代码库回滚、部署版本回滚、数据版本回滚、静态资源版本回滚等。</p>
-<ol>
-<li>事务回滚（单库事务回滚直接使用相关 SQL，分布式数据库可以使用分布式事务，如两阶段提交、三阶段提交协议。另外可以考虑入事务表、消息队列、补偿机制(执行/回滚)、TCC 模式(预占/确认/取消)、Sagas模式(拆分事务+补偿机制)等实现最终一致性。）</li>
-<li>代码库回滚(Git/SVN)</li>
-<li>部署版本回滚（部署版本化、小版本增量发布、大版本灰度发布、架构升级并发发布）</li>
-<li>数据版本回滚（设计版本化数据结构时，有全量和增量两种思路）</li>
-<li>静态资源版本回滚（全量新版本保证版本可追溯。清理CDN 缓存，在新 URL上添加随机数并清理浏览器缓存。请求参数加上版本号）</li>
-</ol>
+<h5 id="7-1-事务回滚"><a href="#7-1-事务回滚" class="headerlink" title="7.1 事务回滚"></a>7.1 事务回滚</h5><p>单库事务回滚直接使用相关 SQL，分布式数据库可以使用分布式事务，如两阶段提交、三阶段提交协议。另外可以考虑入事务表、消息队列、补偿机制(执行/回滚)、TCC 模式(预占/确认/取消)、Sagas模式(拆分事务+补偿机制)等实现最终一致性。</p>
+<h5 id="7-2-代码库回滚"><a href="#7-2-代码库回滚" class="headerlink" title="7.2 代码库回滚"></a>7.2 代码库回滚</h5><p>Git/SVN</p>
+<h5 id="7-3-部署版本回滚"><a href="#7-3-部署版本回滚" class="headerlink" title="7.3 部署版本回滚"></a>7.3 部署版本回滚</h5><p>部署版本化、小版本增量发布、大版本灰度发布、架构升级并发发布</p>
+<h5 id="7-4-数据版本回滚"><a href="#7-4-数据版本回滚" class="headerlink" title="7.4 数据版本回滚"></a>7.4 数据版本回滚</h5><p>设计版本化数据结构时，有全量和增量两种思路</p>
+<h5 id="7-5-静态资源版本回滚"><a href="#7-5-静态资源版本回滚" class="headerlink" title="7.5 静态资源版本回滚"></a>7.5 静态资源版本回滚</h5><p>全量新版本保证版本可追溯。清理CDN 缓存，在新 URL上添加随机数并清理浏览器缓存。请求参数加上版本号</p>
 <h3 id="8-压测与预案"><a href="#8-压测与预案" class="headerlink" title="8. 压测与预案"></a>8. 压测与预案</h3><p>在大促来临之前，研发人员需要对现有系统进行梳理，发现系统瓶颈和问题，然后 进行系统调优来提升系统的健壮性和处理能力。一般通过系统压测来发现系统瓶颈和问 题，然后进行系统优化和容灾（如系统参数调优、单机房容灾、多机房容灾等）。即使 己经把系统优化和容灾做得非常好了，但也存在一些不稳定因素，如网络、依赖服务的 SLA不稳定等，这就需要我们制定应急预案，在出现这些因素后进行路由切换或降级处 理。在大促之前需要进行预案演习，确保预案的有效性。</p>
-<ol>
-<li><p><strong>系统压测</strong></p>
-<p>一般指性能压力测试，评估系统的稳定性和性能，通过压测数据进行系统容量评估，决定是否需要扩容和缩容。压测要有压测方案 {如压测接口、并发量、压测策略（突发、逐步加压、并发量）、压测指标（机器负载、QPS/TPS、响应时间）}，之后产出压测报告{压测方案、机器负载、QPSTPS、响应时间(avg、min、max)、成功率、相关参数(JVM参数、压缩参数)等}，根据压测报告分析的结果进行系统优化和容灾。</p>
+<h5 id="8-1-系统压测"><a href="#8-1-系统压测" class="headerlink" title="8.1 系统压测"></a>8.1 <strong>系统压测</strong></h5><p>一般指性能压力测试，评估系统的稳定性和性能，通过压测数据进行系统容量评估，决定是否需要扩容和缩容。压测要有压测方案 {如压测接口、并发量、压测策略（突发、逐步加压、并发量）、压测指标（机器负载、QPS/TPS、响应时间）}，之后产出压测报告{压测方案、机器负载、QPSTPS、响应时间(avg、min、max)、成功率、相关参数(JVM参数、压缩参数)等}，根据压测报告分析的结果进行系统优化和容灾。</p>
 <ul>
 <li>线下压测(使用Jmeter、Apache ab 压测某个接口或某个组件(如DB 连接池)，然后进行调优，实现单个接口或组件性能最优。线下压测环境和线上不同，适合组件级压测，数据只能参考)</li>
 <li>线上压测(按读写分为读压测、写压测、混合压测，按数据仿真度分为仿真压测和引流压测(如TCPCopy)，按是否给用户提供服务分为隔离集群压测和线上集群压测。注意离散压测(选择的数据应该是分散的或长尾的)和全链路压测)</li>
 </ul>
-</li>
-</ol>
-<ol start="2">
-<li><p><strong>系统优化和容灾</strong></p>
-<p> 拿到压测报告后，接下来分析报告，然后进行有针对性的优化，如硬件升级、系统扩容、参数调优、代码优化、架构优化(如加缓存、读写分离、历史数据归档)等，根据压测数据因地制宜地解决。在系统优化时，要进行代码走查，发现不合理的参数配置，如超时时间、降级策略、缓存时间等。在系统压测时进行慢查询排查，如Redis、MySQL等。在应用系统扩容方面，根据往年流量和运营业务方沟通，评估是否需要扩容及扩容容量。扩容时考虑系统容灾，如分组部署、跨机房部署等，保证高可用。</p>
-</li>
-<li><p><strong>应急预案</strong></p>
-<p> 在系统压测后会发现一些系统瓶颈，在系统优化之后会提升系统吞吐量并降低响应时间，容灾之后的系统可用性得以保障，但还存在一些风险，如网络抖动、某台机器负载过高、某个服务变慢、DB load值过高等，为了防止因为这些问题导致系统雪崩，需要制定应急预案。</p>
-<p> 应急预案可分几步执行：</p>
-<ol>
+<h5 id="8-2-系统优化和容灾"><a href="#8-2-系统优化和容灾" class="headerlink" title="8.2. 系统优化和容灾"></a>8.2. <strong>系统优化和容灾</strong></h5><p>拿到压测报告后，接下来分析报告，然后进行有针对性的优化，如硬件升级、系统扩容、参数调优、代码优化、架构优化(如加缓存、读写分离、历史数据归档)等，根据压测数据因地制宜地解决。在系统优化时，要进行代码走查，发现不合理的参数配置，如超时时间、降级策略、缓存时间等。在系统压测时进行慢查询排查，如Redis、MySQL等。在应用系统扩容方面，根据往年流量和运营业务方沟通，评估是否需要扩容及扩容容量。扩容时考虑系统容灾，如分组部署、跨机房部署等，保证高可用。</p>
+<h5 id="8-3-应急预案"><a href="#8-3-应急预案" class="headerlink" title="8.3. 应急预案"></a>8.3. <strong>应急预案</strong></h5><p>在系统压测后会发现一些系统瓶颈，在系统优化之后会提升系统吞吐量并降低响应时间，容灾之后的系统可用性得以保障，但还存在一些风险，如网络抖动、某台机器负载过高、某个服务变慢、DB load值过高等，为了防止因为这些问题导致系统雪崩，需要制定应急预案。</p>
+<p><strong>应急预案可分几步执行：</strong></p>
+<ul>
 <li>系统分级(划分交易核心系统和交易支撑系统，对不同级别的系统实施不同的质量保障)</li>
 <li>全链路分析(从用户入口到后端存储，梳理出关键路径，进行评估和预案，防止问题的级联效应和雪崩效应)</li>
 <li>配置监控报警</li>
 <li>制定应急预案</li>
-</ol>
-</li>
-</ol>
+</ul>
 <blockquote>
 <p>最后，要对关联路径实施监控报警，包括服务器监控（CPU使用率、磁盘使用率、网络带宽等）、系统监控（系统存活、URL 状态/内容监控、端口存活等）、JVM 监控（堆内存、GC 次数、线程数等）、接口监控（接口调用量『每秒/每分钟』、接口性能『TOP50/TOP99/TOP999』、接口可用率等）。然后配置报警策略，如监控时间段、报警阈值、通知方式等。在报警后要观察系统状态、监控数据或者日志来查看系统是否真的存在故障，如果确实是故障，则应即及时执行相关预案处理，避免故障扩散。</p>
 </blockquote>
@@ -442,7 +405,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Note</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">架构</a>
         		</li>
       		
 		</ul>
@@ -670,6 +633,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
@@ -678,7 +645,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微信</a>
+                <a href="javascript:void(0)" class="js-tag color5">War3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -686,15 +653,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">War3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -702,15 +661,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">外包</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -718,7 +673,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ES</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">外包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -726,11 +685,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
+                <a href="javascript:void(0)" class="js-tag color3">ES</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">深圳</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
               </li>
              
               <li class="article-tag-list-item">
