@@ -195,6 +195,90 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2014-04-21-fighting" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/04/21/2014-04-21-fighting/">总有一天，我的生命将抵达终点，而你，将加冕为王!</a>
+    </h1>
+  
+
+        
+        <a href="/2014/04/21/2014-04-21-fighting/" class="archive-article-date">
+  	<time datetime="2014-04-21T03:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-04-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="2014，我要拼了！"><a href="#2014，我要拼了！" class="headerlink" title="2014，我要拼了！"></a>2014，我要拼了！</h1><p>####</p>
+<h2 id="For-the-Lisa-King"><a href="#For-the-Lisa-King" class="headerlink" title="For the Lisa King!"></a>For the Lisa King!</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Note</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/鬼画弧//" class="article-tag-list-link color4">鬼画弧</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2014/04/21/2014-04-21-fighting/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-2014-04-10-gada-is-dead" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1003,91 +1087,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-e5-88-9b-e5-bb-ba-e5-ad-90-e8-99-9a-e6-8b-9f-e7-9b-98-e5-90-8e-e7-88-b6-e8-99-9a-e6-8b-9f-e7-9b-98-e5-8f-91-e7-94-9f-e6-94-b9-e5-8f-98" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/03/29/e5-88-9b-e5-bb-ba-e5-ad-90-e8-99-9a-e6-8b-9f-e7-9b-98-e5-90-8e-e7-88-b6-e8-99-9a-e6-8b-9f-e7-9b-98-e5-8f-91-e7-94-9f-e6-94-b9-e5-8f-98/">创建子虚拟盘后父虚拟盘发生改变</a>
-    </h1>
-  
-
-        
-        <a href="/2013/03/29/e5-88-9b-e5-bb-ba-e5-ad-90-e8-99-9a-e6-8b-9f-e7-9b-98-e5-90-8e-e7-88-b6-e8-99-9a-e6-8b-9f-e7-9b-98-e5-8f-91-e7-94-9f-e6-94-b9-e5-8f-98/" class="archive-article-date">
-  	<time datetime="2013-03-29T03:38:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-03-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>不能打开磁盘vmname- 000001.vmdk或者是所依赖的磁盘快照。原因：创建子磁盘快照后父磁盘被修改过.<br>某次在vm用linux的快照的时候，不能恢复了，提示上述错误，google it的方案是：<br>每个虚拟磁盘都有两个附属VMDK文件，较大的文件名称最后有-flat，是虚拟磁盘的实际原始数据。较小的文件是描述符文件，包含虚拟磁盘配置的基本 信息。使用诸如Nano等文本编辑器打开原始磁盘的描述符文件(通常情况下和虚拟机的名称相同，如myvm.vmdk)，可以看到列出来的CID和父 CID。第一个磁盘的父CID一般是“ffffffff”，在下面的例子中需要注意快照的父CID和原始磁盘的CID并不一致。<br>　　原始磁盘文件：<br>　　CID=37b6f123<br>　　parentCID=ffffffff<br>　　快照磁盘文件：<br>　　CID=afafa03b<br>　　parentCID=ba4f9916<br>　　为了重新关联父子CID，编辑快照的描述符VMDK文件。标识原始磁盘文件的CID，修改快照磁盘文件的父CID，保证两者一致。如下所示：<br>　　原始磁盘文件：<br>　　CID=37b6f123<br>　　parentCID=ffffffff<br>　　快照磁盘文件：<br>　　CID=afafa03b parentCID=37b6f123<br>　　重新启动虚拟机，就可以顺利重新引导系统了。</p>
-<p>PS：如果是分盘的，我们会发现，vmdk1的CID是vmdk2的parentCID，vmdk2的CID是vmdk3的parentCID，依此类推，按顺序修改即可。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2013/03/29/e5-88-9b-e5-bb-ba-e5-ad-90-e8-99-9a-e6-8b-9f-e7-9b-98-e5-90-8e-e7-88-b6-e8-99-9a-e6-8b-9f-e7-9b-98-e5-8f-91-e7-94-9f-e6-94-b9-e5-8f-98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
@@ -1189,15 +1188,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1205,15 +1200,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">War3</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1221,15 +1216,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1265,11 +1264,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
               <li class="article-tag-list-item">
