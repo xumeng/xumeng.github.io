@@ -195,6 +195,204 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-php" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/06/03/php/">PHP学习四：PHP操作MYSQL</a>
+    </h1>
+  
+
+        
+        <a href="/2012/06/03/php/" class="archive-article-date">
+  	<time datetime="2012-06-02T16:09:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-06-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前言：<br>今天学习php操作mysql</p>
+<p>过程：</p>
+<p>1.连接mysql<br>mysql_connect(servername, username, password)<br>servername:默认 localhost:3306</p>
+<p>2.给出一个综合实例<br><code>&lt;?php
+  //连接mysql
+  $con = mysql_connect(&quot;localhost&quot;, &quot;root&quot; , &quot;root&quot;);
+  //判断连接是否成功，失败则打印错误信息并中断
+  if(!$con){
+ die(&quot;can&#39;t connect db&quot; . mysql_error());
+  }
+  echo(&quot;connect succ&quot;);
+  //创建一个名为“phpdb1”的数据库，失败则打印错误信息
+  if(mysql_query(&quot;create database phpdb1&quot;, $con)){
+ echo(&quot;Datebase created&quot;);
+  }else{
+ echo(&quot;Error creating datebase&quot; . mysql_error());
+  }
+  //选择phpdb1这个数据库
+  mysql_select_db(&quot;phpdb1&quot;,$con);
+  //定义sql语句，插入表单传过来的数据
+  $insert_sql = &quot;insert into posts(post_name, post_content) values (&#39;$_POST[title]&#39;, &#39;$_POST[content]&#39;)&quot;;
+  if(!mysql_query($insert_sql,$con)){
+ die(&quot;add post error&quot;.mysql_error());
+  }
+  echo(&quot;add post succ&quot;);
+  //关闭数据库连接
+  mysql_close($con);
+?&gt;</code></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>3.查询的demo<br>`<br>$result = mysql_query(“select * from posts”);</p>
+<p> echo “<br>  <table border="1"><br>   <tr><br>    <th><br>     ID<br>    </th><br>    <th><br>     TITLE<br>    </th><br>    <th><br>     CONTENT<br>    </th><br>  </tr><br> “;<br> //遍历查询结果，并输出数据为HTML表格<br> while($row = mysql_fetch_array($result)){<br>  echo “<tr>“;<br>  echo “<td>“.$row[‘post_id’].”</td>“;<br>  echo “<td>“.$row[‘post_name’].”</td>“;<br>  echo “<td>“.$row[‘post_content’].”</td>“;<br>  echo “</tr>“;<br> }<br> echo “</table>“;<br>`<br>删除和修改的没什么特别的。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/06/03/php/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-vm-e4-b8-8b-e5-ae-89-e8-a3-85ubuntu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/06/01/vm-e4-b8-8b-e5-ae-89-e8-a3-85ubuntu/">VM下安装Ubuntu</a>
+    </h1>
+  
+
+        
+        <a href="/2012/06/01/vm-e4-b8-8b-e5-ae-89-e8-a3-85ubuntu/" class="archive-article-date">
+  	<time datetime="2012-06-01T13:44:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-06-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div><br><br>前言：<br><br>贴出下面要用到的下载地址：<br><br>vmware：<a href="http://www.vmware.com/cn/" target="_blank" rel="noopener">http://www.vmware.com/cn/</a><br><br>注册码(摘自网上经网友测试过的，未经本人测试，仅为方便读者顺手)：<br><div><br><div><br><pre id="best-answer-content">MV4YN-0L38Q-2ZK60-XUA7K-AAZ18<br>JC6AP-D4H0P-TZ131-4A2QM-8CNP7<br>0U6UU-6AJDL-RZTK9-230Q0-8ARJQ<br>JG2TD-DJL95-FZZZ8-DU1NH-33GH7</pre><br><pre id="best-answer-content">VM汉化包：<a href="http://down.qiannao.com/space/file/xjl456852/-4e0a-4f20-5206-4eab/-8f6f-4ef6/VMware-002dworkstation-002dfull-002d8.0.2-002d591240_-6c49-5316.rar/.page" target="_blank" rel="noopener">VM汉化包下载</a></pre><br><pre id="best-answer-content">鉴于vmware里面太多e文，还是用汉化版比较没压力。</pre><br><pre id="best-answer-content">ubuntu下载：<a href="http://www.ubuntu.org.cn/" target="_blank" rel="noopener">http://www.ubuntu.org.cn/</a></pre><br></div><br></div><br>&nbsp;<br><br>1.下载VM并安装。<br><br>2.打开VM，新建虚拟机，照着点就是了。<br><br>3.基本上没啥好说的，注意一点的就是网络类型，有的推荐说NAT，但是我今天设置的NAT网络无法连接，然后我随便选了个，使用桥接网络。反正能连上就行（等会安装ubuntu要下载安装软件）。<br><br>4.新建好虚拟机后，就可以启动那个虚拟机，会自动启动装系统的程序，但是我今天遇到一个问题，刚开始装入iso文件的时候就提示无法识别系统，但是我没在意，继续新建虚拟机后，在启动的时候出现operating system not found,后来换了个iso文件，就可以了。<br><br>5.安装ubuntu系统没什么好说的，键盘布局我在想是不是要选英语美国的，还有汉语的，不过我没敢选，怕是哪个奇葩的中国人设计的键盘布局。在中国安装语言包的时候，等了半天，我也急着回家了，就干脆skip了，要个毛的语言包？<br><br>6.安装完后会发现启动的分辨率不是我们真机的分辨率，因为自带的是800多分辨率，自己在ubuntu设置里面找–显示–设置为真机的分辨率即可。<br><br>&nbsp;<br><br>总体来说，安装linux还是挺傻瓜化的。。。<br><br></div>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/06/01/vm-e4-b8-8b-e5-ae-89-e8-a3-85ubuntu/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-e5-8f-91-e7-8e-b0-e4-b8-80-e4-b8-aa-e9-97-ae-e9-a2-98" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -983,93 +1181,9 @@ mysql_close();
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/05/21/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2012/05/21/hello-world/" class="archive-article-date">
-  	<time datetime="2012-05-20T17:34:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Start here</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Blog//" class="article-tag-list-link color5">Blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/05/21/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span>
+      <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
     </nav>
   
 
@@ -1164,7 +1278,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Windows</a>
+                <a href="javascript:void(0)" class="js-tag color5">Note</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1172,11 +1286,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Note</a>
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微信</a>
+                <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1188,6 +1302,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">iOS</a>
               </li>
              
@@ -1196,11 +1314,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1212,7 +1330,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color3">ES</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1220,15 +1338,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ES</a>
+                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">深圳</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1240,11 +1354,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">架构</a>
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color3">架构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1252,7 +1366,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1264,19 +1378,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">正则</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
               </li>
              
               <li class="article-tag-list-item">
