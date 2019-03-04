@@ -195,6 +195,182 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-tomcat-e5-86-85-e5-ad-98-e8-ae-be-e7-bd-ae" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/06/07/tomcat-e5-86-85-e5-ad-98-e8-ae-be-e7-bd-ae/">Tomcat内存设置</a>
+    </h1>
+  
+
+        
+        <a href="/2012/06/07/tomcat-e5-86-85-e5-ad-98-e8-ae-be-e7-bd-ae/" class="archive-article-date">
+  	<time datetime="2012-06-07T15:21:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-06-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前言：<br>今天用户打电话来说当上传大数据文件的时候，失败。经验证，出现OOM异常 。</p>
+<p>过程：<br>windows的用绿色版tomcat：<br><span style="color: #ff0000;">set JAVA_OPTS=%JAVA_OPTS% -Xms1024m -Xmx1280m -XX:MaxNewSize=256m -XX:MaxPermSize=256m</span></p>
+<p>windows安装版tomcat（用服务启动tomat）：这个是执行bin/tomcat.exe，不读取catalina.bat的配置<br><span style="color: #ff0000;">修改注册表HKEY_LOCAL_MACHINE\SOFTWARE\Apache Software Foundation\Tomcat Service Manager\Tomcat5\Parameters\JavaOptions</span><br><span style="color: #ff0000;"> 原值为</span><br><span style="color: #ff0000;"> -Dcatalina.home=”C:\ApacheGroup\Tomcat 5.0”</span><br><span style="color: #ff0000;"> -Djava.endorsed.dirs=”C:\ApacheGroup\Tomcat 5.0\common\endorsed”</span><br><span style="color: #ff0000;"> -Xrs</span><br><span style="color: #ff0000;"> 加入 -Xms300m -Xmx350m</span></p>
+<p><span style="color: #ff0000;">linux:</span><br>在/usr/local/apache-tomcat-5.5.23/bin目录下的catalina.sh<br>添加：<span style="color: #ff0000;">JAVA_OPTS=’-Xms512m -Xmx1024m’</span><br>要加“m”说明是MB，否则就是KB了，在启动tomcat时会报内存不足。<br>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
+<p>remark:<br>设置JVM堆的设置是指java程序运行过程中JVM可以调配使用的内存空间的设置.JVM在启动的时候会自动设置Heap size的值，其初始空间(即-Xms)是物理内存的1/64，最大空间(-Xmx)是物理内存的1/4。可以利用JVM提供的-Xmn -Xms -Xmx等选项可进行设置。Heap size 的大小是Young Generation 和Tenured Generaion 之和。提示：在JVM中如果98％的时间是用于GC且可用的Heap size 不足2％的时候将抛出此异常信息。提示：Heap Size 最大不要超过可用物理内存的80％，一般的要将-Xms和-Xmx选项设置为相同，而-Xmn为1/4的-Xmx值。</p>
+<p>最后跟用户说通过设置tomcat内存和分割excel解决。但是这毕竟不是解决之道。<br>想：<br>代码里面控制分次读取，读取后释放资源继续读取。<br>同时在导出excel的时候遇到OOM的异常的话，也可以使用分次写文件，或者写多个文件最后合并excel。<br>同时我在想，他那个超过65535行数据的excel怎么写的数据，应该是导出的…<br>这样的还是用csv或者txt什么的好。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/06/07/tomcat-e5-86-85-e5-ad-98-e8-ae-be-e7-bd-ae/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-vmware-tools-e5-ae-89-e8-a3-85" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/06/05/vmware-tools-e5-ae-89-e8-a3-85/">VMware tools安装</a>
+    </h1>
+  
+
+        
+        <a href="/2012/06/05/vmware-tools-e5-ae-89-e8-a3-85/" class="archive-article-date">
+  	<time datetime="2012-06-05T12:09:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-06-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前言：<br>安装了linux后，安装VM tools是必要的，功能自不必多说。比如我当时的客户机的屏幕很大，不能适应宿主机。</p>
+<p>过程：<br>1.右击虚拟机右下角CD/DVD————设置————使用iso镜像文件————选择VMware workstation安装目录里linux.iso。<br>  同时你可以看到有windows.iso，solaris.iso，linux.iso，这些都是在不同系统里安装vmware tools所需的镜像文件。</p>
+<p>2.选择后，重启客户机。开机后，有的说会在桌面上看到VMware tools的安装文件，有的说直接默认打开了，但是我没有遇到上述两种情况，我在主文件夹左侧导航里设备那找到了VMware tools的安装压缩包，<br>但又发现一个问题，无法像网上那样用命令找到，虽然看到目录是media，但是在cmd里始终是找不到的。<br>只好在设备那里打开VMware tools的驱动目录，复制到主文件夹去。<br>然后解压缩，使用命令或者右键都可以。<br>命令就用tar zxvf xxx.tar.gz，默认解压到当前目录，然后cd进入这个解压后的目录，<br>执行安装文件：sudo ./vmware-install.pl。<br>然后一路回车就是了，有兴趣的也可以看看安装时的提示。安装完后重启虚拟机。<br>反复的试试虚拟机工具栏————视图——————立即适应客户机。然后虚拟机的窗口就能在宿主机中完美的显示出来了。如果不行的话，也可以试试视图里面其他的调整，直到满意为止。</p>
+<p>remark：上次安装的时候因为强制取消了一些更新，这次一看竟然有300多MB，什么程序的更新，系统的更新，不认识的，各种更新都有。想想还是更新下吧。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/06/05/vmware-tools-e5-ae-89-e8-a3-85/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-php" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1008,179 +1184,6 @@ mysql_close();
 
 
   
-    <article id="post-java-e6-9c-89-e6-97-b6-e5-80-99-e6-97-a0-e6-b3-95-e5-af-bc-e5-8c-85-e9-97-ae-e9-a2-98-e7-9a-84-e4-b8-b4-e6-97-b6-e8-a7-a3-e5-86-b3-e6-96-b9-e6-b3-95" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/05/23/java-e6-9c-89-e6-97-b6-e5-80-99-e6-97-a0-e6-b3-95-e5-af-bc-e5-8c-85-e9-97-ae-e9-a2-98-e7-9a-84-e4-b8-b4-e6-97-b6-e8-a7-a3-e5-86-b3-e6-96-b9-e6-b3-95/">java有时候无法导包问题的临时解决方法</a>
-    </h1>
-  
-
-        
-        <a href="/2012/05/23/java-e6-9c-89-e6-97-b6-e5-80-99-e6-97-a0-e6-b3-95-e5-af-bc-e5-8c-85-e9-97-ae-e9-a2-98-e7-9a-84-e4-b8-b4-e6-97-b6-e8-a7-a3-e5-86-b3-e6-96-b9-e6-b3-95/" class="archive-article-date">
-  	<time datetime="2012-05-23T04:49:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-05-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在eclipse里面开发java项目的时候，偶尔会遇到无法导包的问题，</p>
-<p>如：</p>
-<p><code>import com.sun.management.OperatingSystemMXBean;</code><br>无法导入。本来想导com.sun.management包内的，却只有java.lang包的这个类。<br>com.sun.management.OperatingSystemMXBean位于java lib的rt.jar，<br>在eclipse里面可以看到项目引用的JRE System Library里面有rt.jar，<br>并且可以打开看到也有com.sun.management这个包，里面也有OperatingSystemMXBean这个类，<br>但是为何总是无法导入呢。<br>偶然的发现一个解决办法：<br><span style="color: #ff0000;">在项目的java Build Path-Libraries里面，把JRE System Library Remove掉，然后再重新添加Library，</span><br><span style="color: #ff0000;"> 点击右边的Add Library-JRE System Library-就默认选择workspace default JRE-finish。</span><br>遇到这样奇葩的问题，就这样试试吧:)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/05/23/java-e6-9c-89-e6-97-b6-e5-80-99-e6-97-a0-e6-b3-95-e5-af-bc-e5-8c-85-e9-97-ae-e9-a2-98-e7-9a-84-e4-b8-b4-e6-97-b6-e8-a7-a3-e5-86-b3-e6-96-b9-e6-b3-95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-e7-94-b1-e6-89-93-e7-af-ae-e7-90-83-e6-83-b3-e5-88-b0-e7-9a-84" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/05/22/e7-94-b1-e6-89-93-e7-af-ae-e7-90-83-e6-83-b3-e5-88-b0-e7-9a-84/">由打篮球想到的</a>
-    </h1>
-  
-
-        
-        <a href="/2012/05/22/e7-94-b1-e6-89-93-e7-af-ae-e7-90-83-e6-83-b3-e5-88-b0-e7-9a-84/" class="archive-article-date">
-  	<time datetime="2012-05-22T15:12:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>每周一下午4点是固定的打篮球时间，</p>
-<p>我本不是热爱篮球的人，但是因为这2个小时不必坐在办公室埋头苦干，能多呼吸一点外面虽然不新鲜的空气，所以每周一都是很积极着跟着同事去打篮球。<br>每次打球，无论是抢篮板数还是命中数，都是我最低，不是因为我最不会打，而是我最懒，相比别人不停的奔跑着抢篮板，我更多的是站在那里或者做着小弧度的移动，盯着球，等待着抢篮板的机会。除了偶然的守株待兔捡来个球，我始终是一个围观者。虽然我也告诉自己要动起来，不要怕累，不要怕出汗，不要怕被球砸伤被人碰伤，但身体始终无法执行大脑发的指令。</p>
-<p>这让我想起了打魔兽，我最热爱的游戏，很久以前我是一个小小菜鸟，当然现在也仍然是一个菜鸟。打魔兽的时候，我也是喜欢盯，盯着建筑里面出兵，等待着兵出来我操作；盯着打怪，等待怪被打死然后收宝；盯着部队交战，等待敌人落荒而逃或者自己丢盔弃甲…后来知道了APM这个概念后，我发现我需要动起来，我不能让我的手停下来，一停下来我就会习惯了停，习惯了等待。之后，我的apm由开始的50，在我每打完一局就打开w3gmaster看自己的apm，100，150，200…此时再玩起魔兽，我已然有了一种满满的感觉，再快的节奏，再多的队伍，再复杂的操作也能轻松完成。</p>
-<p>我在想，打球是不是也这样，<span style="color: #ff0000;"><strong>如果我可以动起来，不停的奔跑，不停的追逐，哪怕累一点，哪怕很多时候抢不到球，我仍然可以比之前更出色。</strong></span><br>那么，生活也是同理了，如果我不这么懒，我动起来，我的生活也会出色！<br>如果是这样，那么从这个blog开始，start here！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/鬼画弧//" class="article-tag-list-link color4">鬼画弧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/05/22/e7-94-b1-e6-89-93-e7-af-ae-e7-90-83-e6-83-b3-e5-88-b0-e7-9a-84/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
@@ -1282,10 +1285,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
@@ -1306,7 +1305,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1314,15 +1313,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1338,11 +1341,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
+                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
+                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1382,7 +1385,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1390,7 +1393,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">

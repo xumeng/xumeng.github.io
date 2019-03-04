@@ -195,6 +195,210 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-tomcat-e5-86-85-e5-ad-98-e6-ba-a2-e5-87-ba" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/09/12/tomcat-e5-86-85-e5-ad-98-e6-ba-a2-e5-87-ba/">tomcat内存溢出</a>
+    </h1>
+  
+
+        
+        <a href="/2012/09/12/tomcat-e5-86-85-e5-ad-98-e6-ba-a2-e5-87-ba/" class="archive-article-date">
+  	<time datetime="2012-09-12T12:23:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近遇到<strong>java.lang.OutOfMemoryError: Java heap space，</strong></p>
+<p>然后加内存，32G内存的服务器给了4G，还是不行。</p>
+<p>检查代码，发现会把数据库中的一个表的数据读取出来加载到内存中，当这个表的数据越来越大，到了几十万的时候 ，就会OOM错误了。</p>
+<p>和之前大数据量导出同理，分成多次去查数据库并加载。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/09/12/tomcat-e5-86-85-e5-ad-98-e6-ba-a2-e5-87-ba/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-e3-80-90-e8-bd-ac-e3-80-91linux-e4-b8-8btomcat-jvm-e5-86-85-e5-ad-98-e8-ae-be-e7-bd-ae" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/09/10/e3-80-90-e8-bd-ac-e3-80-91linux-e4-b8-8btomcat-jvm-e5-86-85-e5-ad-98-e8-ae-be-e7-bd-ae/">【转】Linux下tomcat JVM内存设置</a>
+    </h1>
+  
+
+        
+        <a href="/2012/09/10/e3-80-90-e8-bd-ac-e3-80-91linux-e4-b8-8btomcat-jvm-e5-86-85-e5-ad-98-e8-ae-be-e7-bd-ae/" class="archive-article-date">
+  	<time datetime="2012-09-10T03:52:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-09-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>常见的内存溢出有以下两种:</p>
+<p><strong>java.lang.OutOfMemoryError: PermGen space</strong></p>
+<p><strong>java.lang.OutOfMemoryError: Java heap space</strong></p>
+<p>&nbsp;</p>
+<hr>
+<p>这里以tomcat环境为例，其它WEB服务器如jboss,weblogic等是同一个道理。<br><strong>一、java.lang.OutOfMemoryError: PermGen space</strong></p>
+<p>PermGen space的全称是Permanent Generation space,是指内存的永久保存区域,<br>这块内存主要是被JVM存放Class和Meta信息的,Class在被Loader时就会被放到PermGen space中,<br>它和存放类实例(Instance)的Heap区域不同,GC(Garbage Collection)不会在主程序运行期对<br>PermGen space进行清理，所以如果你的应用中有很多CLASS的话,就很可能出现PermGen space错误,<br>这种错误常见在web服务器对JSP进行pre compile的时候。如果你的WEB APP下都用了大量的第三方jar, 其大小<br>超过了jvm默认的大小(4M)那么就会产生此错误信息了。<br>解决方法： 手动设置MaxPermSize大小<br>建议：将相同的第三方jar文件移置到tomcat/shared/lib目录下，这样可以达到减少jar 文档重复占用内存的目的。</p>
+<p>&nbsp;</p>
+<p><strong>二、java.lang.OutOfMemoryError: Java heap space</strong><br>JVM堆的设置是指java程序运行过程中JVM可以调配使用的内存空间的设置.JVM在启动的时候会自动设置Heap size的值，<br>其初始空间(即-Xms)是<strong>物理内存的1/64</strong>，最大空间(-Xmx)是<strong>物理内存的1/4</strong>。可以利用JVM提供的-Xmn -Xms -Xmx等选项可<br>进行设置。Heap size 的大小是Young Generation 和Tenured Generaion 之和。<br>提示：在JVM中如果98％的时间是用于GC且可用的Heap size 不足2％的时候将抛出此异常信息。<br>提示：Heap Size 最大不要超过可用物理内存的80％，一般的要将-Xms和-Xmx选项设置为相同，而-Xmn为1/4的-Xmx值。&nbsp;<br>解决方法：手动设置Heap size</p>
+<hr>
+<p>&nbsp;</p>
+<p>Linux下修改JVM内存大小:</p>
+<p>要添加在tomcat&nbsp;的bin 下catalina.sh 里，位置cygwin=false前&nbsp;。注意引号要带上,红色的为新添加的.</p>
+<h1 id="OS-specific-support-nbsp-var-must-be-set-to-either-true-or-false"><a href="#OS-specific-support-nbsp-var-must-be-set-to-either-true-or-false" class="headerlink" title="OS specific support.&nbsp; $var must be set to either true or false."></a>OS specific support.&nbsp; $var <em>must</em> be set to either true or false.</h1><p><span style="color: #ff0000;">JAVA_OPTS=”-Xms256m -Xmx512m -Xss1024K -XX:PermSize=128m -XX:MaxPermSize=256m”</span><br>cygwin=false</p>
+<p>&nbsp;</p>
+<p>windows下修改JVM内存大小:</p>
+<p>情况一:解压版本的Tomcat, 要通过startup.bat启动tomcat才能加载配置</p>
+<p>要添加在tomcat&nbsp;的bin 下catalina.bat 里</p>
+<p>rem Guess CATALINA_HOME if not defined<br>set CURRENT_DIR=%cd%后面添加,红色的为新添加的.</p>
+<p><span style="color: #ff0000;">set JAVA_OPTS=-Xms256m -Xmx512m -XX:PermSize=128M -XX:MaxNewSize=256m -XX:MaxPermSize=256m -Djava.awt.headless=true</span></p>
+<p>&nbsp;</p>
+<p>情况二:安装版的Tomcat下没有catalina.bat</p>
+<p>windows服务执行的是bin\tomcat.exe.他读取注册表中的值,而不是catalina.bat的设置.</p>
+<p>修改注册表HKEY_LOCAL_MACHINE\SOFTWARE\Apache Software Foundation\Tomcat&nbsp;Service Manager\Tomcat5\Parameters\JavaOptions<br>原值为<br>-Dcatalina.home=”C:\ApacheGroup\Tomcat&nbsp;5.0”<br>-Djava.endorsed.dirs=”C:\ApacheGroup\Tomcat&nbsp;5.0\common\endorsed”<br>-Xrs</p>
+<p><div>加入 -Xms300m -Xmx350m&nbsp;&nbsp;<br>重起tomcat服务,设置生效</div><br>&nbsp;</p>
+<hr>
+<p><strong>各参数的比例:</strong></p>
+<p>Xmx 与PermSize的和不可超过JVM可获得的总内存</p>
+<p>PermSize不可大于Xmx</p>
+<p>&nbsp;</p>
+<p>请参见其它的参数详解的文章,各参数值大小的本文不讨论.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/09/10/e3-80-90-e8-bd-ac-e3-80-91linux-e4-b8-8btomcat-jvm-e5-86-85-e5-ad-98-e8-ae-be-e7-bd-ae/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-e7-8c-9d-e6-ad-bb" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -906,180 +1110,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-e5-8d-8e-e4-b8-baascend-d1-e8-81-94-e9-80-9a-e6-97-a0-e6-bc-ab-e6-b8-b8-e5-8d-a1-e4-b8-8d-e8-83-bd-e6-89-93-e7-94-b5-e8-af-9d-e5-8f-91-e7-9f-ad-e4-bf-a1-e7-9a-84-e9-97-ae-e9-a2-98" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/07/31/e5-8d-8e-e4-b8-baascend-d1-e8-81-94-e9-80-9a-e6-97-a0-e6-bc-ab-e6-b8-b8-e5-8d-a1-e4-b8-8d-e8-83-bd-e6-89-93-e7-94-b5-e8-af-9d-e5-8f-91-e7-9f-ad-e4-bf-a1-e7-9a-84-e9-97-ae-e9-a2-98/">华为Ascend D1+联通无漫游卡不能打电话发短信的问题</a>
-    </h1>
-  
-
-        
-        <a href="/2012/07/31/e5-8d-8e-e4-b8-baascend-d1-e8-81-94-e9-80-9a-e6-97-a0-e6-bc-ab-e6-b8-b8-e5-8d-a1-e4-b8-8d-e8-83-bd-e6-89-93-e7-94-b5-e8-af-9d-e5-8f-91-e7-9f-ad-e4-bf-a1-e7-9a-84-e9-97-ae-e9-a2-98/" class="archive-article-date">
-  	<time datetime="2012-07-31T14:43:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>拿到d1装上联通卡后，发现可以用wifi和移动数据上网，但是不能发短信和打电话，包括10010.</p>
-<p>开始以为是设置SMSC，然后手动<em>#</em>#4636#<em>#</em>分别设置为本地SMSC和归属地SMSC。仍然不行。</p>
-<p>然后试着把联通卡装到旧手机上，把移动卡装到d1上。并且没有进行任何的SMSC设置，他们分别都可以正常发信息和打电话。</p>
-<p>然后再复位把联通卡装到d1上，然后惊讶的发现又可以打电话发信息了。</p>
-<p>&nbsp;</p>
-<p>没管它，等到夜晚的时候，情况再次出现，崩溃了有木有。继续换卡、复位，又可以了。</p>
-<p>好吧，我承认d1 NMB！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/鬼画弧//" class="article-tag-list-link color4">鬼画弧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/07/31/e5-8d-8e-e4-b8-baascend-d1-e8-81-94-e9-80-9a-e6-97-a0-e6-bc-ab-e6-b8-b8-e5-8d-a1-e4-b8-8d-e8-83-bd-e6-89-93-e7-94-b5-e8-af-9d-e5-8f-91-e7-9f-ad-e4-bf-a1-e7-9a-84-e9-97-ae-e9-a2-98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-e5-a4-a9-e7-bb-88-e4-ba-8e-e6-94-be-e6-99-b4-e4-ba-86" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/07/29/e5-a4-a9-e7-bb-88-e4-ba-8e-e6-94-be-e6-99-b4-e4-ba-86/">天终于放晴了</a>
-    </h1>
-  
-
-        
-        <a href="/2012/07/29/e5-a4-a9-e7-bb-88-e4-ba-8e-e6-94-be-e6-99-b4-e4-ba-86/" class="archive-article-date">
-  	<time datetime="2012-07-29T14:22:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-07-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>下雨果然是坑爹的，真的是FML发霉拉</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/鬼画弧//" class="article-tag-list-link color4">鬼画弧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/07/29/e5-a4-a9-e7-bb-88-e4-ba-8e-e6-94-be-e6-99-b4-e4-ba-86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
@@ -1181,10 +1211,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
@@ -1205,7 +1231,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1213,15 +1239,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1237,11 +1267,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
+                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
+                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1281,7 +1311,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1289,7 +1319,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
