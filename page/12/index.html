@@ -195,6 +195,124 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-flex-e6-97-a5-e6-9c-9f-e5-a4-84-e7-90-86" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/06/12/flex-e6-97-a5-e6-9c-9f-e5-a4-84-e7-90-86/">Flex日期处理</a>
+    </h1>
+  
+
+        
+        <a href="/2012/06/12/flex-e6-97-a5-e6-9c-9f-e5-a4-84-e7-90-86/" class="archive-article-date">
+  	<time datetime="2012-06-12T09:21:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-06-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前言：</p>
+<p>今天用flex处理了日期，顺便总结下。</p>
+<p>过程：</p>
+<p>flex中的Date类相关属性方法：</p>
+<p>fullYear：公历年</p>
+<p>month：月（0-11）</p>
+<p>date：日（1-31）</p>
+<p>day：一周中的星期（0-6 0是星期日，1是星期1，2是星期二）</p>
+<p>hours：小时（0-23）</p>
+<p>minutes：分钟（0-59）</p>
+<p>seconds：秒（0-59）</p>
+<p>milliseconds：毫秒（0-999）</p>
+<p>日期计算：</p>
+<p>var date:Date = new Date();</p>
+<p>date[‘fullYear’]+=1; //日期加一年</p>
+<p>date[‘month’]+=1; //日期加一月</p>
+<p>date[‘date’]+=1; //日期加一天</p>
+<p>1.计算日期差</p>
+<p>var s1:String = “2012-06-01 11:12:11”;</p>
+<p>Alert.show(getDateDiff(DateFormatter.parseDateString(s1), date) + “###”);</p>
+<p>public static function getDateDiff(startDate:Date, endDate:Date):int</p>
+<p>{</p>
+<p>var diff:Number = (Number(endDate) - Number(startDate))/(3600000*24); //除以每天的毫秒数</p>
+<p>return diff;</p>
+<p>}</p>
+<p>2.将日期格式化为制定格式</p>
+<p>var fr:DateFormatter=new DateFormatter();</p>
+<p>fr.formatString=”YYYY-MM-DD JJ:NN:SS”;</p>
+<p>fr.format(new Date);&nbsp;</p>
+<p>3.字符串和Date的转换</p>
+<p>var strToday:String = “2011-3-12”;</p>
+<p>&nbsp;var dateToday:Date = DateField.stringToDate(strToday, “YYYY-MM-DD”);&nbsp;</p>
+<p>顺便贴下java中的计算日期(比如得到当前时间的5分钟后的时间)</p>
+<p>SimpleDateFormat sdf &nbsp;= new SimpleDateFormat(“yyyy-MM-dd HH;mm:ss”);</p>
+<p>sdf.format(new Timestamp(System.currentTimeMillis()+ 5<em>60</em>1000));</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Flex</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/06/12/flex-e6-97-a5-e6-9c-9f-e5-a4-84-e7-90-86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-tomcat-e5-86-85-e5-ad-98-e8-ae-be-e7-bd-ae" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1052,138 +1170,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-php-e5-ad-a6-e4-b9-a0-e4-b8-80-ef-bc-9a-e5-ae-89-e8-a3-85php-e5-92-8c-e6-90-ad-e5-bb-ba-e7-8e-af-e5-a2-83" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/05/23/php-e5-ad-a6-e4-b9-a0-e4-b8-80-ef-bc-9a-e5-ae-89-e8-a3-85php-e5-92-8c-e6-90-ad-e5-bb-ba-e7-8e-af-e5-a2-83/">PHP学习一：安装PHP和搭建环境</a>
-    </h1>
-  
-
-        
-        <a href="/2012/05/23/php-e5-ad-a6-e4-b9-a0-e4-b8-80-ef-bc-9a-e5-ae-89-e8-a3-85php-e5-92-8c-e6-90-ad-e5-bb-ba-e7-8e-af-e5-a2-83/" class="archive-article-date">
-  	<time datetime="2012-05-23T15:42:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-05-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前言：</p>
-<p>从今天开始学php</p>
-<p>目标：</p>
-<p>先安装php和搭建环境，并写一个HelloWorld。</p>
-<p>步骤：</p>
-<p>1.下载php和apache，貌似有一些绿色版的，我没用过，先贴出大众的方法。</p>
-<p><pre id="best-answer-content">下载PHP5:    <a href="http://cn2.php.net/distributions/php-5.2.6-Win32.zip" target="_blank" rel="noopener">http://cn2.php.net/distributions/php-5.2.6-Win32.zip</a><br>下载apache:  <a href="http://down.chinaz.com/soft/18000.htm" target="_blank" rel="noopener">http://down.chinaz.com/soft/18000.htm</a></pre></p>
-<p><pre id="best-answer-content">2.解压php到如d:/php，</pre></p>
-<p><pre>3.找到php目录下的 php.ini-dist或 php.ini.recommended文件，重命名为 php.ini，</pre></p>
-<p><pre>  并复制到系统盘的windows目录下(以c:\windows为例). </pre></p>
-<p><pre>4.再把php目录下的php5ts.dll,libmysql.dll复制到目录 c:\windows\system32下。</pre></p>
-<p><pre>5.把php5\ext目录下的php_gd2.dll,php_mysql.dll,php_mbstring.dll文件复制到c:\windows\system32下。</pre></p>
-<p><pre>6.安装apache</pre></p>
-<p><pre>一直next，domain什么的就随便输入，mail写自己的也未尝不可。</pre></p>
-<p><pre>设置/conf/httpd.conf：</pre></p>
-<p><pre>查找DocumentRoot&nbsp;设置为放网页文件的文件夹，不变也可以，</pre></p>
-<p><pre>查找DirectoryIndex&nbsp;在index.html后添加indexphp index.htm，多个用空格分隔。</pre></p>
-<p><pre>7.</pre></p>
-<p><pre id="best-answer-content">打开c:\windows\php.ini文件（关联到mysql）<br>设置扩展路径<br>查找 extension_dir 有这么一行extension_dir = “./“<br>将此行改成<br>extension_dir = “C:\php5\ext”<br>其中C:\php5是你安装php的路径。路径不正确将无法加载dll<br>(注意:有些php版本是 ;extension_dir = “./“ 要把前面的分号去掉)<br>查找 extension<br>extension=php_mbstring.dll<br>extension=php_gd2.dll<br>extension=php_mysql.dl<br>把上面3项前面的分号去掉。</pre></p>
-<p><pre id="best-answer-content">将doc_root 改为apache里面放网页的目录，如 “d:\Program Files\Apache Software Foundation\Apache2.2\htdocs”；</pre></p>
-<p><pre id="best-answer-content">找到 ;session.save_path = “/tmp” ,将’;’去掉,设置你保存session的目录，如session.save_path = “D:/php/session_temp”；</pre></p>
-<p><pre id="best-answer-content">8.时差设置</pre></p>
-<p><pre id="best-answer-content">查找date.timezone有这么一行<br>;date.timezone =<br>将;去掉，改成<br>date.timezone = PRC</pre></p>
-<p><pre id="best-answer-content">9.php+apache的设置</pre></p>
-<p><pre id="best-answer-content">设置httpd.conf，</pre></p>
-<p><pre id="best-answer-content">&nbsp;LoadModule php5_module “d:/php/php5apache2_2.dll”</pre></p>
-<p><pre id="best-answer-content">(特别注意这一条，很多地方是调用php5apache2.dll，这样在运行PHP代码时会提示httpd.exe应用程序错误)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AddType application/x-httpd-php .php<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AddType application/x-httpd-php .htm<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （.htm, .php为可执行php语言的扩展名，也可加html, php3, php4,甚至txt）</pre></p>
-<p><pre id="best-answer-content">查找 AddType application/x-gzip .gz .tgz<br>在此行后加入一行<br>AddType application/x-httpd-php .php (记住：前边有一个空格哦！！！)<br>这样apache就可以解释php文件了</pre></p>
-<p><pre id="best-answer-content">10.在web根目录（即apache_home/htdocs）新建test.php,内容如下</pre><br>`</p>
-<p><html></html></p>
-<p><head><title>test</title></head></p>
-<p><body><br>&lt;?php<br>echo “hello world”;<br>phpinfo();<br>?&gt;<br></body><br><br>`</p>
-<p><pre id="best-answer-content">&nbsp;</pre></p>
-<p><pre id="best-answer-content">&nbsp;</pre></p>
-<p><pre id="best-answer-content">重启apache服务，访问<a href="http://localhost/test.php" target="_blank" rel="noopener">http://localhost/test.php</a></pre></p>
-<p><pre id="best-answer-content">当出现hello world和php的一些信息的时候，说明成功了。有问题的话，请检查配置！</pre></p>
-<p><pre id="best-answer-content">&nbsp;</pre></p>
-<p><pre id="best-answer-content">&nbsp;</pre></p>
-<p><pre id="best-answer-content">附测试连接mysql的代码：</pre></p>
-<p><pre id="best-answer-content">&nbsp;</pre><br><code>&lt;?php
-$link=mysql_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;12345&quot;);     //12345改成你的mysql密码
-if(!$link) echo &quot;失败!&quot;;
-else echo &quot;成功!&quot;;
-mysql_close();
-?&gt;</code></p>
-<p>&nbsp;</p>
-<p>参考资料：</p>
-<p><a href="http://zhidao.baidu.com/question/74350698.html" target="_blank" rel="noopener">http://zhidao.baidu.com/question/74350698.html</a></p>
-<p><a href="http://www.cnblogs.com/angelox/archive/2008/10/09/1306732.html" target="_blank" rel="noopener">http://www.cnblogs.com/angelox/archive/2008/10/09/1306732.html</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/05/23/php-e5-ad-a6-e4-b9-a0-e4-b8-80-ef-bc-9a-e5-ae-89-e8-a3-85php-e5-92-8c-e6-90-ad-e5-bb-ba-e7-8e-af-e5-a2-83/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
@@ -1289,15 +1275,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">微信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1309,11 +1295,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1325,11 +1311,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">外包</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color3">外包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1361,11 +1347,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
               <li class="article-tag-list-item">

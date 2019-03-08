@@ -195,6 +195,104 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-e6-9f-a5-e7-9c-8btomcat-e5-86-85-e5-ad-98-e7-9b-b8-e5-85-b3-e4-bf-a1-e6-81-af" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/09/13/e6-9f-a5-e7-9c-8btomcat-e5-86-85-e5-ad-98-e7-9b-b8-e5-85-b3-e4-bf-a1-e6-81-af/">查看tomcat内存相关信息</a>
+    </h1>
+  
+
+        
+        <a href="/2012/09/13/e6-9f-a5-e7-9c-8btomcat-e5-86-85-e5-ad-98-e7-9b-b8-e5-85-b3-e4-bf-a1-e6-81-af/" class="archive-article-date">
+  	<time datetime="2012-09-13T09:14:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-09-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在tomat的任意app中创建一个jsp文件。</p>
+<p>代码如下：<br>`<br>&lt;%@page contenttype=”text/html” pageencoding=”UTF-8”&gt;</p>
+<p>&lt;%</p>
+<p>double total = (Runtime.getRuntime().totalMemory()) / (1024.0 * 1024);</p>
+<p>double max = (Runtime.getRuntime().maxMemory()) / (1024.0 * 1024);</p>
+<p>double free = (Runtime.getRuntime().freeMemory()) / (1024.0 * 1024);</p>
+<p>out.println(“Java 虚拟机试图使用的最大内存量(当前JVM的最大可用内存)maxMemory(): “ + max + “MB<br>“);</p>
+<p>out.println(“Java 虚拟机中的内存总量(当前JVM占用的内存总数)totalMemory(): “ + total + “MB<br>“);</p>
+<p>out.println(“Java 虚拟机中的空闲内存量(当前JVM空闲内存)freeMemory(): “ + free + “MB<br>“);</p>
+<p>out.println(“因为JVM只有在需要内存时才占用物理内存使用，所以freeMemory()的值一般情况下都很小，<br>“ +</p>
+<p>“而JVM实际可用内存并不等于freeMemory()，而应该等于 maxMemory()-totalMemory()+freeMemory()。<br>“);</p>
+<p>out.println(“JVM实际可用内存: “ + (max - total + free) + “MB<br>“);</p>
+<p>%&gt;</p>
+<p>`</p>
+<p>保存运行即可。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/09/13/e6-9f-a5-e7-9c-8btomcat-e5-86-85-e5-ad-98-e7-9b-b8-e5-85-b3-e4-bf-a1-e6-81-af/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-tomcat-e5-86-85-e5-ad-98-e6-ba-a2-e5-87-ba" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1026,90 +1124,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-e4-bb-8e-e4-bb-8a-e5-a4-a9-e5-bc-80-e5-a7-8b-ef-bc-8c-e4-b8-8b-e7-8f-ad-e5-90-8e-e5-8a-a0-e7-8f-ad" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/08/01/e4-bb-8e-e4-bb-8a-e5-a4-a9-e5-bc-80-e5-a7-8b-ef-bc-8c-e4-b8-8b-e7-8f-ad-e5-90-8e-e5-8a-a0-e7-8f-ad/">从今天开始，下班后加班</a>
-    </h1>
-  
-
-        
-        <a href="/2012/08/01/e4-bb-8e-e4-bb-8a-e5-a4-a9-e5-bc-80-e5-a7-8b-ef-bc-8c-e4-b8-8b-e7-8f-ad-e5-90-8e-e5-8a-a0-e7-8f-ad/" class="archive-article-date">
-  	<time datetime="2012-08-01T00:10:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>直到项目结束</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/鬼画弧//" class="article-tag-list-link color4">鬼画弧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/08/01/e4-bb-8e-e4-bb-8a-e5-a4-a9-e5-bc-80-e5-a7-8b-ef-bc-8c-e4-b8-8b-e7-8f-ad-e5-90-8e-e5-8a-a0-e7-8f-ad/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
@@ -1215,15 +1229,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">微信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1235,11 +1249,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1251,11 +1265,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">外包</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color3">外包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1287,11 +1301,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -195,6 +195,95 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ubuntu-e4-b8-8b-e5-a6-82-e4-bd-95-e5-88-87-e6-8d-a2-e5-88-b0-e8-b6-85-e7-ba-a7-e7-94-a8-e6-88-b7-superuser" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/12/07/ubuntu-e4-b8-8b-e5-a6-82-e4-bd-95-e5-88-87-e6-8d-a2-e5-88-b0-e8-b6-85-e7-ba-a7-e7-94-a8-e6-88-b7-superuser/">Ubuntu下如何切换到超级用户 (superuser)</a>
+    </h1>
+  
+
+        
+        <a href="/2012/12/07/ubuntu-e4-b8-8b-e5-a6-82-e4-bd-95-e5-88-87-e6-8d-a2-e5-88-b0-e8-b6-85-e7-ba-a7-e7-94-a8-e6-88-b7-superuser/" class="archive-article-date">
+  	<time datetime="2012-12-07T08:31:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>由于 Ubuntu 是基于 Debian 的 linux 操作系统，在默认的情况下，是没有超级用户(superuser, root)的，但有些系统操作必须有超级用户的权限才能进行，如手动释放内存等。</p>
+<p>在其他 linux 操作系统 (如 fedora) 下，可以使用<br>su<br>切换到超级用户。<br>当输入 su 命令后， 系统会要求输入 root 的密码。<br>可是，在 Ubuntu 下我们根本不知道 root 的密码是什么。</p>
+<p>这样，在 Ubuntu 下切换到超级用户需要使用其他方法，主要有两种：</p>
+<p>1) sudo -i </p>
+<p>sudo<br>是 su 的加强版，意思是 do something as the supervisor。<br>   不需要密码就可以得到 root 的权限。<br>   但是它也有很多限制，比如，在默认的情况下，只能在 5 分钟之内使用 root 权限。</p>
+<p>2) 如果想一直使用 root 权限，还是要使用 su， 还是要得到 root 密码的。<br>   用<br>sudo passwd root<br>可以设置 root 的密码。<br>   之后就可以自由使用 su 命令啦。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/12/07/ubuntu-e4-b8-8b-e5-a6-82-e4-bd-95-e5-88-87-e6-8d-a2-e5-88-b0-e8-b6-85-e7-ba-a7-e7-94-a8-e6-88-b7-superuser/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-oracle-e5-af-bc-e5-87-ba-e7-9a-84-e4-b8-80-e4-ba-8c-e4-ba-8b" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -977,104 +1066,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-e6-9f-a5-e7-9c-8btomcat-e5-86-85-e5-ad-98-e7-9b-b8-e5-85-b3-e4-bf-a1-e6-81-af" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/09/13/e6-9f-a5-e7-9c-8btomcat-e5-86-85-e5-ad-98-e7-9b-b8-e5-85-b3-e4-bf-a1-e6-81-af/">查看tomcat内存相关信息</a>
-    </h1>
-  
-
-        
-        <a href="/2012/09/13/e6-9f-a5-e7-9c-8btomcat-e5-86-85-e5-ad-98-e7-9b-b8-e5-85-b3-e4-bf-a1-e6-81-af/" class="archive-article-date">
-  	<time datetime="2012-09-13T09:14:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-09-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在tomat的任意app中创建一个jsp文件。</p>
-<p>代码如下：<br>`<br>&lt;%@page contenttype=”text/html” pageencoding=”UTF-8”&gt;</p>
-<p>&lt;%</p>
-<p>double total = (Runtime.getRuntime().totalMemory()) / (1024.0 * 1024);</p>
-<p>double max = (Runtime.getRuntime().maxMemory()) / (1024.0 * 1024);</p>
-<p>double free = (Runtime.getRuntime().freeMemory()) / (1024.0 * 1024);</p>
-<p>out.println(“Java 虚拟机试图使用的最大内存量(当前JVM的最大可用内存)maxMemory(): “ + max + “MB<br>“);</p>
-<p>out.println(“Java 虚拟机中的内存总量(当前JVM占用的内存总数)totalMemory(): “ + total + “MB<br>“);</p>
-<p>out.println(“Java 虚拟机中的空闲内存量(当前JVM空闲内存)freeMemory(): “ + free + “MB<br>“);</p>
-<p>out.println(“因为JVM只有在需要内存时才占用物理内存使用，所以freeMemory()的值一般情况下都很小，<br>“ +</p>
-<p>“而JVM实际可用内存并不等于freeMemory()，而应该等于 maxMemory()-totalMemory()+freeMemory()。<br>“);</p>
-<p>out.println(“JVM实际可用内存: “ + (max - total + free) + “MB<br>“);</p>
-<p>%&gt;</p>
-<p>`</p>
-<p>保存运行即可。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/09/13/e6-9f-a5-e7-9c-8btomcat-e5-86-85-e5-ad-98-e7-9b-b8-e5-85-b3-e4-bf-a1-e6-81-af/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
@@ -1180,15 +1171,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">微信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1200,11 +1191,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1216,11 +1207,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">外包</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color3">外包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1252,11 +1243,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
               <li class="article-tag-list-item">

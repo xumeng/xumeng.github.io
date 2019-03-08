@@ -195,6 +195,90 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2015-08-03-OSX-Develop-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/03/2015-08-03-OSX-Develop-1/">OS X应用在状态栏添加图标</a>
+    </h1>
+  
+
+        
+        <a href="/2015/08/03/2015-08-03-OSX-Develop-1/" class="archive-article-date">
+  	<time datetime="2015-08-03T12:56:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>直接上代码:</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">Tray</span> : <span class="title">NSObject</span> &lt;<span class="title">NSApplicationDelegate</span>&gt; </span>&#123;</span><br><span class="line"><span class="built_in">NSStatusItem</span> *trayItem;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line">  </span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">Tray</span></span></span><br><span class="line">  </span><br><span class="line">- (<span class="keyword">void</span>)testAction:(<span class="keyword">id</span>)sender;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"Hello World"</span>);</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">- (<span class="keyword">void</span>)quitAction:(<span class="keyword">id</span>)sender;</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="built_in">NSApp</span> terminate:sender];</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">- (<span class="keyword">void</span>)applicationDidFinishLaunching:(<span class="built_in">NSNotification</span> *)note;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSZone</span> *zone = [<span class="built_in">NSMenu</span> menuZone];</span><br><span class="line">    <span class="built_in">NSMenu</span> *menu = [[<span class="built_in">NSMenu</span> allocWithZone:zone] init];</span><br><span class="line">    <span class="built_in">NSMenuItem</span> *item;</span><br><span class="line">  </span><br><span class="line">    item = [menu addItemWithTitle:<span class="string">@"Testing"</span> action:<span class="keyword">@selector</span>(testAction:) keyEquivalent:<span class="string">@""</span>];</span><br><span class="line">    [item setTarget:<span class="keyword">self</span>];</span><br><span class="line">  </span><br><span class="line">    item = [menu addItemWithTitle:<span class="string">@"Quit"</span> action:<span class="keyword">@selector</span>(quitAction:) keyEquivalent:<span class="string">@""</span>];</span><br><span class="line">    [item setTarget:<span class="keyword">self</span>];</span><br><span class="line">  </span><br><span class="line">    trayItem = [[<span class="built_in">NSStatusBar</span> systemStatusBar] statusItemWithLength:<span class="built_in">NSSquareStatusItemLength</span>];</span><br><span class="line">    [trayItem setMenu:menu];</span><br><span class="line">    [trayItem setHighlightMode:<span class="literal">YES</span>];</span><br><span class="line">    [trayItem setTitle:<span class="string">@"HERE"</span>];</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">OSX</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/08/03/2015-08-03-OSX-Develop-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-2015-07-29-Study-iOS-Path" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1894,102 +1978,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2013-10-10-long-time-no-see" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/10/10/2013-10-10-long-time-no-see/">long time no see</a>
-    </h1>
-  
-
-        
-        <a href="/2013/10/10/2013-10-10-long-time-no-see/" class="archive-article-date">
-  	<time datetime="2013-10-10T03:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-10-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>好久没写博客了，因为太忙。</p>
-<p>至于忙什么，谁也不知道！</p>
-<h3 id="这大半年经历挺多的"><a href="#这大半年经历挺多的" class="headerlink" title="这大半年经历挺多的:"></a>这大半年经历挺多的:</h3><ul>
-<li>女朋友3月来深圳，开始一起生活的日子。</li>
-<li>7月6号和女友一起去许昌，全家大团圆。</li>
-<li>10月1号和女友一起去同里她妈妈那。</li>
-<li>未完待续</li>
-</ul>
-<p>每天都很累，也多少感觉一些充实。</p>
-<p>时间在过，世界在变。</p>
-<p>当时间走过，如果不能留点什么给将来，简直是个遗憾。</p>
-<p>所以我决定重新写博客，有空的时候写一点点，以备后看。</p>
-<p>加油吧，少年！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/鬼画弧//" class="article-tag-list-link color4">鬼画弧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2013/10/10/2013-10-10-long-time-no-see/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
@@ -2095,15 +2083,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">微信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2115,11 +2103,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2131,11 +2119,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">外包</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color3">外包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2167,11 +2155,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
               <li class="article-tag-list-item">
