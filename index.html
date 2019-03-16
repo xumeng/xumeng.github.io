@@ -202,7 +202,7 @@ var _hmt = _hmt || [];
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/07/2019-03-07-jstat-documentation/">jstat命令详解</a>
+      <a class="article-title" href="/2019/03/07/2019-03-07-jstat-documentation/">jstat官方文档, jstat命令详解</a>
     </h1>
   
 
@@ -215,7 +215,43 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>jstat 用于监视 Java 虚拟机(JVM)的统计数据。这个命令是实验性的，不受支持。</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><code>jstat &lt;一般选项 | 输出选项&gt; &lt;vmid&gt; &lt;时间间隔&gt; &lt;count&gt;</code></p>
+<p><code>jstat -&lt;option&gt; [-t] [-h&lt;lines&gt;] &lt;vmid&gt; [&lt;interval&gt; [&lt;count&gt;]]</code></p>
+<p><strong><em>一般选项</em></strong></p>
+<p>​    一个通用命令行选项，<code>-help</code> 或者 <code>-options</code>。详见 <a href="">一般选项</a></p>
+<p><strong><em>输出选项</em></strong></p>
+<p>​    包含单个 <code>statOption</code>的一个或多个输出选项，以及 -t，-h 和 -J 选项。详见<a href="">输出选项</a></p>
+<p><strong><em>vmid</em></strong></p>
+<p>​    虚拟机标识符，是指示目标 JVM 的一个字符串。一般格式如下：</p>
+<p>​    <code>[protocol:][//]lvmid[@hostname[:port]/servername]</code></p>
+<p>​    <code>vmid</code> 的语法对应 URI 的语法。<code>vmid</code> 字符串可以是从表示本地 JVM 的一个整数，到指定通信协议、端口和其他特定实现值的更复杂的结构。详见<a href="">虚拟机标识符</a></p>
+<p><strong><em>间隔时间</em></strong></p>
+<p>​    以指定单位秒(s)或毫秒(ms)的采样间隔。默认是秒，必须为正整数。当指定时，<code>jstat</code> 命令会在每个间隔时间进行输出。</p>
+<p><strong><em>数量</em></strong></p>
+<p>​    要显示的样本数。默认无穷大，这样 <code>jstat</code> 命令会一直输出的统计信息，直到 JVM 终止或者 <code>jstat</code> 命令终止。必须为正整数。</p>
+<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p><code>jstat</code> 命令显示被监测的 Java HotSpot VM的性能统计数据。用虚拟机标识符或者<code>vmid</code>选项标识目标 JVM。</p>
+<h2 id="虚拟机标识"><a href="#虚拟机标识" class="headerlink" title="虚拟机标识"></a>虚拟机标识</h2><p>vmid 的语法对应于 URI 的语法：</p>
+<p><code>[protocol:][//]lvmid[@hostname[:port]/servername]</code> </p>
+<p><strong><em>protocol</em></strong></p>
+<p>​    通信协议，如果省略协议且没有指定主机名，默认协议是特定于平台的优化本地协议。如果省略了协议并指定主机名，那么默认协议是 <code>RMI</code>。</p>
+<p><strong><em>lvmid</em></strong></p>
+<p>​    目标 JVM 的本地虚拟机标识。<code>lvmid</code> 是一个特定于平台的值，它唯一地标识系统上的 JVM。<code>lvmid</code> 是虚拟机标识符唯一需要的组件。lvmid 通常是(但不一定是)目标 JVM 进程的操作系统的标识符。你可以使用 <code>jps</code> 命令来确定 <code>lvmid</code>，此外也可以在 Solaris、Linux、OS X平台上使用 <code>ps</code>命令来确定 <code>lvmid</code>，在 Windows上可以使用 Windows 任务管理器来操作。</p>
+<p><strong><em>hostname</em></strong></p>
+<p>​    目标主机的主机名或 IP 地址。如果省略了 <code>hostname</code>，默认是本地主机。</p>
+<p><strong><em>port</em></strong></p>
+<p>​    与远程服务器通信的端口。如果省略主机名或协议指指定优化的本地协议，则忽略端口值。否则，端口参数的处理是特定于实现的。对于默认的 <code>rmi</code> 协议，端口值指示远程主机上 rmiregistry 的端口号。如果省略端口值且协议值指示 <code>rmi</code>，则使用默认 rmiregistry 的端口。</p>
+<p><code>servername</code></p>
+<p>​    servername 参数的矗立取决于实现。对于优化的本地协议，这个字段被忽略。对于 <code>rmi</code> 协议，它表示远程主机上 RMI 远程对象的名称。</p>
+<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><p>jstat 命令支持两种选项类型：一般选项和输出选项。一般选项用来显示简单的用法和版本信息。输出选项决定统计输出的内容和格式。</p>
+<p>所有选项及其功能都可能在未来的版本中更改或移除。</p>
+<h4 id="一般选项"><a href="#一般选项" class="headerlink" title="一般选项"></a>一般选项</h4><p>如果你指定了一个一般选项，则不能再指定任何其他选项或参数。</p>
+<p><strong><em>-help</em></strong></p>
+<p>​    显示帮助信息    </p>
+<p><strong><em>-options</em></strong></p>
+<p>​    显示一个统计选项列表，详见<a href="">输出选项</a></p>
+<p>​    </p>
+
       
 
       
@@ -1466,19 +1502,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Windows</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Note</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微信</a>
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1487,10 +1527,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1506,6 +1542,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
               </li>
              
@@ -1518,11 +1558,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
+                <a href="javascript:void(0)" class="js-tag color3">ES</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1534,23 +1578,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ES</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">作品</a>
+                <a href="javascript:void(0)" class="js-tag color3">架构</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">架构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1562,11 +1594,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">作品</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Cooking</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1579,10 +1619,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">PHP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
             
             <div class="clearfix"></div>
