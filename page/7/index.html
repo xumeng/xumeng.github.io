@@ -195,6 +195,202 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2015-08-08-XMShareModule" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/08/2015-08-08-XMShareModule/">开源一个iOS快速简单集成国内三大平台分享的模块</a>
+    </h1>
+  
+
+        
+        <a href="/2015/08/08/2015-08-08-XMShareModule/" class="archive-article-date">
+  	<time datetime="2015-08-08T12:56:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ReadMe"><a href="#ReadMe" class="headerlink" title="ReadMe"></a>ReadMe</h1><p>为了方便第三方开发者快速简单的集成国内三大社交平台（微信，QQ，微博），故造此轮子。</p>
+<p><em><code>目前支持微信（微信好友，微信朋友圈），QQ，QQ空间，新浪微博）</code></em></p>
+<p>关于此模块的Bug反馈、建议、口水等等，请大家狠拍并提交到Github上，我会尽快解决。</p>
+<p>该模块会继续完善优化，争取为大家提供一个更快速、更简单、更规范、扩展性更好的集成模块。</p>
+<p>===========<br><img src="http://i1.tietuku.com/d62804985316df60.gif" alt="图片"></p>
+<h1 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h1><ul>
+<li>快速</li>
+<li>简单</li>
+<li>易集成</li>
+<li>支持网页/SSO</li>
+<li>扩展性好</li>
+<li>可定制</li>
+</ul>
+<p>===</p>
+<h1 id="更新-Log"><a href="#更新-Log" class="headerlink" title="更新 Log"></a>更新 Log</h1><pre><code>* 2015-09-29 修复网页微博分享时内容没有传入的 Bug
+* 2015-10-29 适配 iOS 9 下分享
+* 2015-11-04 新增三大平台分享后的回调
+* 2016-01-11 新增适配 iOS 9 SSO 的 `LSApplicationQueriesSchemes`配置说明
+</code></pre><h1 id="集成步骤"><a href="#集成步骤" class="headerlink" title="集成步骤"></a>集成步骤</h1><h3 id="1-下载微信、QQ、微博的社交sdk并导入至项目中"><a href="#1-下载微信、QQ、微博的社交sdk并导入至项目中" class="headerlink" title="1. 下载微信、QQ、微博的社交sdk并导入至项目中"></a>1. 下载微信、QQ、微博的社交sdk并导入至项目中</h3><ul>
+<li><em>可在本页下方参考资料中取得</em></li>
+</ul>
+<h3 id="2-导入它们所需的系统framework与库"><a href="#2-导入它们所需的系统framework与库" class="headerlink" title="2. 导入它们所需的系统framework与库"></a>2. 导入它们所需的系统framework与库</h3><p>程序 —— Targets —— Build Phases —— Link Binary With Libraries</p>
+<p><code>Security.framework</code>, <code>SystemConfiguration.framework</code>, <code>CoreGraphics.framework</code>, <code>CoreTelephony.framework</code>, <code>QuartzCore.framework</code>, <code>ImageIO.framework</code>, <code>CoreText.framework</code>, <code>UIKit.framework</code>, <code>Foundation.framework</code>, <code>libsqlite3.dylib</code>, <code>libc++.dylib</code>, <code>libz.dylib</code>, <code>libstdc++.dylib</code>, <code>libiconv.dylib</code></p>
+<ul>
+<li><em>(具体可参考本页底部参考资料链接)</em></li>
+</ul>
+<h3 id="3-设置编译选项"><a href="#3-设置编译选项" class="headerlink" title="3. 设置编译选项"></a>3. 设置编译选项</h3><p>程序 —— Targets —— Build Settings —— Linking —— Other Linker Flag 添加 <code>-ObjC</code></p>
+<h3 id="4-设置URL-Schema"><a href="#4-设置URL-Schema" class="headerlink" title="4. 设置URL Schema"></a>4. 设置URL Schema</h3><ol>
+<li>程序 —— Targets —— Info —— URL Types</li>
+</ol>
+<p>分别添加微信，QQ，微博</p>
+<p><code>tencentopenapi</code> : <code>tencent222222</code></p>
+<p><code>mqqapi</code> : <code>QQ0605C97A</code></p>
+<p><code>weibo</code> : <code>wb2045436852</code></p>
+<p><code>weixin</code> : <code>wxd930ea5d5a258f4f</code></p>
+<ul>
+<li><p><em>以上均为测试app key，具体可以去对应的开放平台注册</em></p>
+</li>
+<li><p><em>mqqapi 是 tencent 的 app key 转十六进制，不足八位在前面补 0 的结果</em><br><br></p>
+</li>
+</ul>
+<ol start="2">
+<li>在 Info.plist 中添加<code>LSApplicationQueriesSchemes</code>项，<br>分别添加社交平台的几个白名单：<br>mqq<br>mqqopensdkapiV2<br>mqqapi<br>weibosdk2.5<br>weibosdk<br>weibo<br>weixin<br>wechat</li>
+</ol>
+<p>具体列表请至获取<a href="http://dev.umeng.com/social/ios/ios9" target="_blank" rel="noopener">iOS 9 应用跳转适配</a></p>
+<h3 id="5-导入XMShareView至项目中"><a href="#5-导入XMShareView至项目中" class="headerlink" title="5. 导入XMShareView至项目中"></a>5. 导入XMShareView至项目中</h3><h5 id="XMShareView结构介绍："><a href="#XMShareView结构介绍：" class="headerlink" title="XMShareView结构介绍："></a>XMShareView结构介绍：</h5><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CommonMarco.h</td>
+<td>通用宏文件，包含APP Key等宏</td>
+</tr>
+<tr>
+<td>ExtView/</td>
+<td>扩展View，VerticalUIButton为图片文件垂直对齐按钮</td>
+</tr>
+<tr>
+<td>Resource/</td>
+<td>图片等资源，包含微信、QQ、微博图标</td>
+</tr>
+<tr>
+<td>ShareUtil/</td>
+<td>分享工具类</td>
+</tr>
+<tr>
+<td>XMShareView.h</td>
+<td>分享显示视图</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-在AppDelegate-m中注册"><a href="#6-在AppDelegate-m中注册" class="headerlink" title="6. 在AppDelegate.m中注册"></a>6. 在AppDelegate.m中注册</h3><ol>
+<li>导入文件头</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;WXApi.h&quot;</span><br><span class="line">#import &lt;TencentOpenAPI/TencentOAuth.h&gt;</span><br><span class="line">#import &quot;WeiboSDK.h&quot;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>在 <code>application -&gt; didFinishLaunchingWithOptions</code> 方法中注册</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[WXApi registerApp:APP_KEY_WEIXIN];</span><br><span class="line">[WeiboSDK enableDebugMode:YES];</span><br><span class="line">[WeiboSDK registerApp:APP_KEY_WEIBO];</span><br></pre></td></tr></table></figure>
+<h3 id="7-在ViewController-m-中引用"><a href="#7-在ViewController-m-中引用" class="headerlink" title="7. 在ViewController.m 中引用"></a>7. 在<code>ViewController.m</code> 中引用</h3><ul>
+<li><p>导入文件头</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;XMShareView.h&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加一个属性</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property (nonatomic, strong) XMShareView *shareView;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在点击分享的方法添加如下代码：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">if(!self.shareView)&#123;</span><br><span class="line">     </span><br><span class="line">     self.shareView = [[XMShareView alloc] initWithFrame:self.view.bounds];</span><br><span class="line">     </span><br><span class="line">     self.shareView.alpha = 0.0;</span><br><span class="line"></span><br><span class="line">     self.shareView.shareTitle = NSLocalizedString(@&quot;分享标题&quot;, nil);</span><br><span class="line">     </span><br><span class="line">     self.shareView.shareText = NSLocalizedString(@&quot;分享内容&quot;, nil);</span><br><span class="line">     </span><br><span class="line">     self.shareView.shareUrl = @&quot;http://xumeng.github.com&quot;;</span><br><span class="line">     </span><br><span class="line">     [self.view addSubview:self.shareView];</span><br><span class="line">     </span><br><span class="line">     [UIView animateWithDuration:1 animations:^&#123;</span><br><span class="line">         self.shareView.alpha = 1.0;</span><br><span class="line">     &#125;];</span><br><span class="line">     </span><br><span class="line">     </span><br><span class="line"> &#125;else&#123;</span><br><span class="line">     [UIView animateWithDuration:1 animations:^&#123;</span><br><span class="line">         self.shareView.alpha = 1.0;</span><br><span class="line">     &#125;];</span><br><span class="line">     </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-处理-URL-跳转"><a href="#8-处理-URL-跳转" class="headerlink" title="8. 处理 URL 跳转"></a>8. 处理 URL 跳转</h3><h4 id="在-AppDelegate-类中实现两个处理-URL-跳转的方法。"><a href="#在-AppDelegate-类中实现两个处理-URL-跳转的方法。" class="headerlink" title="在 AppDelegate 类中实现两个处理 URL 跳转的方法。"></a>在 <code>AppDelegate</code> 类中实现两个处理 URL 跳转的方法。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation</span><br><span class="line">&#123;</span><br><span class="line">    if ([[url absoluteString] hasPrefix:@&quot;tencent&quot;]) &#123;</span><br><span class="line">        </span><br><span class="line">//        return [TencentOAuth HandleOpenURL:url];</span><br><span class="line">        return [QQApiInterface handleOpenURL:url delegate:self];</span><br><span class="line">        </span><br><span class="line">    &#125;else if([[url absoluteString] hasPrefix:@&quot;wb&quot;]) &#123;</span><br><span class="line">        </span><br><span class="line">        return [WeiboSDK handleOpenURL:url delegate:self];</span><br><span class="line">        </span><br><span class="line">    &#125;else if([[url absoluteString] hasPrefix:@&quot;wx&quot;]) &#123;</span><br><span class="line"></span><br><span class="line">        //  处理微信回调需要在具体的 ViewController 中处理。</span><br><span class="line">        ViewController *vc = (ViewController *)self.window.rootViewController;</span><br><span class="line">        return [WXApi handleOpenURL:url delegate:vc];</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return NO;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url</span><br><span class="line">&#123;</span><br><span class="line">    if ([[url absoluteString] hasPrefix:@&quot;tencent&quot;]) &#123;</span><br><span class="line">        </span><br><span class="line">        return [TencentOAuth HandleOpenURL:url];</span><br><span class="line">        </span><br><span class="line">    &#125;else if([[url absoluteString] hasPrefix:@&quot;wb&quot;]) &#123;</span><br><span class="line">        </span><br><span class="line">        return [WeiboSDK handleOpenURL:url delegate:self];</span><br><span class="line">        </span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        </span><br><span class="line">        ViewController *vc = (ViewController *)self.window.rootViewController;</span><br><span class="line">        return [WXApi handleOpenURL:url delegate:vc];</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9-处理分享后的回调"><a href="#9-处理分享后的回调" class="headerlink" title="9. 处理分享后的回调"></a>9. 处理分享后的回调</h3><p><strong><em>特别提醒：（下方方法体内是示例代码，具体业务逻辑请具体实现）</em></strong></p>
+<ul>
+<li>微信分享：在具体的调用 ViewController 类里面实现微信 <code>WXApiDelegate</code> 协议，然后实现以下方法：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- (void)onResp:(BaseResp *)resp</span><br><span class="line">&#123;</span><br><span class="line">    NSString *message;</span><br><span class="line">    if(resp.errCode == 0) &#123;</span><br><span class="line">        message = @&quot;分享成功&quot;;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        message = @&quot;分享失败&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    showAlert(message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>QQ 分享：在 <code>AppDelegate</code> 类中实现 <code>QQApiInterfaceDelegate</code> 协议，然后实现以下方法：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- (void)onResp:(QQBaseResp *)resp</span><br><span class="line">&#123;</span><br><span class="line">    NSString *message;</span><br><span class="line">    if([resp.result integerValue] == 0) &#123;</span><br><span class="line">        message = @&quot;分享成功&quot;;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        message = @&quot;分享失败&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    showAlert(message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>微博分享：在 <code>AppDelegate</code> 类中实现 <code>WeiboSDKDelegate</code> 协议，然后实现以下方法：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">- (void)didReceiveWeiboResponse:(WBBaseResponse *)response</span><br><span class="line">&#123;</span><br><span class="line">    NSString *message;</span><br><span class="line">    switch (response.statusCode) &#123;</span><br><span class="line">        case WeiboSDKResponseStatusCodeSuccess:</span><br><span class="line">            message = @&quot;分享成功&quot;;</span><br><span class="line">            break;</span><br><span class="line">        case WeiboSDKResponseStatusCodeUserCancel:</span><br><span class="line">            message = @&quot;取消分享&quot;;</span><br><span class="line">            break;</span><br><span class="line">        case WeiboSDKResponseStatusCodeSentFail:</span><br><span class="line">            message = @&quot;分享失败&quot;;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            message = @&quot;分享失败&quot;;</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    showAlert(message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="http://wiki.connect.qq.com/ios_sdk%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" target="_blank" rel="noopener">QQ iOS SDK 环境搭建</a></p>
+<p><a href="https://github.com/sinaweibosdk/weibo_ios_sdk/blob/master/%E5%BE%AE%E5%8D%9AiOS%E5%B9%B3%E5%8F%B0SDK%E6%96%87%E6%A1%A3V3.1.1.pdf" target="_blank" rel="noopener">新浪微博 iOS SDK 环境搭建</a></p>
+<p><a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=1417694084&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">微信 iOS SDK 环境搭建</a></p>
+<p><a href="http://dev.umeng.com/social/ios/ios9" target="_blank" rel="noopener">iOS 9 适配 SSO</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/08/08/2015-08-08-XMShareModule/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-2015-08-03-OSX-Develop-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1882,102 +2078,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2013-10-15-xubumeng-on-weixin" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/10/15/2013-10-15-xubumeng-on-weixin/">折腾了个微信公众号</a>
-    </h1>
-  
-
-        
-        <a href="/2013/10/15/2013-10-15-xubumeng-on-weixin/" class="archive-article-date">
-  	<time datetime="2013-10-15T03:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-10-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这两天没事折腾了一下微信的公众号，我的公众号(订阅号，不支持自定义菜单)在右边，有兴趣的可以扫下:)</p>
-<h4 id="1-注册并提交自己的手持身份证照片"><a href="#1-注册并提交自己的手持身份证照片" class="headerlink" title="1.   注册并提交自己的手持身份证照片"></a>1.   注册并提交自己的手持身份证照片</h4><h4 id="2-简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。"><a href="#2-简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。" class="headerlink" title="2.   简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。"></a>2.   简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。</h4><h4 id="3-在BAE注册并创建移动web应用，我选择的是PHP的。"><a href="#3-在BAE注册并创建移动web应用，我选择的是PHP的。" class="headerlink" title="3.   在BAE注册并创建移动web应用，我选择的是PHP的。"></a>3.   在BAE注册并创建移动web应用，我选择的是PHP的。</h4><h4 id="4-下载微信接口示例代码，并参考微信接口文档，开启折腾之路。"><a href="#4-下载微信接口示例代码，并参考微信接口文档，开启折腾之路。" class="headerlink" title="4.   下载微信接口示例代码，并参考微信接口文档，开启折腾之路。"></a>4.   下载微信接口示例代码，并参考微信接口文档，开启折腾之路。</h4><h4 id="5-目前采用了很多第三方API，支持有"><a href="#5-目前采用了很多第三方API，支持有" class="headerlink" title="5.   目前采用了很多第三方API，支持有"></a>5.   目前采用了很多第三方API，支持有</h4><pre><code>*    机器人聊天
-*    查天气（发送 城市+天气，如 深圳天气，目前支持全国各省市地区）
-*    查PM2.5（同上，如 珠海空气）
-*    看笑话（发送 笑话，支持分类）
-*    看妹子图（发送 妹子 或者 MM 或者 美女，单次查看妹子图目前有限制:D）
-*    藏头诗（发送 藏头诗+任意字句，如 藏头诗徐不猛）
-*    翻译（发送 翻译+词句，如翻译i love you)
-*    看歌词（发送 歌词+歌曲名，如歌词后来）
-*    查域名信息（发送 域名+域名地址，如域名xubumeng.com，或者直接发送域名地址）
-*    查IP信息（发送 归属+IP地址，如归属192.168.1.111，或者直接发送IP地址）
-*    查看手机归属（同上，如归属13888888888 或者 13888888888）
-*    计算器（发送 计算+计算式，如 计算1+1，该功能暂时有些问题，敬请期待更新:p）
-</code></pre><h4 id="6-更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers"><a href="#6-更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers" class="headerlink" title="6.   更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers:)"></a>6.   更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers:)</h4>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">微信</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2013/10/15/2013-10-15-xubumeng-on-weixin/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
@@ -2087,11 +2187,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微信</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2115,11 +2215,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2127,19 +2227,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ES</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">深圳</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2148,10 +2248,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故乡</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">架构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2167,6 +2263,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">架构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">作品</a>
               </li>
              
@@ -2179,7 +2279,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2187,7 +2287,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">

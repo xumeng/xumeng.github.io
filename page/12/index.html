@@ -195,6 +195,114 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java-e6-9b-b4-e6-94-b9-e5-ad-97-e6-ae-b5-e7-b1-bb-e5-9e-8b-e5-af-bc-e8-87-b4flex-e6-8a-a5nosuchmethoderror-e7-9a-84-e9-94-99-e8-af-af" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/07/12/java-e6-9b-b4-e6-94-b9-e5-ad-97-e6-ae-b5-e7-b1-bb-e5-9e-8b-e5-af-bc-e8-87-b4flex-e6-8a-a5nosuchmethoderror-e7-9a-84-e9-94-99-e8-af-af/">java更改字段类型导致Flex报NoSuchMethodError的错误</a>
+    </h1>
+  
+
+        
+        <a href="/2012/07/12/java-e6-9b-b4-e6-94-b9-e5-ad-97-e6-ae-b5-e7-b1-bb-e5-9e-8b-e5-af-bc-e8-87-b4flex-e6-8a-a5nosuchmethoderror-e7-9a-84-e9-94-99-e8-af-af/" class="archive-article-date">
+  	<time datetime="2012-07-12T13:59:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>普通的一天，从梦想开始。</p>
+<p>想到那蛋疼的KPI一大团的难题，想都那个改了SP的类型为何flex就不能访问了。</p>
+<p>本来想早点去公司全力以赴的，奈何睡神打败了我，比闹钟提前十多分钟醒来。</p>
+<p>经过一天的奋战，终于把kpi的问题解决了，擦着汗水笑不了，因为那个蛋疼的SP！</p>
+<p>&nbsp;</p>
+<p>这里说下这个问题的情况：</p>
+<p>之前这个字段spnumber在java中定义为int，大家知道java中int的最大值是2147483647。</p>
+<p>但是后来发现10位数已经满足不了spnumber的需求了。</p>
+<p>然后我改成long，long的最大值有19位9223372036854775807。可以满足需求了。</p>
+<p>改完数据类型后，get set方法也相应改掉，get方法名为getSpNumber()。</p>
+<p>改完后，因为flex都是用Number处理，不需更改，然后我编译java，重启web server，然后在flex访问就出现了一个错误：</p>
+<p><span style="color: #ff0000;">NoSuchMethodError：getSpNumber()I …</span></p>
+<p>我百思不得其姐，好好的方法怎么会出现后面多个I呢。</p>
+<p>认为是什么缓存之类的，反复的build项目，clean项目，清除浏览器缓存，都无效。</p>
+<p>内牛满面了。</p>
+<p>更搞的是，我把spnumber从long改回int，又不报错了。</p>
+<p>顺便说下，我的开发工具是eclipse+flex builder，通过blazeds通信，之前一直可以调试java，但是这两天忽然的就无法调试了。</p>
+<p>反复的搞就是不行，不能调试对于程序员来说简直是致命的打击。</p>
+<p>今天忽然的就好了。</p>
+<p>插话完毕。</p>
+<p>然后我想试试运行到这个类内部是怎么执行的，就加个断点。按照惯例，需要改变一下代码然后编译一下再试才能进入断点。</p>
+<p>然后尼玛突然可以了。不报那个错误了！！！</p>
+<p>总结：还是缓存！！！</p>
+<p><span style="color: #ff0000;">遇到这种问题，啥都别说，执行哪个方法出错的，就改下这个方法的代码，build一下，重新运行，保证OK！</span></p>
+<p>google 百度没帮到我..</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Flex</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2012/07/12/java-e6-9b-b4-e6-94-b9-e5-ad-97-e6-ae-b5-e7-b1-bb-e5-9e-8b-e5-af-bc-e8-87-b4flex-e6-8a-a5nosuchmethoderror-e7-9a-84-e9-94-99-e8-af-af/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-flex-e6-97-a5-e6-9c-9f-e5-a4-84-e7-90-86" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1074,102 +1182,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-php-e5-ad-a6-e4-b9-a0-e4-ba-8c-ef-bc-9aphp-e5-9f-ba-e7-a1-80-e8-af-ad-e6-b3-95-e5-ad-a6-e4-b9-a0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/05/24/php-e5-ad-a6-e4-b9-a0-e4-ba-8c-ef-bc-9aphp-e5-9f-ba-e7-a1-80-e8-af-ad-e6-b3-95-e5-ad-a6-e4-b9-a0/">PHP学习二：php基础语法学习</a>
-    </h1>
-  
-
-        
-        <a href="/2012/05/24/php-e5-ad-a6-e4-b9-a0-e4-ba-8c-ef-bc-9aphp-e5-9f-ba-e7-a1-80-e8-af-ad-e6-b3-95-e5-ad-a6-e4-b9-a0/" class="archive-article-date">
-  	<time datetime="2012-05-24T15:28:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-05-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前言：<br>今天学习php基础语法<br>目标：会php基础语法<br>过程：</p>
-<p>1.php的语法：<br>&lt;?php</p>
-<p>?&gt;<br>也可以&lt;? ?&gt;(不推荐)<br>echo：输出<br>2.声明变量:<br>$var_name = value;<br>不必声明数据类型</p>
-<p>3.操作字符串：<br>. 连接字符串，如a.b结果为ab<br>strleng(“hello”) 计算字符串长度<br>strpos(“source”,”o”) 搜索第二个参数在第一个参数里面的index，未匹配返回false</p>
-<p>4.运算符：<br>算数+-<em>/% ++ –<br>赋值：= += -= </em>= /= .= %=（例：x.=y 意为x = x.y）<br>比较运算符：<br>== != &gt; &lt; &gt;= &lt;=<br>逻辑运算符：<br>&amp;&amp; || ！</p>
-<p>5.条件语句：<br>if else<br>switch</p>
-<p>6.数组：</p>
-<p>a.数值数组<br>带有数字 ID 键的数组：<br>$names = array(“Peter”,”Quagmire”,”Joe”);<br>b.关联数组<br>数组中的每个 ID 键关联一个值<br>$ages[‘Peter’] = “32”;<br>$ages[‘Quagmire’] = “30”;<br>$ages[‘Joe’] = “34”;<br>=&gt;是键值映射的关系<br>$ages = array(“Peter”=&gt;32, “Quagmire”=&gt;30, “Joe”=&gt;34);<br>c.多维数组<br>包含一个或多个数组的数组</p>
-<p>7.循环<br>while,  do while, for, foreach<br>foreach($arr_name as $value_name){<br> echo $value_name<br>}</p>
-<p>8.函数：</p>
-<p>9.表单：<br>$_GET 变量用于收集来自 method=”get” 的表单中的值。<br>$_GET[“age”]; 获取表单里面name为age的值<br>get最多100个字符</p>
-<p>PHP 的 $_REQUEST 变量包含了 $_GET, $_POST 以及 $_COOKIE 的内容。<br>PHP 的 $_REQUEST 变量可用来取得通过 GET 和 POST 方法发送的表单数据的结果。<br>$_POST 变量用于收集来自 method=”post” 的表单中的值。</p>
-<p>小结：w3schol尼玛太坑爹！<br>运算符，数组，有空复习一下。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/05/24/php-e5-ad-a6-e4-b9-a0-e4-ba-8c-ef-bc-9aphp-e5-9f-ba-e7-a1-80-e8-af-ad-e6-b3-95-e5-ad-a6-e4-b9-a0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
@@ -1279,11 +1291,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微信</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1307,11 +1319,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1319,19 +1331,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ES</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">深圳</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1340,10 +1352,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">故乡</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">架构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1359,6 +1367,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">架构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">作品</a>
               </li>
              
@@ -1371,7 +1383,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1379,7 +1391,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
