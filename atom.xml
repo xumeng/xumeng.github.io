@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amonxu.com/"/>
-  <updated>2019-03-20T08:25:12.228Z</updated>
+  <updated>2019-03-26T14:10:56.896Z</updated>
   <id>http://amonxu.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何来一次说干就干的重构</title>
+    <link href="http://amonxu.com/2019/03/26/2019-03-26-Refactoring/"/>
+    <id>http://amonxu.com/2019/03/26/2019-03-26-Refactoring/</id>
+    <published>2019-03-26T14:10:33.000Z</published>
+    <updated>2019-03-26T14:10:56.896Z</updated>
+    
+    <content type="html"><![CDATA[<p>给自己挖了坑，这两天补上来。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;给自己挖了坑，这两天补上来。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="Technology" scheme="http://amonxu.com/categories/Technology/"/>
+    
+    
+      <category term="架构" scheme="http://amonxu.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>20190317基督教宝安堂游记</title>
@@ -492,32 +518,6 @@
       
         &lt;p&gt;&lt;img src=&quot;https://wx4.sinaimg.cn/mw690/8cba4200gy1fuqg12kfqmj20yi1pcgp3.jpg&quot; alt=&quot;sjy&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;四季怨&lt;/strong&gt; &lt;a href=&quot;http://music
-      
-    
-    </summary>
-    
-      <category term="鬼画弧" scheme="http://amonxu.com/categories/%E9%AC%BC%E7%94%BB%E5%BC%A7/"/>
-    
-    
-      <category term="随笔" scheme="http://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>青衫湿</title>
-    <link href="http://amonxu.com/2018/08/28/2018-08-28-Qing-Shan-Shi/"/>
-    <id>http://amonxu.com/2018/08/28/2018-08-28-Qing-Shan-Shi/</id>
-    <published>2018-08-28T08:32:45.000Z</published>
-    <updated>2019-01-16T08:08:21.484Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://wx2.sinaimg.cn/mw690/8cba4200gy1fuqg30f69dj20yi1pcgph.jpg" alt="qss"></p><p><strong>青衫湿</strong> <a href="http://music.163.com/#/m/song?id=461656630" target="_blank" rel="noopener">🎵</a>  </p><p> 登高车马深，<br> 倚楼山水昏。<br> 每见尾气起，<br> 犹思炊烟升。<br> 挥汗十余载，<br> 无悔付青春。<br> 愿求她长伴，<br> 青衫易功勋。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://wx2.sinaimg.cn/mw690/8cba4200gy1fuqg30f69dj20yi1pcgph.jpg&quot; alt=&quot;qss&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;青衫湿&lt;/strong&gt; &lt;a href=&quot;http://music
       
     
     </summary>

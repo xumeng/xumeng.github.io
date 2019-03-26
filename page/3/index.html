@@ -203,6 +203,92 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2018-08-28-Qing-Shan-Shi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/28/2018-08-28-Qing-Shan-Shi/">青衫湿</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/28/2018-08-28-Qing-Shan-Shi/" class="archive-article-date">
+  	<time datetime="2018-08-28T08:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://wx2.sinaimg.cn/mw690/8cba4200gy1fuqg30f69dj20yi1pcgph.jpg" alt="qss"></p>
+<p><strong>青衫湿</strong> <a href="http://music.163.com/#/m/song?id=461656630" target="_blank" rel="noopener">🎵</a>  </p>
+<p> 登高车马深，<br> 倚楼山水昏。<br> 每见尾气起，<br> 犹思炊烟升。<br> 挥汗十余载，<br> 无悔付青春。<br> 愿求她长伴，<br> 青衫易功勋。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/鬼画弧//" class="article-tag-list-link color4">鬼画弧</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/28/2018-08-28-Qing-Shan-Shi/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-2018-07-19-UITextView" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -998,113 +1084,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2018-05-12-ES-Remark" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/12/2018-05-12-ES-Remark/">ES 备忘</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/12/2018-05-12-ES-Remark/" class="archive-article-date">
-  	<time datetime="2018-05-12T08:43:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Date-Histogram时区："><a href="#Date-Histogram时区：" class="headerlink" title="Date Histogram时区："></a>Date Histogram时区：</h4><p>遇到一个按时间统计数据不一致的bug，怀疑是时区的问题，设置下时区即可。</p>
-<p><strong>查询语句中：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;query&quot;: &#123;&#125;,</span><br><span class="line">  &quot;aggs&quot;: &#123;</span><br><span class="line">    &quot;dateAgg&quot;: &#123;</span><br><span class="line">      &quot;date_histogram&quot;: &#123;</span><br><span class="line">        &quot;field&quot;: &quot;@timestamp&quot;,</span><br><span class="line">        &quot;interval&quot;: &quot;1d&quot;,			//1s/1m/1h/1d/1w/1M/1q/1y</span><br><span class="line">        &quot;format&quot;: &quot;yyyy-MM-dd&quot;,</span><br><span class="line">        &quot;time_zone&quot;: &quot;+08:00&quot;		//时区设置</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Java 中：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AggregationBuilder aggregationBuilder = AggregationBuilders.dateHistogram(<span class="string">"dateAgg"</span>).field(<span class="string">"@timestamp"</span>).dateHistogramInterval(DateHistogramInterval.DAY).format(<span class="string">"yyyy-MM-dd"</span>).timeZone(DateTimeZone.forID(<span class="string">"Asia/Shanghai"</span>));</span><br></pre></td></tr></table></figure>
-<p>参考资料:<a href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/_looking_at_time.html" target="_blank" rel="noopener">官方文档</a></p>
-<hr>
-<h4 id="Date-Histogram统计后再去重"><a href="#Date-Histogram统计后再去重" class="headerlink" title="Date Histogram统计后再去重"></a>Date Histogram统计后再去重</h4><p>查询语句:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&quot;aggs&quot;: &#123;</span><br><span class="line">    &quot;dateAgg&quot;: &#123;</span><br><span class="line">      &quot;date_histogram&quot;: &#123;</span><br><span class="line">        &quot;field&quot;: &quot;@timestamp&quot;,</span><br><span class="line">        &quot;interval&quot;: &quot;1d&quot;,</span><br><span class="line">        &quot;format&quot;: &quot;yyyy-MM-dd&quot;,</span><br><span class="line">        &quot;time_zone&quot;: &quot;+08:00&quot;</span><br><span class="line">      &#125;,</span><br><span class="line">      &quot;aggs&quot;: &#123;</span><br><span class="line">        &quot;distinctUserIdAgg&quot;: &#123;</span><br><span class="line">          &quot;cardinality&quot;: &#123;</span><br><span class="line">            &quot;field&quot;: &quot;user_id&quot;,         //去重字段</span><br><span class="line">            &quot;precision_threshold&quot;: 1000    //精度，范围0-40000</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Java中：</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CardinalityAggregationBuilder userIdAggregationBuilder = AggregationBuilders.cardinality(<span class="string">"userIdAgg"</span>).field(<span class="string">"user_id"</span>).precisionThreshold(<span class="number">40000</span>);</span><br><span class="line">                aggregationBuilder.subAggregation(userIdAggregationBuilder);</span><br></pre></td></tr></table></figure></p>
-<p>参考资料:<a href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/cardinality.html" target="_blank" rel="noopener">官方文档</a></p>
-<hr>
-<h4 id="根据分数区间统计"><a href="#根据分数区间统计" class="headerlink" title="根据分数区间统计"></a>根据分数区间统计</h4><p>例如要统计班级学生考试分数哪个区间的人最多。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;query&quot;: &#123;&#125;,</span><br><span class="line">  &quot;aggs&quot;: &#123;</span><br><span class="line">    &quot;scoreAgg&quot;: &#123;</span><br><span class="line">      &quot;histogram&quot;: &#123;</span><br><span class="line">        &quot;field&quot;: &quot;score&quot;,   //根据哪个字段划分区间</span><br><span class="line">        &quot;interval&quot;: 10,     //划分区间大小</span><br><span class="line">        &quot;order&quot;: &#123;</span><br><span class="line">          &quot;_count&quot;: &quot;desc&quot;  //排序</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>参考资料:<a href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/_building_bar_charts.html" target="_blank" rel="noopener">官方文档</a></p>
-<hr>
-<h4 id="根据分数区间统计后再去重"><a href="#根据分数区间统计后再去重" class="headerlink" title="根据分数区间统计后再去重"></a>根据分数区间统计后再去重</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;query&quot;: &#123;&#125;,</span><br><span class="line">  &quot;aggs&quot;: &#123;</span><br><span class="line">    &quot;scoreAgg&quot;: &#123;</span><br><span class="line">      &quot;histogram&quot;: &#123;</span><br><span class="line">        &quot;field&quot;: &quot;score&quot;,</span><br><span class="line">        &quot;interval&quot;: 10,</span><br><span class="line">        &quot;order&quot;: &#123;</span><br><span class="line">          &quot;_count&quot;: &quot;desc&quot;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      &quot;aggs&quot;: &#123;</span><br><span class="line">        &quot;userIdAgg&quot;: &#123;</span><br><span class="line">          &quot;cardinality&quot;: &#123;</span><br><span class="line">            &quot;field&quot;: &quot;user_id&quot;,</span><br><span class="line">            &quot;precision_threshold&quot;: 1000</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="Fielddata-is-disabled-on-text-fields-by-default-Set-fielddata-true-on-xxx-in-order-to-load-fielddata-in-memory-by-uninverting-the-inverted-index-Note-that-this-can-however-use-significant-memor"><a href="#Fielddata-is-disabled-on-text-fields-by-default-Set-fielddata-true-on-xxx-in-order-to-load-fielddata-in-memory-by-uninverting-the-inverted-index-Note-that-this-can-however-use-significant-memor" class="headerlink" title="Fielddata is disabled on text fields by default. Set fielddata=true on xxx in order to load fielddata in memory by uninverting the inverted index. Note that this can however use significant memor"></a>Fielddata is disabled on text fields by default. Set fielddata=true on xxx in order to load fielddata in memory by uninverting the inverted index. Note that this can however use significant memor</h4><p>这个错误的官方解释在这里: <code>Fielddata can consume a lot of heap space, especially when loading high cardinality text fields. Once fielddata has been loaded into the heap, it remains there for the lifetime of the segment. Also, loading fielddata is an expensive process which can cause users to experience latency hits. This is why fielddata is disabled by default.</code></p>
-<p>解决方案:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">curl -XPUT &apos;http://&#123;ip&#125;:&#123;port&#125;/&#123;index_name&#125;/_mapping/&#123;type_name&#125;&apos; -d &apos;</span><br><span class="line">&#123;       </span><br><span class="line">  &quot;properties&quot;: &#123;</span><br><span class="line">        &quot;&#123;field_name&#125;&quot;: &#123;  </span><br><span class="line">            &quot;type&quot;: &quot;text&quot;,</span><br><span class="line">            &quot;fielddata&quot;: true</span><br><span class="line">        &#125;       </span><br><span class="line">    &#125;         </span><br><span class="line">&#125;&apos;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>type_name:ES中type的值</li>
-<li>field_name:要top统计字段的名字</li>
-</ul>
-<p>参考资料:<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/fielddata.html" target="_blank" rel="noopener">官方文档</a>。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ES</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/12/2018-05-12-ES-Remark/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -1230,11 +1209,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+                <a href="javascript:void(0)" class="js-tag color4">OSX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1246,11 +1225,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">外包</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color3">外包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1282,10 +1261,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">作品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
@@ -1298,6 +1273,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">作品</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Cooking</a>
               </li>
              
@@ -1306,11 +1285,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
