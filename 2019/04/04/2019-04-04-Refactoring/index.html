@@ -6,25 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://amonxu.com">
-  <title>如何来一次说干就干的重构 (流程篇) | 逐鹿 IT</title>
+  <title>如何来一次说干就干的重构 (流程篇) | 逐鹿IT,猛猛如玉</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前言随着公司业务的爆炸式的增长，需求规模和用户规模也迅速地膨胀起来，这样给系统的三高(高性能、高并发、高可用)以及扩展性、可维护性都带来了考验。而旧系统因为早期设计的各种局限性（如早期参与人员的水平、架构设计的前瞻性、老板的急性子等等），逐渐满足不了现状和未来的新需求，暴露出各种问题。开发人员们像是拖着老破车上高速，苦不堪言。（说人话：老系统代码的坑太深了，开发们填不住了，要么被坑埋了，要么弃坑">
 <meta name="keywords" content="架构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何来一次说干就干的重构 (流程篇)">
 <meta property="og:url" content="http://amonxu.com/2019/04/04/2019-04-04-Refactoring/index.html">
-<meta property="og:site_name" content="逐鹿 IT">
+<meta property="og:site_name" content="逐鹿IT,猛猛如玉">
 <meta property="og:description" content="前言随着公司业务的爆炸式的增长，需求规模和用户规模也迅速地膨胀起来，这样给系统的三高(高性能、高并发、高可用)以及扩展性、可维护性都带来了考验。而旧系统因为早期设计的各种局限性（如早期参与人员的水平、架构设计的前瞻性、老板的急性子等等），逐渐满足不了现状和未来的新需求，暴露出各种问题。开发人员们像是拖着老破车上高速，苦不堪言。（说人话：老系统代码的坑太深了，开发们填不住了，要么被坑埋了，要么弃坑">
 <meta property="og:locale" content="Chinese">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g1vk1lffwij30dw0dbmyn.jpg">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1g1vksog3csj308c08cq3g.jpg">
-<meta property="og:updated_time" content="2019-04-09T07:26:14.505Z">
+<meta property="og:updated_time" content="2019-04-09T07:33:21.035Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何来一次说干就干的重构 (流程篇)">
 <meta name="twitter:description" content="前言随着公司业务的爆炸式的增长，需求规模和用户规模也迅速地膨胀起来，这样给系统的三高(高性能、高并发、高可用)以及扩展性、可维护性都带来了考验。而旧系统因为早期设计的各种局限性（如早期参与人员的水平、架构设计的前瞻性、老板的急性子等等），逐渐满足不了现状和未来的新需求，暴露出各种问题。开发人员们像是拖着老破车上高速，苦不堪言。（说人话：老系统代码的坑太深了，开发们填不住了，要么被坑埋了，要么弃坑">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g1vk1lffwij30dw0dbmyn.jpg">
   
-    <link rel="alternative" href="/atom.xml" title="逐鹿 IT" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="逐鹿IT,猛猛如玉" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -77,10 +77,10 @@ var _hmt = _hmt || [];
 			<img src="https://avatars1.githubusercontent.com/u/2187660?v=3&amp;s=460" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/categories/Technology/">逐鹿 IT</a></h1>
+		  <h1 class="header-author"><a href="/categories/Technology/">逐鹿IT, 猛猛如玉</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">君子猛猛如玉</p>
+		<p class="header-subtitle">书山有路勤为径，学海无涯苦作舟。</p>
 		
 
 		<nav class="header-menu">
@@ -145,10 +145,10 @@ var _hmt = _hmt || [];
 				<img src="https://avatars1.githubusercontent.com/u/2187660?v=3&amp;s=460" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">逐鹿 IT</h1>
+			  <h1 class="header-author js-header-author">逐鹿IT, 猛猛如玉</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>君子猛猛如玉<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>书山有路勤为径，学海无涯苦作舟。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -276,6 +276,7 @@ var _hmt = _hmt || [];
 <p>参与人员：运维人员，测试人员</p>
 <h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>通过上述几个步骤后，我们成功对系统进行重构。</p>
 <p>重构是一项大工程，但经历重构后的系统也并非完美无缺。重构不是终点，更像是起点。</p>
+<hr>
 <div align="center"><img src="https://ws2.sinaimg.cn/large/006tNc79gy1g1vksog3csj308c08cq3g.jpg" alt="1554732250"></div>
 
 <center>扫码关注有惊喜</center>
@@ -467,7 +468,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 逐鹿 IT
+    		&copy; 2019 逐鹿IT, 猛猛如玉
     	</div>
       	<div class="footer-right">
       		致谢: <a href="http://hexo.io/" target="_blank">Hexo</a> / <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> / <a href="https://github.com/imsun/gitment" target="_blank">Gitment</a> 
@@ -570,11 +571,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
+                <a href="javascript:void(0)" class="js-tag color5">War3</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">War3</a>
+                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -602,19 +603,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ES</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -630,10 +631,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">作品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
@@ -646,6 +643,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">作品</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Cooking</a>
               </li>
              
@@ -654,15 +655,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Flex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
