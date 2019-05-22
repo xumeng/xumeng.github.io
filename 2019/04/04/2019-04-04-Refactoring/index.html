@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="逐鹿IT,猛猛如玉">
 <meta property="og:description" content="前言随着公司业务的爆炸式的增长，需求规模和用户规模也迅速地膨胀起来，这样给系统的三高(高性能、高并发、高可用)以及扩展性、可维护性都带来了考验。而旧系统因为早期设计的各种局限性（如早期参与人员的水平、架构设计的前瞻性、老板的急性子等等），逐渐满足不了现状和未来的新需求，暴露出各种问题。开发人员们像是拖着老破车上高速，苦不堪言。（说人话：老系统代码的坑太深了，开发们填不住了，要么被坑埋了，要么弃坑">
 <meta property="og:locale" content="Chinese">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g1vk1lffwij30dw0dbmyn.jpg">
+<meta property="og:image" content="https://images.unsplash.com/photo-1491406213019-05b162a72c20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1g1vksog3csj308c08cq3g.jpg">
-<meta property="og:updated_time" content="2019-04-09T07:33:21.035Z">
+<meta property="og:updated_time" content="2019-05-22T09:42:09.919Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何来一次说干就干的重构 (流程篇)">
 <meta name="twitter:description" content="前言随着公司业务的爆炸式的增长，需求规模和用户规模也迅速地膨胀起来，这样给系统的三高(高性能、高并发、高可用)以及扩展性、可维护性都带来了考验。而旧系统因为早期设计的各种局限性（如早期参与人员的水平、架构设计的前瞻性、老板的急性子等等），逐渐满足不了现状和未来的新需求，暴露出各种问题。开发人员们像是拖着老破车上高速，苦不堪言。（说人话：老系统代码的坑太深了，开发们填不住了，要么被坑埋了，要么弃坑">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g1vk1lffwij30dw0dbmyn.jpg">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1491406213019-05b162a72c20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
   
     <link rel="alternative" href="/atom.xml" title="逐鹿IT,猛猛如玉" type="application/atom+xml">
   
@@ -225,7 +225,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1g1vk1lffwij30dw0dbmyn.jpg" alt="low angle photography of steel trusses"></p>
+        <p><img src="https://images.unsplash.com/photo-1491406213019-05b162a72c20?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="coverimg"></p>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>随着公司业务的爆炸式的增长，需求规模和用户规模也迅速地膨胀起来，这样给系统的三高(高性能、高并发、高可用)以及扩展性、可维护性都带来了考验。而旧系统因为早期设计的各种局限性（如早期参与人员的水平、架构设计的前瞻性、老板的急性子等等），逐渐满足不了现状和未来的新需求，暴露出各种问题。开发人员们像是拖着老破车上高速，苦不堪言。（说人话：老系统代码的坑太深了，开发们填不住了，要么被坑埋了，要么弃坑逃跑了…）</p>
 <p>那么这个时候，通常要面临一个问题：是继续填坑还是<del>跑路走人</del> 选择重构。填坑是不可能的，这辈子都不可能的。而选择重构是需要壮士断腕的勇气，因为重构是一项老大难、一件耗时耗力的事情，且多少会对现有业务开发造成影响，甚至是停滞。因此大多时候得不到产品经理和老板的支持，他们关心的只有一个：下个需求什么时候能上！至于其他的，都是你们研发该操心的。</p>
 <p>自己选择的重构路，跪着也要走完。如何来一次就干就干的重构呢？根据互联网常见项目重构流程，以及我的亲身参与的重构项目经历，梳理大中小型系统的常见重构流程如下：</p>
@@ -277,7 +277,7 @@ var _hmt = _hmt || [];
 <h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>通过上述几个步骤后，我们成功对系统进行重构。</p>
 <p>重构是一项大工程，但经历重构后的系统也并非完美无缺。重构不是终点，更像是起点。</p>
 <hr>
-<div align="center"><img src="https://ws2.sinaimg.cn/large/006tNc79gy1g1vksog3csj308c08cq3g.jpg" alt="1554732250"></div>
+<div align="center"><img src="https://ws2.sinaimg.cn/large/006tNc79gy1g1vksog3csj308c08cq3g.jpg" alt="logoimg"></div>
 
 <center>扫码关注有惊喜</center>
 
@@ -559,7 +559,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Windows</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -567,15 +567,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">War3</a>
+                <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">War3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -591,11 +591,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color2">Disqus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -611,11 +611,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
+                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">深圳</a>
+                <a href="javascript:void(0)" class="js-tag color2">Stocks</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -631,19 +631,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">作品</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -655,7 +655,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -663,7 +663,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
               </li>
              
               <li class="article-tag-list-item">
