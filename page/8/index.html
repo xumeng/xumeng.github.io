@@ -205,6 +205,94 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2013-10-21-gongqijun-is-good" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/10/21/2013-10-21-gongqijun-is-good/">喜欢上宫骑峻的动画</a>
+    </h1>
+  
+
+        
+        <a href="/2013/10/21/2013-10-21-gongqijun-is-good/" class="archive-article-date">
+  	<time datetime="2013-10-21T03:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-10-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="开头语-rake-post不支持中文标题，所以只能gongqijun。。。"><a href="#开头语-rake-post不支持中文标题，所以只能gongqijun。。。" class="headerlink" title="开头语:rake post不支持中文标题，所以只能gongqijun。。。"></a>开头语:rake post不支持中文标题，所以只能gongqijun。。。</h6><p>以前我是从来不看日本动漫的，总觉得动漫太幼稚了，且一群操着wataxiwa的人听起来就是在那哇哇叫。</p>
+<p>后来老婆推荐我看宫骑峻的电影，看上一次就喜欢上了。</p>
+<p>里面的画面非常唯美，想象力非常奇特，有很多很可爱的动物，也有很多本来很恐怖很恶心的怪物变得非常可爱。</p>
+<p>宫骑峻电影里面的主题也非常的耐人寻味，真心值得看。</p>
+<p>有机会也得把漫画拿来看看。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Note</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/鬼画弧//" class="article-tag-list-link color4">鬼画弧</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2013/10/21/2013-10-21-gongqijun-is-good/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-2013-10-17-java-binary-search" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -997,100 +1085,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-flex-e7-9a-84-e7-bc-93-e5-ad-98-e9-97-ae-e9-a2-98" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/01/25/flex-e7-9a-84-e7-bc-93-e5-ad-98-e9-97-ae-e9-a2-98/">Flex的缓存问题</a>
-    </h1>
-  
-
-        
-        <a href="/2013/01/25/flex-e7-9a-84-e7-bc-93-e5-ad-98-e9-97-ae-e9-a2-98/" class="archive-article-date">
-  	<time datetime="2013-01-25T06:20:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-01-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>flex下载文件的时候很恶心，第一次下载完后，如果服务器上这个文件又修改了，再下载时是还是取的缓存里第一个文件。<br>通过加随机数（也就是方法二）目测是解决了这个问题，后台仔细测试的时候发现居然在ie中还是不行，在chrome中可以。<br>后台又找了第一种方法，是ok的。</p>
-<p>方法一：<br>本人解决的方法，保证可用。<br>添加过滤器（代码如下）<br>package com.cn.util;</p>
-<p>import java.io.<em> ;<br>import javax.servlet.</em> ;<br>import javax.servlet.http.HttpServletResponse;</p>
-<p>public class ForceNoCacheFilter implements Filter {    </p>
-<p>public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain) throws IOException, ServletException<br>{<br>  ((HttpServletResponse) response).setHeader(“Cache-Control”,”no-cache”);<br>  ((HttpServletResponse) response).setHeader(“Pragma”,”no-cache”);<br>  ((HttpServletResponse) response).setDateHeader (“Expires”, -1);<br>  filterChain.doFilter(request, response);<br>}<br>public void destroy()<br>{<br>}<br>   public void init(FilterConfig filterConfig) throws ServletException<br>{<br>}<br>}    </p>
-<p>然后在web.xml中添加这个过滤器</p>
-<p><filter><br>    <filter-name>NoCache</filter-name><br>    <filter-class>com.cn.util.ForceNoCacheFilter</filter-class><br></filter></p>
-<p><filter-mapping><br>    <filter-name>NoCache</filter-name><br>    <url-pattern>/*</url-pattern><br></filter-mapping></p>
-<p>com.cn.util.ForceNoCacheFilter为刚才过滤器的包名.类名,/*为匹配所有请求。</p>
-<p>这样你所有的请求都将会传到服务器处理，不会查看缓存了。 </p>
-<p>方法二：<br>inComeHttp.url=”familyGroup.do?method=query&amp;tmp=”+Math.random();<br>url上随意传一个随机数</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Flex</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2013/01/25/flex-e7-9a-84-e7-bc-93-e5-ad-98-e9-97-ae-e9-a2-98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
@@ -1188,19 +1182,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Note</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">War3</a>
+                <a href="javascript:void(0)" class="js-tag color5">Note</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1212,6 +1198,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">War3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">OSX</a>
               </li>
              
@@ -1220,11 +1214,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1232,19 +1226,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">外包</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ES</a>
+                <a href="javascript:void(0)" class="js-tag color3">外包</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">ES</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1256,11 +1250,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">故乡</a>
+                <a href="javascript:void(0)" class="js-tag color3">Charles</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Charles</a>
+                <a href="javascript:void(0)" class="js-tag color3">故乡</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1272,15 +1266,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">作品</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1296,11 +1290,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
               </li>
              
               <li class="article-tag-list-item">

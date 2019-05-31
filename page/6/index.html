@@ -205,6 +205,98 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2015-12-03-To-Love" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/03/2015-12-03-To-Love/">致妻 • 乙未年三月六日作</a>
+    </h1>
+  
+
+        
+        <a href="/2015/12/03/2015-12-03-To-Love/" class="archive-article-date">
+  	<time datetime="2015-12-03T09:17:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="致妻"><a href="#致妻" class="headerlink" title="致妻"></a>致妻</h2><p> <em>乙未年三月六日作</em></p>
+<h3 id="冬末朽木离别寒，"><a href="#冬末朽木离别寒，" class="headerlink" title="冬末朽木离别寒，"></a>冬末朽木离别寒，</h3><h3 id="夏初嫩草换新颜。"><a href="#夏初嫩草换新颜。" class="headerlink" title="夏初嫩草换新颜。"></a>夏初嫩草换新颜。</h3><h3 id="五月和风起池浪，"><a href="#五月和风起池浪，" class="headerlink" title="五月和风起池浪，"></a>五月和风起池浪，</h3><h3 id="桃花丛里嬉珂苒。"><a href="#桃花丛里嬉珂苒。" class="headerlink" title="桃花丛里嬉珂苒。"></a>桃花丛里嬉珂苒。</h3><ul>
+<li><p>旧文新发，原作于 2015 年 3 月 6 日 • 深圳 。</p>
+</li>
+<li><p>2015 年 2 月 24 日（冬）别离妻女返深，预计 2015 年 5 月 1 日（夏）再回信阳。</p>
+</li>
+<li><p>“珂苒”：小女。</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/鬼画弧//" class="article-tag-list-link color4">鬼画弧</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/12/03/2015-12-03-To-Love/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-2015-11-11-iOS-CI" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -952,94 +1044,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2015-08-28-iOS-Gesture-Tip" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/26/2015-08-28-iOS-Gesture-Tip/">iOS 子视图不响应父视图手势操作</a>
-    </h1>
-  
-
-        
-        <a href="/2015/08/26/2015-08-28-iOS-Gesture-Tip/" class="archive-article-date">
-  	<time datetime="2015-08-26T09:08:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近遇到一个问题，给父视图添加某个事件，但不想子视图响应此事件。</p>
-<p>解决思路：</p>
-<p>1.处理touchsBegan回调，判断当前点击区域是否在子视图内，</p>
-<p>2.如果是，则不处理，否则处理事件。</p>
-<p>解决方案直接上代码:</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)touchesBegan:(<span class="built_in">NSSet</span> *)touches withEvent:(<span class="built_in">UIEvent</span> *)event</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> touchesBegan:touches withEvent:event];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">UITouch</span> *touch <span class="keyword">in</span> touches) &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">CGRectContainsPoint</span>(子视图.frame, [touch locationInView:父视图]))&#123;</span><br><span class="line">            <span class="comment">//  在区域内</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">//  不在区域内</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Technology//" class="article-tag-list-link color1">Technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/08/26/2015-08-28-iOS-Gesture-Tip/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
     <article id="post-2015-08-26-IB-Set-Radius" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1127,28 +1131,32 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2015-08-22-iOS-UI_Dev" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2015-08-28-iOS-Gesture-Tip" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/22/2015-08-22-iOS-UI_Dev/">iOS 技术分享 —— iOS 界面开发发展史</a>
+      <a class="article-title" href="/2015/08/26/2015-08-28-iOS-Gesture-Tip/">iOS 子视图不响应父视图手势操作</a>
     </h1>
   
 
         
-        <a href="/2015/08/22/2015-08-22-iOS-UI_Dev/" class="archive-article-date">
-  	<time datetime="2015-08-22T03:11:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-22</time>
+        <a href="/2015/08/26/2015-08-28-iOS-Gesture-Tip/" class="archive-article-date">
+  	<time datetime="2015-08-26T09:08:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近需要对公司同事做一个简单的 iOS 技术分享，<br>简单的整理了一个 Keynote，共享在<a href="http://pan.baidu.com/s/1dDCr92T" target="_blank" rel="noopener">点击去下载</a>，<br>需要的自行下载。</p>
-
+        <p>最近遇到一个问题，给父视图添加某个事件，但不想子视图响应此事件。</p>
+<p>解决思路：</p>
+<p>1.处理touchsBegan回调，判断当前点击区域是否在子视图内，</p>
+<p>2.如果是，则不处理，否则处理事件。</p>
+<p>解决方案直接上代码:</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)touchesBegan:(<span class="built_in">NSSet</span> *)touches withEvent:(<span class="built_in">UIEvent</span> *)event</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> touchesBegan:touches withEvent:event];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">UITouch</span> *touch <span class="keyword">in</span> touches) &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">CGRectContainsPoint</span>(子视图.frame, [touch locationInView:父视图]))&#123;</span><br><span class="line">            <span class="comment">//  在区域内</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">//  不在区域内</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -1182,7 +1190,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2015/08/22/2015-08-22-iOS-UI_Dev/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/08/26/2015-08-28-iOS-Gesture-Tip/">展开全文 >></a>
         </p>
       
 
@@ -1308,19 +1316,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Note</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">War3</a>
+                <a href="javascript:void(0)" class="js-tag color5">Note</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1332,6 +1332,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">War3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">OSX</a>
               </li>
              
@@ -1340,11 +1348,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">拾忆集</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1352,19 +1360,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">外包</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ES</a>
+                <a href="javascript:void(0)" class="js-tag color3">外包</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">ES</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1376,11 +1384,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">故乡</a>
+                <a href="javascript:void(0)" class="js-tag color3">Charles</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Charles</a>
+                <a href="javascript:void(0)" class="js-tag color3">故乡</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1392,15 +1400,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">作品</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1416,11 +1424,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
               </li>
              
               <li class="article-tag-list-item">
