@@ -264,7 +264,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/08/26/2015-08-28-iOS-Gesture-Tip/">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/10/17/2015-10-17-Think-10/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
@@ -279,7 +279,7 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/2015/08/26/2015-08-28-iOS-Gesture-Tip/" class="post-title-link" itemprop="url">iOS 子视图不响应父视图手势操作</a>
+            <a href="/2015/10/17/2015-10-17-Think-10/" class="post-title-link" itemprop="url">《十月十八日与李丕郎阔论搬砖》</a>
           
         </h1>
 
@@ -294,7 +294,7 @@
                 
               
 
-              <time title="创建时间：2015-08-26 17:08:11" itemprop="dateCreated datePublished" datetime="2015-08-26T17:08:11+08:00">2015-08-26</time>
+              <time title="创建时间：2015-10-17 16:50:50" itemprop="dateCreated datePublished" datetime="2015-10-17T16:50:50+08:00">2015-10-17</time>
             </span>
           
             
@@ -305,7 +305,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-01-16 15:47:27" itemprop="dateModified" datetime="2019-01-16T15:47:27+08:00">2019-01-16</time>
+                <time title="修改时间：2019-01-16 16:16:27" itemprop="dateModified" datetime="2019-01-16T16:16:27+08:00">2019-01-16</time>
               </span>
             
           
@@ -316,8 +316,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
+                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
+                    <span itemprop="name">鬼画弧</span>
                   </a>
                 </span>
 
@@ -338,8 +338,8 @@
       
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2015/08/26/2015-08-28-iOS-Gesture-Tip/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/26/2015-08-28-iOS-Gesture-Tip/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2015/10/17/2015-10-17-Think-10/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/17/2015-10-17-Think-10/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -354,12 +354,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>最近遇到一个问题，给父视图添加某个事件，但不想子视图响应此事件。</p>
-<p>解决思路：</p>
-<p>1.处理touchsBegan回调，判断当前点击区域是否在子视图内，</p>
-<p>2.如果是，则不处理，否则处理事件。</p>
-<p>解决方案直接上代码:</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)touchesBegan:(<span class="built_in">NSSet</span> *)touches withEvent:(<span class="built_in">UIEvent</span> *)event</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> touchesBegan:touches withEvent:event];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">UITouch</span> *touch <span class="keyword">in</span> touches) &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">CGRectContainsPoint</span>(子视图.frame, [touch locationInView:父视图]))&#123;</span><br><span class="line">            <span class="comment">//  在区域内</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">//  不在区域内</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p>李：你这么能说，为什么不去做销售。<br>余：不去。<br>李：为啥？<br>余：我去了，那些销售人员就要失业了<br>李：[挖鼻孔]<br>余：我想把这个世界上最聪明的脑袋留在工地，建造出一栋栋摩天大楼。<br>李：你装逼。<br>余：装逼只是我的一个副业。<br>李：主业是啥？<br>余：搬砖工。<br>李：去屎。<br>余：不要把我想的多么高大上，其实我只是路边一个小小搬砖工。<br>李：其实我一直认为搬砖是一个高端的职业。<br>余：搬砖没有高低贵贱，搬砖只是搬砖。<br>李：工资来的快拿的高。<br>余：搬砖不为工资，搬砖只求内心的平静。<br>李：累岔气了，还能平静。<br>余：越累越平静。<br>余：不管累还是舒坦，不管搬砖还是指点江山，永远追寻内心的平静，这才是人生真正的奥义。<br>李：我曾经认为X是我精神世界的挚友，后来遇到你，我发现我错了。X只是一个能和我一起挖臭缠子的人，唉。<br>余：红玫瑰与白玫瑰嘛。</p>
+
         
       
     </div>
@@ -475,6 +471,122 @@
 <p>3.点击 <code>Show the Attributes Inspector</code>，勾选 <code>Clip Subviews</code> 即可。</p>
 <p><img src="http://ww4.sinaimg.cn/bmiddle/8cba4200gw1evic4kni6dj209b02mglq.jpg" alt="img"></p>
 
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/08/26/2015-08-28-iOS-Gesture-Tip/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2015/08/26/2015-08-28-iOS-Gesture-Tip/" class="post-title-link" itemprop="url">iOS 子视图不响应父视图手势操作</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2015-08-26 17:08:11" itemprop="dateCreated datePublished" datetime="2015-08-26T17:08:11+08:00">2015-08-26</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-01-16 15:47:27" itemprop="dateModified" datetime="2019-01-16T15:47:27+08:00">2019-01-16</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2015/08/26/2015-08-28-iOS-Gesture-Tip/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/26/2015-08-28-iOS-Gesture-Tip/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近遇到一个问题，给父视图添加某个事件，但不想子视图响应此事件。</p>
+<p>解决思路：</p>
+<p>1.处理touchsBegan回调，判断当前点击区域是否在子视图内，</p>
+<p>2.如果是，则不处理，否则处理事件。</p>
+<p>解决方案直接上代码:</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)touchesBegan:(<span class="built_in">NSSet</span> *)touches withEvent:(<span class="built_in">UIEvent</span> *)event</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> touchesBegan:touches withEvent:event];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">UITouch</span> *touch <span class="keyword">in</span> touches) &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">CGRectContainsPoint</span>(子视图.frame, [touch locationInView:父视图]))&#123;</span><br><span class="line">            <span class="comment">//  在区域内</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">//  不在区域内</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       
     </div>
@@ -2343,118 +2455,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2014/04/21/2014-04-21-fighting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2014/04/21/2014-04-21-fighting/" class="post-title-link" itemprop="url">总有一天，我的生命将抵达终点，而你，将加冕为王!</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2014-04-21 11:11:11" itemprop="dateCreated datePublished" datetime="2014-04-21T11:11:11+08:00">2014-04-21</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-01-16 15:14:23" itemprop="dateModified" datetime="2019-01-16T15:14:23+08:00">2019-01-16</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2014/04/21/2014-04-21-fighting/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/04/21/2014-04-21-fighting/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="2014，我要拼了！"><a href="#2014，我要拼了！" class="headerlink" title="2014，我要拼了！"></a>2014，我要拼了！</h1><p>####</p>
-<h2 id="For-the-Lisa-King"><a href="#For-the-Lisa-King" class="headerlink" title="For the Lisa King!"></a>For the Lisa King!</h2>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -2507,7 +2507,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-count">130</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -2520,7 +2520,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -2533,7 +2533,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">49</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -2596,7 +2596,7 @@
   <div class="links-of-blogroll motion-element">
     <div class="links-of-blogroll-title">
       <i class="fa fa-fw fa-link"></i>
-      推荐看看
+      友情链接
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
@@ -2679,9 +2679,6 @@
   </div>
 
   
-    
-  
-  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js"></script>
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>

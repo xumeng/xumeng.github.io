@@ -264,6 +264,329 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2019/02/20/2019-02-20-Reading-Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2019/02/20/2019-02-20-Reading-Note/" class="post-title-link" itemprop="url">《亿级流量网站架构核心技术》读书笔记</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-20 20:45:33" itemprop="dateCreated datePublished" datetime="2019-02-20T20:45:33+08:00">2019-02-20</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-13 23:21:17" itemprop="dateModified" datetime="2019-11-13T23:21:17+08:00">2019-11-13</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2019/02/20/2019-02-20-Reading-Note/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/20/2019-02-20-Reading-Note/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g0orej4jg5j30m80m8my3.jpg" alt="cover"></p>
+<h1 id="第一部分-概述"><a href="#第一部分-概述" class="headerlink" title="第一部分 概述"></a>第一部分 概述</h1><h3 id="1-交易型系统设计的一些原则"><a href="#1-交易型系统设计的一些原则" class="headerlink" title="1. 交易型系统设计的一些原则"></a>1. 交易型系统设计的一些原则</h3><h5 id="1-1-高并发原则"><a href="#1-1-高并发原则" class="headerlink" title="1.1 高并发原则"></a>1.1 高并发原则</h5><ul>
+<li>无状态</li>
+<li>拆分（系统维度、功能维度、读写维度、AOP 维度、模块维度）</li>
+<li>服务化（进程内服务 - 单机远程服务 - 集群手动注册服务 - 自动注册和发现服务 - 服务的分组/隔离/路由 - 服务治理如限流/黑白名单）</li>
+<li>消息队列</li>
+<li>数据异构（数据异构、数据闭环）</li>
+<li>缓存银弹（浏览器缓存、App 客户端缓存、CDN 缓存、接入层缓存、应用层缓存、分布式缓存）</li>
+<li>并发化</li>
+</ul>
+<h5 id="2-高可用原则"><a href="#2-高可用原则" class="headerlink" title="2. 高可用原则"></a>2. 高可用原则</h5><ul>
+<li>降级</li>
+<li>限流</li>
+<li>切流量</li>
+<li>可回滚</li>
+</ul>
+<h5 id="3-业务设计原则"><a href="#3-业务设计原则" class="headerlink" title="3. 业务设计原则"></a>3. 业务设计原则</h5><ul>
+<li>防重设计(防重 Key、防重表)</li>
+<li>幂等设计（消息中间件）</li>
+<li>流程可定义</li>
+<li>状态与状态机</li>
+<li>后台操作系统可反馈</li>
+<li>后台系统审批化（操作日志记录，保证操作可追溯、可审计）</li>
+<li>文档和注释</li>
+<li>备份</li>
+</ul>
+<h1 id="第二部分-高可用"><a href="#第二部分-高可用" class="headerlink" title="第二部分 高可用"></a>第二部分 高可用</h1><h3 id="2-负载均衡与反向代理"><a href="#2-负载均衡与反向代理" class="headerlink" title="2. 负载均衡与反向代理"></a>2. 负载均衡与反向代理</h3><p>对于一般应用来说，有 Nginx 就可以了，但 Nginx 一般用于七层负载均衡，吞吐量有一定限制，为了提升整体吞吐量，会在 DNS 和 Nginx 之间引入接入层，如使用 LVS(软件负载均衡器)、F5(硬负载均衡器)可以做四层负载均衡，即首先 DNS 解析到 LVS/F5，然后 LVS/F5转发给 Nginx，再由 Nginx 转发给后端 Server。</p>
+<p><strong>负载均衡主要关注几个方面：</strong></p>
+<ul>
+<li>上游服务器配置：使用 upstream server 配置上游服务器</li>
+<li>负载均衡算法：配置多个上游服务器时的负载均衡机制</li>
+<li>失败重试机制</li>
+<li>服务器心跳检查</li>
+</ul>
+<p><strong>负载均衡算法 :</strong></p>
+<ul>
+<li>round-robin：轮询算法，默认 LB 算法，配合 weight 配置可以实现基于权重的轮询</li>
+<li>ip_hash：根据 IP 进行 LB，相同的 IP 将 LB 到同一个upstream server</li>
+<li>hash key：对某一个 key 进行 hash或者使用一致性 hash 算法进行 LB</li>
+<li>least_conn：将请求 LB 到最少活跃连接的 upstream server</li>
+<li>least_time：Nginx 商业版功能，基于最小平均响应时间进行 LB</li>
+</ul>
+<p><strong>健康检查：</strong></p>
+<ul>
+<li>TCP 心跳检查</li>
+<li>HTTP心跳检查</li>
+</ul>
+<h3 id="3-隔离术"><a href="#3-隔离术" class="headerlink" title="3. 隔离术"></a>3. 隔离术</h3><p>隔离是指将系统或资源分割开，系统隔离是为了在系统发生故障时，能限定传播范围和影响范围，即发生故障后不会出现滚雪球效应，从而保证只有出问题的服务不可用，其他服务还是可用的。资源隔离通过隔离来减少资源竞争，保障服务间的相互不影响和可用性。出现系统问题时，可以考虑 LB 路由、自动/手动切换分组或者降级等手段来保障可用性。</p>
+<ul>
+<li>线程隔离（不同的线程池）</li>
+<li>进程隔离（单实例到多子系统）</li>
+<li>集群隔离（不同的集群）</li>
+<li>机房隔离（不同的机房）</li>
+<li>读写隔离（主从模式等）</li>
+<li>快慢隔离</li>
+<li>动静隔离（CDN）</li>
+<li>爬虫隔离</li>
+<li>热点隔离（秒杀、抢购做成独立系统或服务隔离，对于读热点，可以使用多级缓存，对于写热点，可以使用缓存+队列模式削峰，）</li>
+<li>资源隔离</li>
+<li>环境隔离（测试环境、预发布环境、灰度环境、正式环境）</li>
+<li>压测隔离（真实数据、压测数据）</li>
+<li>AB 测试</li>
+<li>缓存隔离</li>
+<li>查询隔离（简单、批量、复杂条件查询分别路由到不同集群）</li>
+<li>使用 Hystrix 隔离</li>
+<li>基于 Servlet 3 实现请求隔离</li>
+</ul>
+<h3 id="4-限流"><a href="#4-限流" class="headerlink" title="4. 限流"></a>4. 限流</h3><p>一般幵发高并发系统常见的限流有：限制总并发数（比如数据库连接池、线程池）、 限制瞬时并发数（如Nginx的limit_conn模块，用来限制瞬时并发连接数）、限制时间 窗口内的平均速率（如Guava的RateLimiter、Nginx的limit_req模块，用来限制每秒的 平均速率），以及限制远程接口调用速率、限制MQ的消费速率等。另外，还可以根据 网络连接数、网络流量、CPU或内存负载等来限流。</p>
+<p><strong>限流算法：</strong></p>
+<ul>
+<li>令牌桶算法</li>
+<li>漏桶算法</li>
+<li>计数器算法</li>
+</ul>
+<p><strong>应用级限流：</strong></p>
+<ul>
+<li>限流总并发、连接、请求数（限制 TPS、QPS）</li>
+<li>限流总资源数（池化，如数据库连接池、线程池）</li>
+<li>限流某个接口的总并发、请求数（使用AtomicLong或者Semaphore进行限流，Hystrix）</li>
+<li>限流某个接口的时间窗请求数（如使用Guava Cache来存储计数器）</li>
+<li>平滑限流某个接口的请求数（Guava RateLimiter）</li>
+</ul>
+<p><strong>分布式限流</strong></p>
+<p>分布式限流最关键的是要将限流服务做成原子化，解决方案可以使用 Redis+Lua 或者 Nginx+Lua 技术进行实现</p>
+<p><strong>接入层限流</strong></p>
+<p>接入层通常指请求流量的入口，主要目的有：负载均衡、非法请求过滤、请求聚合、缓存、降级、限流、A/B测试、服务质量监控等。<br>Nginx接入层限流可以使用 Nginx 自带的两个模块：连接数限流模块 ngx_http_limit_conn_module 和漏桶算法实现的请求限流模块 ngx_http_limit_req_module，或者 OpenResty 提供的 Lua 限流模块 lua-resty-limit-traffic</p>
+<p><strong>节流</strong></p>
+<p>防止多个相同事件连续重复执行，主要有throttleFirst、throttleLast、throttleWithTimeout</p>
+<h3 id="5-降级特技"><a href="#5-降级特技" class="headerlink" title="5. 降级特技"></a>5. 降级特技</h3><p>降级的最终目的是保证核心服务可用，即使是有损的。<br>降级需要根据系统的吞吐量、响应时间、可用率等条件进行手工降级或自动降级。</p>
+<h5 id="5-1-降级预案"><a href="#5-1-降级预案" class="headerlink" title="5.1 降级预案"></a>5.1 <strong>降级预案</strong></h5><p>自动开关降级/人工开关降级，读服务降级/写服务降级，多级降级，页面降级/页面片段降级/页面异步请求降级/服务功能降级/读降级/写降级/爬虫降级/风控降级</p>
+<h5 id="5-2-自动开关降级"><a href="#5-2-自动开关降级" class="headerlink" title="5.2 自动开关降级"></a>5.2 <strong>自动开关降级</strong></h5><ul>
+<li>超时降级</li>
+<li>统计失败次数降级</li>
+<li>故障降级</li>
+<li>限流降级</li>
+</ul>
+<h5 id="5-3-人工开关降级"><a href="#5-3-人工开关降级" class="headerlink" title="5.3 人工开关降级"></a>5.3 <strong>人工开关降级</strong></h5><h5 id="5-4-读服务降级"><a href="#5-4-读服务降级" class="headerlink" title="5.4 读服务降级"></a>5.4 <strong>读服务降级</strong></h5><h5 id="5-5-写服务降级"><a href="#5-5-写服务降级" class="headerlink" title="5.5 写服务降级"></a>5.5 <strong>写服务降级</strong></h5><h5 id="5-6-多级降级"><a href="#5-6-多级降级" class="headerlink" title="5.6 多级降级"></a>5.6 <strong>多级降级</strong></h5><ul>
+<li>页面 js 降级开关</li>
+<li>接入层降级开关</li>
+<li>应用层降级开关</li>
+</ul>
+<h5 id="5-7-配置中心（通过配置方式动态开启-关闭降级开关）"><a href="#5-7-配置中心（通过配置方式动态开启-关闭降级开关）" class="headerlink" title="5.7. 配置中心（通过配置方式动态开启/关闭降级开关）"></a>5.7. <strong>配置中心</strong>（通过配置方式动态开启/关闭降级开关）</h5><ul>
+<li>应用层 API 封装</li>
+<li>使用配置文件实现开关配置</li>
+<li>使用配置中心实现开关配置</li>
+</ul>
+<h5 id="5-8-使用-Hystrix-实现降级"><a href="#5-8-使用-Hystrix-实现降级" class="headerlink" title="5.8. 使用 Hystrix 实现降级"></a>5.8. <strong>使用 Hystrix 实现降级</strong></h5><h5 id="5-9-使用-Hystrix-实现熔断"><a href="#5-9-使用-Hystrix-实现熔断" class="headerlink" title="5.9. 使用 Hystrix 实现熔断"></a>5.9. <strong>使用 Hystrix 实现熔断</strong></h5><h3 id="6-超时与重试机制"><a href="#6-超时与重试机制" class="headerlink" title="6. 超时与重试机制"></a>6. 超时与重试机制</h3><p><strong>代理层超时与重试</strong></p>
+<p>如Haproxy/Nginx/Twemproxy，需设置代理与后端真实服务器之间的网络连接/读/写超时时间</p>
+<p><strong>Web 容器超时</strong></p>
+<p>提供HTTP服务运行环境的，如Tomcat/Jetty，需设置客户端与容器之间的网络连接/读/写超时时间，和在此容器中默认 socket 网络连接/读/写超时时间</p>
+<p><strong>中间件客户端超时与重试</strong></p>
+<p>如 Dubbo、MQ、HttpClient 等，需设置客户的网络连接/读/写超时时间与失败重试机制</p>
+<p><strong>数据库客户端超时</strong></p>
+<p>如MySQL/Oracle/PG，需要分别设置JDBC Connection、Statement的网络连接/读/写超时时间，事务超时时间，获取连接池等待时间</p>
+<p><strong>NOSQL客户端超时</strong></p>
+<p>如Mongo、Redis，需要设置其网络连接/读/写超时时间，获取连接池等待时间</p>
+<p><strong>业务超时</strong></p>
+<p>如订单取消任务、超时活动关闭，还有如Future#get(timeout, unix)限制某个接口的超时时间</p>
+<p><strong>前端Ajax超时</strong></p>
+<p>浏览器通过Ajax访问时的网络连接/读/写超时时间</p>
+<p><strong>总结：</strong></p>
+<blockquote>
+<p>最重要的是网络相关的超时设置。<br>    超时后应该有相应的处理策略，如重试(稍后再试、尝试其它分组服务、尝试其它机房服务)、摘掉不存活节点(负载均衡/分布式缓存场景下)、托底(返回历史数据/静态数据/缓存数据)、等待页或错误页。<br>    对于非幂等写服务应避免重试，可以提前生成唯一流水号保证写服务操作通过流水号来实现幂等操作。<br>    在进行DB/缓存服务器操作时，需经常检查慢查询，同时在超时严重时，可以直接将该服务降级。<br>    对于有负载均衡的中间件，考虑配置心跳/存活检查。</p>
+</blockquote>
+<h3 id="7-回滚机制"><a href="#7-回滚机制" class="headerlink" title="7. 回滚机制"></a>7. 回滚机制</h3><p>回滚是指当程序或数据出错时，将程序和数据恢复到最近的一个正确版本的行为。常见的如事务回滚、代码库回滚、部署版本回滚、数据版本回滚、静态资源版本回滚等。</p>
+<h5 id="7-1-事务回滚"><a href="#7-1-事务回滚" class="headerlink" title="7.1 事务回滚"></a>7.1 事务回滚</h5><p>单库事务回滚直接使用相关 SQL，分布式数据库可以使用分布式事务，如两阶段提交、三阶段提交协议。另外可以考虑入事务表、消息队列、补偿机制(执行/回滚)、TCC 模式(预占/确认/取消)、Sagas模式(拆分事务+补偿机制)等实现最终一致性。</p>
+<h5 id="7-2-代码库回滚"><a href="#7-2-代码库回滚" class="headerlink" title="7.2 代码库回滚"></a>7.2 代码库回滚</h5><p>Git/SVN</p>
+<h5 id="7-3-部署版本回滚"><a href="#7-3-部署版本回滚" class="headerlink" title="7.3 部署版本回滚"></a>7.3 部署版本回滚</h5><p>部署版本化、小版本增量发布、大版本灰度发布、架构升级并发发布</p>
+<h5 id="7-4-数据版本回滚"><a href="#7-4-数据版本回滚" class="headerlink" title="7.4 数据版本回滚"></a>7.4 数据版本回滚</h5><p>设计版本化数据结构时，有全量和增量两种思路</p>
+<h5 id="7-5-静态资源版本回滚"><a href="#7-5-静态资源版本回滚" class="headerlink" title="7.5 静态资源版本回滚"></a>7.5 静态资源版本回滚</h5><p>全量新版本保证版本可追溯。清理CDN 缓存，在新 URL上添加随机数并清理浏览器缓存。请求参数加上版本号</p>
+<h3 id="8-压测与预案"><a href="#8-压测与预案" class="headerlink" title="8. 压测与预案"></a>8. 压测与预案</h3><p>在大促来临之前，研发人员需要对现有系统进行梳理，发现系统瓶颈和问题，然后 进行系统调优来提升系统的健壮性和处理能力。一般通过系统压测来发现系统瓶颈和问 题，然后进行系统优化和容灾（如系统参数调优、单机房容灾、多机房容灾等）。即使 己经把系统优化和容灾做得非常好了，但也存在一些不稳定因素，如网络、依赖服务的 SLA不稳定等，这就需要我们制定应急预案，在出现这些因素后进行路由切换或降级处 理。在大促之前需要进行预案演习，确保预案的有效性。</p>
+<h5 id="8-1-系统压测"><a href="#8-1-系统压测" class="headerlink" title="8.1 系统压测"></a>8.1 <strong>系统压测</strong></h5><p>一般指性能压力测试，评估系统的稳定性和性能，通过压测数据进行系统容量评估，决定是否需要扩容和缩容。压测要有压测方案 {如压测接口、并发量、压测策略（突发、逐步加压、并发量）、压测指标（机器负载、QPS/TPS、响应时间）}，之后产出压测报告{压测方案、机器负载、QPSTPS、响应时间(avg、min、max)、成功率、相关参数(JVM参数、压缩参数)等}，根据压测报告分析的结果进行系统优化和容灾。</p>
+<ul>
+<li>线下压测(使用Jmeter、Apache ab 压测某个接口或某个组件(如DB 连接池)，然后进行调优，实现单个接口或组件性能最优。线下压测环境和线上不同，适合组件级压测，数据只能参考)</li>
+<li>线上压测(按读写分为读压测、写压测、混合压测，按数据仿真度分为仿真压测和引流压测(如TCPCopy)，按是否给用户提供服务分为隔离集群压测和线上集群压测。注意离散压测(选择的数据应该是分散的或长尾的)和全链路压测)</li>
+</ul>
+<h5 id="8-2-系统优化和容灾"><a href="#8-2-系统优化和容灾" class="headerlink" title="8.2 系统优化和容灾"></a>8.2 <strong>系统优化和容灾</strong></h5><p>拿到压测报告后，接下来分析报告，然后进行有针对性的优化，如硬件升级、系统扩容、参数调优、代码优化、架构优化(如加缓存、读写分离、历史数据归档)等，根据压测数据因地制宜地解决。在系统优化时，要进行代码走查，发现不合理的参数配置，如超时时间、降级策略、缓存时间等。在系统压测时进行慢查询排查，如Redis、MySQL等。在应用系统扩容方面，根据往年流量和运营业务方沟通，评估是否需要扩容及扩容容量。扩容时考虑系统容灾，如分组部署、跨机房部署等，保证高可用。</p>
+<h5 id="8-3-应急预案"><a href="#8-3-应急预案" class="headerlink" title="8.3 应急预案"></a>8.3 <strong>应急预案</strong></h5><p>在系统压测后会发现一些系统瓶颈，在系统优化之后会提升系统吞吐量并降低响应时间，容灾之后的系统可用性得以保障，但还存在一些风险，如网络抖动、某台机器负载过高、某个服务变慢、DB load值过高等，为了防止因为这些问题导致系统雪崩，需要制定应急预案。</p>
+<p><strong>应急预案可分几步执行：</strong></p>
+<ul>
+<li>系统分级(划分交易核心系统和交易支撑系统，对不同级别的系统实施不同的质量保障)</li>
+<li>全链路分析(从用户入口到后端存储，梳理出关键路径，进行评估和预案，防止问题的级联效应和雪崩效应)</li>
+<li>配置监控报警</li>
+<li>制定应急预案</li>
+</ul>
+<blockquote>
+<p>最后，要对关联路径实施监控报警，包括服务器监控（CPU使用率、磁盘使用率、网络带宽等）、系统监控（系统存活、URL 状态/内容监控、端口存活等）、JVM 监控（堆内存、GC 次数、线程数等）、接口监控（接口调用量『每秒/每分钟』、接口性能『TOP50/TOP99/TOP999』、接口可用率等）。然后配置报警策略，如监控时间段、报警阈值、通知方式等。在报警后要观察系统状态、监控数据或者日志来查看系统是否真的存在故障，如果确实是故障，则应即及时执行相关预案处理，避免故障扩散。</p>
+</blockquote>
+<h1 id="第三部分-高并发"><a href="#第三部分-高并发" class="headerlink" title="第三部分 高并发"></a>第三部分 高并发</h1><h3 id="9-应用级缓存"><a href="#9-应用级缓存" class="headerlink" title="9. 应用级缓存"></a>9. 应用级缓存</h3><h5 id="9-1-缓存简介"><a href="#9-1-缓存简介" class="headerlink" title="9.1 缓存简介"></a>9.1 缓存简介</h5><p>让数据更接近于使用者，目的是让访问速度更快。</p>
+<h5 id="9-2-缓存命中率"><a href="#9-2-缓存命中率" class="headerlink" title="9.2 缓存命中率"></a>9.2 缓存命中率</h5><p>从缓存中读取数据的次数与总读取次数的比率，命中率越高越好。<br>缓存命中率 = 从缓存中读取次数/总读取次数(从缓存中读取次数+从慢速设备上读取次数)</p>
+<h5 id="9-3-缓存回收策略"><a href="#9-3-缓存回收策略" class="headerlink" title="9.3 缓存回收策略"></a>9.3 缓存回收策略</h5><ul>
+<li>基于空间：设置缓存存储空间，超过空间上限时回收</li>
+<li>基于容量：设置缓存最大数量大小</li>
+<li>基于时间：TTL(Time To Live 存活期)，TTI(Time To Idle 空闲期)</li>
+<li>基于 Java 对象引用：软引用，弱引用</li>
+<li>回收算法：<ul>
+<li>FIFO(First In First out 先进先出算法)</li>
+<li>LRU(Least Recently Used 最近最少使用算法)</li>
+<li>LFU(Least Frequently Used 最不常用算法)</li>
+<li>实际应用中基于 LRU 的缓存居多，如 Guava Cache、Ehcache 等</li>
+</ul>
+</li>
+</ul>
+<h5 id="9-4-Java-缓存类型"><a href="#9-4-Java-缓存类型" class="headerlink" title="9.4 Java 缓存类型"></a>9.4 Java 缓存类型</h5><ul>
+<li>堆缓存：使用Java堆内存来存储缓存对象，好处是没有序列号/反序列化，速度最快。缺点是缓存数据量很大时，GC 暂停时间会变长，存储容量受限于堆空间大小，一般通过软引用/弱引用来存储缓存对象，这样堆内存不足时可以强制回收这部分内存。一般存储较热的数据。</li>
+<li>堆外缓存：存储在堆外内存，可以减少 GC 暂停时间，可以支持更大的缓存空间，但读取数据需要序列化/反序列化，速度较慢。</li>
+<li>磁盘缓存：缓存存在磁盘上，在 JVM 重启时缓存还在，而堆缓存/堆外缓存会丢失，需重新加载。</li>
+<li><p>分布式缓存：与上面的进程内缓存和磁盘缓存不同，多 JVM 实例。可以使用Redis/Ehcache-clustered等实现。</p>
+<pre><code>两种模式:
+* 单机时：存储最热的数据到堆缓存，相对热的数据到堆外缓存，不热的数据到磁盘缓存
+* 集群时：存储最热的数据到堆缓存，相对热的数据到堆外缓存，全量数据到分布式缓存
+</code></pre></li>
+</ul>
+<h5 id="9-5-缓存使用模式"><a href="#9-5-缓存使用模式" class="headerlink" title="9.5 缓存使用模式"></a>9.5 缓存使用模式</h5><p>主要分两大类：Cache-Aside 和 Cache-As-SoR(Read-through、Write-through、Write-behind)</p>
+<p><strong>三个名词</strong>  </p>
+<ul>
+<li>SoR(system-of-record)：记录系统，又叫数据源，即实际存储原始数据的系统</li>
+<li>Cache：缓存，是 SoR 的快照数据，访问速度比 SoR快，放入 Cache 目的是提升访问速度，减少回源到 SoR 的次数</li>
+<li>回源：即回到数据源头获取数据，Cache 没有命中时，需要从 SoR 读取数据。</li>
+</ul>
+<p><strong>缓存使用模式：</strong></p>
+<ul>
+<li>Cache-Aside：业务代码围绕着 Cache 写，是由业务代码直接维护缓存。读场景，先从缓存获取数据，如果没有命中，则回源到 SoR 并将源数据放入缓存供下次读取使用。写场景，先将数据写入 SoR，写入成功后立即将数据同步写入缓存。适合使用 AOP 模式实现。</li>
+<li>Cache-As-SoR：把 Cache 看作为 SoR，所有操作都是对 Cache 进行，然后 Cache 委托给 SoR 进行真实的读写。业务代码中只看到 Cache 的操作，看不到关于 SoR 相关的代码。</li>
+<li>Read-Through：业务代码首先调用 Cache，如果不命中由Cache回源到 SoR。需要配置一个 CacheLoader 组件用来回源到 SoR 加载源数据。</li>
+<li>Write-Through：穿透写模式/直写模式，业务代码首先调用 Cache 写数据，然后由 Cache 负责写缓存和写 SoR，而不是由业务代码。需要配置一个 CacheWriter 组件用来回写 SoR。</li>
+<li>Write-Behind：也叫 Write-Back，回写模式。不同于Write-Through是同步写 SoR 和 Cache，它是异步写，异步之后可以实现批量写、合并写、延时和限流。</li>
+<li>Copy pattern：有 Copy-On-Read(在读时复制) 和 Copy-On-Write(在写时复制)两种。</li>
+</ul>
+<h5 id="9-6-性能测试"><a href="#9-6-性能测试" class="headerlink" title="9.6 性能测试"></a>9.6 性能测试</h5><p>使用 JMH 进行基准性能测试。首先进行 JVM 预热，然后进行度量，产生测试结果。</p>
+<h3 id="10-HTTP-缓存"><a href="#10-HTTP-缓存" class="headerlink" title="10. HTTP 缓存"></a>10. HTTP 缓存</h3><h5 id="10-1-HTTP-缓存简介"><a href="#10-1-HTTP-缓存简介" class="headerlink" title="10.1 HTTP 缓存简介"></a>10.1 HTTP 缓存简介</h5><p>当用浏览器访问网页或 HTTP 服务时，根据服务器端返回的缓存设置响应头将相应内容缓存到浏览器，下次可以直接使用缓存内容或者仅需要去服务器端验证内容是否过期即可。减少浏览器与服务器端之间来回传输的数据量，节省带宽以提升性能。</p>
+<h5 id="10-2-HTTP-缓存"><a href="#10-2-HTTP-缓存" class="headerlink" title="10.2 HTTP 缓存"></a>10.2 HTTP 缓存</h5><ol>
+<li>服务器端响应的 Last-Modified 会在下次请求时，将 If-Modified-Since 请求头带到服务器端进行文档是否修改的验证，如果没有修改就返回304，浏览器可以直接使用缓存内容</li>
+<li>Cache-Control:max-age和 Expires 用户决定浏览器端内容缓存多久，即多久过期，过期后则删除缓存重新从服务器端获取最新的。</li>
+<li>HTTP/1.1规范定义的 Cache-Control 优先级高于 HTTP/1.0规范定义的 Expires</li>
+<li>一般情况下 Expires=当前系统时间+缓存时间(Cache-Control:max-age)</li>
+<li>HTTP/1.1规范定义 ETag 为“被请求变量的实体值”，可简单理解为文档内容摘要，ETag 可用来判断页面内容是否已经被修改过了。</li>
+</ol>
+<h5 id="10-3-一些经验"><a href="#10-3-一些经验" class="headerlink" title="10.3 一些经验"></a>10.3 一些经验</h5><ul>
+<li>只缓存200状态码的响应，像302等要根据实际场景决定，比如当系统出错时，自动302到错误页面，此时缓存302就不对了</li>
+<li>有些也没不需要强一致，可以进行几秒的缓存。比如商品详情页展示的库存，可以缓存几秒钟。短时间的不一致对于用户来说没有影响的</li>
+<li>JS/CSS/image等一些内容缓存时间可以设置为很久，比如1月甚至1年，通过在页面修改版本来控制过期</li>
+<li>假设商品详情页异步加载的一些数据，使用 last-modified 进行过期控制，而服务器端做了逻辑修改，但内容是没有修改的，即内容的最后修改时间没变。若果想过期这些异步加载的数据，则可以考虑在商品详情页添加异步加载数据的版本号，通过添加版本号来加载最新的数据，或者将 last-modified 时间加1来解决，但这种情况下使用 ETag 是更好的选择</li>
+<li>商品详情页异步加载的一些数据，可以考虑更长时间的缓存，比如1个月而不是几分钟。可以通过 MQ 将修改时间推送到商品详情页，从而实现按需过期数据</li>
+<li>服务器端考虑使用 tmpfs 内存文件系统缓存、ssd 缓存，使用服务器端负载均衡算法一致性哈希来提升缓存命中率</li>
+<li>缓存 key 要合理设计。比如去掉某些参数或排序参数，以保证代理层的缓存命中率；要有清理缓存的工具，出问题时能快速清理掉问题 key。</li>
+<li>AB 测试/个性化需求时，要禁用掉浏览器缓存，但要考虑服务器端缓存</li>
+<li>为了便于查找问题一般会在响应头中添加源服务器信息，如访问京东商品详情页会看到 ser 响应头，此投存储了源服务器 IP，以便出现问题时，知道哪台服务器有问题</li>
+</ul>
+<h3 id="11-多级缓存"><a href="#11-多级缓存" class="headerlink" title="11. 多级缓存"></a>11. 多级缓存</h3><p>缓存相关的问题有很多，如缓存算法、热点数据与更新缓存、更新缓存与原子性、缓存崩溃与快速恢复等。<br>多级缓存是指在整个系统架构的不同系统层级进行数据缓存，以提升访问效率。</p>
+<p>典型的应用整体架构和流程如图：</p>
+<p>￼<img src="/Users/amon/Library/Application Support/typora-user-images/E9FDE38F-8D19-4587-8308-6629648903FE/Pasted%20Graphic%201.png" alt="Pasted Graphic 1.png"></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2019/02/19/2019-02-19-Yuan-Xiao-Jie/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -294,11 +617,19 @@
                 
               
 
-              <time title="创建时间：2019-02-19 21:06:01 / 修改时间：22:26:47" itemprop="dateCreated datePublished" datetime="2019-02-19T21:06:01+08:00">2019-02-19</time>
+              <time title="创建时间：2019-02-19 21:06:01" itemprop="dateCreated datePublished" datetime="2019-02-19T21:06:01+08:00">2019-02-19</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-13 23:21:43" itemprop="dateModified" datetime="2019-11-13T23:21:43+08:00">2019-11-13</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -1413,118 +1744,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/11/07/2018-11-07-Back/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2018/11/07/2018-11-07-Back/" class="post-title-link" itemprop="url">回</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-07 18:59:00" itemprop="dateCreated datePublished" datetime="2018-11-07T18:59:00+08:00">2018-11-07</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-01-16 15:02:38" itemprop="dateModified" datetime="2019-01-16T15:02:38+08:00">2019-01-16</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2018/11/07/2018-11-07-Back/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/07/2018-11-07-Back/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>像路遥这样通过努力摆脱农村走进城市的作家，在达成愿望之后又自觉不自觉地返回了农村，并打算一辈子写农村。“在农村的时候，总有一种本能要摆脱，等到出去了，又觉得离不开这里，又会回来。这是很多从农村走去出的人共同的心情。”王天笑说。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1577,7 +1796,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-count">130</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1590,7 +1809,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1603,7 +1822,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">49</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -1666,7 +1885,7 @@
   <div class="links-of-blogroll motion-element">
     <div class="links-of-blogroll-title">
       <i class="fa fa-fw fa-link"></i>
-      推荐看看
+      友情链接
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
@@ -1749,9 +1968,6 @@
   </div>
 
   
-    
-  
-  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js"></script>
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>

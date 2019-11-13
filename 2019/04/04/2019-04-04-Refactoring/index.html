@@ -59,7 +59,7 @@
 </script>
 
   <meta name="description" content="前言随着公司业务的爆炸式的增长，需求规模和用户规模也迅速地膨胀起来，这样给系统的三高(高性能、高并发、高可用)以及扩展性、可维护性都带来了考验。而旧系统因为早期设计的各种局限性（如早期参与人员的水平、架构设计的前瞻性、老板的急性子等等），逐渐满足不了现状和未来的新需求，暴露出各种问题。开发人员们像是拖着老破车上高速，苦不堪言。（说人话：老系统代码的坑太深了，开发们填不住了，要么被坑埋了，要么弃坑">
-<meta name="keywords" content="架构">
+<meta name="keywords" content="架构,重构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何来一次说干就干的重构 (流程篇)">
 <meta property="og:url" content="https://amonxu.com/2019/04/04/2019-04-04-Refactoring/index.html">
@@ -67,7 +67,7 @@
 <meta property="og:description" content="前言随着公司业务的爆炸式的增长，需求规模和用户规模也迅速地膨胀起来，这样给系统的三高(高性能、高并发、高可用)以及扩展性、可维护性都带来了考验。而旧系统因为早期设计的各种局限性（如早期参与人员的水平、架构设计的前瞻性、老板的急性子等等），逐渐满足不了现状和未来的新需求，暴露出各种问题。开发人员们像是拖着老破车上高速，苦不堪言。（说人话：老系统代码的坑太深了，开发们填不住了，要么被坑埋了，要么弃坑">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://images.unsplash.com/photo-1491406213019-05b162a72c20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-<meta property="og:updated_time" content="2019-10-16T11:44:19.314Z">
+<meta property="og:updated_time" content="2019-11-13T15:18:02.940Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何来一次说干就干的重构 (流程篇)">
 <meta name="twitter:description" content="前言随着公司业务的爆炸式的增长，需求规模和用户规模也迅速地膨胀起来，这样给系统的三高(高性能、高并发、高可用)以及扩展性、可维护性都带来了考验。而旧系统因为早期设计的各种局限性（如早期参与人员的水平、架构设计的前瞻性、老板的急性子等等），逐渐满足不了现状和未来的新需求，暴露出各种问题。开发人员们像是拖着老破车上高速，苦不堪言。（说人话：老系统代码的坑太深了，开发们填不住了，要么被坑埋了，要么弃坑">
@@ -309,7 +309,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-16 19:44:19" itemprop="dateModified" datetime="2019-10-16T19:44:19+08:00">2019-10-16</time>
+                <time title="修改时间：2019-11-13 23:18:02" itemprop="dateModified" datetime="2019-11-13T23:18:02+08:00">2019-11-13</time>
               </span>
             
           
@@ -457,6 +457,8 @@
             
               <a href="/tags/架构/" rel="tag"># 架构</a>
             
+              <a href="/tags/重构/" rel="tag"># 重构</a>
+            
           </div>
         
 
@@ -551,7 +553,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-count">130</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -564,7 +566,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -577,7 +579,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">49</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -640,7 +642,7 @@
   <div class="links-of-blogroll motion-element">
     <div class="links-of-blogroll-title">
       <i class="fa fa-fw fa-link"></i>
-      推荐看看
+      友情链接
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
@@ -723,9 +725,6 @@
   </div>
 
   
-    
-  
-  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js"></script>
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
