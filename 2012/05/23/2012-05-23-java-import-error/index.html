@@ -58,18 +58,19 @@
   };
 </script>
 
-  <meta name="description" content="青衫濕登高車馬深，倚樓山水昏。每見尾氣起，猶思炊煙升。揮汗十余載，無悔付青春。願求她長伴，青衫易功勛。">
-<meta name="keywords" content="逐鹿IT,猛猛如玉,amonxu,xumeng,Java,程序员,程序员进阶,程序人生,程序世界,Java开发,Java高级开发,架构师,CTO,CIO,CEO,Java进阶,架构,性能调优,Spring,微服务,JVM,Docker,Golang,iOS,SpringCloud,SpringBoot,SpringMVC,Oracle,MySQL,Linux,MongoDB,K8S,职场故事,职场趣事,BAT,一线互联网,编程,人工智能,大数据,云计算,蚂蚁金服,阿里巴巴,腾讯,百度,Google,Facebook,Amazon,重构,互联网,企业智能,项目管理,技术管理,领导力,创新力,企业管理,MBA,开发者,编程,代码,IT,软件工程,软件工程师,软件工程师进阶,高级软件工程师,开源,IT技术博客,IT网站,Developer,Programmer,Coder,Geek,architecture,coding,development,996,信阳,深圳,mengxu,徐猛,猛徐">
-<meta property="og:type" content="website">
-<meta property="og:title" content="逐鹿IT,猛猛如玉">
-<meta property="og:url" content="https://amonxu.com/archives/page/9/index.html">
+  <meta name="description" content="在eclipse里面开发java项目的时候，偶尔会遇到无法导包的问题， 如： import com.sun.management.OperatingSystemMXBean;无法导入。本来想导com.sun.management包内的，却只有java.lang包的这个类。com.sun.management.OperatingSystemMXBean位于java lib的rt.jar，在eclip">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java有时候无法导包问题的临时解决方法">
+<meta property="og:url" content="https://amonxu.com/2012/05/23/2012-05-23-java-import-error/index.html">
 <meta property="og:site_name" content="逐鹿IT,猛猛如玉">
-<meta property="og:description" content="青衫濕登高車馬深，倚樓山水昏。每見尾氣起，猶思炊煙升。揮汗十余載，無悔付青春。願求她長伴，青衫易功勛。">
+<meta property="og:description" content="在eclipse里面开发java项目的时候，偶尔会遇到无法导包的问题， 如： import com.sun.management.OperatingSystemMXBean;无法导入。本来想导com.sun.management包内的，却只有java.lang包的这个类。com.sun.management.OperatingSystemMXBean位于java lib的rt.jar，在eclip">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-14T14:14:24.236Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="逐鹿IT,猛猛如玉">
-<meta name="twitter:description" content="青衫濕登高車馬深，倚樓山水昏。每見尾氣起，猶思炊煙升。揮汗十余載，無悔付青春。願求她長伴，青衫易功勛。">
-  <link rel="canonical" href="https://amonxu.com/archives/page/9/">
+<meta name="twitter:title" content="java有时候无法导包问题的临时解决方法">
+<meta name="twitter:description" content="在eclipse里面开发java项目的时候，偶尔会遇到无法导包的问题， 如： import com.sun.management.OperatingSystemMXBean;无法导入。本来想导com.sun.management包内的，却只有java.lang包的这个类。com.sun.management.OperatingSystemMXBean位于java lib的rt.jar，在eclip">
+  <link rel="canonical" href="https://amonxu.com/2012/05/23/2012-05-23-java-import-error/">
 
 
 <script id="page-configurations">
@@ -77,13 +78,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>归档 | 逐鹿IT,猛猛如玉</title>
+  <title>java有时候无法导包问题的临时解决方法 | 逐鹿IT,猛猛如玉</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66727739-1"></script>
     <script>
@@ -239,24 +240,6 @@
 
     
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
 </nav>
 </div>
     </header>
@@ -277,338 +260,199 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        
-        
-         
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/23/2012-05-23-java-import-error/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
           
-        <span class="collection-header">很好! 目前共计 129 篇日志。 继续努力。</span>
-      </div>
+            java有时候无法导包问题的临时解决方法
+            
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2012-05-23 12:49:39" itemprop="dateCreated datePublished" datetime="2012-05-23T12:49:39+08:00">2012-05-23</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-14 22:14:24" itemprop="dateModified" datetime="2019-11-14T22:14:24+08:00">2019-11-14</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2012/05/23/2012-05-23-java-import-error/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/05/23/2012-05-23-java-import-error/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>在eclipse里面开发java项目的时候，偶尔会遇到无法导包的问题，</p>
+<p>如：</p>
+<p><code>import com.sun.management.OperatingSystemMXBean;</code><br>无法导入。本来想导com.sun.management包内的，却只有java.lang包的这个类。<br>com.sun.management.OperatingSystemMXBean位于java lib的rt.jar，<br>在eclipse里面可以看到项目引用的JRE System Library里面有rt.jar，<br>并且可以打开看到也有com.sun.management这个包，里面也有OperatingSystemMXBean这个类，<br>但是为何总是无法导入呢。<br>偶然的发现一个解决办法：<br><span style="color: #ff0000;">在项目的java Build Path-Libraries里面，把JRE System Library Remove掉，然后再重新添加Library，</span><br><span style="color: #ff0000;"> 点击右边的Add Library-JRE System Library-就默认选择workspace default JRE-finish。</span><br>遇到这样奇葩的问题，就这样试试吧:)</p>
+
+    </div>
+
+    
+    
+    
       
 
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="逐鹿IT, 猛猛如玉 wechat" style="width: 200px; max-width: 100%;">
+  <div>扫一扫关注我，有惊喜不迷路 <br/>（转载本站文章请注明作者和出处: <b>逐鹿IT 猛猛如玉</b>）<br/> 网址: <a href='https://amonxu.com'>https://amonxu.com</a> 微信公众号: <b>itcraft</b> </div>
+</div>
+
       
-
-  
-  
-
-  
-    
-    <div class="collection-year">
-      <h1 class="collection-header">2013</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2013-03-29T11:38:24+08:00"
-              content="2013-03-29">
-          03-29
-        </time>
+        
+      
+        <div class="reward-container">
+  <div>可以请我喝瓶水吗:)</div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block;">
+        <img src="/images/wxpay.jpg" alt="逐鹿IT, 猛猛如玉 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="逐鹿IT, 猛猛如玉 支付宝">
+        <p>支付宝</p>
       </div>
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2013/03/29/e5-88-9b-e5-bb-ba-e5-ad-90-e8-99-9a-e6-8b-9f-e7-9b-98-e5-90-8e-e7-88-b6-e8-99-9a-e6-8b-9f-e7-9b-98-e5-8f-91-e7-94-9f-e6-94-b9-e5-8f-98/" itemprop="url">
-            <span itemprop="name">创建子虚拟盘后父虚拟盘发生改变</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2013-03-20T18:17:32+08:00"
-              content="2013-03-20">
-          03-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2013/03/20/e7-8e-b0-e5-9c-a8-e6-84-9f-e8-a7-89-e4-b8-8d-e5-96-9c-e6-ac-a2-e5-86-99-e6-96-87-e7-ab-a0-e4-ba-86-ef-bc-8c/" itemprop="url">
-            <span itemprop="name">现在感觉不喜欢写文章了，</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2013-02-20T09:27:05+08:00"
-              content="2013-02-20">
-          02-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2013/02/20/e6-96-b0-e5-b9-b4-e5-a5-bd-ef-bc-81-e6-96-b0-e7-9a-84-e4-b8-80-e5-b9-b4-e5-bf-83-e6-83-b3-e4-ba-8b-e6-88-90-ef-bc-8c-e4-b8-87-e4-ba-8b-e5-a6-82-e6-84-8f-ef-bc-81/" itemprop="url">
-            <span itemprop="name">新年好！新的一年心想事成，万事如意！</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2013-01-25T14:20:59+08:00"
-              content="2013-01-25">
-          01-25
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2013/01/25/flex-e7-9a-84-e7-bc-93-e5-ad-98-e9-97-ae-e9-a2-98/" itemprop="url">
-            <span itemprop="name">Flex的缓存问题</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2013-01-22T18:48:23+08:00"
-              content="2013-01-22">
-          01-22
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2013/01/22/2013-01-22-ora-01756/" itemprop="url">
-            <span itemprop="name">ORA-01756: quoted string not properly terminated错误解决</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-    
-    <div class="collection-year">
-      <h1 class="collection-header">2012</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2012-12-10T15:30:01+08:00"
-              content="2012-12-10">
-          12-10
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2012/12/10/drop-e8-a1-a8-e6-97-b6-e5-87-ba-e7-8e-b0ora-02449-e8-a1-a8-e4-b8-ad-e7-9a-84-e5-94-af-e4-b8-80-e4-b8-bb-e9-94-ae-e8-a2-ab-e5-a4-96-e9-94-ae-e5-bc-95-e7-94-a8/" itemprop="url">
-            <span itemprop="name">drop表时出现ORA-02449: 表中的唯一/主键被外键引用</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2012-12-07T16:31:04+08:00"
-              content="2012-12-07">
-          12-07
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2012/12/07/2012-12-07-ubuntu-superuser/" itemprop="url">
-            <span itemprop="name">Ubuntu下如何切换到超级用户 (superuser)</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2012-12-04T16:49:07+08:00"
-              content="2012-12-04">
-          12-04
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2012/12/04/2012-12-04-oracle-dump/" itemprop="url">
-            <span itemprop="name">oracle导出的一二事</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2012-12-04T16:42:15+08:00"
-              content="2012-12-04">
-          12-04
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2012/12/04/2012-12-04-linux-sftp/" itemprop="url">
-            <span itemprop="name">linux sftp取文件</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2012-11-08T16:41:06+08:00"
-              content="2012-11-08">
-          11-08
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2012/11/08/e8-bf-99-e6-98-af-e4-b8-aa-e7-89-b9-e6-ae-8a-e7-9a-84-e6-97-a5-e5-ad-90-e3-80-82/" itemprop="url">
-            <span itemprop="name">这是个特殊的日子。</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-
-    </div>
   </div>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Java/" rel="tag"># Java</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2012/05/22/e7-94-b1-e6-89-93-e7-af-ae-e7-90-83-e6-83-b3-e5-88-b0-e7-9a-84/" rel="next" title="由打篮球想到的">
+                  <i class="fa fa-chevron-left"></i> 由打篮球想到的
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2012/05/23/2012-05-23-php-study-1/" rel="prev" title="PHP学习一：安装PHP和搭建环境">
+                  PHP学习一：安装PHP和搭建环境 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
   
   
   
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/archives/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/13/">13</a><a class="extend next" rel="next" href="/archives/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
+  </div>
 
 
           </div>
           
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
 
         </div>
           
@@ -621,6 +465,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -868,6 +717,28 @@
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  function disqus_config() {
+    this.page.url = "https://amonxu.com/2012/05/23/2012-05-23-java-import-error/";
+    this.page.identifier = "2012/05/23/2012-05-23-java-import-error/";
+    this.page.title = 'java有时候无法导包问题的临时解决方法';
+  }
+  function loadComments() {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://amonxu.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  }
+    window.addEventListener('load', loadComments, false);
+  
 </script>
 
 </body>

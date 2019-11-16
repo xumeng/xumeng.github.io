@@ -59,7 +59,7 @@
 </script>
 
   <meta name="description" content="最近遇到java.lang.OutOfMemoryError: Java heap space， 然后加内存，32G内存的服务器给了4G，还是不行。 检查代码，发现会把数据库中的一个表的数据读取出来加载到内存中，当这个表的数据越来越大，到了几十万的时候 ，就会OOM错误了。 和之前大数据量导出同理，分成多次去查数据库并加载。 &amp;nbsp; &amp;nbsp; &amp;nbsp;">
-<meta name="keywords" content="Tomcat,性能优化,jvm">
+<meta name="keywords" content="Tomcat,jvm,性能优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tomcat内存溢出">
 <meta property="og:url" content="https://amonxu.com/2012/09/12/2012-09-12-tomcat-oom/index.html">
@@ -411,9 +411,9 @@
             
               <a href="/tags/Tomcat/" rel="tag"># Tomcat</a>
             
-              <a href="/tags/性能优化/" rel="tag"># 性能优化</a>
-            
               <a href="/tags/jvm/" rel="tag"># jvm</a>
+            
+              <a href="/tags/性能优化/" rel="tag"># 性能优化</a>
             
           </div>
         
