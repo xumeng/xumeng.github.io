@@ -264,6 +264,137 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/06/03/2012-06-03-php-study-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2012/06/03/2012-06-03-php-study-4/" class="post-title-link" itemprop="url">PHP学习四：PHP操作MYSQL</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2012-06-03 00:09:41" itemprop="dateCreated datePublished" datetime="2012-06-03T00:09:41+08:00">2012-06-03</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2012/06/03/2012-06-03-php-study-4/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/06/03/2012-06-03-php-study-4/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>前言：<br>今天学习php操作mysql</p>
+<p>过程：</p>
+<p>1.连接mysql<br>mysql_connect(servername, username, password)<br>servername:默认 localhost:3306</p>
+<p>2.给出一个综合实例<br><code>&lt;?php
+  //连接mysql
+  $con = mysql_connect(&quot;localhost&quot;, &quot;root&quot; , &quot;root&quot;);
+  //判断连接是否成功，失败则打印错误信息并中断
+  if(!$con){
+ die(&quot;can&#39;t connect db&quot; . mysql_error());
+  }
+  echo(&quot;connect succ&quot;);
+  //创建一个名为“phpdb1”的数据库，失败则打印错误信息
+  if(mysql_query(&quot;create database phpdb1&quot;, $con)){
+ echo(&quot;Datebase created&quot;);
+  }else{
+ echo(&quot;Error creating datebase&quot; . mysql_error());
+  }
+  //选择phpdb1这个数据库
+  mysql_select_db(&quot;phpdb1&quot;,$con);
+  //定义sql语句，插入表单传过来的数据
+  $insert_sql = &quot;insert into posts(post_name, post_content) values (&#39;$_POST[title]&#39;, &#39;$_POST[content]&#39;)&quot;;
+  if(!mysql_query($insert_sql,$con)){
+ die(&quot;add post error&quot;.mysql_error());
+  }
+  echo(&quot;add post succ&quot;);
+  //关闭数据库连接
+  mysql_close($con);
+?&gt;</code></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>3.查询的demo<br>`<br>$result = mysql_query(“select * from posts”);</p>
+<p> echo “<br>  <table border="1"><br>   <tr><br>    <th><br>     ID<br>    </th><br>    <th><br>     TITLE<br>    </th><br>    <th><br>     CONTENT<br>    </th><br>  </tr><br> “;<br> //遍历查询结果，并输出数据为HTML表格<br> while($row = mysql_fetch_array($result)){<br>  echo “<tr>“;<br>  echo “<td>“.$row[‘post_id’].”</td>“;<br>  echo “<td>“.$row[‘post_name’].”</td>“;<br>  echo “<td>“.$row[‘post_content’].”</td>“;<br>  echo “</tr>“;<br> }<br> echo “</table>“;<br>`<br>删除和修改的没什么特别的。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/06/01/2012-06-01-vm-install-ubuntu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1275,111 +1406,11 @@ mysql_close();
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/21/2012-05-21-hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/05/21/2012-05-21-hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-05-21 01:34:44" itemprop="dateCreated datePublished" datetime="2012-05-21T01:34:44+08:00">2012-05-21</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/05/21/2012-05-21-hello-world/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/05/21/2012-05-21-hello-world/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Start here</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1427,7 +1458,7 @@ mysql_close();
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-count">131</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1453,7 +1484,7 @@ mysql_close();
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-count">104</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

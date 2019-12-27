@@ -264,6 +264,107 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/12/04/2012-12-04-linux-sftp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2012/12/04/2012-12-04-linux-sftp/" class="post-title-link" itemprop="url">linux sftp取文件</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2012-12-04 16:42:15" itemprop="dateCreated datePublished" datetime="2012-12-04T16:42:15+08:00">2012-12-04</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2012/12/04/2012-12-04-linux-sftp/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/12/04/2012-12-04-linux-sftp/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今天在从某个server上取文件，但是本地无法直接连接，只能通过另外一台server连接，再ssh到它的上面。<br>1.在有外网ip的server上:sftp username@ip<br>  get filename<br>2.在本地用secureCRT登录有外网ip的server，alt+P打开sftp标签页，get filename</p>
+<p>附sftp相关command<br>sftp&gt; help<br>可用命令：<br>cd 路径                        更改远程目录到“路径”<br>lcd 路径                       更改本地目录到“路径”<br>chgrp group path               将文件“path”的组更改为“group”<br>chmod mode path                将文件“path”的权限更改为“mode”<br>chown owner path               将文件“path”的属主更改为“owner”<br>exit                           退出 sftp<br>help                           显示这个帮助文本<br>get 远程路径                   下载文件<br>ln existingpath linkpath       符号链接远程文件<br>ls [选项] [路径]               显示远程目录列表<br>lls [选项] [路径]              显示本地目录列表<br>mkdir 路径                     创建远程目录<br>lmkdir 路径                    创建本地目录<br>mv oldpath newpath             移动远程文件<br>open [用户@]主机[:端口]        连接到远程主机<br>put 本地路径                   上传文件<br>pwd                            显示远程工作目录<br>lpwd                           打印本地工作目录<br>quit                           退出 sftp<br>rmdir 路径                     移除远程目录<br>lrmdir 路径                    移除本地目录<br>rm 路径                        删除远程文件<br>lrm 路径                       删除本地文件<br>symlink existingpath linkpath  符号链接远程文件<br>version                        显示协议版本</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/11/08/2012-11-08-special-day/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1193,141 +1294,11 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/09/10/2012-09-10-tomcat-oom/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/09/10/2012-09-10-tomcat-oom/" class="post-title-link" itemprop="url">【转】Linux下tomcat JVM内存设置</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-09-10 11:52:08" itemprop="dateCreated datePublished" datetime="2012-09-10T11:52:08+08:00">2012-09-10</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/09/10/2012-09-10-tomcat-oom/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/09/10/2012-09-10-tomcat-oom/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>常见的内存溢出有以下两种:</p>
-<p><strong>java.lang.OutOfMemoryError: PermGen space</strong></p>
-<p><strong>java.lang.OutOfMemoryError: Java heap space</strong></p>
-<p>&nbsp;</p>
-<hr>
-<p>这里以tomcat环境为例，其它WEB服务器如jboss,weblogic等是同一个道理。<br><strong>一、java.lang.OutOfMemoryError: PermGen space</strong></p>
-<p>PermGen space的全称是Permanent Generation space,是指内存的永久保存区域,<br>这块内存主要是被JVM存放Class和Meta信息的,Class在被Loader时就会被放到PermGen space中,<br>它和存放类实例(Instance)的Heap区域不同,GC(Garbage Collection)不会在主程序运行期对<br>PermGen space进行清理，所以如果你的应用中有很多CLASS的话,就很可能出现PermGen space错误,<br>这种错误常见在web服务器对JSP进行pre compile的时候。如果你的WEB APP下都用了大量的第三方jar, 其大小<br>超过了jvm默认的大小(4M)那么就会产生此错误信息了。<br>解决方法： 手动设置MaxPermSize大小<br>建议：将相同的第三方jar文件移置到tomcat/shared/lib目录下，这样可以达到减少jar 文档重复占用内存的目的。</p>
-<p>&nbsp;</p>
-<p><strong>二、java.lang.OutOfMemoryError: Java heap space</strong><br>JVM堆的设置是指java程序运行过程中JVM可以调配使用的内存空间的设置.JVM在启动的时候会自动设置Heap size的值，<br>其初始空间(即-Xms)是<strong>物理内存的1/64</strong>，最大空间(-Xmx)是<strong>物理内存的1/4</strong>。可以利用JVM提供的-Xmn -Xms -Xmx等选项可<br>进行设置。Heap size 的大小是Young Generation 和Tenured Generaion 之和。<br>提示：在JVM中如果98％的时间是用于GC且可用的Heap size 不足2％的时候将抛出此异常信息。<br>提示：Heap Size 最大不要超过可用物理内存的80％，一般的要将-Xms和-Xmx选项设置为相同，而-Xmn为1/4的-Xmx值。&nbsp;<br>解决方法：手动设置Heap size</p>
-<hr>
-<p>&nbsp;</p>
-<p>Linux下修改JVM内存大小:</p>
-<p>要添加在tomcat&nbsp;的bin 下catalina.sh 里，位置cygwin=false前&nbsp;。注意引号要带上,红色的为新添加的.</p>
-<h1 id="OS-specific-support-nbsp-var-must-be-set-to-either-true-or-false"><a href="#OS-specific-support-nbsp-var-must-be-set-to-either-true-or-false" class="headerlink" title="OS specific support.&nbsp; $var must be set to either true or false."></a>OS specific support.&nbsp; $var <em>must</em> be set to either true or false.</h1><p><span style="color: #ff0000;">JAVA_OPTS=”-Xms256m -Xmx512m -Xss1024K -XX:PermSize=128m -XX:MaxPermSize=256m”</span><br>cygwin=false</p>
-<p>&nbsp;</p>
-<p>windows下修改JVM内存大小:</p>
-<p>情况一:解压版本的Tomcat, 要通过startup.bat启动tomcat才能加载配置</p>
-<p>要添加在tomcat&nbsp;的bin 下catalina.bat 里</p>
-<p>rem Guess CATALINA_HOME if not defined<br>set CURRENT_DIR=%cd%后面添加,红色的为新添加的.</p>
-<p><span style="color: #ff0000;">set JAVA_OPTS=-Xms256m -Xmx512m -XX:PermSize=128M -XX:MaxNewSize=256m -XX:MaxPermSize=256m -Djava.awt.headless=true</span></p>
-<p>&nbsp;</p>
-<p>情况二:安装版的Tomcat下没有catalina.bat</p>
-<p>windows服务执行的是bin\tomcat.exe.他读取注册表中的值,而不是catalina.bat的设置.</p>
-<p>修改注册表HKEY_LOCAL_MACHINE\SOFTWARE\Apache Software Foundation\Tomcat&nbsp;Service Manager\Tomcat5\Parameters\JavaOptions<br>原值为<br>-Dcatalina.home=”C:\ApacheGroup\Tomcat&nbsp;5.0”<br>-Djava.endorsed.dirs=”C:\ApacheGroup\Tomcat&nbsp;5.0\common\endorsed”<br>-Xrs</p>
-<p><div>加入 -Xms300m -Xmx350m&nbsp;&nbsp;<br>重起tomcat服务,设置生效</div><br>&nbsp;</p>
-<hr>
-<p><strong>各参数的比例:</strong></p>
-<p>Xmx 与PermSize的和不可超过JVM可获得的总内存</p>
-<p>PermSize不可大于Xmx</p>
-<p>&nbsp;</p>
-<p>请参见其它的参数详解的文章,各参数值大小的本文不讨论.</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1375,7 +1346,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-count">131</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1401,7 +1372,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-count">104</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
