@@ -472,137 +472,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/06/03/bak/2012-06-03-php-study-4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/06/03/bak/2012-06-03-php-study-4/" class="post-title-link" itemprop="url">PHP学习四：PHP操作MYSQL</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-06-03 00:09:41" itemprop="dateCreated datePublished" datetime="2012-06-03T00:09:41+08:00">2012-06-03</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/06/03/bak/2012-06-03-php-study-4/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/06/03/bak/2012-06-03-php-study-4/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>前言：<br>今天学习php操作mysql</p>
-<p>过程：</p>
-<p>1.连接mysql<br>mysql_connect(servername, username, password)<br>servername:默认 localhost:3306</p>
-<p>2.给出一个综合实例<br><code>&lt;?php
-  //连接mysql
-  $con = mysql_connect(&quot;localhost&quot;, &quot;root&quot; , &quot;root&quot;);
-  //判断连接是否成功，失败则打印错误信息并中断
-  if(!$con){
- die(&quot;can&#39;t connect db&quot; . mysql_error());
-  }
-  echo(&quot;connect succ&quot;);
-  //创建一个名为“phpdb1”的数据库，失败则打印错误信息
-  if(mysql_query(&quot;create database phpdb1&quot;, $con)){
- echo(&quot;Datebase created&quot;);
-  }else{
- echo(&quot;Error creating datebase&quot; . mysql_error());
-  }
-  //选择phpdb1这个数据库
-  mysql_select_db(&quot;phpdb1&quot;,$con);
-  //定义sql语句，插入表单传过来的数据
-  $insert_sql = &quot;insert into posts(post_name, post_content) values (&#39;$_POST[title]&#39;, &#39;$_POST[content]&#39;)&quot;;
-  if(!mysql_query($insert_sql,$con)){
- die(&quot;add post error&quot;.mysql_error());
-  }
-  echo(&quot;add post succ&quot;);
-  //关闭数据库连接
-  mysql_close($con);
-?&gt;</code></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>3.查询的demo<br>`<br>$result = mysql_query(“select * from posts”);</p>
-<p> echo “<br>  <table border="1"><br>   <tr><br>    <th><br>     ID<br>    </th><br>    <th><br>     TITLE<br>    </th><br>    <th><br>     CONTENT<br>    </th><br>  </tr><br> “;<br> //遍历查询结果，并输出数据为HTML表格<br> while($row = mysql_fetch_array($result)){<br>  echo “<tr>“;<br>  echo “<td>“.$row[‘post_id’].”</td>“;<br>  echo “<td>“.$row[‘post_name’].”</td>“;<br>  echo “<td>“.$row[‘post_content’].”</td>“;<br>  echo “</tr>“;<br> }<br> echo “</table>“;<br>`<br>删除和修改的没什么特别的。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/06/01/2012-06-01-vm-install-ubuntu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -804,253 +673,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/26/bak/2012-05-26-php-study-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/05/26/bak/2012-05-26-php-study-3/" class="post-title-link" itemprop="url">PHP学习三：PHP高级基础学习（B）</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-05-26 23:58:56" itemprop="dateCreated datePublished" datetime="2012-05-26T23:58:56+08:00">2012-05-26</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/05/26/bak/2012-05-26-php-study-3/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/05/26/bak/2012-05-26-php-study-3/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>前言：</strong><br>继续学习php的高级基础<br><strong>过程：</strong></p>
-<p><strong>1.session: </strong><br>session_start();(写在html标签之前)<br>set：$_SESSION[‘var_name’]=1;<br>get: echo $_SESSION[‘var_name’];<br>isset可以用来判断是否设置了这个session变量。<br>终结：unset($_SESSION[‘var_name’]); or session_destroy();</p>
-<p><strong>tips:在””里面也可以用变量，可以用\阻止。</strong><br><strong><br>2.mail：</strong><br>mail(to,subject,message,headers,parameters)<br>to:收件人<br>subject：主题 Message：内容(LF or \n 换行)<br>headers：(可选)附加标题，（CRLF or \r\n 分隔）<br>parameters：（可选，额外参数）</p>
-<p>FILTER_SANITIZE_EMAIL 从字符串中删除电子邮件的非法字符<br>FILTER_VALIDATE_EMAIL 验证电子邮件地址<br>filter_var(var_name, filter)通过指定的过滤器过滤变量。<br>如果成功，则返回已过滤的数据，如果失败，则返回 false。</p>
-<p><strong>3.错误处理：</strong><br>die(“错误信息”);输出错误信息并终止脚本。<br>创建自定义错误处理器：<br>error_function(error_level, error_message, error_file, error_line, error_context);<br>set_error_handler(“错误处理器的function name”);<br>trigger_error(“错误提示”,”E_USER_ERROR/E_USER_WARNING/E_USER_NOTICE”)触发错误<br>error_log()</p>
-<p>&nbsp;</p>
-<p><strong>4.异常处理</strong></p>
-<p>try：<br>throw:规定如何触发异常（也就是抛出异常），每一个throw必须对应至少一个<br>catch<br>catch：捕获异常，并创建一个包含异常信息的对象</p>
-<p>自定义异常：</p>
-<p>&nbsp;<br><code>class customException extends Exception
- {
- public function errorMessage()
-  {
-  //error message
-  $errorMsg = &#39;Error on line &#39;.$this-&gt;getLine().&#39; in &#39;.$this-&gt;getFile()
-  .&#39;: **&#39;.$this-&gt;getMessage().&#39;** is not a valid E-Mail address&#39;;
-  return $errorMsg;
-  }
- }</code></p>
-<p>set_exception_handler() 函数可设置处理所有未捕获异常的用户定义函数。<br>简而言之：如果抛出了异常，就必须捕获它。</p>
-<p>&nbsp;</p>
-<p><strong>5.过滤器</strong></p>
-<p><code>用于验证和过滤来自非安全来源的数据。</code></p>
-<p>filter_var() 过滤单一变量 ex：filter_val($int, FILTER_VALIDATE_INT)<br>filter_var_array() 通过多个过滤器过滤多个变量<br>filter_input 获取一个输入变量并过滤<br>filter_input_array 获取多个输入变量，并通过多个过滤器进行过滤</p>
-<p>Validating和sanitizing<br>v：验证输入，有严格的格式规则，成功则返回预期的类型，否则返回false<br>（针对这个返回的事，我特意试了下，其实是如果符合格式，就返回那个值，如<br>果输出的话就输出那个值，如果不符合格式，返回的是false，但是输出这个返回值<br>，是不会输出的。）<br>s： 用于允许或禁止字符串中指定的字符。无数据格式规则，始终返回字符串。</p>
-<p>&nbsp;<br>`还是给出一些例子来看吧：<br>&lt;?php<br>$var=300;</p>
-<p>$int_options = array(<br>“options”=&gt;array<br> (<br> “min_range”=&gt;0,<br> “max_range”=&gt;256<br> )<br>);</p>
-<p>if(!filter_var($var, FILTER_VALIDATE_INT, $int_options))<br> {<br> echo(“Integer is not valid”);<br> }<br>else<br> {<br> echo(“Integer is valid”);<br> }<br>?&gt;<br>`</p>
-<p>`</p>
-<p>&lt;?php<br>if(!filter_has_var(INPUT_GET, “email”))<br> {<br> echo(“Input type does not exist”);<br> }<br>else<br> {<br> if (!filter_input(INPUT_GET, “email”, FILTER_VALIDATE_EMAIL))<br>  {<br>  echo “E-Mail is not valid”;<br>  }<br> else<br>  {<br>  echo “E-Mail is valid”;<br>  }<br> }<br>?&gt;<br>`</p>
-<p>`</p>
-<p>&lt;?php<br>if(!filter_has_var(INPUT_POST, “url”))<br> {<br> echo(“Input type does not exist”);<br> }<br>else<br> {<br> $url = filter_input(INPUT_POST,<br> “url”, FILTER_SANITIZE_URL);<br> }<br>?&gt;<br>`</p>
-<p>`</p>
-<p>&lt;?php<br>$filters = array<br> (<br> “name” =&gt; array<br>  (<br>  “filter”=&gt;FILTER_SANITIZE_STRING<br>  ),<br> “age” =&gt; array<br>  (<br>  “filter”=&gt;FILTER_VALIDATE_INT,<br>  “options”=&gt;array<br>   (<br>   “min_range”=&gt;1,<br>   “max_range”=&gt;120<br>   )<br>  ),<br> “email”=&gt; FILTER_VALIDATE_EMAIL,<br> );</p>
-<p>$result = filter_input_array(INPUT_GET, $filters);</p>
-<p>if (!$result[“age”])<br> {<br> echo(“Age must be a number between 1 and 120.<br>“);<br> }<br>elseif(!$result[“email”])<br> {<br> echo(“E-Mail is not valid.<br>“);<br> }<br>else<br> {<br> echo(“User input is valid”);<br> }<br>?&gt;<br>`</p>
-<p>`</p>
-<p>&lt;?php<br>function convertSpace($string)<br>{<br>return str_replace(“_”, “ “, $string);<br>}</p>
-<p>$string = “Peter_is_a_great_guy!”;</p>
-<p>echo filter_var($string, FILTER_CALLBACK,<br>array(“options”=&gt;”convertSpace”));<br>?&gt;<br>`</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/25/bak/2012-05-25-php-study-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/05/25/bak/2012-05-25-php-study-3/" class="post-title-link" itemprop="url">PHP学习三：PHP高级基础学习（A）</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-05-25 23:34:48" itemprop="dateCreated datePublished" datetime="2012-05-25T23:34:48+08:00">2012-05-25</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/05/25/bak/2012-05-25-php-study-3/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/05/25/bak/2012-05-25-php-study-3/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>前言：</strong><br>学习php的高级基础，何为高级基础，w3school写php高级，我感觉还是基础，故曰高级基础。<br><strong>目标：</strong><br>进一步掌握php的基础。<br><strong>过程：</strong></p>
-<p><strong>1.日期：</strong><br> 格式：date(“Y/m/d”)和date(“Y/m/d”,时间戳)<br> 支持/ . - 三种符号<br>mktime(hour,minute,second,month,day,year,is_dst)获得时间戳<br>注意month在day前面。 is_dst可选，已经被废弃了。</p>
-<p><strong>2.引用：</strong><br>&lt;?php include(“header.php”); ?&gt; 引用错误仍继续执行其他的<br>&lt;?php require(“header.php”); ?&gt;  引用错误则中断。（推荐）</p>
-<p><strong>3.文件</strong><br>fopen 打开<br>fclose 关闭<br>feof 判断是否到达文件末端<br>fgets 逐行读取文件<br>fgetc 逐字符读取文件</p>
-<p><strong>4.文件上传</strong><br>表单：enctype=”multipart/form-data”</p>
-<p>一个简单的处理文件上传的php代码：<br>`<br>&lt;?php<br>//限制文件类型为图片，限制大小小于20kb<br>if ((($_FILES[“file”][“type”] == “image/gif”)<br>|| ($_FILES[“file”][“type”] == “image/jpeg”)<br>|| ($_FILES[“file”][“type”] == “image/pjpeg”))<br>&amp;&amp; ($_FILES[“file”][“size”] &lt; 20000))<br>  {<br>  if ($_FILES[“file”][“error”] &gt; 0)<br>    {<br>    echo “Return Code: “ . $_FILES[“file”][“error”] . “<br>“;<br>    }<br>  else<br>    {<br>    //输出文件名，类型，大小，临时存储的目录。<br>    echo “Upload: “ . $_FILES[“file”][“name”] . “<br>“;<br>    echo “Type: “ . $_FILES[“file”][“type”] . “<br>“;<br>    echo “Size: “ . ($_FILES[“file”][“size”] / 1024) . “ Kb<br>“;<br>    echo “Temp file: “ . $_FILES[“file”][“tmp_name”] . “<br>“;</p>
-<p>   //判断文件是否存在，不存在就把文件从临时目录移动过来。<br>    if (file_exists(“upload/“ . $_FILES[“file”][“name”]))<br>      {<br>      echo $_FILES[“file”][“name”] . “ already exists. “;<br>      }<br>    else<br>      {<br>      move_uploaded_file($_FILES[“file”][“tmp_name”],<br>      “upload/“ . $_FILES[“file”][“name”]);<br>      echo “Stored in: “ . “upload/“ . $_FILES[“file”][“name”];<br>      }<br>    }<br>  }<br>else<br>  {<br>  echo “Invalid file”;<br>  }<br>?&gt;<br>`</p>
-<p><strong>5.cookie</strong><br>cookies：写到html标签前<br>设置：setcookie(name,value,expire,path,domain)<br> eg：setcookie(“user”, “Alex Porter”, time()+3600);<br> setrawcookie() 防止url编码<br>取回：$_COOKIE[“user”];<br>isset：判断是否设置了cookie. return true/false<br>删除cookie：设置过期日期为过去<br>setcookie(“user”, “”, time()-3600);<br>浏览器不支持cookie就用表单提交了。。。：</p>
-<p>小结：php的函数很强大，封装这么深对程序员有利有弊。<br>高级基础得慢慢来，先把这当一小节吧。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/25/2012-05-25-how-to-noodles/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1153,7 +775,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/24/bak/2012-05-24-php-study-2/">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/23/2012-05-23-java-import-error/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
@@ -1168,7 +790,7 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/2012/05/24/bak/2012-05-24-php-study-2/" class="post-title-link" itemprop="url">PHP学习二：php基础语法学习</a>
+            <a href="/2012/05/23/2012-05-23-java-import-error/" class="post-title-link" itemprop="url">java有时候无法导包问题的临时解决方法</a>
           
         </h1>
 
@@ -1183,7 +805,7 @@
                 
               
 
-              <time title="创建时间：2012-05-24 23:28:31" itemprop="dateCreated datePublished" datetime="2012-05-24T23:28:31+08:00">2012-05-24</time>
+              <time title="创建时间：2012-05-23 12:49:39" itemprop="dateCreated datePublished" datetime="2012-05-23T12:49:39+08:00">2012-05-23</time>
             </span>
           
             <span class="post-meta-item">
@@ -1215,8 +837,8 @@
       
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2012/05/24/bak/2012-05-24-php-study-2/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/05/24/bak/2012-05-24-php-study-2/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2012/05/23/2012-05-23-java-import-error/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/05/23/2012-05-23-java-import-error/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1231,19 +853,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>前言：<br>今天学习php基础语法<br>目标：会php基础语法<br>过程：</p>
-<p>1.php的语法：<br>&lt;?php</p>
-<p>?&gt;<br>也可以&lt;? ?&gt;(不推荐)<br>echo：输出<br>2.声明变量:<br>$var_name = value;<br>不必声明数据类型</p>
-<p>3.操作字符串：<br>. 连接字符串，如a.b结果为ab<br>strleng(“hello”) 计算字符串长度<br>strpos(“source”,”o”) 搜索第二个参数在第一个参数里面的index，未匹配返回false</p>
-<p>4.运算符：<br>算数+-<em>/% ++ –<br>赋值：= += -= </em>= /= .= %=（例：x.=y 意为x = x.y）<br>比较运算符：<br>== != &gt; &lt; &gt;= &lt;=<br>逻辑运算符：<br>&amp;&amp; || ！</p>
-<p>5.条件语句：<br>if else<br>switch</p>
-<p>6.数组：</p>
-<p>a.数值数组<br>带有数字 ID 键的数组：<br>$names = array(“Peter”,”Quagmire”,”Joe”);<br>b.关联数组<br>数组中的每个 ID 键关联一个值<br>$ages[‘Peter’] = “32”;<br>$ages[‘Quagmire’] = “30”;<br>$ages[‘Joe’] = “34”;<br>=&gt;是键值映射的关系<br>$ages = array(“Peter”=&gt;32, “Quagmire”=&gt;30, “Joe”=&gt;34);<br>c.多维数组<br>包含一个或多个数组的数组</p>
-<p>7.循环<br>while,  do while, for, foreach<br>foreach($arr_name as $value_name){<br> echo $value_name<br>}</p>
-<p>8.函数：</p>
-<p>9.表单：<br>$_GET 变量用于收集来自 method=”get” 的表单中的值。<br>$_GET[“age”]; 获取表单里面name为age的值<br>get最多100个字符</p>
-<p>PHP 的 $_REQUEST 变量包含了 $_GET, $_POST 以及 $_COOKIE 的内容。<br>PHP 的 $_REQUEST 变量可用来取得通过 GET 和 POST 方法发送的表单数据的结果。<br>$_POST 变量用于收集来自 method=”post” 的表单中的值。</p>
-<p>小结：w3schol尼玛太坑爹！<br>运算符，数组，有空复习一下。</p>
+          <p>在eclipse里面开发java项目的时候，偶尔会遇到无法导包的问题，</p>
+<p>如：</p>
+<p><code>import com.sun.management.OperatingSystemMXBean;</code><br>无法导入。本来想导com.sun.management包内的，却只有java.lang包的这个类。<br>com.sun.management.OperatingSystemMXBean位于java lib的rt.jar，<br>在eclipse里面可以看到项目引用的JRE System Library里面有rt.jar，<br>并且可以打开看到也有com.sun.management这个包，里面也有OperatingSystemMXBean这个类，<br>但是为何总是无法导入呢。<br>偶然的发现一个解决办法：<br><span style="color: #ff0000;">在项目的java Build Path-Libraries里面，把JRE System Library Remove掉，然后再重新添加Library，</span><br><span style="color: #ff0000;"> 点击右边的Add Library-JRE System Library-就默认选择workspace default JRE-finish。</span><br>遇到这样奇葩的问题，就这样试试吧:)</p>
 
         
       
@@ -1265,7 +877,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/23/bak/2012-05-23-php-study-1/">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/22/2012-05-22-basketball-think/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
@@ -1280,7 +892,7 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/2012/05/23/bak/2012-05-23-php-study-1/" class="post-title-link" itemprop="url">PHP学习一：安装PHP和搭建环境</a>
+            <a href="/2012/05/22/2012-05-22-basketball-think/" class="post-title-link" itemprop="url">由打篮球想到的</a>
           
         </h1>
 
@@ -1295,7 +907,7 @@
                 
               
 
-              <time title="创建时间：2012-05-23 23:42:31" itemprop="dateCreated datePublished" datetime="2012-05-23T23:42:31+08:00">2012-05-23</time>
+              <time title="创建时间：2012-05-22 23:12:12" itemprop="dateCreated datePublished" datetime="2012-05-22T23:12:12+08:00">2012-05-22</time>
             </span>
           
             <span class="post-meta-item">
@@ -1305,8 +917,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
+                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
+                    <span itemprop="name">鬼画弧</span>
                   </a>
                 </span>
 
@@ -1327,8 +939,8 @@
       
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2012/05/23/bak/2012-05-23-php-study-1/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/05/23/bak/2012-05-23-php-study-1/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2012/05/22/2012-05-22-basketball-think/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/05/22/2012-05-22-basketball-think/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1343,55 +955,110 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>前言：</p>
-<p>从今天开始学php</p>
-<p>目标：</p>
-<p>先安装php和搭建环境，并写一个HelloWorld。</p>
-<p>步骤：</p>
-<p>1.下载php和apache，貌似有一些绿色版的，我没用过，先贴出大众的方法。</p>
-<p><pre id="best-answer-content">下载PHP5:    <a href="http://cn2.php.net/distributions/php-5.2.6-Win32.zip" target="_blank" rel="noopener">http://cn2.php.net/distributions/php-5.2.6-Win32.zip</a><br>下载apache:  <a href="http://down.chinaz.com/soft/18000.htm" target="_blank" rel="noopener">http://down.chinaz.com/soft/18000.htm</a></pre></p>
-<p><pre id="best-answer-content">2.解压php到如d:/php，</pre></p>
-<p><pre>3.找到php目录下的 php.ini-dist或 php.ini.recommended文件，重命名为 php.ini，</pre></p>
-<p><pre>  并复制到系统盘的windows目录下(以c:\windows为例). </pre></p>
-<p><pre>4.再把php目录下的php5ts.dll,libmysql.dll复制到目录 c:\windows\system32下。</pre></p>
-<p><pre>5.把php5\ext目录下的php_gd2.dll,php_mysql.dll,php_mbstring.dll文件复制到c:\windows\system32下。</pre></p>
-<p><pre>6.安装apache</pre></p>
-<p><pre>一直next，domain什么的就随便输入，mail写自己的也未尝不可。</pre></p>
-<p><pre>设置/conf/httpd.conf：</pre></p>
-<p><pre>查找DocumentRoot&nbsp;设置为放网页文件的文件夹，不变也可以，</pre></p>
-<p><pre>查找DirectoryIndex&nbsp;在index.html后添加indexphp index.htm，多个用空格分隔。</pre></p>
-<p><pre>7.</pre></p>
-<p><pre id="best-answer-content">打开c:\windows\php.ini文件（关联到mysql）<br>设置扩展路径<br>查找 extension_dir 有这么一行extension_dir = “./“<br>将此行改成<br>extension_dir = “C:\php5\ext”<br>其中C:\php5是你安装php的路径。路径不正确将无法加载dll<br>(注意:有些php版本是 ;extension_dir = “./“ 要把前面的分号去掉)<br>查找 extension<br>extension=php_mbstring.dll<br>extension=php_gd2.dll<br>extension=php_mysql.dl<br>把上面3项前面的分号去掉。</pre></p>
-<p><pre id="best-answer-content">将doc_root 改为apache里面放网页的目录，如 “d:\Program Files\Apache Software Foundation\Apache2.2\htdocs”；</pre></p>
-<p><pre id="best-answer-content">找到 ;session.save_path = “/tmp” ,将’;’去掉,设置你保存session的目录，如session.save_path = “D:/php/session_temp”；</pre></p>
-<p><pre id="best-answer-content">8.时差设置</pre></p>
-<p><pre id="best-answer-content">查找date.timezone有这么一行<br>;date.timezone =<br>将;去掉，改成<br>date.timezone = PRC</pre></p>
-<p><pre id="best-answer-content">9.php+apache的设置</pre></p>
-<p><pre id="best-answer-content">设置httpd.conf，</pre></p>
-<p><pre id="best-answer-content">&nbsp;LoadModule php5_module “d:/php/php5apache2_2.dll”</pre></p>
-<p><pre id="best-answer-content">(特别注意这一条，很多地方是调用php5apache2.dll，这样在运行PHP代码时会提示httpd.exe应用程序错误)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AddType application/x-httpd-php .php<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AddType application/x-httpd-php .htm<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （.htm, .php为可执行php语言的扩展名，也可加html, php3, php4,甚至txt）</pre></p>
-<p><pre id="best-answer-content">查找 AddType application/x-gzip .gz .tgz<br>在此行后加入一行<br>AddType application/x-httpd-php .php (记住：前边有一个空格哦！！！)<br>这样apache就可以解释php文件了</pre></p>
-<p><pre id="best-answer-content">10.在web根目录（即apache_home/htdocs）新建test.php,内容如下</pre><br>`</p>
-<p><html></html></p>
-<p><head><title>test</title></head></p>
-<p><body><br>&lt;?php<br>echo “hello world”;<br>phpinfo();<br>?&gt;<br></body><br><br>`</p>
-<p><pre id="best-answer-content">&nbsp;</pre></p>
-<p><pre id="best-answer-content">&nbsp;</pre></p>
-<p><pre id="best-answer-content">重启apache服务，访问<a href="http://localhost/test.php" target="_blank" rel="noopener">http://localhost/test.php</a></pre></p>
-<p><pre id="best-answer-content">当出现hello world和php的一些信息的时候，说明成功了。有问题的话，请检查配置！</pre></p>
-<p><pre id="best-answer-content">&nbsp;</pre></p>
-<p><pre id="best-answer-content">&nbsp;</pre></p>
-<p><pre id="best-answer-content">附测试连接mysql的代码：</pre></p>
-<p><pre id="best-answer-content">&nbsp;</pre><br><code>&lt;?php
-$link=mysql_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;12345&quot;);     //12345改成你的mysql密码
-if(!$link) echo &quot;失败!&quot;;
-else echo &quot;成功!&quot;;
-mysql_close();
-?&gt;</code></p>
-<p>&nbsp;</p>
-<p>参考资料：</p>
-<p><a href="http://zhidao.baidu.com/question/74350698.html" target="_blank" rel="noopener">http://zhidao.baidu.com/question/74350698.html</a></p>
-<p><a href="http://www.cnblogs.com/angelox/archive/2008/10/09/1306732.html" target="_blank" rel="noopener">http://www.cnblogs.com/angelox/archive/2008/10/09/1306732.html</a></p>
+          <p>每周一下午4点是固定的打篮球时间，</p>
+<p>我本不是热爱篮球的人，但是因为这2个小时不必坐在办公室埋头苦干，能多呼吸一点外面虽然不新鲜的空气，所以每周一都是很积极着跟着同事去打篮球。<br>每次打球，无论是抢篮板数还是命中数，都是我最低，不是因为我最不会打，而是我最懒，相比别人不停的奔跑着抢篮板，我更多的是站在那里或者做着小弧度的移动，盯着球，等待着抢篮板的机会。除了偶然的守株待兔捡来个球，我始终是一个围观者。虽然我也告诉自己要动起来，不要怕累，不要怕出汗，不要怕被球砸伤被人碰伤，但身体始终无法执行大脑发的指令。</p>
+<p>这让我想起了打魔兽，我最热爱的游戏，很久以前我是一个小小菜鸟，当然现在也仍然是一个菜鸟。打魔兽的时候，我也是喜欢盯，盯着建筑里面出兵，等待着兵出来我操作；盯着打怪，等待怪被打死然后收宝；盯着部队交战，等待敌人落荒而逃或者自己丢盔弃甲…后来知道了APM这个概念后，我发现我需要动起来，我不能让我的手停下来，一停下来我就会习惯了停，习惯了等待。之后，我的apm由开始的50，在我每打完一局就打开w3gmaster看自己的apm，100，150，200…此时再玩起魔兽，我已然有了一种满满的感觉，再快的节奏，再多的队伍，再复杂的操作也能轻松完成。</p>
+<p>我在想，打球是不是也这样，<span style="color: #ff0000;"><strong>如果我可以动起来，不停的奔跑，不停的追逐，哪怕累一点，哪怕很多时候抢不到球，我仍然可以比之前更出色。</strong></span><br>那么，生活也是同理了，如果我不这么懒，我动起来，我的生活也会出色！<br>如果是这样，那么从这个blog开始，start here！</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/21/2012-05-21-hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2012/05/21/2012-05-21-hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2012-05-21 01:34:44" itemprop="dateCreated datePublished" datetime="2012-05-21T01:34:44+08:00">2012-05-21</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2012/05/21/2012-05-21-hello-world/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/05/21/2012-05-21-hello-world/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Start here</p>
 
         
       
@@ -1413,7 +1080,7 @@ mysql_close();
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span>
   </nav>
 
 
@@ -1461,7 +1128,7 @@ mysql_close();
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">133</span>
+          <span class="site-state-item-count">128</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1487,7 +1154,7 @@ mysql_close();
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">107</span>
+        <span class="site-state-item-count">105</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
