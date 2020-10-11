@@ -264,6 +264,118 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/15/2013-10-15-xubumeng-on-weixin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2013/10/15/2013-10-15-xubumeng-on-weixin/" class="post-title-link" itemprop="url">折腾了个微信公众号</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2013-10-15 11:11:11" itemprop="dateCreated datePublished" datetime="2013-10-15T11:11:11+08:00">2013-10-15</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2013/10/15/2013-10-15-xubumeng-on-weixin/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/10/15/2013-10-15-xubumeng-on-weixin/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>这两天没事折腾了一下微信的公众号，我的公众号(订阅号，不支持自定义菜单)在右边，有兴趣的可以扫下:)</p>
+<h4 id="1-注册并提交自己的手持身份证照片"><a href="#1-注册并提交自己的手持身份证照片" class="headerlink" title="1.   注册并提交自己的手持身份证照片"></a>1.   注册并提交自己的手持身份证照片</h4><h4 id="2-简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。"><a href="#2-简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。" class="headerlink" title="2.   简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。"></a>2.   简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。</h4><h4 id="3-在BAE注册并创建移动web应用，我选择的是PHP的。"><a href="#3-在BAE注册并创建移动web应用，我选择的是PHP的。" class="headerlink" title="3.   在BAE注册并创建移动web应用，我选择的是PHP的。"></a>3.   在BAE注册并创建移动web应用，我选择的是PHP的。</h4><h4 id="4-下载微信接口示例代码，并参考微信接口文档，开启折腾之路。"><a href="#4-下载微信接口示例代码，并参考微信接口文档，开启折腾之路。" class="headerlink" title="4.   下载微信接口示例代码，并参考微信接口文档，开启折腾之路。"></a>4.   下载微信接口示例代码，并参考微信接口文档，开启折腾之路。</h4><h4 id="5-目前采用了很多第三方API，支持有"><a href="#5-目前采用了很多第三方API，支持有" class="headerlink" title="5.   目前采用了很多第三方API，支持有"></a>5.   目前采用了很多第三方API，支持有</h4><pre><code>*    机器人聊天
+*    查天气（发送 城市+天气，如 深圳天气，目前支持全国各省市地区）
+*    查PM2.5（同上，如 珠海空气）
+*    看笑话（发送 笑话，支持分类）
+*    看妹子图（发送 妹子 或者 MM 或者 美女，单次查看妹子图目前有限制:D）
+*    藏头诗（发送 藏头诗+任意字句，如 藏头诗徐不猛）
+*    翻译（发送 翻译+词句，如翻译i love you)
+*    看歌词（发送 歌词+歌曲名，如歌词后来）
+*    查域名信息（发送 域名+域名地址，如域名xubumeng.com，或者直接发送域名地址）
+*    查IP信息（发送 归属+IP地址，如归属192.168.1.111，或者直接发送IP地址）
+*    查看手机归属（同上，如归属13888888888 或者 13888888888）
+*    计算器（发送 计算+计算式，如 计算1+1，该功能暂时有些问题，敬请期待更新:p）
+</code></pre><h4 id="6-更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers"><a href="#6-更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers" class="headerlink" title="6.   更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers:)"></a>6.   更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers:)</h4>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/10/2013-10-10-long-time-no-see/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1188,106 +1300,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/12/10/2012-12-10-ORA-02449/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/12/10/2012-12-10-ORA-02449/" class="post-title-link" itemprop="url">drop表时出现ORA-02449: 表中的唯一/主键被外键引用</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-12-10 15:30:01" itemprop="dateCreated datePublished" datetime="2012-12-10T15:30:01+08:00">2012-12-10</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/12/10/2012-12-10-ORA-02449/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/12/10/2012-12-10-ORA-02449/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>用select A.*<br>       from user_constraints A, user_constraints B<br>       WHERE b.table_name = ‘TABLE_NAME’<br>        and a.constraint_type = ‘R’<br>        and a.r_constraint_name = b.constraint_name;<br>查出扎有关联的表，然后删掉！再drop 即可！</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1340,7 +1352,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">128</span>
+          <span class="site-state-item-count">129</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1366,7 +1378,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">105</span>
+        <span class="site-state-item-count">107</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
