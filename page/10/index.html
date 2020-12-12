@@ -264,7 +264,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/12/10/2012-12-10-ORA-02449/">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/23/2012-05-23-java-import-error/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
@@ -279,7 +279,7 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/2012/12/10/2012-12-10-ORA-02449/" class="post-title-link" itemprop="url">drop表时出现ORA-02449: 表中的唯一/主键被外键引用</a>
+            <a href="/2012/05/23/2012-05-23-java-import-error/" class="post-title-link" itemprop="url">java有时候无法导包问题的临时解决方法</a>
           
         </h1>
 
@@ -294,7 +294,7 @@
                 
               
 
-              <time title="创建时间：2012-12-10 15:30:01" itemprop="dateCreated datePublished" datetime="2012-12-10T15:30:01+08:00">2012-12-10</time>
+              <time title="创建时间：2012-05-23 12:49:39" itemprop="dateCreated datePublished" datetime="2012-05-23T12:49:39+08:00">2012-05-23</time>
             </span>
           
             <span class="post-meta-item">
@@ -326,8 +326,8 @@
       
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2012/12/10/2012-12-10-ORA-02449/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/12/10/2012-12-10-ORA-02449/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2012/05/23/2012-05-23-java-import-error/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/05/23/2012-05-23-java-import-error/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -342,7 +342,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>用select A.*<br>       from user_constraints A, user_constraints B<br>       WHERE b.table_name = ‘TABLE_NAME’<br>        and a.constraint_type = ‘R’<br>        and a.r_constraint_name = b.constraint_name;<br>查出扎有关联的表，然后删掉！再drop 即可！</p>
+          <p>在eclipse里面开发java项目的时候，偶尔会遇到无法导包的问题，</p>
+<p>如：</p>
+<p><code>import com.sun.management.OperatingSystemMXBean;</code><br>无法导入。本来想导com.sun.management包内的，却只有java.lang包的这个类。<br>com.sun.management.OperatingSystemMXBean位于java lib的rt.jar，<br>在eclipse里面可以看到项目引用的JRE System Library里面有rt.jar，<br>并且可以打开看到也有com.sun.management这个包，里面也有OperatingSystemMXBean这个类，<br>但是为何总是无法导入呢。<br>偶然的发现一个解决办法：<br><span style="color: #ff0000;">在项目的java Build Path-Libraries里面，把JRE System Library Remove掉，然后再重新添加Library，</span><br><span style="color: #ff0000;"> 点击右边的Add Library-JRE System Library-就默认选择workspace default JRE-finish。</span><br>遇到这样奇葩的问题，就这样试试吧:)</p>
 
         
       
@@ -364,7 +366,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/12/07/2012-12-07-ubuntu-superuser/">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/05/21/2012-05-21-hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
@@ -379,7 +381,7 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/2012/12/07/2012-12-07-ubuntu-superuser/" class="post-title-link" itemprop="url">Ubuntu下如何切换到超级用户 (superuser)</a>
+            <a href="/2012/05/21/2012-05-21-hello-world/" class="post-title-link" itemprop="url">Hello World</a>
           
         </h1>
 
@@ -394,7 +396,7 @@
                 
               
 
-              <time title="创建时间：2012-12-07 16:31:04" itemprop="dateCreated datePublished" datetime="2012-12-07T16:31:04+08:00">2012-12-07</time>
+              <time title="创建时间：2012-05-21 01:34:44" itemprop="dateCreated datePublished" datetime="2012-05-21T01:34:44+08:00">2012-05-21</time>
             </span>
           
             <span class="post-meta-item">
@@ -404,8 +406,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
+                  <a href="/categories/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
                   </a>
                 </span>
 
@@ -426,8 +428,8 @@
       
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2012/12/07/2012-12-07-ubuntu-superuser/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/12/07/2012-12-07-ubuntu-superuser/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2012/05/21/2012-05-21-hello-world/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/05/21/2012-05-21-hello-world/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -442,838 +444,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>由于 Ubuntu 是基于 Debian 的 linux 操作系统，在默认的情况下，是没有超级用户(superuser, root)的，但有些系统操作必须有超级用户的权限才能进行，如手动释放内存等。</p>
-<p>在其他 linux 操作系统 (如 fedora) 下，可以使用<br>su<br>切换到超级用户。<br>当输入 su 命令后， 系统会要求输入 root 的密码。<br>可是，在 Ubuntu 下我们根本不知道 root 的密码是什么。</p>
-<p>这样，在 Ubuntu 下切换到超级用户需要使用其他方法，主要有两种：</p>
-<p>1) sudo -i </p>
-<p>sudo<br>是 su 的加强版，意思是 do something as the supervisor。<br>   不需要密码就可以得到 root 的权限。<br>   但是它也有很多限制，比如，在默认的情况下，只能在 5 分钟之内使用 root 权限。</p>
-<p>2) 如果想一直使用 root 权限，还是要使用 su， 还是要得到 root 密码的。<br>   用<br>sudo passwd root<br>可以设置 root 的密码。<br>   之后就可以自由使用 su 命令啦。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/12/04/2012-12-04-oracle-dump/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/12/04/2012-12-04-oracle-dump/" class="post-title-link" itemprop="url">oracle导出的一二事</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-12-04 16:49:07" itemprop="dateCreated datePublished" datetime="2012-12-04T16:49:07+08:00">2012-12-04</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/12/04/2012-12-04-oracle-dump/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/12/04/2012-12-04-oracle-dump/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1.<br> 导出时候出现：IMP-00010: 不是有效的导出文件, 头部验证失败。<br> 经查明是导出和导入的oracle版本不同，用文件编辑器修改dmp文件的头部分的版本信息，改为导入oracle的版本。<br> 对应版本：<br>   11g R2：V11.02.00<br>　　11g R1：V11.01.00<br>　　10g：V10.02.01</p>
-<p>2.<br> 警告: 这些对象由 xxx导出, 而不是当前用户<br>在导出语句中加上fromuser=xxx touser=xxxx</p>
-<p>附oracle导出格式:<br>数据导出：<br> 1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\daochu.dmp中<br>   exp system/manager@TEST file=d:\daochu.dmp full=y<br> 2 将数据库中system用户与sys用户的表导出<br>   exp system/manager@TEST file=d:\daochu.dmp owner=(system,sys)<br> 3 将数据库中的表table1 、table2导出<br>   exp system/manager@TEST file=d:\daochu.dmp tables=(table1,table2)<br> 4 将数据库中的表table1中的字段filed1以”00”打头的数据导出<br>   exp system/manager@TEST file=d:\daochu.dmp tables=(table1) query=\” where filed1 like  ‘00%’\”</p>
-<pre><code>上面是常用的导出，对于压缩我不太在意，用winzip把dmp文件可以很好的压缩。
-                不过在上面命令后面 加上 compress=y  就可以了
-</code></pre><p>数据的导入<br> 1 将D:\daochu.dmp 中的数据导入 TEST数据库中。<br>   imp system/manager@TEST  file=d:\daochu.dmp<br>   上面可能有点问题，因为有的表已经存在，然后它就报错，对该表就不进行导入。<br>   在后面加上 ignore=y 就可以了。<br> 2 将d:\daochu.dmp中的表table1 导入<br> imp system/manager@TEST  file=d:\daochu.dmp  tables=(table1) </p>
-<p> 基本上上面的导入导出够用了。不少情况我是将表彻底删除，然后导入。</p>
-<p>注意：<br> 你要有足够的权限，权限不够它会提示你。<br> 数据库时可以连上的。可以用tnsping TEST 来获得数据库TEST能否连上。</p>
-<p>数据导出：<br>exp hkb/hkb@boss_14 full=y file=c:\orabackup\hkbfull.dmp log=c:\orabackup\hkbfull.log;</p>
-<p>导出注意事项：导出的是当前用户的的数据，当前用户如果有DBA的权限，则导出所有数据！</p>
-<p>同名用户之间的数据导入：<br>imp hkb/hkb@xe  file=c:\orabackup\hkbfull.dmp log=c:\orabackup\hkbimp.log full=y</p>
-<p>不同名之间的数据导入：<br>imp system/test@xe fromuser=hkb touser=hkb_new file=c:\orabackup\hkbfull.dmp</p>
-<p>log=c:\orabackup\hkbimp.log;</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/12/04/2012-12-04-linux-sftp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/12/04/2012-12-04-linux-sftp/" class="post-title-link" itemprop="url">linux sftp取文件</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-12-04 16:42:15" itemprop="dateCreated datePublished" datetime="2012-12-04T16:42:15+08:00">2012-12-04</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/12/04/2012-12-04-linux-sftp/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/12/04/2012-12-04-linux-sftp/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今天在从某个server上取文件，但是本地无法直接连接，只能通过另外一台server连接，再ssh到它的上面。<br>1.在有外网ip的server上:sftp username@ip<br>  get filename<br>2.在本地用secureCRT登录有外网ip的server，alt+P打开sftp标签页，get filename</p>
-<p>附sftp相关command<br>sftp&gt; help<br>可用命令：<br>cd 路径                        更改远程目录到“路径”<br>lcd 路径                       更改本地目录到“路径”<br>chgrp group path               将文件“path”的组更改为“group”<br>chmod mode path                将文件“path”的权限更改为“mode”<br>chown owner path               将文件“path”的属主更改为“owner”<br>exit                           退出 sftp<br>help                           显示这个帮助文本<br>get 远程路径                   下载文件<br>ln existingpath linkpath       符号链接远程文件<br>ls [选项] [路径]               显示远程目录列表<br>lls [选项] [路径]              显示本地目录列表<br>mkdir 路径                     创建远程目录<br>lmkdir 路径                    创建本地目录<br>mv oldpath newpath             移动远程文件<br>open [用户@]主机[:端口]        连接到远程主机<br>put 本地路径                   上传文件<br>pwd                            显示远程工作目录<br>lpwd                           打印本地工作目录<br>quit                           退出 sftp<br>rmdir 路径                     移除远程目录<br>lrmdir 路径                    移除本地目录<br>rm 路径                        删除远程文件<br>lrm 路径                       删除本地文件<br>symlink existingpath linkpath  符号链接远程文件<br>version                        显示协议版本</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/11/08/2012-11-08-special-day/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/11/08/2012-11-08-special-day/" class="post-title-link" itemprop="url">这是个特殊的日子。</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-11-08 16:41:06" itemprop="dateCreated datePublished" datetime="2012-11-08T16:41:06+08:00">2012-11-08</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/11/08/2012-11-08-special-day/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/11/08/2012-11-08-special-day/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>恩！ 20121108</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/11/04/2012-11-04-Special-day/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/11/04/2012-11-04-Special-day/" class="post-title-link" itemprop="url">一个值得纪念的日子</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-11-04 21:14:09" itemprop="dateCreated datePublished" datetime="2012-11-04T21:14:09+08:00">2012-11-04</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/11/04/2012-11-04-Special-day/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/11/04/2012-11-04-Special-day/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>因为不管结果如何，这都是我人生的一个分界线。<br>记得这个日子吧，20121104，这个离2012光棍节只有几天的一天。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/11/01/2012-11-01-shenzhen-cold-down/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/11/01/2012-11-01-shenzhen-cold-down/" class="post-title-link" itemprop="url">降温了!</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-11-01 17:08:21" itemprop="dateCreated datePublished" datetime="2012-11-01T17:08:21+08:00">2012-11-01</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/11/01/2012-11-01-shenzhen-cold-down/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/11/01/2012-11-01-shenzhen-cold-down/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>2012的短袖算过去了么？<br>注意身体！</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/10/24/2012-10-24-oracle-data-page/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/10/24/2012-10-24-oracle-data-page/" class="post-title-link" itemprop="url">解决oracle分页查询数据重复问题</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-10-24 10:22:02" itemprop="dateCreated datePublished" datetime="2012-10-24T10:22:02+08:00">2012-10-24</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/10/24/2012-10-24-oracle-data-page/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/10/24/2012-10-24-oracle-data-page/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>oracle分页查询时，会遇到数据重复的问题，下面就教您一个解决oracle分页查询数据重复问题的方法，希望对您能够有所帮助。</p>
-<p>在oracle分页查询中，我们采用类似以下所示的公认的比较高效的数据库分页查询语句（Effective Oracle by Design中有描述、众多oracle使用者也做过测试）。</p>
-<p>写道</p>
-<p>SELECT <em> FROM<br>(<br>SELECT A.</em>, ROWNUM RN<br>FROM (SELECT * FROM TABLE_NAME) A<br>WHERE ROWNUM &lt;= n)<br>WHERE RN &gt; m<br>这里的ROWNUM是一个伪列，它是oracle为查询结果所编的一个号，第一行的 ROWNUM为1，第二行为2，以此类推。</p>
-<p>因为oracle是按块进行读取数据的，如果数据按顺序存储，则可能使读取出来的数据是按顺序的，给用户误解为默认排序。事实上，oracle没有进行任何排序操作，如果sql没有要求排序，oracle会顺序的从数据块中读取符合条件的数据返回到客户端。所以在没有使用排序sql的时候，分页返回的数据可能是按顺序的，也可能是杂乱无章的，这都取决与数据的存储位置。在oracle分页查询过程中，如果数据的物理位置发生了改变，就可能会引起分页数据重复的现象。</p>
-<p>所以，要正确使用oracle分页查询，sql语句中必须有排序条件。</p>
-<p>但是，在有排序条件的时候，仍然会出现数据重复的现象，这是为什么呢？</p>
-<p>通过了解oracle的排序机理就会明白，出现这种情况的原因是因为排序列值的不唯一性。 Oracle这里使用的排序算法不具有稳定性，也就是说，对于键值相等的数据，这种算法完成排序后，不保证这些键值相等的数据保持排序前的顺序。</p>
-<p>解决的方法是在后边增加一个唯一性列，比如主键。</p>
-<p>所以解决方法如下（两个条件必须同时满足）：<br>**<br>1.sql语句中需要有排序条件。</p>
-<p>2.排序条件如果没有唯一性，那么必须在后边跟上一个唯一性的条件，比如主键。**</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/10/09/2012-10-09-Funny-National-day/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/10/09/2012-10-09-Funny-National-day/" class="post-title-link" itemprop="url">十一轶事</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-10-09 22:28:19" itemprop="dateCreated datePublished" datetime="2012-10-09T22:28:19+08:00">2012-10-09</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/10/09/2012-10-09-Funny-National-day/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/10/09/2012-10-09-Funny-National-day/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1.2012年的十一从深圳去湖南株洲爸妈那。期间全家去张家界旅游。</p>
-<p>2.在株洲开往张家界的列车上，我们4个打跑的快，4个人一副牌，每个人的牌很少，所以总是少这少那。一次我缺个7，就在取牌的时候大呼“7！7！”，老妈听到，你妻没来。（- -#好吧，老妈，这都被你知道了，你是有多想她啊！）</p>
-<p>3.一路上都是山，火车总是穿山的隧道，窗外一黑一黑的。老妈不满意了，诗曰：一山一水一黑洞。  众人大惊，无人能应下一句。</p>
-<p>4.一起吃饭的时候，因为最近你幸福吗比较火，遂问老妈：你幸福吗？老妈整理了一下普通话语气（在家我们都是说方言）颤抖的说道：我很幸福。我有一个好老公，一个好儿子一个好女儿。我很幸福。 大家大笑，又问： 既然你这么幸福了怎么还总是生气发脾气呢?  答曰：这个是控制不住的，有时候不想生气但还是控制不住。问：那你生气的时候考虑了你老公的感受吗？ 只听老爸在那悠悠可怜的唱道：我多么多么多么（此处省略N个多么）想…</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/09/28/2012-09-28-Started-with-Head/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/09/28/2012-09-28-Started-with-Head/" class="post-title-link" itemprop="url">从头开始！</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-09-28 22:03:30" itemprop="dateCreated datePublished" datetime="2012-09-28T22:03:30+08:00">2012-09-28</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/09/28/2012-09-28-Started-with-Head/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/09/28/2012-09-28-Started-with-Head/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今天搞了一个超短的发型！</p>
+          <p>Start here</p>
 
         
       
@@ -1295,7 +466,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span>
   </nav>
 
 
@@ -1343,7 +514,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-count">92</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1356,7 +527,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1369,7 +540,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">107</span>
+        <span class="site-state-item-count">117</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

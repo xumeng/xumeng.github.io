@@ -59,14 +59,14 @@
 </script>
 
   <meta name="description" content="tomcat使用的是电脑的80端口。&amp;nbsp; 当客户端访问的时候就会，会和服务器端的80端口建立连接。&amp;nbsp; 现在在做压力测试。当多个用户访问的时候，服务器端的80端口就会被一直被连接占用着，导致服务器端的CPU很容易就飙升到100%。&amp;nbsp; 连接数据库用的是tomcat连接池。&amp;nbsp; 可能性分析：80被长期占用，因为tomcat会启动连接池，注意是tomcat的连接池，不是">
-<meta name="keywords" content="Tomcat,性能优化,jvm">
+<meta name="keywords" content="Tomcat,JVM,性能优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tomcat CPU使用率高的原因分析">
 <meta property="og:url" content="https://amonxu.com/2012/07/26/2012-07-26-tomcat-high-cpu/index.html">
 <meta property="og:site_name" content="逐鹿IT,猛猛如玉">
 <meta property="og:description" content="tomcat使用的是电脑的80端口。&amp;nbsp; 当客户端访问的时候就会，会和服务器端的80端口建立连接。&amp;nbsp; 现在在做压力测试。当多个用户访问的时候，服务器端的80端口就会被一直被连接占用着，导致服务器端的CPU很容易就飙升到100%。&amp;nbsp; 连接数据库用的是tomcat连接池。&amp;nbsp; 可能性分析：80被长期占用，因为tomcat会启动连接池，注意是tomcat的连接池，不是">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-14T14:12:11.475Z">
+<meta property="og:updated_time" content="2020-12-12T05:46:50.035Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tomcat CPU使用率高的原因分析">
 <meta name="twitter:description" content="tomcat使用的是电脑的80端口。&amp;nbsp; 当客户端访问的时候就会，会和服务器端的80端口建立连接。&amp;nbsp; 现在在做压力测试。当多个用户访问的时候，服务器端的80端口就会被一直被连接占用着，导致服务器端的CPU很容易就飙升到100%。&amp;nbsp; 连接数据库用的是tomcat连接池。&amp;nbsp; 可能性分析：80被长期占用，因为tomcat会启动连接池，注意是tomcat的连接池，不是">
@@ -406,9 +406,9 @@
             
               <a href="/tags/Tomcat/" rel="tag"># Tomcat</a>
             
-              <a href="/tags/性能优化/" rel="tag"># 性能优化</a>
+              <a href="/tags/JVM/" rel="tag"># JVM</a>
             
-              <a href="/tags/jvm/" rel="tag"># jvm</a>
+              <a href="/tags/性能优化/" rel="tag"># 性能优化</a>
             
           </div>
         
@@ -418,8 +418,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2012/07/19/2012-07-19-ant-compile/" rel="next" title="eclipse中ant编译项目控制台不输出日志了">
-                  <i class="fa fa-chevron-left"></i> eclipse中ant编译项目控制台不输出日志了
+                <a href="/2012/07/13/2012-07-13-useful-regular-expression/" rel="next" title="常用到的正则表达式">
+                  <i class="fa fa-chevron-left"></i> 常用到的正则表达式
                 </a>
               
             </div>
@@ -502,7 +502,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-count">92</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -515,7 +515,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -528,7 +528,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">107</span>
+        <span class="site-state-item-count">117</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

@@ -58,18 +58,18 @@
   };
 </script>
 
-  <meta name="description" content="前言：今天用户打电话来说当上传大数据文件的时候，失败。经验证，出现OOM异常 。 过程：windows的用绿色版tomcat：set JAVA_OPTS=%JAVA_OPTS% -Xms1024m -Xmx1280m -XX:MaxNewSize=256m -XX:MaxPermSize=256m windows安装版tomcat（用服务启动tomat）：这个是执行bin/tomcat.exe，不">
+  <meta name="description" content="前言：当上传大数据文件的时候，失败。经验证，出现OOM异常 。 过程：windows的用绿色版tomcat：set JAVA_OPTS=%JAVA_OPTS% -Xms1024m -Xmx1280m -XX:MaxNewSize=256m -XX:MaxPermSize=256m windows安装版tomcat（用服务启动tomat）：这个是执行bin/tomcat.exe，不读取catalin">
 <meta name="keywords" content="Tomcat,JVM,性能优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tomcat内存设置">
 <meta property="og:url" content="https://amonxu.com/2012/06/07/2012-06-07-tomcat-vm/index.html">
 <meta property="og:site_name" content="逐鹿IT,猛猛如玉">
-<meta property="og:description" content="前言：今天用户打电话来说当上传大数据文件的时候，失败。经验证，出现OOM异常 。 过程：windows的用绿色版tomcat：set JAVA_OPTS=%JAVA_OPTS% -Xms1024m -Xmx1280m -XX:MaxNewSize=256m -XX:MaxPermSize=256m windows安装版tomcat（用服务启动tomat）：这个是执行bin/tomcat.exe，不">
+<meta property="og:description" content="前言：当上传大数据文件的时候，失败。经验证，出现OOM异常 。 过程：windows的用绿色版tomcat：set JAVA_OPTS=%JAVA_OPTS% -Xms1024m -Xmx1280m -XX:MaxNewSize=256m -XX:MaxPermSize=256m windows安装版tomcat（用服务启动tomat）：这个是执行bin/tomcat.exe，不读取catalin">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-14T14:11:55.386Z">
+<meta property="og:updated_time" content="2020-12-12T05:30:06.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tomcat内存设置">
-<meta name="twitter:description" content="前言：今天用户打电话来说当上传大数据文件的时候，失败。经验证，出现OOM异常 。 过程：windows的用绿色版tomcat：set JAVA_OPTS=%JAVA_OPTS% -Xms1024m -Xmx1280m -XX:MaxNewSize=256m -XX:MaxPermSize=256m windows安装版tomcat（用服务启动tomat）：这个是执行bin/tomcat.exe，不">
+<meta name="twitter:description" content="前言：当上传大数据文件的时候，失败。经验证，出现OOM异常 。 过程：windows的用绿色版tomcat：set JAVA_OPTS=%JAVA_OPTS% -Xms1024m -Xmx1280m -XX:MaxNewSize=256m -XX:MaxPermSize=256m windows安装版tomcat（用服务启动tomat）：这个是执行bin/tomcat.exe，不读取catalin">
   <link rel="canonical" href="https://amonxu.com/2012/06/07/2012-06-07-tomcat-vm/">
 
 
@@ -344,7 +344,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>前言：<br>今天用户打电话来说当上传大数据文件的时候，失败。经验证，出现OOM异常 。</p>
+        <p>前言：<br>当上传大数据文件的时候，失败。经验证，出现OOM异常 。</p>
 <p>过程：<br>windows的用绿色版tomcat：<br><span style="color: #ff0000;">set JAVA_OPTS=%JAVA_OPTS% -Xms1024m -Xmx1280m -XX:MaxNewSize=256m -XX:MaxPermSize=256m</span></p>
 <p>windows安装版tomcat（用服务启动tomat）：这个是执行bin/tomcat.exe，不读取catalina.bat的配置<br><span style="color: #ff0000;">修改注册表HKEY_LOCAL_MACHINE\SOFTWARE\Apache Software Foundation\Tomcat Service Manager\Tomcat5\Parameters\JavaOptions</span><br><span style="color: #ff0000;"> 原值为</span><br><span style="color: #ff0000;"> -Dcatalina.home=”C:\ApacheGroup\Tomcat 5.0”</span><br><span style="color: #ff0000;"> -Djava.endorsed.dirs=”C:\ApacheGroup\Tomcat 5.0\common\endorsed”</span><br><span style="color: #ff0000;"> -Xrs</span><br><span style="color: #ff0000;"> 加入 -Xms300m -Xmx350m</span></p>
 <p><span style="color: #ff0000;">linux:</span><br>在/usr/local/apache-tomcat-5.5.23/bin目录下的catalina.sh<br>添加：<span style="color: #ff0000;">JAVA_OPTS=’-Xms512m -Xmx1024m’</span><br>要加“m”说明是MB，否则就是KB了，在启动tomcat时会报内存不足。<br>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
@@ -420,8 +420,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2012/06/12/2012-06-12-flex-date-time/" rel="prev" title="Flex日期处理">
-                  Flex日期处理 <i class="fa fa-chevron-right"></i>
+                <a href="/2012/07/12/2012-07-12-java-no-such-method/" rel="prev" title="java更改字段类型导致Flex报NoSuchMethodError的错误">
+                  java更改字段类型导致Flex报NoSuchMethodError的错误 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -494,7 +494,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-count">92</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -507,7 +507,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -520,7 +520,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">107</span>
+        <span class="site-state-item-count">117</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

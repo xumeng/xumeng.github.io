@@ -264,7 +264,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/05/10/2018-05-10-Hello-Gitment/">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/03/24/2016-03-24-QA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
@@ -279,7 +279,7 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/2018/05/10/2018-05-10-Hello-Gitment/" class="post-title-link" itemprop="url">Hello Gitment</a>
+            <a href="/2016/03/24/2016-03-24-QA/" class="post-title-link" itemprop="url">回答几个问题</a>
           
         </h1>
 
@@ -294,7 +294,7 @@
                 
               
 
-              <time title="创建时间：2018-05-10 11:42:39" itemprop="dateCreated datePublished" datetime="2018-05-10T11:42:39+08:00">2018-05-10</time>
+              <time title="创建时间：2016-03-24 11:07:11" itemprop="dateCreated datePublished" datetime="2016-03-24T11:07:11+08:00">2016-03-24</time>
             </span>
           
             <span class="post-meta-item">
@@ -304,8 +304,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
+                  <a href="/categories/猛言猛语/" itemprop="url" rel="index">
+                    <span itemprop="name">猛言猛语</span>
                   </a>
                 </span>
 
@@ -326,8 +326,8 @@
       
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2018/05/10/2018-05-10-Hello-Gitment/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/05/10/2018-05-10-Hello-Gitment/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2016/03/24/2016-03-24-QA/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/24/2016-03-24-QA/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -342,44 +342,798 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><img src="https://images.unsplash.com/photo-1481622254766-0f0a35bf6e77?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=571f6724a7088c40e3f4cb2acf1bec87&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80" alt="cover"><br>换 Disqus 才一年，因为被 Q，本来就清静的博客更清静了，索性再也看不到任何评论，忧伤。</p>
-<p>最近又看到一个讨论国内社会化评论系统的帖子，兴之所致接入 Gitment。</p>
-<p>网上有不少教程，可以按照教程一步步操作。说说我的踩坑过程：</p>
-<hr>
-<h5 id="1-更新主题"><a href="#1-更新主题" class="headerlink" title="1. 更新主题"></a>1. 更新主题</h5><p>我的博客采用的是 <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">hexo</a> + <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">hexo-theme-yilia</a>，首先更新了<code>hexo-theme-yilia</code>主题。</p>
-<h5 id="2-配置信息"><a href="#2-配置信息" class="headerlink" title="2. 配置信息"></a>2. 配置信息</h5><p>发现<code>hexo-theme-yilia</code>主题自带支持<code>Gitment</code>，如下<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitment_owner:</span> <span class="comment">#      #你的 GitHub ID</span></span><br><span class="line"><span class="attr">gitment_repo:</span> <span class="string">'#'</span>          <span class="comment">#存储评论的 repo</span></span><br><span class="line"><span class="attr">gitment_oauth:</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">'#'</span>           <span class="comment">#client ID</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="string">'#'</span>       <span class="comment">#client secret</span></span><br></pre></td></tr></table></figure></p>
-<p>去<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">创建一个 OAuth application</a>，并获取相关信息填入其中。</p>
-<h5 id="3-部署博客"><a href="#3-部署博客" class="headerlink" title="3. 部署博客"></a>3. 部署博客</h5><p>进入博客文章详情，可以看到文章底部已经有评论模块了。</p>
-<h5 id="4-初始化评论"><a href="#4-初始化评论" class="headerlink" title="4. 初始化评论"></a>4. 初始化评论</h5><p>可以自己点进博客手动点击初始化，也可以使用<a href="https://draveness.me/git-comments-initialize" target="_blank" rel="noopener">自动初始化 Gitalk 和 Gitment 评论</a>。</p>
-<p>遇到一个蛋疼的问题是当文章链接过长的时候(超过 50 个字符)，会报<code>Validation Failed</code>错误。</p>
-<p>解决办法：</p>
+          <p>很久没有写文章了，第一太懒，第二没时间。连买来的体重称都几天没见到了。</p>
+<p>今天在论坛上看到有人问这三个问题，想了想便回复如下，不知所云。</p>
+<h4 id="Q-你打算一直做程序猿吗？"><a href="#Q-你打算一直做程序猿吗？" class="headerlink" title="Q:你打算一直做程序猿吗？"></a>Q:你打算一直做程序猿吗？</h4><p>A:看怎么理解“做”这个词，以及理解“程序猿”的涵义，甚至如何定义“一直”。</p>
+<p>“做”是仅仅代表着职业，还是代表着某种身份。</p>
+<p>“程序猿”是只要在IT行业干着就算“程序猿”吗，不在IT行业但是业余编程算不算。</p>
+<p>“一直”有多直？“永远”有多远？这个问题交给哲学，交给佛学。</p>
+<p>At last, 编程是我的兴趣爱好，但不是生活的全部，也不是生命的全部，所以“程序猿”不会是我“一直”的“职业”，而是我某种身份：很多种身份之一。</p>
+<h4 id="Q-如果将来转行，你打算做什么"><a href="#Q-如果将来转行，你打算做什么" class="headerlink" title="Q:如果将来转行，你打算做什么?"></a>Q:如果将来转行，你打算做什么?</h4><p>A:农妇山泉有点田，空闲之余思考哲学与科技。大隐中隐隐不住，房价太高，只能小隐隐于野了。</p>
+<h4 id="Q-如果没打算转行，那目前您感到的最大的压力是什么？"><a href="#Q-如果没打算转行，那目前您感到的最大的压力是什么？" class="headerlink" title="Q:如果没打算转行，那目前您感到的最大的压力是什么？"></a>Q:如果没打算转行，那目前您感到的最大的压力是什么？</h4><p>A:人类自我膨胀的速度与社会进步的速度不成正比的压力。</p>
+<p>理解上句很简单，宇宙空间这么大，人类居然害怕没有住的地方，将一辈子的生命付诸到买那不到一百平方米上。</p>
+<p>嗟夫！这和一只可怜的飞蛾，为了贪图眼前的光明，义无反顾、毫不思考地扑向火苗有何异处。 </p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/03/02/2016-03-02-God-Of-Gamblers-Is-Dead/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2016/03/02/2016-03-02-God-Of-Gamblers-Is-Dead/" class="post-title-link" itemprop="url">赌神里皮东的陨落</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2016-03-02 11:11:11" itemprop="dateCreated datePublished" datetime="2016-03-02T11:11:11+08:00">2016-03-02</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
+                    <span itemprop="name">鬼画弧</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2016/03/02/2016-03-02-God-Of-Gamblers-Is-Dead/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/02/2016-03-02-God-Of-Gamblers-Is-Dead/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>这么看来我快成了一个专业的悼文写作者了。然则想想确实又没什么好写的，独听闻某个曾经真实存在的人突然消失时，觉得有写些什么的必要。</p>
+<p>里皮东是一个方言音调发出的洋气名字。据说是我父亲的老表，所以我应该叫其为表叔。这个表叔我在两年以前从未谋面，只听父亲与其关系甚好。父亲是那种本身老实本分的人，常舍己为人地帮助他人，但同时又有一颗偶尔不安的心。</p>
+<p>里皮东这个名听起来是一个身穿白衣长袖的风度偏偏公子哥，加上传闻他是赌神，靠牌桌上的本事成家立业，娇妻爱子，甚至在南方买了房子，举家搬到南方。在父母口中他是一个成功人士，不是世俗的通过努力工作、时来运转的发财的那种成功，而是通过天赋异禀的赌术与精明过人的智慧获得成功。当然更重要的一天是他还很重情重义，即使身居显贵也不相忘。</p>
+<p>一直很想一睹赌神的风采，可惜每每来我家拜年时我已开学。直到2012年初有天母亲带我去看买的新房，正好那天赌神也在城里，才得以见了一面。得见时原来那个赌神的模样被彻底反转，没有白衣长袖，也没有风度翩翩，赌神只是一个中年发福的胖子，个子不高、显得机灵，客客气气的他丝毫没有印象中赌神那种气宇轩昂的感觉。开着一辆银白色的车，一眼望去只会以为他是一个小商贩。</p>
+<p>赌神既没有白衣飘飘，也没有风度翩翩，倒是娶了一个身材高挑模样端正的老婆。前两年携全家来拜年时，但见赌神儿子高大帅气，女儿温柔漂亮，看起来是一个人见人羡的幸福家庭。自此后举家搬往南方，再无讯息。</p>
+<p>时间来到2016年，某天突然听到爸妈说里皮东死了，我大感震惊，追问怎么死的，答曰猝死。惊惶之余，细想起来也是情理之中。赌神好堵，赌桌上工作肯定不比朝九晚五，自然是兴致来时酣战成天成夜，风餐露宿，酒足饭饱，早已是四十岁的年纪六十岁的身体。</p>
+<p>人生得意须尽欢，赌神赌场纵横捭阖、挥斥方遒，到头来醉卧沙场、马革裹尸，虽是遗憾，却也不愧为精彩。唏嘘间，方想到赌神的娇妻爱子，经历一番丧父丧夫的痛，怕是难以承受。但最终水还得流，路还得走，娇妻得嫁人，爱子得改口。赌神奋一世之余烈，终落得个红棺木、绿坟地，每逢清明</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/01/08/2016-01-08-Tie-Guai-Li-Lost/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2016/01/08/2016-01-08-Tie-Guai-Li-Lost/" class="post-title-link" itemprop="url">符号“铁拐李”的消逝</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2016-01-08 17:17:17" itemprop="dateCreated datePublished" datetime="2016-01-08T17:17:17+08:00">2016-01-08</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
+                    <span itemprop="name">鬼画弧</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2016/01/08/2016-01-08-Tie-Guai-Li-Lost/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/08/2016-01-08-Tie-Guai-Li-Lost/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>  铁拐李，名徐洪富，名字是大富大贵之人。因其有一瘸腿，常以一根竹棍为拐，人称铁拐李。</p>
+<p>  洪富年少之事已去半个世纪，如今都忘了个八八九九，只剩下吃不饱的肚子、玩不完的泥巴、闻不腻的牛屎味，和浑浑噩噩就长大就变老。洪富没想过去想那些苦日子，后来的日子能想吃白饭有米、想吃馒头有面，无疑更让洪富难以想起从前。大概人老的久了，就容易像别人一样以为自己没有年轻过。</p>
+<p>  至少我是这么认为的，自我认识洪富起，他便老了。永远都是一身农村老头标配的蓝黑色中山装和裤子，脚踏一双解放鞋或者黑面白底的单鞋。因为地中海的缘故他总是顶着一顶与衣服同色的帽子。因为瘸的缘故常常瘫坐在路边的大石头上，摘下帽子扇风，地中海边上廖廖几根发丝润出一滴滴汗珠下半截沾满泥土的竹棍侧放在石头沿。</p>
+<p>  洪富年轻时大概是一位相貌堂堂较出众的男子，身材高大威猛，这一点是因为即使多年后看到瘸了一条腿又老了的他，也比普通身高略高出些。双目炯炯有神，瞪若铜铃。可能那时他便已经瘸了，或者之后瘸了。总之他是瘸了。年轻时估计过了一段潇洒的日子，姑娘们都青睐于他，他成了一个瘸了腿的潇洒男子，或者一个潇洒男子后来瘸了腿。年轻时左右逢女人缘，可不见有人和他结婚，说明他不仅潇洒，还是潇洒到姑娘们都不敢托付终身的那种。眼见着身边的姑娘一个个都结婚了，洪富不急：优秀的男人总是不到最后不做决定。</p>
+<p>  后来的故事大概是这样：洪富越老越心气儿高，可是因为他后来瘸了或者随着年纪的增大瘸这个事情愈发显得突出，年轻时可以靠脸和一口伪专业，老了就要靠身体。洪富侊（guàng）了，也许他没有意识到这个问题的严重性，毕竟几十年如一日都面对这个问题说明这个问题已经于他不甚严重了，顶多就是吃饭少道菜缺副碗筷矣。别人结婚了，生娃了，娃长大了，娃结婚了，娃生娃了，我也是其一。如上所说，我认识洪富时，他是一个不可爱的老头，一个瘸了腿的地中海且还是个老光棍，总归不会是一位慈祥的老爷爷。原来他和他哥哥住一起，后来哥哥结婚了便搬去某个小破屋，再后来过继给侄子当父亲。当然这个父亲是没什么价值的，既扛不起家庭重任，也管不了人说不上什么话，只能成了供桌上的一匾“东厨司命神位”，看的见扔不着又不能发挥什么显而易见价值的东西，只能摆那发霉发臭直至烂掉。</p>
+<p>  但洪富终归是发了点光和热的：在发霉之前，侄子的娃大了一些，侄子与侄媳妇为了生计跟着外出务工潮外出务工，照顾孙子的任务就交给他了。当然我想不出他帮孙子洗衣服做饭的样子，但洪富总也享受了一下父亲和爷爷的角色。除此之外，被外人举反例大半辈子的洪富，居然在末了还享受了一把被艳羡的感觉：因为条件的特殊性，在开始施行五保政策时洪富是理所当然的第一个。荣誉没有持续很久，孙子就长大去外面念书了，洪富老无所依，只能作为第一批养老院入住五保进驻新建好的养老院。据说养老院条件不错，冬有热水，夏有空调，就连大米饭吃完也会有厚厚的锅巴，井里的山泉都是甜的，远近闻了名，不少路过的农村妇女常常去里面蹭吃锅巴蹭喝凉水。</p>
+<p>  洪富住进养老院时我大概读高中，一月回一次长假待家里，基本没什么机会看到他。每次见到他都老了一些，背驮了、肩膀弯了、瘸腿走路更慢了，连地中海都泛起了白。每逢过年拜年时，看着洪富端坐在客厅，一副家有一老如有一宝的态度。高中，大学，工作，也快十年了。我十几二十的十年也是洪富生命最后的十年。</p>
+<p>  阳历二零一六年一月四日，收到一条家人微信：铁拐李长世了。长世可能并不是什么特殊名词，但是我们之间大概不会讨论起铁拐李，除非像这样，顺便带起一句铁拐李长世了。我也没有什么惊讶和感叹，看别人的生死就如同花开花落、云卷云舒，只有淡淡的些许哀伤。</p>
+<p>  铁拐李与我而言，在与不在已经没什么不同，他都是投射在我大脑中的一个符号，一个指针，对应和存储的是一个瘸子，有过交集但并不熟的不太可爱的老头，一生未娶，老无所依，五保与养老院。铁拐李走了，也意味着指针要被释放，渐渐消失了。</p>
+<p>  洪富一生，未能如名大富大贵，年轻时放浪形骸，老来坐在石头上笃学，在养老院附近的山林思考人生，无所寄，无所托，来无因，去无终。以成败论他算上一个彻底失败的人，然其未尝成功之喜，遑论失败之悲。</p>
+<p>  洪富代表着上上辈的一代，而现在，正慢慢和我们告别。</p>
+<p>  甚至没有告别。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/01/01/2016-01-01-New-Year/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2016/01/01/2016-01-01-New-Year/" class="post-title-link" itemprop="url">旧年新年</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2016-01-01 00:00:01" itemprop="dateCreated datePublished" datetime="2016-01-01T00:00:01+08:00">2016-01-01</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Note/" itemprop="url" rel="index">
+                    <span itemprop="name">Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2016/01/01/2016-01-01-New-Year/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/01/2016-01-01-New-Year/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>旧年新年</p>
+<p>2015，终于成为历史，一个无关紧要的数字。</p>
+<p>将来是诱惑的，现在是重要的，过去是没用的，就和女人一样。你以为没有追上的女神是遥不可及的，充满可能的，当你拿下了也发现不过如此。你以为现在的会永远在一起，也说不定转眼就成为过去式了。而过去的女人就成了黏在身上的一坨泥巴，虽然擦了洗了泼出去了，也会干了变成灰尘漂浮在你的周围，落在衣服上钻进鼻孔揉进眼睛，不时出现在你边上。</p>
+<p>回想 2015，大致可以分为几个时期：</p>
+<p>乱世：<br>持续了小上半年。首先上架了某图片社交应用，此举难度姑且堪称全年一难。</p>
+<p>混沌世：<br>持续了一个半月，期间成功脱坑。虽然不知入的是不是坑，但起码也算的上起起落落。</p>
+<p>朗世：<br>感觉混沌天空变成朗朗晴空，一切充满挑战与可能。可惜它只持续了将近两个月。</p>
+<p>浊世：<br>团队的磨合、产品方向的变更、人员的匮乏，堪称这几个月的几大痛处。好在最终都坚持了下来，然后，年底前，3.0（0.3）版本发布。伴随着 2016 新年的钟声，全年第一难结束了。新年的事，日后再说。</p>
+<p>这一年，读了点书，写了点字，呻了点吟，并没有赚什么钱，并没有陪什么家人。</p>
+<p>我算坚定的保守主义者，因为阳历到了 2016 而阴历还是 2015 时，我认为时间在此应该慢下来按阴历算。虽然你已然是 2016 了，但是应该停下来等一等阴历，待过完年新历旧历再一起携着小手一起欢快的奔腾。</p>
+<p>可惜事与愿违，新历大概永远不会停下来等一等旧历，至少在它被发明出来时并没打算加上这个功能。旧历的新年开始时，新历的一年也已去了几分之一。</p>
+<p>新年，且说几句：</p>
 <ul>
-<li>如果是手动初始化的，可以考虑在 Gitment 配置里面用<code>page.date</code>代替<code>url</code>，这样就不会超出 50 个字符了。</li>
-<li>如果是使用自动初始化的 ruby 脚本，可以改下代码，思路有几种：<blockquote>
-<ol>
-<li>将 url 截取不超过 50 个字符</li>
-<li>将 url md5 加密或者 Base64 编码</li>
-<li>用时间来代替(估计比较蛋疼，涉及时间格式转换)</li>
-<li>设置博客的<code>permalink</code>，保证 url 长度在 50 个字符以内</li>
-<li>其它大胆的想法…<br>我采用的是第 1 种方案。</li>
-</ol>
-</blockquote>
+<li>继续看书</li>
+<li>继续学习</li>
+<li>继续写</li>
+<li>继续思考</li>
+<li>继续执行</li>
+<li>继续输出</li>
+</ul>
+<p>这篇文章啰嗦到此了，赶着写铁拐李。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/12/15/2015-12-15-Eggs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2015/12/15/2015-12-15-Eggs/" class="post-title-link" itemprop="url">一只忘了下蛋的鸡</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2015-12-15 14:30:33" itemprop="dateCreated datePublished" datetime="2015-12-15T14:30:33+08:00">2015-12-15</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
+                    <span itemprop="name">鬼画弧</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2015/12/15/2015-12-15-Eggs/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/15/2015-12-15-Eggs/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>  以前提到过，我自幼对文字有特殊的感觉。当然这里的以前未必真是以前，因为提及此的文章写于本文之前，却并未发出。故而读者如果感到疑惑，可理解为我在此确定一个如上前提条件，且是全局性的，前后文皆接受此条件，除非局部重新定义。</p>
+<p>  因为擅文字，好卖弄，这让不少人知道我是一个有才的家伙，无论真心的 (true) 和假意的 (false) 。但这一点都无法构成我很牛逼，因为 true &amp;&amp; false = false. 文字哪怕写的很好，也仅此而已了，既无法让你成为一个数理化很牛逼的学霸，也无法成为一个精通历史政治、能谈古说今的家伙。反倒让你看起来是个多长了条胳膊：往乐观了看是三头六臂，往悲观了看却是在你睡觉的时候硌着背，吃饭的时候恐怕会抢碗筷。</p>
+<p>  总之这让别人看来一个穿着长布衫扶着圆片眼镜的 nerd ：既闷而骚，还能写点文字。这里能写点文字就跟老母鸡能下蛋一样不值一提了，老母鸡就是下蛋的，这也算本事嘛？老母鸡会下蛋，所以干嘛不下蛋？你不下蛋我们便会对你老母鸡的身份重新定义。老母鸡之所以是老母鸡，盖因你会下蛋。假使老母鸡不会下蛋，那么与老公鸡无异，不能称之为老母鸡、下蛋的母鸡。老公鸡见到老母鸡便念叨：下只蛋罢，甭管老母鸡当时是心情不好或是刚来月经，或者刚拉完一泡鸡屎压根没想过下蛋。</p>
+<p>  因为上述原因加上自己的懒惰，为自己找来借口什么也不干。加上上述原因是借口之一，由此可见我为找借口是不遗余力的。每次决心写点什么，想好一个故事，确定好主人公的名字和关系，然后就放那了。只顾想不顾写。很多年后写代码这毛病再次复发：定义好 variable 和 Data Type，然后就不往下写了。算下来这么多年写下来的东西就是声明了一大摊 Interface 和 variable，不管实现。至于能遗留下来的，就更少了。所以其实可以算我其实什么也没”写过”，只是”想过”。</p>
+<p>  如果能写文字时写文字，可以姑且算个有才，那么能写文字时不写文字，等到老都再写文字，那么不叫有才，叫自传，写完自是读不到的，别人更不会读到。大家那么忙，自己的一辈子都操心不过来，哪还有时间关心你的一辈子。</p>
+<p>  那么现在写点什么到底算个什么呢？我想最大的意义便是对我的脑袋之前天马行空的一个交代，因为假使如上所说在能写点什么的时候写点什么，可以称之为有才，而最后我没有成为有才，只是一个普通的家伙，靠不了文字过日子，只能写些abcd123的代码吃饭，脑袋肯定是不满意的，不满意的早晚要造反，为了长久之计还是需要写点什么，尽管上述并不构成因果关系。</p>
+<p>  如果一只本会下蛋的鸡，一只没下什么蛋，那么最后我们可以认为它忘了下蛋，或者压根不会下蛋，那么它现在下的蛋究竟是些什么蛋，肯定不会是什么好蛋，是坏掉的蛋，畸形的蛋。</p>
+<p>  此文无特殊意义，仅为下蛋的碎碎念、咯咯叫。</p>
+<p>  <em>顺便祝自己 25 岁生日快乐 :)</em></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/12/09/2015-12-09-City-Shenzhen-Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2015/12/09/2015-12-09-City-Shenzhen-Note/" class="post-title-link" itemprop="url">(城市 & 深圳) · 印象</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2015-12-09 15:55:55" itemprop="dateCreated datePublished" datetime="2015-12-09T15:55:55+08:00">2015-12-09</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
+                    <span itemprop="name">鬼画弧</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2015/12/09/2015-12-09-City-Shenzhen-Note/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/09/2015-12-09-City-Shenzhen-Note/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>  2015 年冬天，某天清早出门。在短促的冬风中听到几声唢呐。<br>  唢呐，大概是最具特色的农村乐器。它没有西洋乐器的雅，也没有锣鼓的闷。它就像老农民一样踏实，从骨子里的有爆发力，安静的在一旁蹲着，没有花里胡哨，没有悦耳和震撼，而它一响起，其它声音便只能当背景。乡下红白喜事都靠它挑起气氛。唢呐大概是比较官方的称呼，我们那里叫它喇叭，演奏者顺当被好笑的称为“吹喇叭的”。</p>
+<p>  一般两个中老年男人坐在矮方桌旁的木凳上，木色的方桌上放上两个装满茶水的白洋瓷缸，两个唢呐小头朝天屁股着地的摆在桌上，红白喜丧的红布白布缠在唢呐的腰部，静静地立在那里像两个待嫁的姑娘披上了嫁衣。临了，两个男人慢悠悠的拿起唢呐，插上喇叭嘴，鼓起两边大腮帮子，像一只生气的蛤蟆，然后两声噪耳的唢呐声便由方桌上的白洋瓷缸边窜起。</p>
+<p>  唢呐演奏不是一种优雅的音乐，自然只有乡下人、老农民们喜欢它，当然前提是他们没有听过优雅的音乐。而我口味比较综杂，比如美食喜欢清淡的粤菜，也喜欢味重的湘菜川菜，画风喜欢小清新也喜欢黑暗系，女人喜欢小萝莉当然也喜欢熟女，我对钢琴曲触动心弦，也会被唢呐引起共振。从小开始每逢喜事的时候，我除了看一眼新娘子就是呆那听唢呐，丧事肯定没有人可以看，我便看着别人穿白衣，然后听着唢呐，想象自己心里下着雨。</p>
+<p>  深圳现在没有人穿白衣，有也是穿着白衬衫、白T恤，自然与丧事也算不上什么关系。但是不远处天桥上缓缓挪动的人群，倒是很像送葬的队伍：沉默，肃穆，每个人都面无表情的挪动着。不同的是这群人没有人举招魂旗，没有人抱遗像，也没人带头哭着。我萌生一种想法，如果有人带头哭，会不会其他人也会跟着哀嚎。不过这个想法经过简单的辩证后给出No，因为有人晕死撞死猝死无名死在路上，人们都懒得送出一眼关注。每个人都活在自己的套子里，街上的路人都是NPC而已，说不定都开启屏蔽开关了呢。</p>
+<p>  说起来，作为一个乡生土长的农村人，距离最近的县城区也得百十来里，从小自然便对城市和城市人有着特殊的看法。在我看来，城市与农村最大的区别就是钢筋水泥是城市的基本元素，土地与树木是另一个的基本元素。城市像远处的城堡，高大壮观，阔气无比。有着下雨不用穿雨靴的柏油马路，穿个鞋子一月半载也不会沾泥巴点子。有高楼大厦，虽然不知道那么高的盒子里有没有住人，不过想想睡在几十米高的空中，应该感觉不错。有满街的铁壳子汽车，走上几十里也可以不晒太阳不淋雨不出汗。有西装革履的男人与浓妆艳抹的女人，还有操着一口普通话分不清麦子和韭菜的小孩。他们的天空没有晴天的白云蓝天，没有阴天的雷雨闪电，想想应该只会有一座座面面相觑的盒子楼。</p>
+<p>  当然盒子楼不是我梦想的去处。一座两层的小楼，菜园，院子，门前可以看到田野和四季，厨房屋顶上伸出来烟囱飘出来的跟天空一样蓝的炊烟，这些本已经实现的就是我的去处，我也没想着离开。直到上学、毕业、上学、毕业、工作，跟挤火车站似的被人群裹挟着往城市奔去。如果你不往前挪动，肯定周围的人会伸手掐着你的脖子问你为什么在这磨磨蹭蹭。</p>
+<p>  “走不走啊？”…  “请让一下”…  原来我已经走到天桥上了，周围还是那些陌生熟悉的送葬者的面孔。再往前走时，看到一个衣着破烂的人坐那吹着唢呐乞讨，曲子诙谐的是“小苹果”。</p>
+<p>  我意识到深圳大概不会有吹着唢呐的送葬队伍，甚至大概不会死人，死人显然不符合城市的气质。农村会死人，城市只会活人。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/12/05/2015-12-05-Jiang-Nan/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2015/12/05/2015-12-05-Jiang-Nan/" class="post-title-link" itemprop="url">十年前江南，十年后五月春天</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2015-12-05 15:56:11" itemprop="dateCreated datePublished" datetime="2015-12-05T15:56:11+08:00">2015-12-05</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
+                    <span itemprop="name">鬼画弧</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2015/12/05/2015-12-05-Jiang-Nan/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/05/2015-12-05-Jiang-Nan/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="2005"><a href="#2005" class="headerlink" title="2005"></a>2005</h3><p>  十年前，2005。<br>  回望过去总是容易的，哪怕十年，也只像过场动画一样，一帧一瞬间，一瞬间几年。</p>
+<p>  时间是个奇妙的东西，当我们人类的生命以几十年计时，动物是几年，蚂蚁几天，更小的细胞或其他生物以几秒甚至毫秒微秒乃至人类不能想象的单位计算。而高山，海洋，地球，宇宙的生命则是亿万年。而十年，不多不少，正好是我已有生命的五分之二。</p>
+<h3 id="高一"><a href="#高一" class="headerlink" title="高一"></a>高一</h3><p>  生命中每一段新的旅程都像长大，上幼儿园、升初中、上高中、读大学、找工作。<br>我仔细想想，这么些年一直像只风筝，与故乡一点点飞高飞远。以前还能近近的的看到故乡的模样，再变成只能看到远处的影子，再后来只能遥遥的看到故乡缩小到看不见的一个点，而现在只能看着身上那根线，只有它还提醒着我还有归途，而不是断线的风筝，飘到哪里就是哪里。</p>
+<p>  飞得越远，越会害怕，不愿承受回线之苦，落地之痛。所以读高一那年离家100里的时候。感受不到故乡光环，在学校就仿佛一只蔫瘪的皮球，怎么都蹦哒不起来。</p>
+<h3 id="冬天"><a href="#冬天" class="headerlink" title="冬天"></a>冬天</h3><p>   信阳恐怕是不多的四季如此分明的地区之一。春天如褐灰色春天中的一束发芽的杨柳，夏天像葱绿色夏天中远处的一抹白墙，秋天如青黄色秋天的一碗碧蓝天空，冬天像银白色冬天中的一处红房。</p>
+<p>   信阳的冬天不如北方的冷，浑厚而严实的冷，扛着四层面棉袄方能御之，窝在四层棉袄中艰难度冬。也不如南方的冷，咸粘而闷湿。信阳的冷正如它自身的小江南气质一样，婉约而小巧的冷，太阳出来时温度便温暖如春，太阳下去时又细冷刺骨。</p>
+<h3 id="阳光"><a href="#阳光" class="headerlink" title="阳光"></a>阳光</h3><p>  记忆中的冬天大多都是充满阳光的。冬天的太阳犹如一颗未煮熟的蛋，所到之处都遍布着意犹未尽的鸡蛋味和似黄既绿的颜色。</p>
+<h3 id="宿舍"><a href="#宿舍" class="headerlink" title="宿舍"></a>宿舍</h3><p> 乍上高一时，搬去的一个临时搭建的平房，低矮潮湿、终日不见阳光，大白天还要开着仅有的发黄白炽灯，像一间监狱的地窖。还没穿了一周未晾干的内裤后，搬去了相对高大上的对面办公室楼某间办公室当宿舍。雪白的墙壁，光滑的米白地板，电棒的白光把宿舍照的像一个购物中心。感觉像从棚户区走进了对岸的CBD。</p>
+<h3 id="绿色玻璃"><a href="#绿色玻璃" class="headerlink" title="绿色玻璃"></a>绿色玻璃</h3><p>  CBD一定少不了玻璃。玻璃是现代建筑中的一个重要组成部分，无论城市还是农村。农村居民楼的二层喜欢用上一排绿色蓝色玻璃，高档的商贸大厦也同样外面裹上一层玻璃。砖头为里，玻璃为表。宿舍同样每一层也用上了玻璃，当然对于一个县级高中来讲，这个建筑风格明显是农村风格。</p>
+<p>  正下午，两三点的阳光透过绿色玻璃打进大楼的走廊里，在地板上再弹到宿舍内银白的天花板上。行走在走廊上会有一种穿梭于光与影，漫步在true and false之间。</p>
+<h3 id="洗衣服"><a href="#洗衣服" class="headerlink" title="洗衣服"></a>洗衣服</h3><p>  当然穿梭漫步的时候，手里提着水桶与盆。住校的冬天一周洗一次全部衣服，就是周日下午此时了。把水龙头放到最大，水激到生胶的桶底上，发出敲木头的声音，化出很多泡沫。有大太阳的时候，水管放出来的水也不会很冰凉，不然手一接触到水就像泡在硫酸中一样，刺的谷骨子里疼。由此证明记忆中那一天确实是晴天，并且太阳很大很厉害，大中午晒得人不敢暴露在太阳下面，只能在太阳地和阴冷的没太阳的地方转来转去。</p>
+<h3 id="三两人群"><a href="#三两人群" class="headerlink" title="三两人群"></a>三两人群</h3><p>  这时候到处都有来来去去的人，刚吃完饭上来的，准备洗衣服的，有到处转转的，也有一些莫名其妙的家伙，反正做着无关紧要的莫名其妙不规则未知轨迹运动。透过窗户能看到操场上漫步的三两人群，时不时蹦哒的打球者，穿梭于宿舍教学楼小卖部的人。</p>
+<h3 id="江南"><a href="#江南" class="headerlink" title="江南"></a>江南</h3><p>  学校的广播永远都是循环播放几曲永远耳根烂熟但是不知名字的音乐，或者一些烂大街的通俗流行曲，譬如那个冬天的《江南》。歌曲开头的呼呼风声也算给那个温暖的冬天吹来不少南方的暖风。一群“不懂爱恨情仇的我们”听着这歌来到了一座座低矮建筑的小镇，小河，和风，乌篷船，斗笠，花伞，穿着旗袍扭着屁股的女人，锃亮的木门。当然还有永不换季的春天。</p>
+<h3 id="春天"><a href="#春天" class="headerlink" title="春天"></a>春天</h3><p>  春天像小孩蹿起来的身高，父母弯下去的肩膀，不知从什么时候开始，也不知何时会真正来到，就这样躲在冬天的后面悄悄的来了。三四月时信阳的大街小巷会同时刮着西北的阴风和东南的暖风，走在太阳底下暖和如春，走在荫凉地下又阴冷似冬。这时候人们有穿着秋季换冬的衣服，有穿着冬装，也有穿春装，唯独我每次早早的换上短袖，怕不能更早的拥抱夏天。三四月时，穿着短袖走在信阳的大街上会有一种清冷的感觉。路上行人会对你投以为你披上小棉袄的温暖目光。街边的商场里面一遍遍的播放《江南》，和三四月的春风，路两旁的梧桐树，穿着春夏秋冬装的人们，靓丽的女孩，与帅气的我，奏成了我青春记忆中最后的信阳印象曲。</p>
+<h3 id="南方"><a href="#南方" class="headerlink" title="南方"></a>南方</h3><p>   在我印象里，南方一直是一座神秘之都，它没有具体的省和市，只是一座四四方方的城，无数的人奔赴于此，把青春与汗水挥霍在前，把家庭和故乡抛诸在后。等到在城里炼到头发白了背也驼了眼也花了，便要从城里被挤出来，回到北方去。南方就是一个铁与石的机器，把千模百样的人们倏的压成四四方方的一块人肉干。管你腰缠万贯还是响叮当，都只剩下屎尿屁。</p>
+<p>  20岁前一直梦想踏上南方这块土地，看看是不是此地的人们是否如同活在电视上，看看南方和北方是否两个世界。等到时速100多km的火车渐行渐远时，除了一路上渐渐茂盛的树木，房子越建越小，坟墓由等腰三角体变成沿着山坡挖的小洞外，大江南北居然没什么刻意的变化：既没浓烈的风土人情，也不会陌生到让我思念家乡，除了周围换成一群群陌生独立的脸。确实陌生，因为人口一千多万的深圳，我熟悉的人为个位数。</p>
+<h3 id="不想结束的结束"><a href="#不想结束的结束" class="headerlink" title="不想结束的结束"></a>不想结束的结束</h3><p>  信阳，一个旧相识女孩，谈过爱恋说了再见；南方则是一个浓妆艳抹的女人，浑身散发着炽热的气息，一举一动都显得撩人心扉。终有一天，趴在她一对36D的肥乳上，会对刺鼻的奶油味感到绝望，转而怀念起那个简单的洗发水味道。</p>
+<p>而心中的江南，也化作五月春天。</p>
+<p><br></p>
+<h4 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h4><p>  写这篇文章的灵感源于再听到江南这首歌，写作时也反复播放当作背景音乐。起笔时还是2015，落笔已是2016，因为文思泉涌中途陆续写了几篇文章，挖了几个坑，有的填了，有的没填，有的随便乱填。这篇文章也是堆积很久，最终匆匆结尾。</p>
+<p>   最近的写作于我是一种发泄，发泄脑中喷薄郁积的想法、回忆和吐槽。</p>
+<p>   最后，谨以此文献给十年前的青春，和那个五月春风拂面的信阳。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/12/03/2015-12-03-To-Love/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2015/12/03/2015-12-03-To-Love/" class="post-title-link" itemprop="url">致妻 • 乙未年三月六日作</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2015-12-03 17:17:17" itemprop="dateCreated datePublished" datetime="2015-12-03T17:17:17+08:00">2015-12-03</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/诗/" itemprop="url" rel="index">
+                    <span itemprop="name">诗</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2015/12/03/2015-12-03-To-Love/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/03/2015-12-03-To-Love/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="致妻"><a href="#致妻" class="headerlink" title="致妻"></a>致妻</h2><p> <em>乙未年三月六日作</em></p>
+<h3 id="冬末朽木离别寒，"><a href="#冬末朽木离别寒，" class="headerlink" title="冬末朽木离别寒，"></a>冬末朽木离别寒，</h3><h3 id="夏初嫩草换新颜。"><a href="#夏初嫩草换新颜。" class="headerlink" title="夏初嫩草换新颜。"></a>夏初嫩草换新颜。</h3><h3 id="五月和风起池浪，"><a href="#五月和风起池浪，" class="headerlink" title="五月和风起池浪，"></a>五月和风起池浪，</h3><h3 id="桃花丛里嬉KeRan。"><a href="#桃花丛里嬉KeRan。" class="headerlink" title="桃花丛里嬉KeRan。"></a>桃花丛里嬉KeRan。</h3><ul>
+<li><p>旧文新发，原作于 2015 年 3 月 6 日 • 深圳 。</p>
+</li>
+<li><p>2015 年 2 月 24 日（冬）别离妻女返深，预计 2015 年 5 月 1 日（夏）再回信阳。</p>
+</li>
+<li><p>“KeRan”：小女。</p>
 </li>
 </ul>
-<p><strong>FBI Warning! FBI Warning! FBI Warning!</strong></p>
-<p>因为 Issue 需要和文章对应，改完代码后，还需要在博客源码里面改下 Gitment 的配置，使两处生成的值一致。</p>
-<p><em>Ruby 脚本修改一处：</em><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">req.body = &#123; <span class="symbol">body:</span> url, <span class="symbol">labels:</span> [kind, url[<span class="number">0</span>,<span class="number">48</span>]], <span class="symbol">title:</span> title &#125;.to_json</span><br></pre></td></tr></table></figure></p>
-<p><em>Gitment 配置修改一处：</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gitment = <span class="keyword">new</span> Gitment(&#123;</span><br><span class="line">  id: <span class="string">"&lt;%= url %&gt;"</span>.substring(<span class="number">0</span>,<span class="number">48</span>),</span><br></pre></td></tr></table></figure></p>
-<p>为方便还晕着的，再贴下原来的代码以便区分：</p>
-<p><em>原 Ruby 脚本：</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">req.body = &#123; body: url, labels: [kind, url], title: title &#125;.to_json</span><br></pre></td></tr></table></figure></p>
-<p><em>原 Gitment 配置：</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gitment = <span class="keyword">new</span> Gitment(&#123;</span><br><span class="line">  id: <span class="string">"&lt;%=url%&gt;"</span>,</span><br></pre></td></tr></table></figure></p>
-<h5 id="5-大功告成"><a href="#5-大功告成" class="headerlink" title="5. 大功告成"></a>5. 大功告成</h5><h5 id="6-后续问题"><a href="#6-后续问题" class="headerlink" title="6. 后续问题"></a>6. 后续问题</h5><ul>
-<li>之前旧的评论不能导入：理论上可以实现，解析 Disqus 导出的评论文件，然后添加到文章的评论内。看有无必要了。</li>
-<li>后续每次添加新文章，都需要手动初始化下评论：同样可以使用脚本初始化，或者发布文章部署时自动调用以初始化。</li>
-</ul>
-<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><p><a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="noopener">Gitment：使用 GitHub Issues 搭建评论系统</a></p>
-<p><a href="https://draveness.me/git-comments-initialize" target="_blank" rel="noopener">自动初始化 Gitalk 和 Gitment 评论</a></p>
-<p><a href="https://www.jianshu.com/p/57afa4844aaa" target="_blank" rel="noopener">Gitment评论功能接入踩坑教程</a></p>
 
         
       
@@ -401,7 +1155,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/05/01/2018-05-01-Dog-Talk/">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/11/12/2015-11-11-iOS-CI/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
@@ -416,7 +1170,7 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/2018/05/01/2018-05-01-Dog-Talk/" class="post-title-link" itemprop="url">狗与人说 - 五月</a>
+            <a href="/2015/11/12/2015-11-11-iOS-CI/" class="post-title-link" itemprop="url">iOS 使用 Jeninks + Fir.im 实现 CI</a>
           
         </h1>
 
@@ -431,401 +1185,7 @@
                 
               
 
-              <time title="创建时间：2018-05-01 00:00:00" itemprop="dateCreated datePublished" datetime="2018-05-01T00:00:00+08:00">2018-05-01</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2018/05/01/2018-05-01-Dog-Talk/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/05/01/2018-05-01-Dog-Talk/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>周五，天晴，午后。</p>
-<p>15:00 股票收盘后，放弃盯着泛绿的持仓，拿起水杯咕咚灌下几口，时光变得慵懒了些。</p>
-<p>QQ 闪来一句消息，老家的表弟分享一条游戏抽奖链接。往上一条消息，是过年时候他群发的祝福。表弟差我十二岁，素来不甚亲近，我生他未生，他生我少年，等他少年我已结婚生子成年。</p>
-<hr>
-<p>表弟分享游戏里的抽奖链接，<br>我心想：这小家伙，放假玩游戏啦。<br>回复道：“。。”<br>表弟：“！”<br>“小家伙，回家了吗？”<br>“对”<br>“在干吗呢”<br>“打游戏”</p>
-<hr>
-<p>“嘿！怎么又在玩游戏？”。我本想问这一句。</p>
-<p>但那一刻忽然想起了，十几年前的初中，周五放学后，裹拥着人群出了校门，和几个同村的小伙伴一路迎着夕阳，边玩边走回到了家。放下书包望着一周未摸的小霸王，趁机耍把魂斗罗。不一会，小伙伴溜来，拉着要在门前趁着天色尚亮玩一波。</p>
-<p>几天不见的柳树又长出了新叶，田野里庄稼发的更绿，脚下的土地因为久无玩耍的我们而显得有些冰凉。</p>
-<p>家家烟囱里升起了晚饭的炊烟，窗户里飘出了香味。过不一会，回家吃饭的叫喊声此起彼伏，小伙伴依依不舍道别。</p>
-<hr>
-<p>我不该问这么扫兴的问题，十几岁的我，讨厌被说教、讨厌被上课，只想沉浸在自己的小小世界里。</p>
-<p>“拍张家里的照片看看天气如何”<br>过了些会，表弟发来如图。<br><img src="http://p9.pstatp.com/large/pgc-image/15251771417336b075e2465" alt="51"><br>水边的树，茂密的枝叶遮住了五月的天空，天空上满布白云。</p>
-<hr>
-<p>已是五月，该回家看看了。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/03/17/2018-03-17-Good-Bye-Big-Brother/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2018/03/17/2018-03-17-Good-Bye-Big-Brother/" class="post-title-link" itemprop="url">大哥，后会有期！</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-03-17 21:45:00" itemprop="dateCreated datePublished" datetime="2018-03-17T21:45:00+08:00">2018-03-17</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2018/03/17/2018-03-17-Good-Bye-Big-Brother/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/03/17/2018-03-17-Good-Bye-Big-Brother/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="http://p3.pstatp.com/large/pgc-image/152129501374456fc6bfb6e" alt="cover_img"></p>
-<h5 id="前注"><a href="#前注" class="headerlink" title="前注"></a>前注</h5><blockquote>
-<p>本文原创作者Amon Xu，转载请注明作者与链接，谢谢:D</p>
-</blockquote>
-<h3 id="壹"><a href="#壹" class="headerlink" title="壹"></a>壹</h3><p>”16 点会议室开会，讨论接下来到 6 月份的工作计划。“<br>一阵默默无言。<br>……</p>
-<p>今天是大哥上班最后一天，大家都想和大哥多呆上一会。<br>”大哥，什么时候走？“  ——  ”一会，等 Boss 签字。“<br>“现在走吗？我送你。”  ——  “还要一会。”<br>“要不要一起去开会，最后一次。”  ——  “我不用了，你们去吧。”<br>……</p>
-<p>会议正进行时，大哥在微信群里发了一个红包：祝大家工作顺利。彼时，会议室唾沫横飞、激扬文字，窗外四点钟的太阳依旧强烈，大哥开车飞快驶往广州，视野两边的一切都迅速被甩在身后。深圳，再见！</p>
-<p>前一天夜晚，大哥请我们吃散伙饭，一路欢声笑语，饭桌上举杯痛饮，像我们刚认识时吃结伙饭一样。大哥和最后一次组队王者荣耀，大哥依旧超神 Carry 全场，连下三城。这是我们送给大哥最后的胜利，也是大哥送给我们最后的胜利。</p>
-<p>再往前几天，大哥举行了交接工作会议，会议上他讲解了满满一大篇的交接文档，以及部分核心业务逻辑的思维导图。涉及核心业务逻辑、环境配置及部署、数据算法对接、中间件模块说明等。基本囊括了大哥进入公司一年多的重要成果。</p>
-<p>时间再往前，过年刚来没几天，大家尚沉浸中假日的气氛里、陷入假期综合症中不能自拔，惊闻大哥要撤退了，大家甚至没有做好上班的心理准备，突然受到新年第一暴击，皆哑然叹息。</p>
-<p>回想大哥入职一年有余，短短时间，已然成为团队核心主力之一，这也是为何“大哥”称号流传开来。上年度(2017)年终总结大会，大哥荣膺“攻坚奖”，以此表彰大哥上年度的工作成果。</p>
-<h3 id="贰"><a href="#贰" class="headerlink" title="贰"></a>贰</h3><p>大哥初入职，彼时团队正值项目重构期：将后台架构由 Golang 迁移到 Java。当时搭了一套 Java 微服务架构，大伙皆摸着石头过河。大哥坐在离我不远的位置，开始了熟悉业务和代码。</p>
-<p>因为项目旧数据都存放在 MongoDB，新架构采用 PostgreSQL + MongoDB，大哥首先接触的是这个数据迁移的需求：将部分数据由 MongoDB 导入 PostgreSQL，并编写了部分 DAO 访问数据库的接口。</p>
-<p>与其说是“重构”，倒不如说是“重写”，整个重构需要将原 Golang 所有的业务代码用 Java 重写。因为赶时间，加上大家是摸着石头过河，前期很多业务代码写的不甚严谨，写 Test Case 的习惯也没有流行起来。大哥编写了部分接口的 Test Case，并将这个习惯发扬。</p>
-<p>在项目重构还在进行的时候，已经出现重构‘重构‘的情况，大哥为整理、优化代码提供诸多帮助和建议，比如抽离了 DAO 层业务的共享代码，使不同 Rest 层项目访问 DAO 层简便了诸多。</p>
-<p>项目重构中，为了快速验证新平台架构，本地部署验证的都很匆忙。我们当时采用比较原始的 Git + Maven 部署方式，因为采用微服务架构，有大小十几个项目，每次部署苦不堪言。大哥后来编写几个 Shell 脚本，实现一条命令快速部署多个项目，部署项目从此实现鸟枪换炮。</p>
-<p>大哥也承担了部分核心业务逻辑的编写。重构后项目年初终于上线，大哥在上线部署过程中发挥了重要作用，这也导致了在后续的工作中，他甚至承担了部分运维的工作。</p>
-<p>上线后，逐渐发现了一些性能的问题，大哥优化完善了项目核心基础数据和统计数据的缓存方式，以及改造了部分业务流程的计算和缓存逻辑。</p>
-<p>再往后，大哥一手编写了各个服务的 Dockerfile，以及 Maven 配置 Docker，通过 Docker Compose 编排各种服务，实现线上部署服务 Docker 化。</p>
-<p>随着迭代的不断进行，大哥也对业务和代码愈加熟悉。因为产品的特殊性，PM 们经常脑洞大开做一些富含’战略性’、‘创造性‘的新功能，大哥承担了这些新功能的后台职责。亦由于产品的广性，需要做大量兼容性的工作、特殊性的功能、擦屁股般的需求，这些需求也源源不断的流向了大哥的名下。</p>
-<p>彼时，大哥俨然已成为团队后台的核心人物之一，大哥的称号也流传越来越广。</p>
-<h3 id="叁"><a href="#叁" class="headerlink" title="叁"></a>叁</h3><p>大哥是典型的 90 后，表面文静内心火热，话虽不多人挺利索。</p>
-<p>大哥喜欢追各种日漫，就连和大嫂去日本旅游时，狠狠地过了一把动漫粉丝的瘾。当他发出和各种动漫形象合影的朋友圈时，大家纷纷调侃大哥宅男。</p>
-<p>大哥对游戏也钟爱有加。有一阵子，我们几人组队打王者荣耀，在我们猥琐发育时，大哥擅长打野位，每每 Carry 我们，成为一个靠谱的队友。</p>
-<p>网易吃鸡新出时，我们自然也成为第一批尝鲜者。我成了一个勤劳的快递员，而大哥，无不冲在最前、攻城掠地、收割人头，继续扮演着中国好大哥角色。<br><img src="http://p9.pstatp.com/large/pgc-image/15212951862933fb49583d9" alt="game_img"></p>
-<p>大哥也早早的进入了养生了模式，保温杯、枸杞茶，天气稍微变冷就注意保暖，每每被调侃很虚。</p>
-<h3 id="肆"><a href="#肆" class="headerlink" title="肆"></a>肆</h3><p>PM 最擅长两件事情：一是脑洞大开做一些富含’战略性‘、’创造性‘的新功能；二是为这些脑洞填土，要么修修补补，要么重新推翻重来，然后未来某个时刻又想回到从前。</p>
-<p>大哥难当，大哥更难当。不知何时起，大哥也被这些吃屎般的需求，每每逼的从座位上站起身，绕着座位背后的梁柱而行。每逢此时，我都很想和大哥说一句：QTMD 产品！转而低头做各种“ ”的需求。</p>
-<p>我料想大哥应该不会久留了，但没想会这么快，我原以为大哥至少会再呆上半年的。大哥是在拿“攻坚奖”前后提出辞职的，这个决定无论是前还是后，背后都是几个艰难的决定。</p>
-<h3 id="伍"><a href="#伍" class="headerlink" title="伍"></a>伍</h3><p>大哥入职有一阵我才知道，大哥并非初入公司，早在读研时已在公司实习过，后来去了百度和网易。</p>
-<p>大哥走后，据说大哥离开的原因是遇到天花板了，我们当然知道，大哥本来抱着学习的心态进入公司，一不小心就触摸到了天花板，这里面既有技术上的，也有产品上的，既有可以改变的，更多的是无力改变的。</p>
-<h3 id="末"><a href="#末" class="headerlink" title="末"></a>末</h3><p>海阔凭鱼跃，天高任鸟飞。大哥，祝你飞的更高！</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2017/10/31/2017-10-31-First-Outsource2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2017/10/31/2017-10-31-First-Outsource2/" class="post-title-link" itemprop="url">复盘 | 初次接项目的血与泪，前进吧骚年「二」</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-10-31 11:11:11" itemprop="dateCreated datePublished" datetime="2017-10-31T11:11:11+08:00">2017-10-31</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2017/10/31/2017-10-31-First-Outsource2/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/31/2017-10-31-First-Outsource2/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="https://static.clouderwork.com/59ed8c5c16151.jpg" alt="cover_img"></p>
-<h5 id="前注"><a href="#前注" class="headerlink" title="前注"></a>前注</h5><blockquote>
-<p>本文原创作者Amon Xu，首发于<a href="https://www.clouderwork.com" target="_blank" rel="noopener">云沃客</a>平台，转载请注明作者与链接，谢谢:D</p>
-</blockquote>
-<p><a href="https://community.clouderwork.com/article/view/59dc30c04d281.html" target="_blank" rel="noopener">上一篇:    复盘 | 初次接项目的血与泪，扎坑了老铁</a></p>
-<p>上篇文章主要讲踩坑。初次接项目，在项目开始前夕遇到的一些坑，并提供了一些个人建议。最后说到原型的迟迟交付、需求方对接人员的变更、硬件开发团队人员离职等等，各种因素都在拖累项目的进度。</p>
-<p>当然，项目中也不是只有坑，也有一座高山。今天就继续回顾接下来项目过程，讲讲如何爬这座山。</p>
-<pre><code>既然选择了远方，便只顾风雨兼程。
-                                —— 汪国真 《热爱生命》
-</code></pre><h3 id="万事开头难"><a href="#万事开头难" class="headerlink" title="万事开头难"></a>万事开头难</h3><p>中间因为需求整理、原型设计、经历长假一连串的折腾，等到原型最终交付出来，距离合同签订时间已经过去了一个月。如果按照合同上的交付时间来算的话，也意味着我们开发时间已经少了一个月。</p>
-<p>合同上写明自签订日期开始项目正式开始，直到 xxxx 年 x 月 x 日。因为前期准备工作耽误了太多时间，如果就这么下去的话，项目风险很大，且会违反合同交付时间。基于此，我和对方人员沟通一下，明确是因为前期需求整理和产品原型设计耽误太多时间导致整体进度 delay，并确定整体进度预计会后延多少个工作日，这一切都拟定一个补充协议。</p>
-<h3 id="千里之行，始于足下"><a href="#千里之行，始于足下" class="headerlink" title="千里之行，始于足下"></a>千里之行，始于足下</h3><p>项目要开始，自然不能一股劲儿干，做好开发计划，不打无准备之仗。我们采用敏捷开发模式，所以下面这些内容很多是基于敏捷开发模式。</p>
-<h6 id="消化需求"><a href="#消化需求" class="headerlink" title="消化需求"></a>消化需求</h6><p>首先，组织大家阅读消化项目需求。需求的理解非常重要，我见过许多开发人员，没有理解需求，上手就是一个字：干，然后开发过程各种问题，手忙脚乱地开发，还抱怨时间少、进度赶，结果自然开发效率和质量难以乐观。</p>
-<p>仔细理解项目需求，正是磨刀不误砍柴工。设计人员理解了，可以更好的设计用户交互；开发人员理解了需求，可以避免后续开发中遇到因为需求不明而导致的逻辑问题；项目经理理解了，可以更好地把控项目的进度和细节，也更有效率地和团队人员沟通，不至于因为中间出现问题项目经理表示一脸茫然。</p>
-<h6 id="任务拆分"><a href="#任务拆分" class="headerlink" title="任务拆分"></a>任务拆分</h6><p>在理解需求之后，我们开始进行任务的拆分。任务拆分中，基于几个原则：</p>
-<ul>
-<li><strong>任务粒度原子化</strong>。 最小粒度确保开发目标清晰，不涉及其他任务，可以更好的评估任务复杂度和开发估时。</li>
-<li><strong>目标为独立个人</strong>。避免单个任务产生人员依赖，如有需要多人参与的任务，可以独立划分给相关人员。</li>
-<li><strong>任务需要有优先级</strong>。如有强依赖，可定义好前置依赖。</li>
-</ul>
-<p><strong>举例</strong>：用户登录的功能，需要怎么拆分？UI设计一个任务、前端登录一个任务、后端登录一个任务？说是一个登录功能，里面可能包含：</p>
-<pre><code>* 账号密码登录（手机号、Email、用户名）
-* 手机号快捷登录
-* 第三方登录（微信、微博、QQ等）
-* 其他方式登录（如卡号卡密登录、SSO登录等）
-</code></pre><p>手机登录需要涉及短信 SDK（注册申请、后台接入 SDK）、获取验证码、发送频率限制、黑白名单等等；Email 涉及 Email 发送、验证；用户名涉及敏感词检测、唯一性检测；第三方登录需要涉及第三方 SDK（注册申请、后台接入、前端接入）。</p>
-<p>所以你看，任何任务的拆分，都应该首先从业务角度出发，列出到底有多少种应用场景和可能性，然后逐个拆分细化。只有不断的将任务一点点地解剖到骨肉分离、细节毫发毕现，才能避免因为经验和时间的问题，没有看到一些暗藏的功能和细节，导致开发过程中处处踩雷。</p>
-<h6 id="时间评估"><a href="#时间评估" class="headerlink" title="时间评估"></a>时间评估</h6><p>任务拆分后，评估时间的时候，开发人员一般会比较乐观，另外一般项目也因为赶进度压缩时间，我的建议是在条件允许的情况下，尽可能预留充裕的开发时间和缓冲时间。长期地压缩开发时间快速开发和赶进度，会压缩开发人员深度思考的能力，当然最终影响到的还是产品的质量。</p>
-<p>外包项目中，时间评估上尽可能细致周全，将需求整理、原型设计、UI 设计、架构设计、项目搭建、功能开发、测试联调、文档整理交付、交付验收、项目上线等时间都区分开（因项目、需求而异会有不同）。</p>
-<p>任务拆分和评估时间后，所有的信息都输出到项目管理工具上，然后制作燃尽图。即使没有项目经理也可以实现成员自我管理。如有项目经理，也可以基于此整理出一个开发排期表和甘特图。</p>
-<h3 id="Let’s-go"><a href="#Let’s-go" class="headerlink" title="Let’s go!"></a>Let’s go!</h3><p>如果一个外包项目合同已经签订下来，项目正式启动，那么就早些动手吧。避免拖延症，尽早地让团队齐心协力，向着完成项目的目标前进。尤其是业余时间做外包项目，有各种理由和原因迟迟不行动，最终耽误的时间还是会由自己埋单。</p>
-<p>这次外包也遇到这个问题，因为前期准备工作耽误时间太久的缘故，项目整个处于 blocked 状态，过了一段时间询问相关开发人员进度，得知还没有开始。</p>
-<h3 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h3><p>技术选型要贴合业务场景，外包项目更要如此。当业务初期时，技术要灵活，以便快速验证业务模式，就是说要能灵活地改改改；当业务处于稳定期，技术要稳定，不能拖技术后腿，就是说业务正常了系统不能整天出 Bug 或者服务器没事就提出一个问题；当业务处于维护期时，技术要讲究妥协，就是说不能还花费大量精力折腾项目，维稳就好。</p>
-<p>总之，技术选型都是为了业务服务。比如因为对方有 iOS/Android 两端 App 的要求，在仔细评估需求后，决定采用 Native + React 模式开发，这样开发效率提高了，开发成本也降低了。</p>
-<h3 id="时间管理"><a href="#时间管理" class="headerlink" title="时间管理"></a>时间管理</h3><p>时间管理上，因为是业余时间做外包，所以本职工作和外包上的时间花费一定要平衡好，不能因为外包耽误本职工作，当然也不能将外包置之一旁。</p>
-<p>每个人有自己的时间管理观念和舒适的状态，比如我，我个人比较喜欢的状态是早起写一阵代码，如果是工作日的话大概是一个多小时，上班时间专心处理公司事情，下班回家后继续处理外包工作一两个小时，这样每天可以有将三个小时左右的时间处理外包任务。夜晚务必早睡，这样可以保证第二天的状态，不影响本职工作。如果是周末的话，早上会运动，洗澡吃饭后精神倍爽，一口气可以持续工作到中午。</p>
-<p>外包过程中务必找到自己最习惯的节奏和最舒适的状态，本职工作和外包项目一定不能顾此失彼。当然更重要的是，个人的健康状况，毕竟身体是革命的本钱。</p>
-<h3 id="项目管理"><a href="#项目管理" class="headerlink" title="项目管理"></a>项目管理</h3><p>前面提到，敏捷开发会采用一些项目管理工具，如<code>Tapd、Tower、Trello、Teambition</code>等。基本上当一个团队有了经验后，都可以使用这些工具实现自管理。但因为是初次接外包，和团队成员磨合也是一个挑战，加上每个人个性不同，和外包项目的特殊性，作为项目管理人员需要在项目管理上投入一定的精力和时间。</p>
-<p>项目管理千差万别，项目管理人员也千差万别。记得以前公司有过两任完全不同风格的项目管理人员，一个是每天晨会出现一次，其它时间见不到人，基本没什么存在感；另一个是每天像班主任一样跟在团队成员屁股后面催进度，结果导致团队产生了严重的依赖性，在他突然离职后，项目基本处理停滞状态，团队成员也完全无法适应。</p>
-<p>我的想法是，团队成员可以有不同的时间管理方式，和投入方式，但是务必保证有持续性的产出。所以，在项目前期，我们便花一部分精力搭建了 CI 系统<em>（<a href="https://baike.baidu.com/item/持续集成/6250744" target="_blank" rel="noopener">持续集成</a>）</em>，后台和前端人员在实现功能提交代码后，可以选择自动发布项目或者一键发布，工作成果开发团队和外包需求方都可以查看。使用 CI 后，项目的进度就一目了然，不会处在一个黑盒里面。CI 的意义是以最小的精力，实现最大的价值。</p>
-<p>外包项目如果周期很长，会是一个持久性的拉锯战。因为团队成员都在一个城市，所以我们除了日常的开发和沟通外，定期会组织大家坐在一起工作，这样面对面地沟通交流，将之前因异步沟通无法解决的问题提出来解决。比如租个酒店房间，大家周末一天或者两天时间呆在那里，没有其它的干扰，可以全身心地投入到项目中。一般这样的一天，可以有几天的产出。当然这样高专注度、高强度的工作也会使人比较疲惫，所以不必经常这么做。</p>
-<p>当然主要还是大家日常开发、沟通，所以养成线上及时同步开发进度、共享开发中存在的问题很重要，我们当时是每日在微信里面沟通进度，然后如果 CI 有更新，大家可以相互体验测试，发现问题，有问题直接在微信里沟通，如果落实下来，直接输出到问题管理系统里。</p>
-<p>在整个开发过程中，可以将重要的、难度比较大的任务优先解决，这样防止后续时间不充足的情况下，解决难度大的问题没有太多的精力。</p>
-<h3 id="里程碑交付"><a href="#里程碑交付" class="headerlink" title="里程碑交付"></a>里程碑交付</h3><p>里程碑交付也是外包项目中关键的一环，在之前任务模块拆分和评估时间后，项目经理可以根据进度安排里程碑交付，在一定周期内按时按量交付已有功能模块，避免项目周期持续太久客户接收不到产出。尽早的交付，可以验证一些功能，也可以暴露一些问题，甚至了解客户的验收喜好标准等等。</p>
-<p>例如，一个购物网站，可以根据功能划分为商品模块、会员模块、订单模块、购买支付几大模块，然后依据优先级分期交付一些模块。</p>
-<p>记得之前在<a href="https://www.clouderwork.com" target="_blank" rel="noopener">云沃客</a>上接项目时，项目里面会有里程碑的历史记录，详细记录了每一个阶段的任务、截止日期、金额和状态，每一个阶段都会有交付工作和申请结款两种操作，将里程碑线上化，工作者和需求方都能清晰地查看到每个阶段的工作状况和历史交付产品。</p>
-<h3 id="交付验收"><a href="#交付验收" class="headerlink" title="交付验收"></a>交付验收</h3><p>辛苦一段时间，最终将项目交给客户手里，因为前面已经有 CI 系统和里程碑交付，所以对客户的验收标准是有一些心理准备。项目中的一些问题，也尽量会在开发阶段就沟通处理掉，争取不在最后交付验收时遗留问题。最终交付给客户一定是包含完整功能、能稳定运行的系统。</p>
-<p>关于后续维护，开始签订合同时已经约定好免费维护周期，这期间只包含处理线上问题和解决 Bug，不包含新功能的开发和功能变更。如有相应需求，可追加相关协议。</p>
-<h3 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h3><p>项目到此也结束了，回过头看看，整个项目最花费时间精力的地方，还是开始时和对方沟通整理需求，因为相隔两地，线上沟通效率又不高，花费了大量的时间和精力在业务层面。</p>
-<p>当然，现在一般的外包项目都是需求很明确，只需要将之由需求层面实现出来就好，这样让专业的人做专业的事。所以建议大家想图省心的话，还是上正规的外包平台（比如云沃客）接活，因为做一个外包项目要当项目经理、产品经理、开发人员，真的太累了:(</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2017/10/10/2017-10-10-PingAn/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2017/10/10/2017-10-10-PingAn/" class="post-title-link" itemprop="url">平安高级 Java 面试题</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-10-10 21:22:23" itemprop="dateCreated datePublished" datetime="2017-10-10T21:22:23+08:00">2017-10-10</time>
+              <time title="创建时间：2015-11-12 12:13:14" itemprop="dateCreated datePublished" datetime="2015-11-12T12:13:14+08:00">2015-11-12</time>
             </span>
           
             <span class="post-meta-item">
@@ -857,8 +1217,8 @@
       
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2017/10/10/2017-10-10-PingAn/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/10/2017-10-10-PingAn/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2015/11/12/2015-11-11-iOS-CI/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/12/2015-11-11-iOS-CI/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -873,647 +1233,159 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="前注"><a href="#前注" class="headerlink" title="前注"></a>前注</h4><blockquote>
-<p>本文原创作者 <strong>逐鹿 IT (Amon Xu)</strong> 的小老弟张桐，首发于<a href="http://amonxu.com/">逐鹿 IT (http://amonxu.com)</a>，转载请注明作者与链接，谢谢:D</p>
-</blockquote>
-<hr>
-<h5 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h5><ul>
-<li>String，StringBuffer，StringBuilder 区别<blockquote>
-<p><a href="https://www.cnblogs.com/xudong-bupt/p/3961159.html" target="_blank" rel="noopener">https://www.cnblogs.com/xudong-bupt/p/3961159.html</a></p>
-</blockquote>
-</li>
-<li>final 修饰符的作用，能修饰什么，分别的作用，不可变是指什么，不可变类设计<blockquote>
-<p><a href="https://www.cnblogs.com/qq188380780/p/6607578.html" target="_blank" rel="noopener">https://www.cnblogs.com/qq188380780/p/6607578.html</a><br><a href="https://www.cnblogs.com/jaylon/p/5721571.html" target="_blank" rel="noopener">https://www.cnblogs.com/jaylon/p/5721571.html</a></p>
-</blockquote>
-</li>
-<li>单例模式有几种写法<blockquote>
-<p><a href="https://www.cnblogs.com/dongyu666/p/6971783.html" target="_blank" rel="noopener">https://www.cnblogs.com/dongyu666/p/6971783.html</a></p>
-</blockquote>
-</li>
-<li>深拷贝浅拷贝<blockquote>
-<p><a href="https://www.cnblogs.com/shakinghead/p/7651502.html" target="_blank" rel="noopener">https://www.cnblogs.com/shakinghead/p/7651502.html</a></p>
+          <p>  8月份的时候有个需求，需要将 iOS 项目持久化构建，方便将打包上传安装程序的工作从开发人员手中脱离出来（关爱猿类、解救开发）。</p>
+<p>  需求来了，就简单分析下，实现这种需求需要以下两步：</p>
+<pre><code>1. 自动编译打包，而不再是在 Xcode 中编译打包（xcodebuild, [xctool](https://github.com/facebook/xctool)）
+2. 将 ipa 包上传到服务器或者 Fir.im / Pgyer 这种托管网站供下载
+</code></pre><p>  除了自己写脚本实现外，也有一些成熟的方案，如 <a href="http://jenkins-ci.org/" target="_blank" rel="noopener">Jenkins</a>。</p>
+<p>  先放出最终 OK 的的方案：</p>
+<pre><code>1. 使用 [Jenkins](http://jenkins-ci.org/) 从 Git 上拉取代码
+2. 使用 [Fir.im CLI](http://club.fir.im/topic/54f3d26074c4c85e73e4ac14) 提供的打包程序进行打包和上传
+</code></pre><p>说干就干，</p>
+<ul>
+<li>安装 Jenkins（具体过程不赘述，网上一票）</li>
+<li>打开<a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a>启动 Jenkins</li>
+<li>安装<code>Xcode integration</code>,<code>GIT plugin</code>,<code>Post-Build Script Plug-in</code>,<code>GitHub plugin</code>四个插件（使用 Fir.im 的 CLI 可不需要安装 <code>Xcode integration</code> ）</li>
+<li>新建一个项目，录入基本信息，Git 的地址与分支</li>
+<li>增加构建步骤 -&gt; Execute shell：<blockquote>
+<p>fir b <code>项目路径</code> -w -S <code>Scheme名称</code> -p -T <code>Fir.im API Token</code></p>
 </blockquote>
 </li>
-<li>Error 和 Exception 区别<blockquote>
-<p><a href="https://blog.csdn.net/xuchonghao/article/details/80516450" target="_blank" rel="noopener">https://blog.csdn.net/xuchonghao/article/details/80516450</a></p>
-</blockquote>
-</li>
-<li>说说线程池<blockquote>
-<p><a href="https://www.cnblogs.com/dolphin0520/p/3932921.html" target="_blank" rel="noopener">https://www.cnblogs.com/dolphin0520/p/3932921.html</a></p>
-</blockquote>
-</li>
-<li>说说 HashMap<blockquote>
-<p><a href="https://blog.csdn.net/qq_18661793/article/details/81161193" target="_blank" rel="noopener">https://blog.csdn.net/qq_18661793/article/details/81161193</a></p>
-</blockquote>
-</li>
-<li>解决 hash 冲突<blockquote>
-<p><a href="https://blog.csdn.net/qq_27093465/article/details/52269862" target="_blank" rel="noopener">https://blog.csdn.net/qq_27093465/article/details/52269862</a></p>
-</blockquote>
-</li>
-<li>说说 Java IO<blockquote>
-<p><a href="https://www.cnblogs.com/ylspace/p/8128112.html" target="_blank" rel="noopener">https://www.cnblogs.com/ylspace/p/8128112.html</a></p>
-</blockquote>
-</li>
-<li>NIO/AIO/BIO 区别<blockquote>
-<p><a href="https://blog.csdn.net/u013851082/article/details/53942947" target="_blank" rel="noopener">https://blog.csdn.net/u013851082/article/details/53942947</a></p>
-</blockquote>
-</li>
-<li>如何实现多路复用<blockquote>
-<p><a href="https://blog.csdn.net/tanzhe2017/article/details/80997437" target="_blank" rel="noopener">https://blog.csdn.net/tanzhe2017/article/details/80997437</a></p>
-</blockquote>
-</li>
-<li>说说 JVM<blockquote>
-<p><a href="http://www.ityouknow.com/jvm.html" target="_blank" rel="noopener">http://www.ityouknow.com/jvm.html</a></p>
-</blockquote>
-</li>
-<li>乐观锁和悲观锁<blockquote>
-<p><a href="https://www.cnblogs.com/qjjazry/p/6581568.html" target="_blank" rel="noopener">https://www.cnblogs.com/qjjazry/p/6581568.html</a></p>
-</blockquote>
-</li>
-<li>MySQL 事务隔离级别<br><a href="https://www.cnblogs.com/huanongying/p/7021555.html" target="_blank" rel="noopener">https://www.cnblogs.com/huanongying/p/7021555.html</a></li>
-<li>Redis 数据类型（高级数据类型）<blockquote>
-<p><a href="http://www.cnblogs.com/mrhgw/p/6278619.html" target="_blank" rel="noopener">http://www.cnblogs.com/mrhgw/p/6278619.html</a></p>
-</blockquote>
-</li>
-<li>说说 Redis 分布式锁<blockquote>
-<p><a href="https://www.jianshu.com/p/e72baf5e5617" target="_blank" rel="noopener">https://www.jianshu.com/p/e72baf5e5617</a></p>
-</blockquote>
-</li>
-<li>画一下系统架构图</li>
-<li>针对画的系统架构图说说</li>
-<li>说说 ELK</li>
+<li>保存构建即可</li>
 </ul>
-<p>欢迎交流补充。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2017/10/10/2017-10-10-First-Outsource/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2017/10/10/2017-10-10-First-Outsource/" class="post-title-link" itemprop="url">复盘 | 初次接项目的血与泪，扎坑了老铁</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-10-10 11:11:11" itemprop="dateCreated datePublished" datetime="2017-10-10T11:11:11+08:00">2017-10-10</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2017/10/10/2017-10-10-First-Outsource/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/10/2017-10-10-First-Outsource/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="https://static.clouderwork.com/59dc32a2bca09.jpg" alt="cover_img"></p>
-<h5 id="前注"><a href="#前注" class="headerlink" title="前注"></a>前注</h5><blockquote>
-<p>本文原创作者Amon Xu，首发于<a href="https://www.clouderwork.com" target="_blank" rel="noopener">云沃客</a>平台，转载请注明作者与链接，谢谢:D</p>
-</blockquote>
-<p>  谈起外包经历，我的第一次外包源自前两年某天陪着女友逛商场时，接到一个朋友的电话，朋友兴高采烈地跟我介绍一个大项目：需求不多、钱不少，难度不大、口气不小，我一听心动了，原以为要赚一笔 easy money，后面再看看，这次外包踩了大大小小不少的坑，遂想好好记录一下。</p>
-<h3 id="前期沟通"><a href="#前期沟通" class="headerlink" title="前期沟通"></a>前期沟通</h3><p>  电话的第二天，和外包项目需求方简单沟通后，他们发来十几张 App 界面的样例，大概是些软硬件结合、通过 App 界面展示硬件信息和数据统计，以及相关信息的 <code>CRUD</code> Demo，功能不多不过开发时间也有限，要求在月底前做完 App Demo 与后台系统，赶着参加一个会议展示。对方多次强调项目的优势：正处于风口、资源配置各方面都齐备，除了…没有软件技术团队，目前只有硬件团队，软件这边只有零星的两三个，但不堪重用。</p>
-<blockquote>
-<h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h4><p>这里我犯下了第一个错误，我以为只是一个Demo完事，但这背后是一个完整庞大的项目，项目大小、类型和复杂度的错误评估，使我没有很好地把控全局和考虑整个项目的细节，导致后面引发了很多问题。</p>
-</blockquote>
-<blockquote>
-<p>在评估一个项目时，我们通常会低估项目的复杂度，而高估自己处理某些琐碎细节的能力。</p>
-</blockquote>
-<h3 id="组建团队"><a href="#组建团队" class="headerlink" title="组建团队"></a>组建团队</h3><p>  项目要进行，一个人是搞不定的，因为涉及到 各端 App、Web以及后台，于是我首先找了一个靠谱的后台开发朋友，然后等项目快正式开始前，再一起寻找和确定其它小伙伴。</p>
-<blockquote>
-<h4 id="Tips-1"><a href="#Tips-1" class="headerlink" title="Tips:"></a>Tips:</h4><p>外包合作过程中，优先找靠谱、技术扎实、有责任心的人，外包项目大多技术不复杂，但因为协作方式的特殊性，大多是异地异步办公，需要有强烈责任心的人。不然项目开发时，经常找不到人，或者沟通缺乏反馈就很被动了。</p>
-</blockquote>
-<h3 id="项目报价"><a href="#项目报价" class="headerlink" title="项目报价"></a>项目报价</h3><p>  谈到项目必然会谈到钱，关于报价这块，对方很开放的有两种合作方式，一种是技术入股的形式，另一种是按照外包的方式报价。我想着因为是第一次合作，采用第二种方式最为保险，毕竟落袋为安嘛。</p>
-<p>  由于是第一次接外包没有经验，心里很忐忑，赶忙去网上查一些外包报价的方式和注意事项，最终决定根据团队人员工作的日薪，乘以一个系数，报给了他们。不出所料，他们觉得贵了，整个合作就僵持在那里。介绍项目的朋友答应去斡旋，然后…没了下文。</p>
-<blockquote>
-<h4 id="Tips-2"><a href="#Tips-2" class="headerlink" title="Tips:"></a>Tips:</h4><p>不同外包项目的公司、项目背景不同，遇到技术入股这事得慎之又慎。当然现在外包平台很多，一切都基本流程化、正规化了，直接是项目与钱的交易，这种问题也会越来越少。</p>
-</blockquote>
-<p>  按照故事的正常节奏，我的外包初体验夭折了。大概两周后，事情出了转机，对方的负责人打来电话说要当面沟通一下。然后技术负责人和老总一并赶了过来，扯了半天介绍了项目的背景、公司及技术团队的情况，我意识到了这个项目不只是一个 Demo 这么简单。最后约定另找时间详细沟通需求，以及评估报价。</p>
-<p>  等到沟通完需求要报价的时候，对方想要一个打包价格，而不管每人每天的算法，又扯到这个项目很大，会分几期开发交付，第一期想让双方以磨合的姿态来合作。意思是你们也别想着开高价了，我们第一次合作先便宜点，磨合一下摸摸底，觉得不错的话后面合作再谈。</p>
-<p>  因为我也是第一次接外包，缺乏经验，在这个磨价的过程中，脑子一热不小心就答应了对方的要求。等到协商完毕确定好报价，发现只有第一次给出的每人每天报价的一半，才意识到我们还是图样图森破。</p>
-<blockquote>
-<h4 id="Tips-3"><a href="#Tips-3" class="headerlink" title="Tips:"></a>Tips:</h4><p>这里是第二个错误，报价过程中要尽可能坚持自己的报价条件和底限，如果对方说出最低价格这种话，绝不能给出一个自以为的最低报价，不然就容易弄成菜市场的讨价还价，最终会被磨的和自己预期差距很远，可以跟对方认真沟通，<strong>谈钱一定不能图省事</strong>。价格贵也是质量的保证，可以象征性地少一些，但务必控制范围。</p>
-</blockquote>
-<h3 id="签订合同"><a href="#签订合同" class="headerlink" title="签订合同"></a>签订合同</h3><p>  不管怎么说，既然给出了报价，本着学习涨姿势的态度，咱就干吧。需要拟订合同时，没看到合适的，最终在网上找了一个软件外包开发合同模板，大致改了一下，将就用着。</p>
-<p>  关于外包合同有很多需要注意的地方，这里就只简单说一点：合同的条款一定要一条条地过，确保自己能完全掌握和理解每一条的内容及背后的含义，确保不要对自己埋有坑，当然也最好不要坑对方。</p>
-<blockquote>
-<h4 id="Tips-4"><a href="#Tips-4" class="headerlink" title="Tips:"></a>Tips:</h4><p>当然现在外包行业发展越来越成熟，外包流程和项目也越来越规范，也诞生了像<a href="https://www.clouderwork.com" target="_blank" rel="noopener">云沃客</a>这种成熟的众包平台，甚至不再需要合作双方私下签订协议，服务方和需求方都能把精力专注于项目上，而把背后的一些琐碎之事和问题交由平台来规范管理，省心很多。</p>
-</blockquote>
-<p>  签合同远赴对方公司，中午正热时坐了个顺风车过去，下了车一看太阳都快下山了，高楼不见了，眼见之处都是低矮的民房，大爷大妈懒洋洋地支起了小吃摊，第一感觉是从深圳到县城了。对方是一个传统的公司/工厂，这意味着什么互联网、软件开发等等都可能是对牛弹琴，如果对方没有一个专业懂行的对接人员，这个项目的进展将会非常艰难，后面的事情也正出乎我所料。</p>
-<blockquote>
-<h4 id="Tips-5"><a href="#Tips-5" class="headerlink" title="Tips:"></a>Tips:</h4><p>尽可能详细地了解对方公司、项目情况及相关人员背景，如果出现对接人员素质与项目不相符的情况，尽早向合作方提出疑问，把问题抛向对方，不要让这种问题影响项目的进度和后续工作的开展。</p>
-</blockquote>
-<p>  合同签完，需要再次详细沟通需求和评估开发计划，我和团队同伴远赴对方公司开会。沟通需求的过程中对方少不了加需求，甚至是一个独立的模块，相当于工作量莫名就多了几分之一。对方含糊其词，说这是一个非常重要的模块，没有这个模块就不是一个完整的系统，当初以为这是默认大家知道的事情云云。好在先前拟订合同的时候，我把主要功能和相关模块都写在了合同的开发内容一款里面，赶忙把合同拿给对方看，对方哑口无言，后面继续沟通是加时间、加人力还是精简功能。</p>
-<blockquote>
-<h4 id="Tips-6"><a href="#Tips-6" class="headerlink" title="Tips:"></a>Tips:</h4><p>拟订合同时，一定要写清楚开发内容和主要功能，尽可能详细准确，避免后续因为添功能、改功能扯皮，毕竟口说无凭、白纸黑字才是硬道理。</p>
-</blockquote>
-<h3 id="项目开始"><a href="#项目开始" class="headerlink" title="项目开始"></a>项目开始</h3><p>  合同签完，按照合同约定对方需要先支付 30% 的项目款作为一期款，因为这些都是明确写到合同里，整个付款过程中很利索，唯一的问题是对方需要提供发票，后面找了朋友公司代开搞定。</p>
-<p>  软件增值税票税点一般是 6%，税费也会是一笔不小的支出。最好在报价时沟通好税费及发票相关事宜。</p>
-<blockquote>
-<h4 id="Tips-7"><a href="#Tips-7" class="headerlink" title="Tips:"></a>Tips:</h4><p>最好等到预付款 or 第一期项目款到账后再启动项目，避免不必要的麻烦。</p>
-</blockquote>
-<blockquote>
-<p>报价时将税费和发票考虑进去。现在众包平台也大多解决了这个问题，用户不必再操心这个。</p>
-</blockquote>
-<h3 id="项目准备"><a href="#项目准备" class="headerlink" title="项目准备"></a>项目准备</h3><p>  等到相关流程都走完，需要对方提供产品原型的时候，对方硬是石滚碾不出个屁来，憋了很久什么东西也提供不出来，我们艰难地跟他们普及了设计稿和原型稿的区别后，他们疑惑地表示：这种东西不是应该由你们来搞定吗。只好边跟他们说清楚，边给对方提供几个原型示例和原型工具。</p>
-<p>  回过头看看，整个项目过程中对方除了给出一个非常粗糙的概念需求文档，任何文档输出都没有，在前面沟通需求时提出让对方把相关需求文档整理给我们，他们表示这种东西都在自己脑子里没有时间整理。</p>
-<p>  没有输出的文档，后续的工作便没有了依据，而所有的依据，也只是在详细沟通需求的时候，我们自己整理的需求列表文档。</p>
-<blockquote>
-<h4 id="Tips-8"><a href="#Tips-8" class="headerlink" title="Tips:"></a>Tips:</h4><p>文档的输出非常重要，详细的需求文档与设计文档是后续项目开发中的必备利器，没有这些，整个项目成了巧妇难为无米之炊，而且这些也会是项目开发完毕验收的标准之一。</p>
-</blockquote>
-<h3 id="项目前期"><a href="#项目前期" class="headerlink" title="项目前期"></a>项目前期</h3><p>  项目还没正式开始，对方又出幺蛾子了，对方对接人员由技术主管变更为另一个下级技术负责人，估计他们内部都没有仔细沟通过，就直接让我们和他对接，上来第一句便是<code>找个时间沟通下需求，这边不太清楚细节</code>。拜托，细节都在你们老大那里了，求我们心理阴影面积…</p>
-<p>  所有的输出文档只有在我和第一任对接人沟通需求时，整理的需求列表文档，这意味着它是经过第一任对接人陈述并由我们消化整理的，而第二任对接人如果再以它为参照的话，这里面的需求理解因人而异，项目变数更多、前景堪忧。想到这些，我们只好再次奔赴过去详细沟通需求。</p>
-<blockquote>
-<h4 id="Tips-9"><a href="#Tips-9" class="headerlink" title="Tips:"></a>Tips:</h4><p>项目对接人的变更算是一个意料之外的问题，也更显前面所述的文档的重要性。越快越早地形成详细清晰的文档直接决定了项目后续的走势和进度。</p>
-</blockquote>
-<p> 在等原型的这段时间，风雨飘摇的项目又出了新纰漏：原本协商好的我们只需要负责软件系统开发（包含各端 App、Web 管理系统、后台系统），对方负责硬件生产及硬件系统开发，后来他们硬件开发人员离职，想把硬件系统开发这一块也交由我们。我们想都没想，就直接拒绝了。</p>
-<blockquote>
-<h4 id="Tips-10"><a href="#Tips-10" class="headerlink" title="Tips:"></a>Tips:</h4><p>尽管接下硬件这块又有钱赚了，但这不是我们团队的强项，需要另找专业人员，相当于给团队和项目增加风险和不确定性。专注于做自己擅长的一面，不为团队和项目累加风险和不确定性，也是一种责任心。</p>
-</blockquote>
-<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>  还没写到项目正式开始，就已经罗罗嗦嗦一大篇了，后续记录一下项目开发过程中的坑和教训，未完待续，欢迎交流。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2017/08/12/2017-08-12-I-Need-Creation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2017/08/12/2017-08-12-I-Need-Creation/" class="post-title-link" itemprop="url">也许我该在这发点什么</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-08-12 18:13:11" itemprop="dateCreated datePublished" datetime="2017-08-12T18:13:11+08:00">2017-08-12</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2017/08/12/2017-08-12-I-Need-Creation/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/08/12/2017-08-12-I-Need-Creation/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>说实话，我一直在备忘录里断断续续的写些什么，大多都是些无病呻吟。</p>
-<p>但是我确实是很久没有在这发了，眼看距离上篇文章已经5个月了，我想还是发点什么罢。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2017/03/22/2017-03-22-Hello-Disqus/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2017/03/22/2017-03-22-Hello-Disqus/" class="post-title-link" itemprop="url">Hello disqus</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-03-22 15:26:11" itemprop="dateCreated datePublished" datetime="2017-03-22T15:26:11+08:00">2017-03-22</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2017/03/22/2017-03-22-Hello-Disqus/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/22/2017-03-22-Hello-Disqus/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>突闻多说欲关闭服务，<br>讶然觉blog时代去久矣。<br>Bye duoshuo, Hello disqus!</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2017/02/25/2017-02-25-FengYa/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2017/02/25/2017-02-25-FengYa/" class="post-title-link" itemprop="url">风雅 - 用中国传统色恣意书写</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-02-25 15:00:00" itemprop="dateCreated datePublished" datetime="2017-02-25T15:00:00+08:00">2017-02-25</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2017/02/25/2017-02-25-FengYa/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/25/2017-02-25-FengYa/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>书写。<br><a href="http://amonxu.com/fengya/fengya.html">http://amonxu.com/fengya/fengya.html</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/09/15/2016-09-15-Middle-Autumn-Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2016/09/15/2016-09-15-Middle-Autumn-Note/" class="post-title-link" itemprop="url">中秋乱写</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2016-09-15 08:15:00" itemprop="dateCreated datePublished" datetime="2016-09-15T08:15:00+08:00">2016-09-15</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2016/09/15/2016-09-15-Middle-Autumn-Note/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/15/2016-09-15-Middle-Autumn-Note/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="中秋列表"><a href="#中秋列表" class="headerlink" title="中秋列表"></a>中秋列表</h4><ul>
-<li>2012.9.30 中秋</li>
-<li>2013.9.19 中秋</li>
-<li>2014.9.8 中秋</li>
-<li>2015.9.27 中秋</li>
-<li>2016.9.15 中秋</li>
+<p>当然这只是百般折腾后的得出的正确路线，因为项目是集成了 Cocoapods，所以遇到不少网上没有的坑。</p>
+<p>最开始我在构建步骤里面添加了 Xcode 相关的信息，结果每次构建都会一直卡死在某个进度上。多番折腾下，仍然未果，因为项目进度与考虑到无 OS X 服务器可以用来构建，无奈放弃。</p>
+<p>最近比较闲，再个 OS X 服务器也摆那有一阵了，手痒便折腾了一下。</p>
+<p>这次依然遇到那个卡死的问题，我尝试了只用 Xcode 构建步骤，也尝试只用 Fir.im CLI，均有各种错误。后来尝试先脱离 Jenkins，直接本地编译。遇到以下几个坑：</p>
+<p> 我的命令是 <code>fir build_ipa ${WORKSPACE} -S MyApp -o ${WORKSPACE}/build -w -C Release -t MyApp －n myapp</code></p>
+<ul>
+<li>还是卡住，尝试去掉 workspace 路径和 Target，变成<code>fir build_ipa -S MyApp -o ${WORKSPACE}/build -w -C Release －n myapp</code></li>
+<li>运行后不会卡住，但是报了<code>error: couldn&#39;t create directory /build: Permission denied. Failed to create temporary outfile &#39;/build/MyApp.app.dSYM.tmp%%%%%%.dwarf&#39;: No such file or directory</code>错误，已经好很多了。继续简化步骤，索性直接前往项目目录下，然后使用<code>fir b -w -S MyApp</code>，结果居然 OK 了。</li>
+<li>继续在 Jenkins 中折腾，删除 Xcode 的构建步骤，然后在 Execute Shell 中使用<code>fir b 项目路径 -w -S Sheme名称 -p -T token</code></li>
+<li>报 Cocospods Lock File 错误，可以手动<code>pod install</code>一次，也可以将 Lock File 同步，这样就可以避免这个问题。</li>
 </ul>
+<p>最终解决！回望整个过程是折腾的， 不过有几点可以记住：</p>
+<ul>
+<li>项目 clone 到本地后，先在 Xcode 中编译运行试试，有问题及时解决</li>
+<li>在命令行里面试试编译、打包，看是否正常</li>
+<li>上面都 OK 再在 Jenkins 这种集成平台中集成</li>
+</ul>
+<p>全文完。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/11/08/2015-11-08-YangQ-is-dead/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2015/11/08/2015-11-08-YangQ-is-dead/" class="post-title-link" itemprop="url">悼同学杨X/Y之父</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2015-11-08 23:45:44" itemprop="dateCreated datePublished" datetime="2015-11-08T23:45:44+08:00">2015-11-08</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
+                    <span itemprop="name">鬼画弧</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2015/11/08/2015-11-08-YangQ-is-dead/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/08/2015-11-08-YangQ-is-dead/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>  2015的夏天走的晚，直到现在夏意仍然未尽，门外有的树叶还显得碧绿，野外田地里油菜和小麦刚长出翠青的苗，屋旁的菜园里的青菜更是盎然生机。</p>
+<p>  信阳的秋天早就来了，到现在也尽显秋意。杨树叶落得落，黄的黄，在泥土地面上盖住一层层，光秃秃的树枝指向雾蒙蒙的天空。柳树条则光条条的仿佛一根根老妇人枯瘦的手指，即使无风也总是颤颤巍巍着。</p>
+<p>  冬天来的也早，这次回来的几天，也算是过了几天冬。不刮寒风不下冷雨单是靠着几度的温度把人冻的厉害。走在路上，唯恐不能盖住身上每一寸肌肤。戴上帽子仍觉得冷空气从面颊两侧灌入脑后，直感觉像走在诺森德冰天冻地、漫天飞雪的大陆上，戴着阿尔萨斯的寒冰王冠。</p>
+<p>  在这冷空气遍布每一个空间的秋天，忽然听到爆竹的响声。在这不年不月的时候，一般乡下是安静的出奇的。能听到的也就是偶有的不明狗叫与妇人的呼喊声。而这时候的爆竹声，无疑是哪个村子的红白喜事。</p>
+<p>  爸随口问我：杨X村有你姐同学罢？叫什么。<br><br>  我大概一想，似乎有叫杨X与杨Y的。答：杨X？<br><br>  爸说：他老头死了，杨元Q。<br><br>  我还没细问，但见母亲大人那凌厉的眼神。大概不让讨论这不吉利的丧事。此话题便提前结束。</p>
+<p>  待一个人时，脑里想起这个杨X/Y父亲的离世。杨X的可能性大些，一是他单是我姐的同学，并不同时是我的同学。如果是，我爸会说你同学杨XX的父亲，而不绕路说我姐的。二是杨Y的父亲似乎不叫杨元Q，经过我的仔细回忆应该是叫杨元P。三是我已经幻想了杨X丧失父亲的悲痛模样，实在转换不了把悲伤的杨X变成哀痛的杨Y。这大概是思想的偷懒，或者谓之自欺欺人。</p>
+<p>  可是不管怎么说，杨X/的父亲是死了的。之前很想知到底是X还是Y，可是后面明白XY都不重要，重要的是一个意气风发的年轻人，在生命最好的时光，突然丧失了父亲。而这个年轻人，恰好是我姐的同学，同时是一个地方的，所以听到了他家的葬礼爆竹声。重要的是一个老骥伏枥的中年人，一辈子闯南走北，把儿女养大，正准备歇下来享受儿孙绕膝之乐，突然的就去了。所以我刻意的不去想是X还是Y，害怕得到它的答案。</p>
+<p>  杨XY是学习很好的实力派，那时与我这种天赋派成为对比。我们觉得他们是愚不可及，用生命在学习。他们觉得我们是投机取巧，不可长久。但彼此都对对方有敬畏之心。</p>
+<p>  而他的父亲，我未曾谋面。他可能是一个结实的庄稼汉，也可能是在外谋生的一个老板。年轻的时候挑水库，挖水塘，掘水坝。后来种田地，犁田耙田，撒种子，插秧，割谷，挑草头，堆草垛，打谷。忙碌的身影春夏秋冬不断的闪现在田野上。流出的汗水洒遍每一条小路上滴进他家的土地里。后来慢慢的村子里时兴出外打工。有去北京收废品的，有去南方进厂的，有去江浙拉货的，也有去大西北磨板子的。他也步入了这一洪流，在外地打工。一年只有农忙时和过年才会扛着大包背着小包拎着两包拖着一化肥袋，满载着回家的期盼挤上洪水般的人流火车。包里有给孩子买的新衣服，玩具，捡来的新奇玩意，外面老板不要的给他的旧衣服和旧玩具，买的吃的，外面见过的家里没见过的水果等。塞的满满当当，鼓鼓囊囊。回家后，看到年幼的孩子，消瘦的妻子。大半年在外的劳累，都付诸咧嘴一笑。1990，1995，2000，2005，2010，2015…二十几年转瞬即逝，曾经呆的城市天翻地覆，刚来落脚的工棚也早已建起了高楼大厦。老家也变化很大，家家盖起了两层小洋楼，买了洋车代步，村子前都修起了水泥路。而那个年幼的孩子也已变成大姑娘小伙子，就像昨天的自己一样。就连当初梦寐以求才娶到的青春靓丽的妻子，也体态渐渐臃肿，乌黑的长发渐渐被岁月染上点白色，水灵灵的皮肤如今呈黄黑色。</p>
+<p>  2015，人生大概第十个五年。这一年，是五十年来再普通不过的一年，相比十岁时的在贫苦中作乐，二十岁的在清苦中劳累，三十岁拖着家里家外中奋力直前，四十岁子女初长成、家业稳健，五十岁实在是平淡无聊的一年。这前后，儿子工作几年，事业初成，娶妻生子，一切都显得顺其自然。老婆给儿子照看着孙子，自己也想着回到老家了，等把这两年的账清点完了就打道回府，开个小百货店或者卖个水果，没事就去村子后面转转，看看当年挖的水库、修的路，栽过的树。看看20岁时的自己的那个世界，与50岁自己的这个世界，进行着激烈的时空交错，而迸发出的火花，都是这几十年的记忆碎片的光与影。</p>
+<p>  这一年的11月，夏秋冬三个季节联奏着准备送完最后的2015。在这个人们都不想外出只想守着老婆孩子热炕头的时节，他突然走了，没有一句叮咛嘱咐，突然潇洒的去了。杨X/Y从遥远的城市接来家里的电话，像往常一样：<br><br>  喂 妈<br><br>  X/Y啊，你快回来，你爸……<br><br>  我爸怎么了<br><br>  你爸走了……<br><br>……<br></p>
+<p>买票，坐车，离开这个他熟知的世界，这个他还有个遥远的爹的世界，这个丝毫感受不到悲伤的爹，去往另一个世界，阔别已久的旧世界，那个一直有爹的世界。像从热被窝里掉入了冰窟窿里，两个世界。</p>
+<p>  回到家，这个秋天，真冷。大概再不会有这样冷的秋天罢。熟悉的老房子前泛起了久违的热闹，忙碌的身影穿梭于屋前屋后，他想着父亲已经撒手西去，再看着眼前这幅景象，觉得很荒诞，他嘴角咧了起来，他想笑，亦想哭，哭哭笑笑。到家后他急寻着母亲，和父亲，见到母亲后便被带着去入棺的父亲。深红色的棺木里静静的躺着他熟悉的父亲，身上花绿的寿衣像参加一场盛大的节日。</p>
+<p>  阴雨连绵几天，浑浑噩噩的几天，事情总算办妥。终于要返程，回到那个乍离的世界，这一去一回，父亲也没有了罢。再去的世界，和几天前的世界，是否是一个世界。或许那个世界，根本感受不到他的一丝悲伤。被窝已不是被窝，冰窟窿还是冰窟窿。临别前，看着从未如此瘦弱的母亲，他心如刀割血直流，恨欲从此烂家里，任它雨打风吹去。</p>
+<p>  临行前，杨X/Y最后一次去后院田地上的坟前，冷风刺骨。遍布丘壑的田野有的光秃秃，有的种上了小麦和油菜，有的只是野草，有的还是上次的播收后未经翻土处理的田地。新坟孤伶伶的躺在那里，听着秋风歌，看着雾蒙蒙的天空和暗黄的田野、零星的村落，淋着秋雨，吹着秋风。</p>
+<p>  他走了，带着身上残留的秋意。远处的坟边的田野上，枯黄的叶草凋落着，而泥土下面的草根，正等待着明年的春天。他想着，笑了。</p>
 
         
       
@@ -1535,7 +1407,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1583,7 +1455,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-count">92</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1596,7 +1468,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1609,7 +1481,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">107</span>
+        <span class="site-state-item-count">117</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
