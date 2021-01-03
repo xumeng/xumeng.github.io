@@ -264,6 +264,120 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/09/13/2012-09-13-tomcat-memory/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2012/09/13/2012-09-13-tomcat-memory/" class="post-title-link" itemprop="url">查看tomcat内存相关信息</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2012-09-13 17:14:43" itemprop="dateCreated datePublished" datetime="2012-09-13T17:14:43+08:00">2012-09-13</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2012/09/13/2012-09-13-tomcat-memory/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/09/13/2012-09-13-tomcat-memory/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在tomat的任意app中创建一个jsp文件。</p>
+<p>代码如下：<br>`<br>&lt;%@page contenttype=”text/html” pageencoding=”UTF-8”&gt;</p>
+<p>&lt;%</p>
+<p>double total = (Runtime.getRuntime().totalMemory()) / (1024.0 * 1024);</p>
+<p>double max = (Runtime.getRuntime().maxMemory()) / (1024.0 * 1024);</p>
+<p>double free = (Runtime.getRuntime().freeMemory()) / (1024.0 * 1024);</p>
+<p>out.println(“Java 虚拟机试图使用的最大内存量(当前JVM的最大可用内存)maxMemory(): “ + max + “MB<br>“);</p>
+<p>out.println(“Java 虚拟机中的内存总量(当前JVM占用的内存总数)totalMemory(): “ + total + “MB<br>“);</p>
+<p>out.println(“Java 虚拟机中的空闲内存量(当前JVM空闲内存)freeMemory(): “ + free + “MB<br>“);</p>
+<p>out.println(“因为JVM只有在需要内存时才占用物理内存使用，所以freeMemory()的值一般情况下都很小，<br>“ +</p>
+<p>“而JVM实际可用内存并不等于freeMemory()，而应该等于 maxMemory()-totalMemory()+freeMemory()。<br>“);</p>
+<p>out.println(“JVM实际可用内存: “ + (max - total + free) + “MB<br>“);</p>
+<p>%&gt;</p>
+<p>`</p>
+<p>保存运行即可。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/09/10/2012-09-10-tomcat-oom/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1340,105 +1454,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/06/01/2012-06-01-vm-install-ubuntu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/06/01/2012-06-01-vm-install-ubuntu/" class="post-title-link" itemprop="url">VM下安装Ubuntu</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-06-01 21:44:43" itemprop="dateCreated datePublished" datetime="2012-06-01T21:44:43+08:00">2012-06-01</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/06/01/2012-06-01-vm-install-ubuntu/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/06/01/2012-06-01-vm-install-ubuntu/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <div><br><br>前言：<br><br>贴出下面要用到的下载地址：<br><br>vmware：<a href="http://www.vmware.com/cn/" target="_blank" rel="noopener">http://www.vmware.com/cn/</a><br><br>注册码(摘自网上经网友测试过的，未经本人测试，仅为方便读者顺手)：<br><div><br><div><br><pre id="best-answer-content">MV4YN-0L38Q-2ZK60-XUA7K-AAZ18<br>JC6AP-D4H0P-TZ131-4A2QM-8CNP7<br>0U6UU-6AJDL-RZTK9-230Q0-8ARJQ<br>JG2TD-DJL95-FZZZ8-DU1NH-33GH7</pre><br><pre id="best-answer-content">VM汉化包：<a href="http://down.qiannao.com/space/file/xjl456852/-4e0a-4f20-5206-4eab/-8f6f-4ef6/VMware-002dworkstation-002dfull-002d8.0.2-002d591240_-6c49-5316.rar/.page" target="_blank" rel="noopener">VM汉化包下载</a></pre><br><pre id="best-answer-content">鉴于vmware里面太多e文，还是用汉化版比较没压力。</pre><br><pre id="best-answer-content">ubuntu下载：<a href="http://www.ubuntu.org.cn/" target="_blank" rel="noopener">http://www.ubuntu.org.cn/</a></pre><br></div><br></div><br>&nbsp;<br><br>1.下载VM并安装。<br><br>2.打开VM，新建虚拟机，照着点就是了。<br><br>3.基本上没啥好说的，注意一点的就是网络类型，有的推荐说NAT，但是我今天设置的NAT网络无法连接，然后我随便选了个，使用桥接网络。反正能连上就行（等会安装ubuntu要下载安装软件）。<br><br>4.新建好虚拟机后，就可以启动那个虚拟机，会自动启动装系统的程序，但是我今天遇到一个问题，刚开始装入iso文件的时候就提示无法识别系统，但是我没在意，继续新建虚拟机后，在启动的时候出现operating system not found,后来换了个iso文件，就可以了。<br><br>5.安装ubuntu系统没什么好说的，键盘布局我在想是不是要选英语美国的，还有汉语的，不过我没敢选，怕是哪个奇葩的中国人设计的键盘布局。在中国安装语言包的时候，等了半天，我也急着回家了，就干脆skip了，要个毛的语言包？<br><br>6.安装完后会发现启动的分辨率不是我们真机的分辨率，因为自带的是800多分辨率，自己在ubuntu设置里面找–显示–设置为真机的分辨率即可。<br><br>&nbsp;<br><br>总体来说，安装linux还是挺傻瓜化的。。。<br><br></div>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1491,7 +1506,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">93</span>
+          <span class="site-state-item-count">94</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1517,7 +1532,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">103</span>
+        <span class="site-state-item-count">104</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -1634,7 +1649,7 @@
 
 <div class="copyright">
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heartbeat"></i>
   </span>
