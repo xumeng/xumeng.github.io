@@ -264,6 +264,169 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2017/10/10/2017-10-10-First-Outsource/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2017/10/10/2017-10-10-First-Outsource/" class="post-title-link" itemprop="url">复盘 | 初次接项目的血与泪，扎坑了老铁</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2017-10-10 11:11:11" itemprop="dateCreated datePublished" datetime="2017-10-10T11:11:11+08:00">2017-10-10</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/职说/" itemprop="url" rel="index">
+                    <span itemprop="name">职说</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2017/10/10/2017-10-10-First-Outsource/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/10/2017-10-10-First-Outsource/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://static.clouderwork.com/59dc32a2bca09.jpg" alt="cover_img"></p>
+<h5 id="前注"><a href="#前注" class="headerlink" title="前注"></a>前注</h5><blockquote>
+<p>本文原创作者Amon Xu，首发于<a href="https://www.clouderwork.com" target="_blank" rel="noopener">云沃客</a>平台，转载请注明作者与链接，谢谢:D</p>
+</blockquote>
+<p>  谈起外包经历，我的第一次外包源自前两年某天陪着女友逛商场时，接到一个朋友的电话，朋友兴高采烈地跟我介绍一个大项目：需求不多、钱不少，难度不大、口气不小，我一听心动了，原以为要赚一笔 easy money，后面再看看，这次外包踩了大大小小不少的坑，遂想好好记录一下。</p>
+<h3 id="前期沟通"><a href="#前期沟通" class="headerlink" title="前期沟通"></a>前期沟通</h3><p>  电话的第二天，和外包项目需求方简单沟通后，他们发来十几张 App 界面的样例，大概是些软硬件结合、通过 App 界面展示硬件信息和数据统计，以及相关信息的 <code>CRUD</code> Demo，功能不多不过开发时间也有限，要求在月底前做完 App Demo 与后台系统，赶着参加一个会议展示。对方多次强调项目的优势：正处于风口、资源配置各方面都齐备，除了…没有软件技术团队，目前只有硬件团队，软件这边只有零星的两三个，但不堪重用。</p>
+<blockquote>
+<h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h4><p>这里我犯下了第一个错误，我以为只是一个Demo完事，但这背后是一个完整庞大的项目，项目大小、类型和复杂度的错误评估，使我没有很好地把控全局和考虑整个项目的细节，导致后面引发了很多问题。</p>
+</blockquote>
+<blockquote>
+<p>在评估一个项目时，我们通常会低估项目的复杂度，而高估自己处理某些琐碎细节的能力。</p>
+</blockquote>
+<h3 id="组建团队"><a href="#组建团队" class="headerlink" title="组建团队"></a>组建团队</h3><p>  项目要进行，一个人是搞不定的，因为涉及到 各端 App、Web以及后台，于是我首先找了一个靠谱的后台开发朋友，然后等项目快正式开始前，再一起寻找和确定其它小伙伴。</p>
+<blockquote>
+<h4 id="Tips-1"><a href="#Tips-1" class="headerlink" title="Tips:"></a>Tips:</h4><p>外包合作过程中，优先找靠谱、技术扎实、有责任心的人，外包项目大多技术不复杂，但因为协作方式的特殊性，大多是异地异步办公，需要有强烈责任心的人。不然项目开发时，经常找不到人，或者沟通缺乏反馈就很被动了。</p>
+</blockquote>
+<h3 id="项目报价"><a href="#项目报价" class="headerlink" title="项目报价"></a>项目报价</h3><p>  谈到项目必然会谈到钱，关于报价这块，对方很开放的有两种合作方式，一种是技术入股的形式，另一种是按照外包的方式报价。我想着因为是第一次合作，采用第二种方式最为保险，毕竟落袋为安嘛。</p>
+<p>  由于是第一次接外包没有经验，心里很忐忑，赶忙去网上查一些外包报价的方式和注意事项，最终决定根据团队人员工作的日薪，乘以一个系数，报给了他们。不出所料，他们觉得贵了，整个合作就僵持在那里。介绍项目的朋友答应去斡旋，然后…没了下文。</p>
+<blockquote>
+<h4 id="Tips-2"><a href="#Tips-2" class="headerlink" title="Tips:"></a>Tips:</h4><p>不同外包项目的公司、项目背景不同，遇到技术入股这事得慎之又慎。当然现在外包平台很多，一切都基本流程化、正规化了，直接是项目与钱的交易，这种问题也会越来越少。</p>
+</blockquote>
+<p>  按照故事的正常节奏，我的外包初体验夭折了。大概两周后，事情出了转机，对方的负责人打来电话说要当面沟通一下。然后技术负责人和老总一并赶了过来，扯了半天介绍了项目的背景、公司及技术团队的情况，我意识到了这个项目不只是一个 Demo 这么简单。最后约定另找时间详细沟通需求，以及评估报价。</p>
+<p>  等到沟通完需求要报价的时候，对方想要一个打包价格，而不管每人每天的算法，又扯到这个项目很大，会分几期开发交付，第一期想让双方以磨合的姿态来合作。意思是你们也别想着开高价了，我们第一次合作先便宜点，磨合一下摸摸底，觉得不错的话后面合作再谈。</p>
+<p>  因为我也是第一次接外包，缺乏经验，在这个磨价的过程中，脑子一热不小心就答应了对方的要求。等到协商完毕确定好报价，发现只有第一次给出的每人每天报价的一半，才意识到我们还是图样图森破。</p>
+<blockquote>
+<h4 id="Tips-3"><a href="#Tips-3" class="headerlink" title="Tips:"></a>Tips:</h4><p>这里是第二个错误，报价过程中要尽可能坚持自己的报价条件和底限，如果对方说出最低价格这种话，绝不能给出一个自以为的最低报价，不然就容易弄成菜市场的讨价还价，最终会被磨的和自己预期差距很远，可以跟对方认真沟通，<strong>谈钱一定不能图省事</strong>。价格贵也是质量的保证，可以象征性地少一些，但务必控制范围。</p>
+</blockquote>
+<h3 id="签订合同"><a href="#签订合同" class="headerlink" title="签订合同"></a>签订合同</h3><p>  不管怎么说，既然给出了报价，本着学习涨姿势的态度，咱就干吧。需要拟订合同时，没看到合适的，最终在网上找了一个软件外包开发合同模板，大致改了一下，将就用着。</p>
+<p>  关于外包合同有很多需要注意的地方，这里就只简单说一点：合同的条款一定要一条条地过，确保自己能完全掌握和理解每一条的内容及背后的含义，确保不要对自己埋有坑，当然也最好不要坑对方。</p>
+<blockquote>
+<h4 id="Tips-4"><a href="#Tips-4" class="headerlink" title="Tips:"></a>Tips:</h4><p>当然现在外包行业发展越来越成熟，外包流程和项目也越来越规范，也诞生了像<a href="https://www.clouderwork.com" target="_blank" rel="noopener">云沃客</a>这种成熟的众包平台，甚至不再需要合作双方私下签订协议，服务方和需求方都能把精力专注于项目上，而把背后的一些琐碎之事和问题交由平台来规范管理，省心很多。</p>
+</blockquote>
+<p>  签合同远赴对方公司，中午正热时坐了个顺风车过去，下了车一看太阳都快下山了，高楼不见了，眼见之处都是低矮的民房，大爷大妈懒洋洋地支起了小吃摊，第一感觉是从深圳到县城了。对方是一个传统的公司/工厂，这意味着什么互联网、软件开发等等都可能是对牛弹琴，如果对方没有一个专业懂行的对接人员，这个项目的进展将会非常艰难，后面的事情也正出乎我所料。</p>
+<blockquote>
+<h4 id="Tips-5"><a href="#Tips-5" class="headerlink" title="Tips:"></a>Tips:</h4><p>尽可能详细地了解对方公司、项目情况及相关人员背景，如果出现对接人员素质与项目不相符的情况，尽早向合作方提出疑问，把问题抛向对方，不要让这种问题影响项目的进度和后续工作的开展。</p>
+</blockquote>
+<p>  合同签完，需要再次详细沟通需求和评估开发计划，我和团队同伴远赴对方公司开会。沟通需求的过程中对方少不了加需求，甚至是一个独立的模块，相当于工作量莫名就多了几分之一。对方含糊其词，说这是一个非常重要的模块，没有这个模块就不是一个完整的系统，当初以为这是默认大家知道的事情云云。好在先前拟订合同的时候，我把主要功能和相关模块都写在了合同的开发内容一款里面，赶忙把合同拿给对方看，对方哑口无言，后面继续沟通是加时间、加人力还是精简功能。</p>
+<blockquote>
+<h4 id="Tips-6"><a href="#Tips-6" class="headerlink" title="Tips:"></a>Tips:</h4><p>拟订合同时，一定要写清楚开发内容和主要功能，尽可能详细准确，避免后续因为添功能、改功能扯皮，毕竟口说无凭、白纸黑字才是硬道理。</p>
+</blockquote>
+<h3 id="项目开始"><a href="#项目开始" class="headerlink" title="项目开始"></a>项目开始</h3><p>  合同签完，按照合同约定对方需要先支付 30% 的项目款作为一期款，因为这些都是明确写到合同里，整个付款过程中很利索，唯一的问题是对方需要提供发票，后面找了朋友公司代开搞定。</p>
+<p>  软件增值税票税点一般是 6%，税费也会是一笔不小的支出。最好在报价时沟通好税费及发票相关事宜。</p>
+<blockquote>
+<h4 id="Tips-7"><a href="#Tips-7" class="headerlink" title="Tips:"></a>Tips:</h4><p>最好等到预付款 or 第一期项目款到账后再启动项目，避免不必要的麻烦。</p>
+</blockquote>
+<blockquote>
+<p>报价时将税费和发票考虑进去。现在众包平台也大多解决了这个问题，用户不必再操心这个。</p>
+</blockquote>
+<h3 id="项目准备"><a href="#项目准备" class="headerlink" title="项目准备"></a>项目准备</h3><p>  等到相关流程都走完，需要对方提供产品原型的时候，对方硬是石滚碾不出个屁来，憋了很久什么东西也提供不出来，我们艰难地跟他们普及了设计稿和原型稿的区别后，他们疑惑地表示：这种东西不是应该由你们来搞定吗。只好边跟他们说清楚，边给对方提供几个原型示例和原型工具。</p>
+<p>  回过头看看，整个项目过程中对方除了给出一个非常粗糙的概念需求文档，任何文档输出都没有，在前面沟通需求时提出让对方把相关需求文档整理给我们，他们表示这种东西都在自己脑子里没有时间整理。</p>
+<p>  没有输出的文档，后续的工作便没有了依据，而所有的依据，也只是在详细沟通需求的时候，我们自己整理的需求列表文档。</p>
+<blockquote>
+<h4 id="Tips-8"><a href="#Tips-8" class="headerlink" title="Tips:"></a>Tips:</h4><p>文档的输出非常重要，详细的需求文档与设计文档是后续项目开发中的必备利器，没有这些，整个项目成了巧妇难为无米之炊，而且这些也会是项目开发完毕验收的标准之一。</p>
+</blockquote>
+<h3 id="项目前期"><a href="#项目前期" class="headerlink" title="项目前期"></a>项目前期</h3><p>  项目还没正式开始，对方又出幺蛾子了，对方对接人员由技术主管变更为另一个下级技术负责人，估计他们内部都没有仔细沟通过，就直接让我们和他对接，上来第一句便是<code>找个时间沟通下需求，这边不太清楚细节</code>。拜托，细节都在你们老大那里了，求我们心理阴影面积…</p>
+<p>  所有的输出文档只有在我和第一任对接人沟通需求时，整理的需求列表文档，这意味着它是经过第一任对接人陈述并由我们消化整理的，而第二任对接人如果再以它为参照的话，这里面的需求理解因人而异，项目变数更多、前景堪忧。想到这些，我们只好再次奔赴过去详细沟通需求。</p>
+<blockquote>
+<h4 id="Tips-9"><a href="#Tips-9" class="headerlink" title="Tips:"></a>Tips:</h4><p>项目对接人的变更算是一个意料之外的问题，也更显前面所述的文档的重要性。越快越早地形成详细清晰的文档直接决定了项目后续的走势和进度。</p>
+</blockquote>
+<p> 在等原型的这段时间，风雨飘摇的项目又出了新纰漏：原本协商好的我们只需要负责软件系统开发（包含各端 App、Web 管理系统、后台系统），对方负责硬件生产及硬件系统开发，后来他们硬件开发人员离职，想把硬件系统开发这一块也交由我们。我们想都没想，就直接拒绝了。</p>
+<blockquote>
+<h4 id="Tips-10"><a href="#Tips-10" class="headerlink" title="Tips:"></a>Tips:</h4><p>尽管接下硬件这块又有钱赚了，但这不是我们团队的强项，需要另找专业人员，相当于给团队和项目增加风险和不确定性。专注于做自己擅长的一面，不为团队和项目累加风险和不确定性，也是一种责任心。</p>
+</blockquote>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>  还没写到项目正式开始，就已经罗罗嗦嗦一大篇了，后续记录一下项目开发过程中的坑和教训，未完待续，欢迎交流。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2017/02/25/2017-02-25-FengYa/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1260,114 +1423,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/12/03/2015-12-03-To-Love/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2015/12/03/2015-12-03-To-Love/" class="post-title-link" itemprop="url">致妻 • 乙未年三月六日作</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2015-12-03 17:17:17" itemprop="dateCreated datePublished" datetime="2015-12-03T17:17:17+08:00">2015-12-03</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/诗/" itemprop="url" rel="index">
-                    <span itemprop="name">诗</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2015/12/03/2015-12-03-To-Love/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/03/2015-12-03-To-Love/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="致妻"><a href="#致妻" class="headerlink" title="致妻"></a>致妻</h2><p> <em>乙未年三月六日作</em></p>
-<h3 id="冬末朽木离别寒，"><a href="#冬末朽木离别寒，" class="headerlink" title="冬末朽木离别寒，"></a>冬末朽木离别寒，</h3><h3 id="夏初嫩草换新颜。"><a href="#夏初嫩草换新颜。" class="headerlink" title="夏初嫩草换新颜。"></a>夏初嫩草换新颜。</h3><h3 id="五月和风起池浪，"><a href="#五月和风起池浪，" class="headerlink" title="五月和风起池浪，"></a>五月和风起池浪，</h3><h3 id="桃花丛里嬉KeRan。"><a href="#桃花丛里嬉KeRan。" class="headerlink" title="桃花丛里嬉KeRan。"></a>桃花丛里嬉KeRan。</h3><ul>
-<li><p>旧文新发，原作于 2015 年 3 月 6 日 • 深圳 。</p>
-</li>
-<li><p>2015 年 2 月 24 日（冬）别离妻女返深，预计 2015 年 5 月 1 日（夏）再回信阳。</p>
-</li>
-<li><p>“KeRan”：小女。</p>
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1420,7 +1475,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">94</span>
+          <span class="site-state-item-count">95</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1433,7 +1488,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
