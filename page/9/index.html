@@ -264,6 +264,116 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/10/24/2012-10-24-oracle-data-page/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2012/10/24/2012-10-24-oracle-data-page/" class="post-title-link" itemprop="url">解决oracle分页查询数据重复问题</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2012-10-24 10:22:02" itemprop="dateCreated datePublished" datetime="2012-10-24T10:22:02+08:00">2012-10-24</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2012/10/24/2012-10-24-oracle-data-page/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/10/24/2012-10-24-oracle-data-page/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>oracle分页查询时，会遇到数据重复的问题，下面就教您一个解决oracle分页查询数据重复问题的方法，希望对您能够有所帮助。</p>
+<p>在oracle分页查询中，我们采用类似以下所示的公认的比较高效的数据库分页查询语句（Effective Oracle by Design中有描述、众多oracle使用者也做过测试）。</p>
+<p>写道</p>
+<p>SELECT <em> FROM<br>(<br>SELECT A.</em>, ROWNUM RN<br>FROM (SELECT * FROM TABLE_NAME) A<br>WHERE ROWNUM &lt;= n)<br>WHERE RN &gt; m<br>这里的ROWNUM是一个伪列，它是oracle为查询结果所编的一个号，第一行的 ROWNUM为1，第二行为2，以此类推。</p>
+<p>因为oracle是按块进行读取数据的，如果数据按顺序存储，则可能使读取出来的数据是按顺序的，给用户误解为默认排序。事实上，oracle没有进行任何排序操作，如果sql没有要求排序，oracle会顺序的从数据块中读取符合条件的数据返回到客户端。所以在没有使用排序sql的时候，分页返回的数据可能是按顺序的，也可能是杂乱无章的，这都取决与数据的存储位置。在oracle分页查询过程中，如果数据的物理位置发生了改变，就可能会引起分页数据重复的现象。</p>
+<p>所以，要正确使用oracle分页查询，sql语句中必须有排序条件。</p>
+<p>但是，在有排序条件的时候，仍然会出现数据重复的现象，这是为什么呢？</p>
+<p>通过了解oracle的排序机理就会明白，出现这种情况的原因是因为排序列值的不唯一性。 Oracle这里使用的排序算法不具有稳定性，也就是说，对于键值相等的数据，这种算法完成排序后，不保证这些键值相等的数据保持排序前的顺序。</p>
+<p>解决的方法是在后边增加一个唯一性列，比如主键。</p>
+<p>所以解决方法如下（两个条件必须同时满足）：<br>**<br>1.sql语句中需要有排序条件。</p>
+<p>2.排序条件如果没有唯一性，那么必须在后边跟上一个唯一性的条件，比如主键。**</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/10/09/2012-10-09-Funny-National-day/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1349,111 +1459,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/06/07/2012-06-07-tomcat-vm/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/06/07/2012-06-07-tomcat-vm/" class="post-title-link" itemprop="url">Tomcat内存设置</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-06-07 23:21:23" itemprop="dateCreated datePublished" datetime="2012-06-07T23:21:23+08:00">2012-06-07</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/06/07/2012-06-07-tomcat-vm/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/06/07/2012-06-07-tomcat-vm/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>前言：<br>当上传大数据文件的时候，失败。经验证，出现OOM异常 。</p>
-<p>过程：<br>windows的用绿色版tomcat：<br><span style="color: #ff0000;">set JAVA_OPTS=%JAVA_OPTS% -Xms1024m -Xmx1280m -XX:MaxNewSize=256m -XX:MaxPermSize=256m</span></p>
-<p>windows安装版tomcat（用服务启动tomat）：这个是执行bin/tomcat.exe，不读取catalina.bat的配置<br><span style="color: #ff0000;">修改注册表HKEY_LOCAL_MACHINE\SOFTWARE\Apache Software Foundation\Tomcat Service Manager\Tomcat5\Parameters\JavaOptions</span><br><span style="color: #ff0000;"> 原值为</span><br><span style="color: #ff0000;"> -Dcatalina.home=”C:\ApacheGroup\Tomcat 5.0”</span><br><span style="color: #ff0000;"> -Djava.endorsed.dirs=”C:\ApacheGroup\Tomcat 5.0\common\endorsed”</span><br><span style="color: #ff0000;"> -Xrs</span><br><span style="color: #ff0000;"> 加入 -Xms300m -Xmx350m</span></p>
-<p><span style="color: #ff0000;">linux:</span><br>在/usr/local/apache-tomcat-5.5.23/bin目录下的catalina.sh<br>添加：<span style="color: #ff0000;">JAVA_OPTS=’-Xms512m -Xmx1024m’</span><br>要加“m”说明是MB，否则就是KB了，在启动tomcat时会报内存不足。<br>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
-<p>remark:<br>设置JVM堆的设置是指java程序运行过程中JVM可以调配使用的内存空间的设置.JVM在启动的时候会自动设置Heap size的值，其初始空间(即-Xms)是物理内存的1/64，最大空间(-Xmx)是物理内存的1/4。可以利用JVM提供的-Xmn -Xms -Xmx等选项可进行设置。Heap size 的大小是Young Generation 和Tenured Generaion 之和。提示：在JVM中如果98％的时间是用于GC且可用的Heap size 不足2％的时候将抛出此异常信息。提示：Heap Size 最大不要超过可用物理内存的80％，一般的要将-Xms和-Xmx选项设置为相同，而-Xmn为1/4的-Xmx值。</p>
-<p>最后跟用户说通过设置tomcat内存和分割excel解决。但是这毕竟不是解决之道。<br>想：<br>代码里面控制分次读取，读取后释放资源继续读取。<br>同时在导出excel的时候遇到OOM的异常的话，也可以使用分次写文件，或者写多个文件最后合并excel。<br>同时我在想，他那个超过65535行数据的excel怎么写的数据，应该是导出的…<br>这样的还是用csv或者txt什么的好。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1506,7 +1511,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-count">96</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
