@@ -264,6 +264,113 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/17/2013-10-17-java-binary-search/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2013/10/17/2013-10-17-java-binary-search/" class="post-title-link" itemprop="url">Java二分法查找</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2013-10-17 11:11:11" itemprop="dateCreated datePublished" datetime="2013-10-17T11:11:11+08:00">2013-10-17</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2013/10/17/2013-10-17-java-binary-search/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/10/17/2013-10-17-java-binary-search/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>  最近遇到一个问题：</p>
+<p>  须要在20万号段数据中查找对应的地市，并且这个过程是发生在遍历几百万数据中的。也就是说正常情况下须要执行20万*几百万次。</p>
+<p>这个时间太久了，且因为号段是长数字，执行起来速度超慢。</p>
+<p>后来突然想到可以用二分法。</p>
+<h4 id="二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O-logn-。"><a href="#二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O-logn-。" class="headerlink" title="二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O(logn)。"></a>二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O(logn)。</h4><p>下面两个例子就是二分法的示例，一个是递归，一个是循环。</p>
+<p><em>java二分法循环示例</em><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.sunzn.dichotomy;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DichotomySearch</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; <span class="number">12</span>, <span class="number">23</span>, <span class="number">34</span>, <span class="number">45</span>, <span class="number">56</span>, <span class="number">67</span>, <span class="number">77</span>, <span class="number">89</span>, <span class="number">90</span> &#125;;</span><br><span class="line">       System.out.println(search(arr, <span class="number">12</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">45</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">67</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">89</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">99</span>));</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">int</span> end = arr.length - <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">while</span> (start &lt;= end) &#123;</span><br><span class="line">           <span class="keyword">int</span> middle = (start + end) / <span class="number">2</span>;</span><br><span class="line">           <span class="keyword">if</span> (key &lt; arr[middle]) &#123;</span><br><span class="line">               end = middle - <span class="number">1</span>;</span><br><span class="line">           &#125; <span class="keyword">else</span> <span class="keyword">if</span> (key &gt; arr[middle]) &#123;</span><br><span class="line">               start = middle + <span class="number">1</span>;</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               <span class="keyword">return</span> middle;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><em>java二分法递归示例</em><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 二分法查找，必须对已经排好序的序列进行查找，假设现在有一个递增序列，取中间位置的数及序号midIndex=(beginIndex+endIndex)/2，</span></span><br><span class="line"><span class="comment"> * 然后将一个序列折成两半，beginIndex~midIndex，midIndex~endIndex,如果目标数T等于S[midIndex]，找到，</span></span><br><span class="line"><span class="comment"> * 否则，如果T&lt;S[midIndex]，则在beginIndex~midIndex中继续查找；如果T&gt;S[midIndex],则在midIndex~endIndex</span></span><br><span class="line"><span class="comment"> * 中继续查找，如此反复进行，直到找到目标数据，</span></span><br><span class="line"><span class="comment"> * 初始对传入参数进行约束及避免无效计算的条件为，T&lt;S[beginIndex]或T&gt;S[endIndex]或beginIndex&gt;endIndex</span></span><br><span class="line"><span class="comment"> * 或beginIndex&gt;S.length-1||endIndex&gt;S.length-1||beginIndex&lt;0||endIndex&lt;0</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">package</span> junit.test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySearchTest</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 找到返回索引下标，否则返回-1；</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> index</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> dataset[],<span class="keyword">int</span> target,<span class="keyword">int</span> beginIndex,<span class="keyword">int</span> endIndex)</span></span>&#123;</span><br><span class="line">  <span class="comment">//数组校验</span></span><br><span class="line">  <span class="keyword">if</span>(dataset==<span class="keyword">null</span>||dataset.length==<span class="number">0</span>)&#123;</span><br><span class="line">	  <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//beginIndex,endIndex校验</span></span><br><span class="line">  <span class="keyword">if</span>(beginIndex&gt;endIndex||beginIndex&gt;dataset.length-<span class="number">1</span>||endIndex&gt;dataset.length-<span class="number">1</span>||beginIndex&lt;<span class="number">0</span>||endIndex&lt;<span class="number">0</span>)&#123;</span><br><span class="line">   System.out.println(<span class="string">"error arguments!"</span>);</span><br><span class="line">   <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//无效参数处理</span></span><br><span class="line">  <span class="keyword">if</span>(target&lt;dataset[beginIndex]||target&gt;dataset[endIndex]||beginIndex&gt;endIndex)&#123;</span><br><span class="line">   <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> midIndex=(beginIndex+endIndex)/<span class="number">2</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//System.out.println(midIndex);</span></span><br><span class="line">  <span class="keyword">if</span>(target==dataset[midIndex])&#123;</span><br><span class="line">   <span class="keyword">return</span> midIndex;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(target&lt;dataset[midIndex])&#123;</span><br><span class="line">   <span class="keyword">return</span> binarySearch(dataset,target,beginIndex,midIndex-<span class="number">1</span>);<span class="comment">//注意midIndex-1</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span>&#123;</span><br><span class="line">   <span class="keyword">return</span> binarySearch(dataset,target,midIndex+<span class="number">1</span>,endIndex);<span class="comment">//注意midIndex+1</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">  BinarySearchTest bs=<span class="keyword">new</span> BinarySearchTest();</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">int</span>[] data=<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">12</span>&#125;;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">int</span> index=bs.binarySearch(data,<span class="number">12</span>,<span class="number">0</span>, <span class="number">5</span>);</span><br><span class="line">  </span><br><span class="line">  System.out.println(<span class="string">"The position of the target number in the array is :"</span>+ index);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>后记：算法无穷妙，看来得好好学习下算法。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/15/2013-10-15-xubumeng-on-weixin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1201,111 +1308,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/12/07/2012-12-07-ubuntu-superuser/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/12/07/2012-12-07-ubuntu-superuser/" class="post-title-link" itemprop="url">Ubuntu下如何切换到超级用户 (superuser)</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-12-07 16:31:04" itemprop="dateCreated datePublished" datetime="2012-12-07T16:31:04+08:00">2012-12-07</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/12/07/2012-12-07-ubuntu-superuser/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/12/07/2012-12-07-ubuntu-superuser/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>由于 Ubuntu 是基于 Debian 的 linux 操作系统，在默认的情况下，是没有超级用户(superuser, root)的，但有些系统操作必须有超级用户的权限才能进行，如手动释放内存等。</p>
-<p>在其他 linux 操作系统 (如 fedora) 下，可以使用<br>su<br>切换到超级用户。<br>当输入 su 命令后， 系统会要求输入 root 的密码。<br>可是，在 Ubuntu 下我们根本不知道 root 的密码是什么。</p>
-<p>这样，在 Ubuntu 下切换到超级用户需要使用其他方法，主要有两种：</p>
-<p>1) sudo -i </p>
-<p>sudo<br>是 su 的加强版，意思是 do something as the supervisor。<br>   不需要密码就可以得到 root 的权限。<br>   但是它也有很多限制，比如，在默认的情况下，只能在 5 分钟之内使用 root 权限。</p>
-<p>2) 如果想一直使用 root 权限，还是要使用 su， 还是要得到 root 密码的。<br>   用<br>sudo passwd root<br>可以设置 root 的密码。<br>   之后就可以自由使用 su 命令啦。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1358,7 +1360,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-count">99</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
