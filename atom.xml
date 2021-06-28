@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amonxu.com/"/>
-  <updated>2021-06-28T13:57:41.827Z</updated>
+  <updated>2021-06-28T14:04:24.507Z</updated>
   <id>https://amonxu.com/</id>
   
   <author>
@@ -21,16 +21,17 @@
     <link href="https://amonxu.com/2021/06/28/2021-06-28-Redis-Book/"/>
     <id>https://amonxu.com/2021/06/28/2021-06-28-Redis-Book/</id>
     <published>2021-06-28T14:00:01.000Z</published>
-    <updated>2021-06-28T13:57:41.827Z</updated>
+    <updated>2021-06-28T14:04:24.507Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://img1.doubanio.com/view/subject/l/public/s27297117.jpg" alt="img" style="zoom: 33%;"></p><p>认识这本书是好几年前了，那时候在一个胖胖哒同事桌前翻了几页；第一次看是3年前，看过几章大概到跳表那里；重新看完是3年后的今天，用时13时14分。</p><p>这本书确实是好书，以前对Redis的理解太过浅显（当然现在也未必多佳，但拜本书所赐，必不可同当年而语）。</p><p>书的结构非常好，从底层数据结构讲起，再到基本功能，高级功能，扩展功能。即使是每一节的内容，也非常有趣。从大致说明，基本用法，解释原理，数据结构图示，再到最后的总结。读来不觉乏味，这也和Redis本身清晰简洁的设计相符。</p><p>感谢本书作者，也感谢阅读中那些精彩的读者分享和讨论。 </p>]]></content>
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p><img src="https://img1.doubanio.com/view/subject/l/public/s27297117.jpg" alt="img" style="zoom: 33%;"></p><p>认识这本书是好几年前了，那时候在一个胖胖哒同事桌前翻了几页；第一次看是3年前，看过几章大概到跳表那里；重新看完是3年后的今天，用时13时14分。</p><p>这本书确实是好书，以前对Redis的理解太过浅显（当然现在也未必多佳，但拜本书所赐，必不可同当年而语）。</p><p>书的结构非常好，从底层数据结构讲起，再到基本功能，高级功能，扩展功能。即使是每一节的内容，也非常有趣。从大致说明，基本用法，解释原理，数据结构图示，再到最后的总结。读来不觉乏味，这也和Redis本身清晰简洁的设计相符。</p><p>感谢本书作者，也感谢阅读中那些精彩的读者分享和讨论。 </p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/subject/l/public/s27297117.jpg&quot; alt=&quot;img&quot; style=&quot;zoom: 33%;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;认识这本书是好几年前了，那时候在一个胖胖哒同事桌前翻了
+        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img1.doubanio.com/view/subject/l/public/s27297117.jpg&quot; alt=&quot;img&quot; style=&quot;z
       
     
     </summary>
@@ -171,7 +172,7 @@
     <link href="https://amonxu.com/2021/02/04/2021-02-04-Poem-Cloud/"/>
     <id>https://amonxu.com/2021/02/04/2021-02-04-Poem-Cloud/</id>
     <published>2021-02-04T14:02:20.000Z</published>
-    <updated>2021-02-22T13:31:28.899Z</updated>
+    <updated>2021-06-28T14:04:00.139Z</updated>
     
     <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.ting456.com%2Fpic%2Fuploadimg%2F2014-6%2F611.jpg&refer=http%3A%2F%2Fwww.ting456.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1615035146&t=9fa2644ef3f1d2eb4be0ff378d4e5e21" alt="img" style="zoom: 80%;"></p><p>还有什么比神化作中国古代最杰出的文学艺术家之一的李白更浪漫的呢；</p><p>还有什么比神对人类古诗词产生兴趣更浪漫的呢；</p><p>还有什么比神弹指间毁灭太阳系只为作诗更浪漫的呢，</p><p>还有什么比一朵诗云创作出所有诗词可能性更浪漫的呢。</p><p>往前看，这个星球以前的虫子们创作出的诗词，没有创作出的诗词，都在诗云之中；往后看，这个星球未来的虫子们可能创作出的诗词，没有创作出的诗词，也都在诗云之中。</p><p>念天地之悠悠，独怆然而涕下。 </p>]]></content>
     
@@ -358,11 +359,11 @@
     
       <category term="读书笔记" scheme="https://amonxu.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
+    
       <category term="婚姻" scheme="https://amonxu.com/tags/%E5%A9%9A%E5%A7%BB/"/>
     
       <category term="生活" scheme="https://amonxu.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
     
   </entry>
   
@@ -449,9 +450,9 @@
     
       <category term="故乡" scheme="https://amonxu.com/tags/%E6%95%85%E4%B9%A1/"/>
     
-      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
-    
       <category term="雪" scheme="https://amonxu.com/tags/%E9%9B%AA/"/>
+    
+      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
     
   </entry>
   
