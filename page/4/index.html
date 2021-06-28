@@ -264,6 +264,115 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/11/24/2018-11-24-eliminating-large-jvm-gc-pauses-caused-by-background-io-traffic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2018/11/24/2018-11-24-eliminating-large-jvm-gc-pauses-caused-by-background-io-traffic/" class="post-title-link" itemprop="url">如何避免后台IO高负载造成的长时间JVM GC停顿</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-24 21:30:31" itemprop="dateCreated datePublished" datetime="2018-11-24T21:30:31+08:00">2018-11-24</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2018/11/24/2018-11-24-eliminating-large-jvm-gc-pauses-caused-by-background-io-traffic/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/24/2018-11-24-eliminating-large-jvm-gc-pauses-caused-by-background-io-traffic/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>英文原文：<br><a href="https://engineering.linkedin.com/blog/2016/02/eliminating-large-jvm-gc-pauses-caused-by-background-io-traffic" target="_blank" rel="noopener">https://engineering.linkedin.com/blog/2016/02/eliminating-large-jvm-gc-pauses-caused-by-background-io-traffic</a></p>
+<p>译文原文：<br><a href="https://www.jianshu.com/p/ce9b3f0a90f2" target="_blank" rel="noopener">https://www.jianshu.com/p/ce9b3f0a90f2</a></p>
+<p>这里就只贴出结论总结吧：</p>
+<p>有低延迟要求的Java应用程序需要极短的JVM GC停顿。但是，当磁盘IO压力很大时，JVM可能被阻塞一段较长的时间。</p>
+<p>我们对该问题进行了调查，并且发现如下原因：</p>
+<ol>
+<li>JVM GC需要通过发起系统调用<code>write()</code>，来记录GC行为。</li>
+<li><code>write()</code>调用可以被后台磁盘IO所阻塞。</li>
+<li>记录GC日志属于JVM停顿的一部分，因此<code>write()</code>调用的时间也会被计算在JVM STW的停顿时间内。<br>我们提出了一系列解决该问题的方案。重要的是，我们的发现可以帮助JVM实现来改进该问题。对于低延迟应用程序来说，最简单有效的措施是将GC日志文件放到单独的HDD或者高性能磁盘（例如SSD）上，来避免IO竞争。</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/11/23/2018-11-23-Java-Script/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1254,116 +1363,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/06/20/2018-06-20-Farewell-Shenzhen/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2018/06/20/2018-06-20-Farewell-Shenzhen/" class="post-title-link" itemprop="url">临行小事</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-06-20 18:17:19" itemprop="dateCreated datePublished" datetime="2018-06-20T18:17:19+08:00">2018-06-20</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2018/06/20/2018-06-20-Farewell-Shenzhen/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/06/20/2018-06-20-Farewell-Shenzhen/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>妻子在给女儿换衣服，<br>丈夫顶着蓬松的头发四处寻找，<br>“梳子呢，你带走了吗？”<br>“嗯，在包里”<br>丈夫转身去行李里翻找。</p>
-<p>妻子换罢衣服，<br>过来从一堆行李里利索地拿起了梳子。<br>丈夫接过梳子去镜前梳头发。  </p>
-<p>“你为我梳一次头发吧”<br>“不会”<br>“你梳了那么多次了，给我梳一次吧”  </p>
-<p>妻子走来走去地收拾着东西，<br>丈夫拿着梳子跟在后面，<br>拗不过，妻子拿过梳子。</p>
-<p>这是她第一次为他梳头，<br>零星的白发藏在一头并不浓密的头发中间，<br>她用手抚握住前面的头发，<br>用梳子轻轻地往后梳。</p>
-<p>等到几束头发都梳到后面，<br>他递上捏在手中的皮筋，<br>她拿起皮筋将握在手中的头发扎起来。</p>
-<p>她欠身准备继续去忙，<br>他拉着她的手，<br>不舍放开。</p>
-<p>他凝视着镜中的自己，<br>还没等她们离开，<br>他便有些不舍了。<br>他对着镜子咧嘴扭曲着五官，<br>想记起些什么。  </p>
-<p>他换上鞋子，准备出门。<br>她唤女儿，<br>“跟爸爸来个临别的拥抱吧”<br>女儿马上黏了过来，<br>他俯下身子抱着女儿。</p>
-<p>“明天这个时候你们就在老家啦”<br>“爸爸，你不跟我们回去吗”<br>“爸爸在这里，等你们”</p>
-<p>他再往下俯了些，<br>然后起身离去。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1416,7 +1415,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">101</span>
+          <span class="site-state-item-count">102</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1442,7 +1441,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">108</span>
+        <span class="site-state-item-count">110</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
