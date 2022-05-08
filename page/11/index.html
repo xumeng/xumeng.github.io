@@ -10,6 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 3.7.1">
+<meta name="referrer" content="no-referrer" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
@@ -260,6 +261,109 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/06/05/2012-06-05-vmware-tools-install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2012/06/05/2012-06-05-vmware-tools-install/" class="post-title-link" itemprop="url">VMware tools安装</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2012-06-05 20:09:23" itemprop="dateCreated datePublished" datetime="2012-06-05T20:09:23+08:00">2012-06-05</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2012/06/05/2012-06-05-vmware-tools-install/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/06/05/2012-06-05-vmware-tools-install/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>前言：<br>安装了linux后，安装VM tools是必要的，功能自不必多说。比如我当时的客户机的屏幕很大，不能适应宿主机。</p>
+<p>过程：<br>1.右击虚拟机右下角CD/DVD————设置————使用iso镜像文件————选择VMware workstation安装目录里linux.iso。<br>  同时你可以看到有windows.iso，solaris.iso，linux.iso，这些都是在不同系统里安装vmware tools所需的镜像文件。</p>
+<p>2.选择后，重启客户机。开机后，有的说会在桌面上看到VMware tools的安装文件，有的说直接默认打开了，但是我没有遇到上述两种情况，我在主文件夹左侧导航里设备那找到了VMware tools的安装压缩包，<br>但又发现一个问题，无法像网上那样用命令找到，虽然看到目录是media，但是在cmd里始终是找不到的。<br>只好在设备那里打开VMware tools的驱动目录，复制到主文件夹去。<br>然后解压缩，使用命令或者右键都可以。<br>命令就用tar zxvf xxx.tar.gz，默认解压到当前目录，然后cd进入这个解压后的目录，<br>执行安装文件：sudo ./vmware-install.pl。<br>然后一路回车就是了，有兴趣的也可以看看安装时的提示。安装完后重启虚拟机。<br>反复的试试虚拟机工具栏————视图——————立即适应客户机。然后虚拟机的窗口就能在宿主机中完美的显示出来了。如果不行的话，也可以试试视图里面其他的调整，直到满意为止。</p>
+<p>remark：上次安装的时候因为强制取消了一些更新，这次一看竟然有300多MB，什么程序的更新，系统的更新，不认识的，各种更新都有。想想还是更新下吧。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
         
   
   
@@ -715,7 +819,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">104</span>
+          <span class="site-state-item-count">105</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -741,7 +845,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">113</span>
+        <span class="site-state-item-count">114</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -858,7 +962,7 @@
 
 <div class="copyright">
   &copy; 2012 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heartbeat"></i>
   </span>
