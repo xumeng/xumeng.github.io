@@ -47,6 +47,30 @@
   </entry>
   
   <entry>
+    <title>如何优雅地查看Kubernetes容器中的日志</title>
+    <link href="https://amonxu.com/2022/10/12/2022-10-12-K8S-Logs/"/>
+    <id>https://amonxu.com/2022/10/12/2022-10-12-K8S-Logs/</id>
+    <published>2022-10-12T13:00:01.000Z</published>
+    <updated>2022-10-12T14:33:52.065Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Technology" scheme="https://amonxu.com/categories/Technology/"/>
+    
+    
+      <category term="k8s" scheme="https://amonxu.com/tags/k8s/"/>
+    
+      <category term="log" scheme="https://amonxu.com/tags/log/"/>
+    
+      <category term="阿里云" scheme="https://amonxu.com/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+      <category term="docker" scheme="https://amonxu.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>中国人民的老朋友——从书中人物的角度读 《红星照耀中国》</title>
     <link href="https://amonxu.com/2022/05/04/2022-05-04-Red-Star-Over-China/"/>
     <id>https://amonxu.com/2022/05/04/2022-05-04-Red-Star-Over-China/</id>
@@ -500,9 +524,9 @@
     
       <category term="职场" scheme="https://amonxu.com/tags/%E8%81%8C%E5%9C%BA/"/>
     
-      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
-    
       <category term="996" scheme="https://amonxu.com/tags/996/"/>
+    
+      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
     
   </entry>
   
@@ -530,9 +554,9 @@
     
       <category term="故乡" scheme="https://amonxu.com/tags/%E6%95%85%E4%B9%A1/"/>
     
-      <category term="雪" scheme="https://amonxu.com/tags/%E9%9B%AA/"/>
-    
       <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
+    
+      <category term="雪" scheme="https://amonxu.com/tags/%E9%9B%AA/"/>
     
   </entry>
   
@@ -598,37 +622,6 @@
       <category term="猛言猛语" scheme="https://amonxu.com/tags/%E7%8C%9B%E8%A8%80%E7%8C%9B%E8%AF%AD/"/>
     
       <category term="tcp" scheme="https://amonxu.com/tags/tcp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>李永乐老师的“如何才能摆脱贫穷？穷人和富人有什么差别？【诺贝尔经济学奖解读】”重点提取</title>
-    <link href="https://amonxu.com/2019/11/13/2019-11-13-Be-Rich/"/>
-    <id>https://amonxu.com/2019/11/13/2019-11-13-Be-Rich/</id>
-    <published>2019-11-13T15:03:59.000Z</published>
-    <updated>2020-12-12T08:16:48.280Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://tva1.sinaimg.cn/large/007X8olVly1g8wt9yfwn5j31hc0u079a.jpg" alt="cover"></p><ol><li>每增加国民平均受教育年限一年，国家GDP可提升30%以上。（再穷不能穷教育！）</li><li>平均来讲多读一年书比少读一年书，工资多8%。（活到老学到老！）</li><li>买保险，可以避免贫困陷阱。（敲黑板！！！富人必备。）</li><li>富裕可以增加人的耐心，贫穷会使人丧失耐心。（多存钱，少剁手，争取早日摆脱贫困陷阱）</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;http://tva1.sinaimg.cn/large/007X8olVly1g8wt9yfwn5j31hc0u079a.jpg&quot; alt=&quot;cover&quot;&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;每增加国民平均受教育年限一年，国家GDP可提升30%以上。（再穷不能
-      
-    
-    </summary>
-    
-      <category term="书" scheme="https://amonxu.com/categories/%E4%B9%A6/"/>
-    
-    
-      <category term="经济学" scheme="https://amonxu.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-      <category term="李永乐" scheme="https://amonxu.com/tags/%E6%9D%8E%E6%B0%B8%E4%B9%90/"/>
-    
-      <category term="保险" scheme="https://amonxu.com/tags/%E4%BF%9D%E9%99%A9/"/>
     
   </entry>
   
