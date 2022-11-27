@@ -47,13 +47,51 @@
   </entry>
   
   <entry>
-    <title>如何优雅地查看Kubernetes容器中的日志</title>
+    <title>写于11月27日</title>
+    <link href="https://amonxu.com/2022/11/27/2022-11-27-Date/"/>
+    <id>https://amonxu.com/2022/11/27/2022-11-27-Date/</id>
+    <published>2022-11-27T14:18:01.000Z</published>
+    <updated>2022-11-27T14:20:42.975Z</updated>
+    
+    <content type="html"><![CDATA[<p>8年前的一天，在一家粤菜店吃不是饭点的午饭时，我一边品着大麦茶，一边对着左顾右盼着餐厅不多的客人。</p><p>餐厅播放着无聊的节目，但当我转头看向电子时钟，上面跳动着猩红色的数字：2014年11月27日。</p><p>恍惚间，这年这月这日组成这一串，于我陌生无比，不知是外星数字来了地球，还是我这地球人去了外星。</p><p>2-0-1-4，2014年？我印象中并没有这么个年，要说有的，大概是些刚毕业时上大学，刚高考完读高中，刚升高中读初中，升初中时读小学的那些年。</p><p>1-1-2-7，11月27日？还早呢。我并没有十一长假，也未曾过过中秋，说起端午，粽子也没吃过，五一呢，我倒没什么记忆深刻的事情。</p><p>现在，又是11月27日。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;8年前的一天，在一家粤菜店吃不是饭点的午饭时，我一边品着大麦茶，一边对着左顾右盼着餐厅不多的客人。&lt;/p&gt;
+&lt;p&gt;餐厅播放着无聊的节目，但当我转头看向电子时钟，上面跳动着猩红色的数字：2014年11月27日。&lt;/p&gt;
+&lt;p&gt;恍惚间，这年这月这日组成这一串，于我陌生无比，不知
+      
+    
+    </summary>
+    
+      <category term="Note" scheme="https://amonxu.com/categories/Note/"/>
+    
+    
+      <category term="随笔" scheme="https://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="2022" scheme="https://amonxu.com/tags/2022/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从优雅地查看K8s应用日志聊到日志管理</title>
     <link href="https://amonxu.com/2022/10/12/2022-10-12-K8S-Logs/"/>
     <id>https://amonxu.com/2022/10/12/2022-10-12-K8S-Logs/</id>
     <published>2022-10-12T13:00:01.000Z</published>
-    <updated>2022-10-12T14:33:52.065Z</updated>
+    <updated>2022-11-27T14:23:26.741Z</updated>
+    
+    <content type="html"><![CDATA[<p>曾不知在哪听过一经典名句：程序员的工作只有两件事，一是写 Bug，二是找 Bug。</p><p>说归说笑归笑，奈何话糙理不糙。而在真正排查 Bug 时，才深刻体会到另一名句：不写日志一时爽，排查 Bug 火Z场。</p><p>日志管理，一直是开发人员的老大难题。这个老大难题，大致分为几块内容：</p><h3 id="1-打印日志"><a href="#1-打印日志" class="headerlink" title="1. 打印日志"></a>1. 打印日志</h3><p>狭义上的日志管理，也即打印日志。套用 3W1H 分析方法可以分为几个子问题：</p><ol><li>Why 为什么要打日志<br> 显而易见，日志是记录关键信息和数据的地方，以备未来排查问题和数据统计分析之用。</li><li><p>What 要打什么样的日志</p></li><li><p>Where/When 在哪里/什么时候打日志</p></li><li>How 怎么打日志</li></ol><h3 id="2-记录日志"><a href="#2-记录日志" class="headerlink" title="2. 记录日志"></a>2. 记录日志</h3><h3 id="3-查看日志"><a href="#3-查看日志" class="headerlink" title="3. 查看日志"></a>3. 查看日志</h3>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;曾不知在哪听过一经典名句：程序员的工作只有两件事，一是写 Bug，二是找 Bug。&lt;/p&gt;
+&lt;p&gt;说归说笑归笑，奈何话糙理不糙。而在真正排查 Bug 时，才深刻体会到另一名句：不写日志一时爽，排查 Bug 火Z场。&lt;/p&gt;
+&lt;p&gt;日志管理，一直是开发人员的老大难题。这个老大
+      
     
     </summary>
     
@@ -524,9 +562,9 @@
     
       <category term="职场" scheme="https://amonxu.com/tags/%E8%81%8C%E5%9C%BA/"/>
     
-      <category term="996" scheme="https://amonxu.com/tags/996/"/>
-    
       <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
+    
+      <category term="996" scheme="https://amonxu.com/tags/996/"/>
     
   </entry>
   
@@ -554,9 +592,9 @@
     
       <category term="故乡" scheme="https://amonxu.com/tags/%E6%95%85%E4%B9%A1/"/>
     
-      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
-    
       <category term="雪" scheme="https://amonxu.com/tags/%E9%9B%AA/"/>
+    
+      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
     
   </entry>
   
@@ -588,40 +626,6 @@
       <category term="腾讯" scheme="https://amonxu.com/tags/%E8%85%BE%E8%AE%AF/"/>
     
       <category term="庆余年" scheme="https://amonxu.com/tags/%E5%BA%86%E4%BD%99%E5%B9%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>下班打卡的ACK机制</title>
-    <link href="https://amonxu.com/2019/11/19/2019-11-19-ACK/"/>
-    <id>https://amonxu.com/2019/11/19/2019-11-19-ACK/</id>
-    <published>2019-11-19T14:32:33.000Z</published>
-    <updated>2020-12-12T08:16:37.894Z</updated>
-    
-    <content type="html"><![CDATA[<p>每次下班打卡都要经历以下步骤：</p><ol><li>我打卡了。</li><li>我打卡了吗？我确认我打卡了。</li><li>我打卡了吗？我确认我确认过打卡了。</li></ol><p>打卡完毕，下班。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;每次下班打卡都要经历以下步骤：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;我打卡了。&lt;/li&gt;
-&lt;li&gt;我打卡了吗？我确认我打卡了。&lt;/li&gt;
-&lt;li&gt;我打卡了吗？我确认我确认过打卡了。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;打卡完毕，下班。&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-      <category term="Note" scheme="https://amonxu.com/categories/Note/"/>
-    
-    
-      <category term="猛言猛语" scheme="https://amonxu.com/tags/%E7%8C%9B%E8%A8%80%E7%8C%9B%E8%AF%AD/"/>
-    
-      <category term="tcp" scheme="https://amonxu.com/tags/tcp/"/>
     
   </entry>
   

@@ -265,6 +265,154 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/08/18/2015-08-18-Breaking-down-iOS9-Universal-Links/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2015/08/18/2015-08-18-Breaking-down-iOS9-Universal-Links/" class="post-title-link" itemprop="url">(译文) 打通 iOS 9 的通用链接</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2015-08-18 11:11:11" itemprop="dateCreated datePublished" datetime="2015-08-18T11:11:11+08:00">2015-08-18</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2015/08/18/2015-08-18-Breaking-down-iOS9-Universal-Links/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/18/2015-08-18-Breaking-down-iOS9-Universal-Links/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><em>本文译自<a href="http://blog.hokolinks.stfi.re/how-to-implement-apple-universal-links-on-ios-9/?sf=kjlnv" target="_blank" rel="noopener">Breaking down iOS 9 Universal Links</a>, 侵立删</em></p>
+<p>在几周前的 WWDC 上, Apple 为 iOS 9 宣布了一个所谓<strong>通用链接</strong>的深层链接特性, 地址为 <a href="https://developer.apple.com/videos/wwdc/2015/?id=509." target="_blank" rel="noopener">无缝链接到您的 App</a>.虽然它不是一个必须实现的功能, 但还是需要引起一些注意.</p>
+<p>在网上有太多让人迷惑和错误的信息, 然后这次 WWDC 本身也没有去描述细节.幸运的是, 在 HOKO 我们在我们的智能链接上添加了这一特性, 所以我们可以无缝的引导用户到 APP 上.</p>
+<h2 id="什么是通用链接？"><a href="#什么是通用链接？" class="headerlink" title="什么是通用链接？"></a>什么是通用链接？</h2><p>很显然 Apple 正在大力推动 APP 开发者在深层链接上有更好的体验.所有的消息都围绕着深层链接技术.与此同时, Apple 推出通用链接：一种能够方便的通过传统 HTTP 链接来启动 APP, 使用相同的网址打开网站和 APP.</p>
+<p>通过唯一的网址, 就可以链接一个特定的视图到你的 APP 里面, 不需要特别的 schema .试想一下 Twitter 使用了通用链接, 那么你每在 twitter.com 点击一个链接, 你的 iOS 设备都会在 Twitter 里面自动打开这个页面, 而不是当你没有安装时转到普通的网页.这个用户体验是顺畅的, 最重要的是用户不会失去上下文（跳到 APP 后 Safari 上不再留下空标签）.</p>
+<h2 id="准备使用通用链接"><a href="#准备使用通用链接" class="headerlink" title="准备使用通用链接"></a>准备使用通用链接</h2><p>实现通用链接不难, 但首先必须遵守一些先决条件.如下：</p>
+<ul>
+<li>有一个注册的域名</li>
+<li>通过 SSL 访问域名</li>
+<li>支持上传一个 JSON 文件到你的域名</li>
+<li>至少 iOS 9 beta 2 版本 (<a href="https://developer.apple.com/ios/download/" target="_blank" rel="noopener">下载</a>) ,  —— 这很重要, 因为如果是之前的测试版本你需要做额外的操作.</li>
+<li>至少 Xcode 7 beta 2 (<a href="https://developer.apple.com/xcode/downloads/" target="_blank" rel="noopener">下载</a>)</li>
+</ul>
+<p>如果你都有了, 那就来按照下面3个步骤来做吧.</p>
+<h3 id="1-添加域名到-Capabilities"><a href="#1-添加域名到-Capabilities" class="headerlink" title="1.添加域名到 Capabilities"></a>1.添加域名到 <code>Capabilities</code></h3><p>首先, 你必须在 Xcode 的 <code>capabilities</code> 里 添加你的 APP 域名, 必须用 <code>applinks:</code> 前置它：还添加一些你可能拥有的子域和扩展（<a href="http://www.domain.com" target="_blank" rel="noopener">www.domain.com</a>,  news.domain.com 等等）.</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/hoko-blog/apple_capabilities.png" alt="img"></p>
+<p><em>—— 用 <code>applinks:</code> 前缀添加所有域名, 同时不要忘了包含所有可能需要的子域名</em></p>
+<p>这将使你的 APP 从你的域名请求一个特殊的 JSON 文件 <code>apple-app-site-association</code>.<strong> 当你第一次启动 APP </strong> 它会从 <code>https://domain.com/apple-app-site-association</code> 下载这个文件.跳到下个步骤来了解如何构建这个文件.</p>
+<h3 id="2-上传-apple-app-site-association-文件"><a href="#2-上传-apple-app-site-association-文件" class="headerlink" title="2.上传 apple-app-site-association 文件"></a>2.上传 <code>apple-app-site-association</code> 文件</h3><p>该文件必须存在且为了安全原因可使用 <strong>SSL</strong> 通过 <strong>GET</strong> 请求访问到.你可以打开一个文本编辑器然后写一个这样的简单 <strong>JSON</strong> 格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;applinks&quot;: &#123;</span><br><span class="line">    &quot;apps&quot;: [], </span><br><span class="line">    &quot;details&quot;: &#123;</span><br><span class="line">      &quot;TBEJCS6FFP.com.domain.App&quot;: &#123;</span><br><span class="line">        &quot;paths&quot;:[ &quot;*&quot; ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>根据 <code>paths</code> 键设定一个允许的路径列表(你想你的 APP 作出反应的路径), 或只是一个星号如果你想打开 APP 而不管路径是什么.</p>
+<p>你可能想知道 <code>TBEJCS6FFP.com.domain.App</code> 从何而来, 基本上, 它是加入了你的团队标识的 bundle id.你可以从你的 <a href="https://developer.apple.com/membercenter/index.action#accountSummary" target="_blank" rel="noopener">苹果开发账号页面</a> 获取你的团队标识:<br><img src="https://s3-eu-west-1.amazonaws.com/hoko-blog/apple_team_id.png" alt="img"></p>
+<p><em>—— 这个页面有你的团队标识, 你可以拷贝粘贴到 apple-app-site-association 文件</em></p>
+<p>Bundle id 可以在项目的 <code>target</code> —— <code>General</code> 中找到：<br><img src="https://s3-eu-west-1.amazonaws.com/hoko-blog/apple_bundle.png" alt="img"><br><em>—— 检查 General 标签并拷贝粘贴 bundle id 到 apple-app-site-association 文件</em></p>
+<p>最后, 上传这个文件到你的域名根目录.如果你打开 <code>https://domain.com/apple-app-site-association</code> 可以看到你的文件, 那么你就可以继续下一步了.</p>
+<h3 id="3-在-APP-里处理通用链接"><a href="#3-在-APP-里处理通用链接" class="headerlink" title="3.在 APP 里处理通用链接"></a>3.在 APP 里处理通用链接</h3><p>为了在 APP 里支持通用链接, 你需要在 AppDelegate 里实现 <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:continueUserActivity:restorationHandler:" target="_blank" rel="noopener">application(_:continueUserActivity:restorationHandler:)</a>. 尽管这种方法可以用于许多不同的目的（比如 <a href="https://developer.apple.com/handoff/" target="_blank" rel="noopener">Handoff</a> 和 <a href="https://developer.apple.com/videos/wwdc/2015/?id=709" target="_blank" rel="noopener">搜索 API</a>）, 我们将只关注如何处理接收到的通用链接.</p>
+<p>如果提供的 <code>userActivity</code> 是 <code>NSUserActivityTypeBrowsingWeb</code> 类型, 那么意味着它已经由通用链接 API 代理.这样的话, 它保证用户打开的 URL 将有一个非空的 <code>webpageURL</code> 属性.依据前面的例子, 这将是 <code>http://domain.com/path/to/thezoo</code> <code>http://domain.com/path/to/thezoo</code> 体现.</p>
+<p>为了确保你的 APP 可以翻译 URL 成实际的内容, 你需要做下面几步：</p>
+<ul>
+<li>使用 <a href="https://developer.apple.com/library/prerelease/ios/documentation/Foundation/Reference/NSURLComponents_class/index.html" target="_blank" rel="noopener">NSURLComponents</a> 简单解析<code>webpageURL</code> 到 host(如domain.com), 路径组成同理(如<code>[&quot;/&quot;],  &quot;path&quot;,  &quot;to&quot;,  &quot;thezoo&quot;</code>).</li>
+<li>确保能识别 <code>host</code>.</li>
+<li>尝试将 <code>pathComponents</code> 匹配到 APP 的已知内容里.</li>
+<li>验证该内容实际上可以被呈现.</li>
+<li>呈现内容给用户.</li>
+</ul>
+<p>如果上述步骤有任何一个失败, Apple 建议你的 APP 应该在 Safari 上打开 <code>webpageURL</code> 以显示错误.</p>
+<p>总结如图：</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/hoko-blog/universal_links.png" alt="img"></p>
+<p><em>—— 上图为通用链接的工作流程提供一个摘要</em></p>
+<h2 id="通用链接的缺点"><a href="#通用链接的缺点" class="headerlink" title="通用链接的缺点"></a>通用链接的缺点</h2><p>通用链接对于开发人员来说是一个好主意, 但也有一些缺点可能会导致不受青睐：</p>
+<h3 id="通用链接只适用于-iOS-9"><a href="#通用链接只适用于-iOS-9" class="headerlink" title="通用链接只适用于 iOS 9 +"></a>通用链接只适用于 iOS 9 +</h3><p>配置 APP 支持通用链接意味着只有运行 iOS 9 的用户才能享用这一技术优势. 而之前版本的用户将不能在点击网页链接时打开 APP. 相反的, 他们将返回到浏览器和网页, 就像之前正常的网页链接一样.</p>
+<p>然后, HOKO为 iOS 5 及更高的用户提供了移动深层链接. 因此, 你的移动深层链接将可以运行在几乎所有的 iOS 设备上, 不管它们是不是 iOS 9.</p>
+<h3 id="通用链接总是会返回到先前创建的网页"><a href="#通用链接总是会返回到先前创建的网页" class="headerlink" title="通用链接总是会返回到先前创建的网页"></a>通用链接总是会返回到先前创建的网页</h3><p>如果你想退回主页或与 APP 完全不不相关的网站？实现这一目标需要一些额外的工作, 要配置一个网页可以指引用户到你的目标页面. 此外, 如果你没有一个网站的话, 这将会是一个不可能的解决方案.</p>
+<p>你可以使用 HOKO 智能链接和他们自适应的返回来轻松的解决这个问题. 对于创建的每个智能链接, 你可以在每个平台上选择如果没有安装 APP 会发生什么. 另外你可以设置返回到你的网站, iTunes 商店页面或其它外部网站.</p>
+<h3 id="使用通用链接-开发者必须部署一个网站来关联-APP"><a href="#使用通用链接-开发者必须部署一个网站来关联-APP" class="headerlink" title="使用通用链接, 开发者必须部署一个网站来关联 APP"></a>使用通用链接, 开发者必须部署一个网站来关联 APP</h3><p>这对于小型开发者来说可能是个坏消息, 他们可能买不起或维护一个网站, 但是仍然想通过网页链接进入他们的 APP. </p>
+<p>HOKO 可以解决这个问题因为它来充当开发者的网站, 每个 APP 托管在不同的子域. 因此, 开发者只需创建智能链接, 并发布其网址, 然后每次都会无缝的打开相应的 APP.</p>
+<h3 id="APP-与网站之间的联系是由创建和托管在开发者网站上的配置文件搞定的"><a href="#APP-与网站之间的联系是由创建和托管在开发者网站上的配置文件搞定的" class="headerlink" title="APP 与网站之间的联系是由创建和托管在开发者网站上的配置文件搞定的"></a>APP 与网站之间的联系是由创建和托管在开发者网站上的配置文件搞定的</h3><p>使用 HOKO, 你可以跳过这些繁的配置, 因为我们使它可以开箱即用. 此外, 我们的服务器运行在有行业顶级标准的安全性和性能上, 为每个设备提供安全和快速的方式.</p>
+<p>如果你想了解更多关于 HOKO 的信息, 可以给我们发<a href="mailto:support@hokolinks.com" target="_blank" rel="noopener">邮件</a>或直接<a href="https://hokolinks.com/" target="_blank" rel="noopener">注册</a>.</p>
+<p><em>(或直接检查我们关于<a href="http://blog.hokolinks.com/android-m-app-links-implementation-drawbacks/" target="_blank" rel="noopener">Google’s App Links</a>的详细指南)</em></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/08/08/2015-08-08-XMShareModule/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2216,118 +2364,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/10/2013-10-10-long-time-no-see/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2013/10/10/2013-10-10-long-time-no-see/" class="post-title-link" itemprop="url">long time no see</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2013-10-10 11:11:11" itemprop="dateCreated datePublished" datetime="2013-10-10T11:11:11+08:00">2013-10-10</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Note/" itemprop="url" rel="index">
-                    <span itemprop="name">Note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2013/10/10/2013-10-10-long-time-no-see/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/10/10/2013-10-10-long-time-no-see/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>好久没写博客了，因为太忙。</p>
-<p>至于忙什么，谁也不知道！</p>
-<h3 id="这大半年经历挺多的"><a href="#这大半年经历挺多的" class="headerlink" title="这大半年经历挺多的:"></a>这大半年经历挺多的:</h3><ul>
-<li>女朋友3月来深圳，开始一起生活的日子。</li>
-<li>7月6号和女友一起去许昌，全家大团圆。</li>
-<li>10月1号和女友一起去同里她妈妈那。</li>
-<li>未完待续</li>
-</ul>
-<p>每天都很累，也多少感觉一些充实。</p>
-<p>时间在过，世界在变。</p>
-<p>当时间走过，如果不能留点什么给将来，简直是个遗憾。</p>
-<p>所以我决定重新写博客，有空的时候写一点点，以备后看。</p>
-<p>加油吧，少年！</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -2380,7 +2416,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">106</span>
+          <span class="site-state-item-count">107</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
