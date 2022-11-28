@@ -265,6 +265,118 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/12/04/2012-12-04-oracle-dump/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
+      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2012/12/04/2012-12-04-oracle-dump/" class="post-title-link" itemprop="url">oracle导出的一二事</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2012-12-04 16:49:07" itemprop="dateCreated datePublished" datetime="2012-12-04T16:49:07+08:00">2012-12-04</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2012/12/04/2012-12-04-oracle-dump/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/12/04/2012-12-04-oracle-dump/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>1.<br> 导出时候出现：IMP-00010: 不是有效的导出文件, 头部验证失败。<br> 经查明是导出和导入的oracle版本不同，用文件编辑器修改dmp文件的头部分的版本信息，改为导入oracle的版本。<br> 对应版本：<br>   11g R2：V11.02.00<br>　　11g R1：V11.01.00<br>　　10g：V10.02.01</p>
+<p>2.<br> 警告: 这些对象由 xxx导出, 而不是当前用户<br>在导出语句中加上fromuser=xxx touser=xxxx</p>
+<p>附oracle导出格式:<br>数据导出：<br> 1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\daochu.dmp中<br>   exp system/manager@TEST file=d:\daochu.dmp full=y<br> 2 将数据库中system用户与sys用户的表导出<br>   exp system/manager@TEST file=d:\daochu.dmp owner=(system,sys)<br> 3 将数据库中的表table1 、table2导出<br>   exp system/manager@TEST file=d:\daochu.dmp tables=(table1,table2)<br> 4 将数据库中的表table1中的字段filed1以”00”打头的数据导出<br>   exp system/manager@TEST file=d:\daochu.dmp tables=(table1) query=\” where filed1 like  ‘00%’\”</p>
+<pre><code>上面是常用的导出，对于压缩我不太在意，用winzip把dmp文件可以很好的压缩。
+                不过在上面命令后面 加上 compress=y  就可以了
+</code></pre><p>数据的导入<br> 1 将D:\daochu.dmp 中的数据导入 TEST数据库中。<br>   imp system/manager@TEST  file=d:\daochu.dmp<br>   上面可能有点问题，因为有的表已经存在，然后它就报错，对该表就不进行导入。<br>   在后面加上 ignore=y 就可以了。<br> 2 将d:\daochu.dmp中的表table1 导入<br> imp system/manager@TEST  file=d:\daochu.dmp  tables=(table1) </p>
+<p> 基本上上面的导入导出够用了。不少情况我是将表彻底删除，然后导入。</p>
+<p>注意：<br> 你要有足够的权限，权限不够它会提示你。<br> 数据库时可以连上的。可以用tnsping TEST 来获得数据库TEST能否连上。</p>
+<p>数据导出：<br>exp hkb/hkb@boss_14 full=y file=c:\orabackup\hkbfull.dmp log=c:\orabackup\hkbfull.log;</p>
+<p>导出注意事项：导出的是当前用户的的数据，当前用户如果有DBA的权限，则导出所有数据！</p>
+<p>同名用户之间的数据导入：<br>imp hkb/hkb@xe  file=c:\orabackup\hkbfull.dmp log=c:\orabackup\hkbimp.log full=y</p>
+<p>不同名之间的数据导入：<br>imp system/test@xe fromuser=hkb touser=hkb_new file=c:\orabackup\hkbfull.dmp</p>
+<p>log=c:\orabackup\hkbimp.log;</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/12/04/2012-12-04-linux-sftp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1266,177 +1378,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/07/13/2012-07-13-useful-regular-expression/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="逐鹿IT, 猛猛如玉">
-      <meta itemprop="description" content="青衫濕<br>登高車馬深，<br>倚樓山水昏。<br>每見尾氣起，<br>猶思炊煙升。<br>揮汗十余載，<br>無悔付青春。<br>願求她長伴，<br>青衫易功勛。">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="逐鹿IT,猛猛如玉">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2012/07/13/2012-07-13-useful-regular-expression/" class="post-title-link" itemprop="url">常用到的正则表达式</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2012-07-13 19:35:05" itemprop="dateCreated datePublished" datetime="2012-07-13T19:35:05+08:00">2012-07-13</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/07/13/2012-07-13-useful-regular-expression/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/07/13/2012-07-13-useful-regular-expression/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>因为开发中经常需要用正则表达式进行数据校验，今天总的收集一下。</p>
-<p>正确与否暂时测试，仅供参考。</p>
-<p>&nbsp;</p>
-<p>java中常用：</p>
-<p>1。^\d+$　　//匹配非负整数（正整数 + 0）</p>
-<p>2。^[0-9]<em>[1-9][0-9]</em>$　　//匹配正整数</p>
-<p>3。^((-\d+)|(0+))$　　//匹配非正整数（负整数 + 0）</p>
-<p>4。^-[0-9]<em>[1-9][0-9]</em>$　　//匹配负整数</p>
-<p>5。^-?\d+$　　　　//匹配整数</p>
-<p>6。^\d+(.\d+)?$　　//匹配非负浮点数（正浮点数 + 0）</p>
-<p>7。^(([0-9]+.[0-9]<em>[1-9][0-9]</em>)|([0-9]<em>[1-9][0-9]</em>.[0-9]+)|([0-9]<em>[1-9][0-9]</em>))$　　//匹配正浮点数</p>
-<p>8。^((-\d+(.\d+)?)|(0+(.0+)?))$　　//匹配非正浮点数（负浮点数 + 0）</p>
-<p>9。^(-(([0-9]+.[0-9]<em>[1-9][0-9]</em>)|([0-9]<em>[1-9][0-9]</em>.[0-9]+)|([0-9]<em>[1-9][0-9]</em>)))$　　//匹配负浮点数</p>
-<p>10。^(-?\d+)(.\d+)?$　　//匹配浮点数</p>
-<p>11。^[A-Za-z]+$　　//匹配由26个英文字母组成的字符串</p>
-<p>12。^[A-Z]+$　　//匹配由26个英文字母的大写组成的字符串</p>
-<p>13。^[a-z]+$　　//匹配由26个英文字母的小写组成的字符串</p>
-<p>14。^[A-Za-z0-9]+$　　//匹配由数字和26个英文字母组成的字符串</p>
-<p>15。^\w+$　　//匹配由数字、26个英文字母或者下划线组成的字符串</p>
-<p>16。^[\w-]+(.[\w-]+)*@[\w-]+(.[\w-]+)+$　　　　//匹配email地址</p>
-<p>17。^[a-zA-z]+://匹配(\w+(-\w+)<em>)(.(\w+(-\w+)</em>))<em>(\?\S</em>)?$　　//匹配url</p>
-<p>18。匹配中文字符的正则表达式： [\u4e00-\u9fa5]</p>
-<p>19。匹配双字节字符(包括汉字在内)：[^\x00-\xff]</p>
-<p>20。应用：计算字符串的长度（一个双字节字符长度计2，ASCII字符计1） String.prototype.len=function(){return this.replace([^\x00-\xff]/g,”aa”).length;}</p>
-<p>21。匹配空行的正则表达式：\n[\s| ]*\r</p>
-<p>22。匹配HTML标记的正则表达式：/&lt;(.<em>)&gt;.</em>&lt;\/\1&gt;|&lt;(.*) \/&gt;/</p>
-<p>23。匹配首尾空格的正则表达式：(^\s<em>)|(\s</em>$)</p>
-<p>&nbsp;</p>
-<p>匹配中文字符的正则表达式： [\u4e00-\u9fa5] &nbsp;&nbsp;<br>评注：匹配中文还真是个头疼的事，有了这个表达式就好办了 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配双字节字符(包括汉字在内)：[^\x00-\xff] &nbsp;&nbsp;<br>评注：可以用来计算字符串的长度（一个双字节字符长度计2，ASCII字符计1） &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配空白行的正则表达式：\n\s<em>\r &nbsp;&nbsp;<br>评注：可以用来删除空白行 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配HTML标记的正则表达式：&lt;(\S</em>?)[^&gt;]<em>&gt;.</em>?|&lt;.<em>? /&gt; &nbsp;&nbsp;<br>评注：网上流传的版本太糟糕，上面这个也仅仅能匹配部分，对于复杂的嵌套标记依旧无能为力 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配首尾空白字符的正则表达式：^\s</em>|\s<em>$ &nbsp;&nbsp;<br>评注：可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配Email地址的正则表达式：\w+([-+.]\w+)</em>@\w+([-.]\w+)<em>.\w+([-.]\w+)</em> &nbsp;&nbsp;<br>评注：表单验证时很实用 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配网址URL的正则表达式：[a-zA-z]+://[^\s]<em> &nbsp;&nbsp;<br>评注：网上流传的版本功能很有限，上面这个基本可以满足需求 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$ &nbsp;&nbsp;<br>评注：表单验证时很实用 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配国内电话号码：\d{3}-\d{8}|\d{4}-\d{7} &nbsp;&nbsp;<br>评注：匹配形式如 0511-4405222 或 021-87888822 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配腾讯QQ号：[1-9][0-9]{4,} &nbsp;&nbsp;<br>评注：腾讯QQ号从10000开始 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配中国邮政编码：[1-9]\d{5}(?!\d) &nbsp;&nbsp;<br>评注：中国邮政编码为6位数字 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配身份证：\d{15}|\d{18} &nbsp;&nbsp;<br>评注：中国的身份证为15位或18位 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配ip地址：\d+.\d+.\d+.\d+ &nbsp;&nbsp;<br>评注：提取ip地址时有用 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配特定数字： &nbsp;&nbsp;<br>^[1-9]\d</em>$　 　 //匹配正整数 &nbsp;&nbsp;<br>^-[1-9]\d<em>$ 　 //匹配负整数 &nbsp;&nbsp;<br>^-?[1-9]\d</em>$　　 //匹配整数 &nbsp;&nbsp;<br>^[1-9]\d<em>|0$　 //匹配非负整数（正整数 + 0） &nbsp;&nbsp;<br>^-[1-9]\d</em>|0$　　 //匹配非正整数（负整数 + 0） &nbsp;&nbsp;<br>^[1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>$　　 //匹配正浮点数 &nbsp;&nbsp;<br>^-([1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>)$　 //匹配负浮点数 &nbsp;&nbsp;<br>^-?([1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>|0?.0+|0)$　 //匹配浮点数 &nbsp;&nbsp;<br>^[1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>|0?.0+|0$　　 //匹配非负浮点数（正浮点数 + 0） &nbsp;&nbsp;<br>^(-([1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>))|0?.0+|0$　　//匹配非正浮点数（负浮点数 + 0） &nbsp;&nbsp;<br>评注：处理大量数据时有用，具体应用时注意修正 &nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>匹配特定字符串： &nbsp;&nbsp;<br>^[A-Za-z]+$　　//匹配由26个英文字母组成的字符串 &nbsp;&nbsp;<br>^[A-Z]+$　　//匹配由26个英文字母的大写组成的字符串 &nbsp;&nbsp;<br>^[a-z]+$　　//匹配由26个英文字母的小写组成的字符串 &nbsp;&nbsp;<br>^[A-Za-z0-9]+$　　//匹配由数字和26个英文字母组成的字符串 &nbsp;&nbsp;<br>^\w+$　　//匹配由数字、26个英文字母或者下划线组成的字符串 &nbsp;&nbsp;<br>“^[\w-]+(\.[\w-]+)<em>@[\w-]+(\.[\w-]+)+<strong><em>FCKpd</em></strong>0quot;　　　　//email地址 &nbsp;&nbsp;<br>“^[a-zA-z]+://(\w+(-\w+)</em>)(\.(\w+(-\w+)<em>))</em>(\?\S*)?<strong><em>FCKpd</em></strong>0quot;　　//url &nbsp;&nbsp;</p>
-<p>匹配中文字符的正则表达式： [\u4e00-\u9fa5]<br>评注：匹配中文还真是个头疼的事，有了这个表达式就好办了</p>
-<p>匹配双字节字符(包括汉字在内)：[^\x00-\xff]<br>评注：可以用来计算字符串的长度（一个双字节字符长度计2，ASCII字符计1）</p>
-<p>匹配空白行的正则表达式：\n\s*\r<br>评注：可以用来删除空白行</p>
-<p>匹配HTML标记的正则表达式：&lt;(\S<em>?)[^&gt;]</em>&gt;.<em>?|&lt;.</em>? /&gt;<br>评注：网上流传的版本太糟糕，上面这个也仅仅能匹配部分，对于复杂的嵌套标记依旧无能为力</p>
-<p>匹配首尾空白字符的正则表达式：^\s<em>|\s</em>$<br>评注：可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式</p>
-<p>匹配Email地址的正则表达式：\w+([-+.]\w+)<em>@\w+([-.]\w+)</em>.\w+([-.]\w+)*<br>评注：表单验证时很实用</p>
-<p>匹配网址URL的正则表达式：[a-zA-z]+://[^\s]*<br>评注：网上流传的版本功能很有限，上面这个基本可以满足需求</p>
-<p>匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$<br>评注：表单验证时很实用</p>
-<p>匹配国内电话号码：\d{3}-\d{8}|\d{4}-\d{7}<br>评注：匹配形式如 0511-4405222 或 021-87888822</p>
-<p>匹配腾讯QQ号：[1-9][0-9]{4,}<br>评注：腾讯QQ号从10000开始</p>
-<p>匹配中国邮政编码：[1-9]\d{5}(?!\d)<br>评注：中国邮政编码为6位数字</p>
-<p>匹配身份证：\d{15}|\d{18}<br>评注：中国的身份证为15位或18位</p>
-<p>匹配ip地址：\d+.\d+.\d+.\d+<br>评注：提取ip地址时有用</p>
-<p>匹配特定数字：<br>^[1-9]\d<em>$　 　 //匹配正整数<br>^-[1-9]\d</em>$ 　 //匹配负整数<br>^-?[1-9]\d<em>$　　 //匹配整数<br>^[1-9]\d</em>|0$　 //匹配非负整数（正整数 + 0）<br>^-[1-9]\d<em>|0$　　 //匹配非正整数（负整数 + 0）<br>^[1-9]\d</em>.\d<em>|0.\d</em>[1-9]\d<em>$　　 //匹配正浮点数<br>^-([1-9]\d</em>.\d<em>|0.\d</em>[1-9]\d<em>)$　 //匹配负浮点数<br>^-?([1-9]\d</em>.\d<em>|0.\d</em>[1-9]\d<em>|0?.0+|0)$　 //匹配浮点数<br>^[1-9]\d</em>.\d<em>|0.\d</em>[1-9]\d<em>|0?.0+|0$　　 //匹配非负浮点数（正浮点数 + 0）<br>^(-([1-9]\d</em>.\d<em>|0.\d</em>[1-9]\d*))|0?.0+|0$　　//匹配非正浮点数（负浮点数 + 0）<br>评注：处理大量数据时有用，具体应用时注意修正</p>
-<p>匹配特定字符串：<br>^[A-Za-z]+$　　//匹配由26个英文字母组成的字符串<br>^[A-Z]+$　　//匹配由26个英文字母的大写组成的字符串<br>^[a-z]+$　　//匹配由26个英文字母的小写组成的字符串<br>^[A-Za-z0-9]+$　　//匹配由数字和26个英文字母组成的字符串<br>^\w+$　　//匹配由数字、26个英文字母或者下划线组成的字符串<br>“^[\w-]+(\.[\w-]+)<em>@[\w-]+(\.[\w-]+)+<strong><em>FCKpd</em></strong>0quot;　　　　//email地址&nbsp;&nbsp;<br>“^[a-zA-z]+://(\w+(-\w+)</em>)(\.(\w+(-\w+)<em>))</em>(\?\S*)?<strong><em>FCKpd</em></strong>0quot;　　//urlview plaincopy to clipboardprint?<br>正则几个基本概念： &nbsp;&nbsp;</p>
-<p>正则几个基本概念：view plaincopy to clipboardprint?<br>1.贪婪：+,*,?,{m,n}等默认是贪婪匹配，即尽可能多匹配，也叫最大匹配 &nbsp;&nbsp;<br>如果后面加上?，就转化为非贪婪匹配，需要高版本支持 &nbsp;&nbsp;</p>
-<p>1.贪婪：+,*,?,{m,n}等默认是贪婪匹配，即尽可能多匹配，也叫最大匹配<br>如果后面加上?，就转化为非贪婪匹配，需要高版本支持view plaincopy to clipboardprint?<br>2.获取：默认用(x|y)是获取匹配，很多时候只是测试，不一定要求得到所匹配的数据，尤其在嵌套匹配或大数据中就要用非获取匹配(?:x|y)，这样提高了效率，优化了程序。 &nbsp;&nbsp;</p>
-<p>2.获取：默认用(x|y)是获取匹配，很多时候只是测试，不一定要求得到所匹配的数据，尤其在嵌套匹配或大数据中就要用非获取匹配(?:x|y)，这样提高了效率，优化了程序。view plaincopy to clipboardprint?<br>3.消耗：默认是消耗匹配，一般在预查中是非消耗匹配。 &nbsp;&nbsp;<br>举个例子，2003-2-8要变为2003-02-08 &nbsp;&nbsp;<br>如果用/-(\d)-/第二次匹配将从8开始，从而只替换第一个2，错误 &nbsp;&nbsp;<br>如果用/-(\d)(?=-)/则第二次匹配从第二个-开始，即不消耗字符- &nbsp;&nbsp;</p>
-<p>3.消耗：默认是消耗匹配，一般在预查中是非消耗匹配。<br>举个例子，2003-2-8要变为2003-02-08<br>如果用/-(\d)-/第二次匹配将从8开始，从而只替换第一个2，错误<br>如果用/-(\d)(?=-)/则第二次匹配从第二个-开始，即不消耗字符-view plaincopy to clipboardprint?<br>4.预查：js中分为正向预查和负向预查 &nbsp;&nbsp;<br>如上面的(?=pattern)是正向预查，在任何匹配 pattern 的字符串开始处匹配查找字符串。还有(?!pattern)是负向预查，在任何不匹配 pattern 的字符串开始处匹配查找字符串。负向预查有时会用在对[^]的扩充，[^]只是一些字符，而?!可以使整个字符串。 &nbsp;&nbsp;</p>
-<p>4.预查：js中分为正向预查和负向预查<br>如上面的(?=pattern)是正向预查，在任何匹配 pattern 的字符串开始处匹配查找字符串。还有(?!pattern)是负向预查，在任何不匹配 pattern 的字符串开始处匹配查找字符串。负向预查有时会用在对[^]的扩充，[^]只是一些字符，而?!可以使整个字符串。view plaincopy to clipboardprint?<br>5.回调：一般用在替换上，即根据不用的匹配内容返回不用的替换值，从而简化了程序，需要高版本支持 &nbsp;&nbsp;</p>
-<p>5.回调：一般用在替换上，即根据不用的匹配内容返回不用的替换值，从而简化了程序，需要高版本支持view plaincopy to clipboardprint?<br>6.引用：\num 对所获取的第num个匹配的引用。 &nbsp;&nbsp;<br>例如，’(.)\1\1’ 匹配AAA型。’(.)(.)\2\1’ 匹配ABBA型。 &nbsp;&nbsp;</p>
-<p>6.引用：\num 对所获取的第num个匹配的引用。<br>例如，’(.)\1\1’ 匹配AAA型。’(.)(.)\2\1’ 匹配ABBA型。view plaincopy to clipboardprint?<br>正则表达式保留字 &nbsp;&nbsp;<br>^ (carat) &nbsp;&nbsp;<br>. (period) &nbsp;&nbsp;<br>[ (left bracket} &nbsp;&nbsp;<br>$ (dollar sign) &nbsp;&nbsp;<br>( (left parenthesis) &nbsp;&nbsp;<br>) (right parenthesis) &nbsp;&nbsp;<br>| (pipe) &nbsp;&nbsp;</p>
-<ul>
-<li>(asterisk) &nbsp;&nbsp;</li>
-</ul>
-<ul>
-<li>(plus symbol) &nbsp;&nbsp;<br>? (question mark) &nbsp;&nbsp;<br>{ (left curly bracket, or left brace) &nbsp;&nbsp;<br>\ backslash &nbsp;&nbsp;</li>
-</ul>
-<p>正则表达式保留字<br>^ (carat)&nbsp;&nbsp;<br>. (period)&nbsp;&nbsp;<br>[ (left bracket}&nbsp;&nbsp;<br>$ (dollar sign)&nbsp;&nbsp;<br>( (left parenthesis)&nbsp;&nbsp;<br>) (right parenthesis)&nbsp;&nbsp;<br>| (pipe)&nbsp;&nbsp;</p>
-<ul>
-<li>(asterisk)&nbsp;&nbsp;</li>
-</ul>
-<ul>
-<li>(plus symbol)&nbsp;&nbsp;<br>? (question mark)&nbsp;&nbsp;<br>{ (left curly bracket, or left brace)&nbsp;&nbsp;<br>\ backslash view plaincopy to clipboardprint?<br>构造 匹配于 &nbsp;&nbsp;</li>
-</ul>
-<p>构造 匹配于 view plaincopy to clipboardprint?<br>字符 &nbsp;&nbsp;<br>x 字符 x &nbsp;&nbsp;<br>\ 反斜线字符 &nbsp;&nbsp;<br>\0n 八进制值的字符0n (0 &lt;= n &lt;= 7) &nbsp;&nbsp;<br>\0nn 八进制值的字符 0nn (0 &lt;= n &lt;= 7) &nbsp;&nbsp;<br>\0mnn 八进制值的字符0mnn 0mnn (0 &lt;= m &lt;= 3, 0 &lt;= n &lt;= 7) &nbsp;&nbsp;<br>\xhh 十六进制值的字符0xhh &nbsp;&nbsp;<br>\uhhhh 十六进制值的字符0xhhhh &nbsp;&nbsp;<br>\t 制表符(‘\u0009’) &nbsp;&nbsp;<br>\n 换行符 (‘\u000A’) &nbsp;&nbsp;<br>\r 回车符 (‘\u000D’) &nbsp;&nbsp;<br>\f 换页符 (‘\u000C’) &nbsp;&nbsp;<br>\a 响铃符 (‘\u0007’) &nbsp;&nbsp;<br>\e 转义符 (‘\u001B’) &nbsp;&nbsp;<br>\cx T对应于x的控制字符 x &nbsp;&nbsp;</p>
-<p>字符&nbsp;&nbsp;<br>x 字符 x&nbsp;&nbsp;<br>\ 反斜线字符&nbsp;&nbsp;<br>\0n 八进制值的字符0n (0 &lt;= n &lt;= 7)&nbsp;&nbsp;<br>\0nn 八进制值的字符 0nn (0 &lt;= n &lt;= 7)&nbsp;&nbsp;<br>\0mnn 八进制值的字符0mnn 0mnn (0 &lt;= m &lt;= 3, 0 &lt;= n &lt;= 7)&nbsp;&nbsp;<br>\xhh 十六进制值的字符0xhh&nbsp;&nbsp;<br>\uhhhh 十六进制值的字符0xhhhh&nbsp;&nbsp;<br>\t 制表符(‘\u0009’)&nbsp;&nbsp;<br>\n 换行符 (‘\u000A’)&nbsp;&nbsp;<br>\r 回车符 (‘\u000D’)&nbsp;&nbsp;<br>\f 换页符 (‘\u000C’)&nbsp;&nbsp;<br>\a 响铃符 (‘\u0007’)&nbsp;&nbsp;<br>\e 转义符 (‘\u001B’)&nbsp;&nbsp;<br>\cx T对应于x的控制字符 x view plaincopy to clipboardprint?<br>字符类 &nbsp;&nbsp;<br>[abc] a, b, or c (简单类) &nbsp;&nbsp;<br>[^abc] 除了a、b或c之外的任意 字符（求反） &nbsp;&nbsp;<br>[a-zA-Z] a到z或A到Z ，包含（范围) &nbsp;&nbsp;<br>[a-z-[bc]] a到z，除了b和c ： [ad-z]（减去） &nbsp;&nbsp;<br>[a-z-[m-p]] a到z，除了m到 p： [a-lq-z] &nbsp;&nbsp;<br>[a-z-[^def]] d, e, 或 f &nbsp;&nbsp;</p>
-<p>字符类&nbsp;&nbsp;<br>[abc] a, b, or c (简单类)&nbsp;&nbsp;<br>[^abc] 除了a、b或c之外的任意 字符（求反）&nbsp;&nbsp;<br>[a-zA-Z] a到z或A到Z ，包含（范围)&nbsp;&nbsp;<br>[a-z-[bc]] a到z，除了b和c ： [ad-z]（减去）&nbsp;&nbsp;<br>[a-z-[m-p]] a到z，除了m到 p： [a-lq-z]&nbsp;&nbsp;<br>[a-z-[^def]] d, e, 或 f view plaincopy to clipboardprint?<br>预定义的字符类 &nbsp;&nbsp;<br>. 任意字符（也许能与行终止符匹配，也许不能） &nbsp;&nbsp;<br>\d 数字: [0-9] &nbsp;&nbsp;<br>\D 非数字: [^0-9] &nbsp;&nbsp;<br>\s 空格符: [ \t\n\x0B\f\r] &nbsp;&nbsp;<br>\S 非空格符: [^\s] &nbsp;&nbsp;<br>\w 单词字符: [a-zA-Z_0-9] &nbsp;&nbsp;<br>\W 非单词字符: [^\w] &nbsp;</p>
-<p>&nbsp;</p>
-<p>actionscript中常用正则表达式：</p>
-<p>1.匹配正整数：&nbsp;<br>/^[1-9]\d<em>$/&nbsp;<br>2.匹配负整数：&nbsp;<br>/^-[1-9]\d</em>$/&nbsp;<br>3.匹配浮点数：&nbsp;<br>/^-?(([1-9]\d|0)).\d<em>$/&nbsp;<br>4.匹配二进制数字:&nbsp;<br>/^([0|1]{4}\s)</em>([0|1]{4})$/&nbsp;<br>5.匹配八进制数字:&nbsp;<br>/^0[1-7][0-7]<em>$]&nbsp;<br>6.匹配十六进制数字：&nbsp;<br>/^0x[0-9][A-F]</em>$/&nbsp;<br>7.匹配中国人姓名：通常由2到4个汉字组成。使用Unicode编码&nbsp;<br>/^[\u4e00-\u9fa5][2,4]$/&nbsp;<br>8.匹配QQ号：&nbsp;<br>/^[1-9][0-9]{4,9}$/&nbsp;<br>9.匹配日期：&nbsp;<br>中国习惯日期：&nbsp;<br>/^[19|20]\d{2}年(0[1-9]|(1(0|1|2)))月(0[1-9]|((1|2)\d))|(3(0|1)))日$/&nbsp;<br>西方习惯日期：&nbsp;<br>/^(0[1-9]|(1(0|1|2)))\/(0[1-9]|((1|2)\d)|(3(0|1)))\/(19|20)\d{2}$/&nbsp;<br>10.匹配身份证：&nbsp;<br>/(^\d{15}$)|(^\d{17}([0-9]|x)$)/i&nbsp;<br>11.匹配邮政编码：&nbsp;<br>/^[1-9][0-9]{5}$/&nbsp;<br>12.匹配电话号码：&nbsp;<br>/^\d{3,4}-\d{7,8}$/&nbsp;<br>13.匹配手机号码：&nbsp;<br>/^(13|15|18)\d{9}$/&nbsp;<br>14.匹配电子邮箱：&nbsp;<br>/^[a-z0-9][<em>.a-z0-9]*@([a-z0-9][</em>.a-z0-9]*.)+[a-z]{2,6}$/i&nbsp;<br>15.匹配货币：&nbsp;<br>/^\d{0,3}(,\d{3}){0,}.\d{2}$/&nbsp;<br>16.匹配IPv4地址：&nbsp;<br>/^((\d{1,2}|1\d{2}|2[0-4]\d{1}|25[0-5]).){3}(\d{1,2}|1\d{2}|2[0-4]\d{1}|25[0-5])$/&nbsp;<br>16.匹配颜色：&nbsp;<br>/^#(([0-9|A-F]){6})|(([0-9|A-F]){8})$/i</p>
-<p>&nbsp;</p>
-<p>javascript常用正则表达式：</p>
-<div>&nbsp;Require : /.+/,</div><br><div>&nbsp;&nbsp; &nbsp; Email : /^\w+([-+.]\w+)<em>@\w+([-.]\w+)</em>.\w+([-.]\w+)<em>$/,</em></div><br><div>&nbsp;&nbsp; &nbsp; Phone : /^(((\d{2,3}))|(\d{3}-))?((0\d{2,3})|0\d{2,3}-)?[1-9]\d{6,7}(-\d{1,4})?$/,</div><br><div>&nbsp;&nbsp; &nbsp; Mobile : /^(((\d{2,3}))|(\d{3}-))?13\d{9}$/,</div><br><div>&nbsp;&nbsp; &nbsp; Url : /^http:\/\/[A-Za-z0-9]+.[A-Za-z0-9]+[\/=\?%-&amp;_~`@[]\’:+!]([^&lt;&gt;\”\”])<em>$/,</em></div><br><div>&nbsp;&nbsp; &nbsp; IdCard : /^\d{15}(\d{2}[A-Za-z0-9])?$/,</div><br><div>&nbsp;&nbsp; &nbsp; Currency : /^\d+(.\d+)?$/,</div><br><div>&nbsp;&nbsp; &nbsp; Number : /^\d+$/,</div><br><div>&nbsp;&nbsp; &nbsp; Zip : /^[1-9]\d{5}$/,</div><br><div>&nbsp;&nbsp; &nbsp; QQ : /^[1-9]\d{4,8}$/,</div><br><div>&nbsp;&nbsp; &nbsp; Integer : /^[-+]?\d+$/,</div><br><div>&nbsp;&nbsp; &nbsp; Double : /^[-+]?\d+(.\d+)?$/,</div><br><div>&nbsp;&nbsp; &nbsp; English : /^[A-Za-z]+$/,</div><br><div>&nbsp;&nbsp; &nbsp; Chinese : &nbsp;/^[\u0391-\uFFE5]+$/,</div><br><div>&nbsp;&nbsp; &nbsp; Username : /^[a-z]\w{3,}$/i,</div><br><div>&nbsp;&nbsp; &nbsp; UnSafe : /^(([A-Z]|[a-z]<em>|\d</em>|[-<em>~!@#\$%\^&amp;*.()[]{}&lt;&gt;\?\\/\’\”]<em>)|.{0,5})$|\s/,</em></em></div><br><div>&nbsp;</div><br><div>&nbsp;</div><br><div>匹配中文字符的正则表达式： [\u4e00-\u9fa5]</div><br><div>评注：匹配中文还真是个头疼的事，有了这个表达式就好办了</div><br><div>&nbsp;</div><br><div>匹配双字节字符(包括汉字在内)：[^\x00-\xff]</div><br><div>评注：可以用来计算字符串的长度（一个双字节字符长度计2，ASCII字符计1）</div><br><div>&nbsp;</div><br><div>匹配空白行的正则表达式：\n\s\r</div><br><div>评注：可以用来删除空白行</div><br><div>&nbsp;</div><br><div>匹配HTML标记的正则表达式：&lt;(\S<em>?)[^&gt;]</em>&gt;.<em>?&lt;/\1&gt;|&lt;.</em>? /&gt;</div><br><div>评注：网上流传的版本太糟糕，上面这个也仅仅能匹配部分，对于复杂的嵌套标记依旧无能为力</div><br><div>&nbsp;</div><br><div>匹配首尾空白字符的正则表达式：^\s<em>|\s</em>$</div><br><div>评注：可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式</div><br><div>&nbsp;</div><br><div>匹配Email地址的正则表达式：\w+([-+.]\w+)<em>@\w+([-.]\w+)</em>.\w+([-.]\w+)<em></em></div><br><div>评注：表单验证时很实用</div><br><div>&nbsp;</div><br><div>匹配网址URL的正则表达式：[a-zA-z]+://[^\s]</div><br><div>评注：网上流传的版本功能很有限，上面这个基本可以满足需求</div><br><div>&nbsp;</div><br><div>匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9]{4,15}$</div><br><div>评注：表单验证时很实用</div><br><div>&nbsp;</div><br><div>匹配国内电话号码：\d{3}-\d{8}|\d{4}-\d{7}</div><br><div>评注：匹配形式如 0511-4405222 或 021-87888822</div><br><div>&nbsp;</div><br><div>匹配腾讯QQ号：[1-9][0-9]{4,}</div><br><div>评注：腾讯QQ号从10000开始</div><br><div>&nbsp;</div><br><div>匹配中国邮政编码：[1-9]\d{5}(?!\d)</div><br><div>评注：中国邮政编码为6位数字</div><br><div>&nbsp;</div><br><div>匹配身份证：\d{15}|\d{18}</div><br><div>评注：中国的身份证为15位或18位</div><br><div>&nbsp;</div><br><div>匹配ip地址：\d+.\d+.\d+.\d+</div><br><div>评注：提取ip地址时有用</div><br><div>&nbsp;</div><br><div>匹配特定数字：</div><br><div>^[1-9]\d<em>$　 　 //匹配正整数</em></div><br><div>^-[1-9]\d$ 　 //匹配负整数</div><br><div>^-?[1-9]\d<em>$　　 //匹配整数</em></div><br><div>^[1-9]\d|0$　 //匹配非负整数（正整数 + 0）</div><br><div>^-[1-9]\d<em>|0$　　 //匹配非正整数（负整数 + 0）</em></div><br><div>^[1-9]\d.\d<em>|0.\d</em>[1-9]\d<em>$　　 //匹配正浮点数</em></div><br><div>^-([1-9]\d.\d<em>|0.\d</em>[1-9]\d<em>)$　 //匹配负浮点数</em></div><br><div>^-?([1-9]\d.\d<em>|0.\d</em>[1-9]\d<em>|0?.0+|0)$　 //匹配浮点数</em></div><br><div>^[1-9]\d.\d<em>|0.\d</em>[1-9]\d<em>|0?.0+|0$　　 //匹配非负浮点数（正浮点数 + 0）</em></div><br><div>^(-([1-9]\d.\d<em>|0.\d</em>[1-9]\d<em>))|0?.0+|0$　　//匹配非正浮点数（负浮点数 + 0）</em></div><br><div>评注：处理大量数据时有用，具体应用时注意修正</div><br><div>&nbsp;</div><br><div>匹配特定字符串：</div><br><div>^[A-Za-z]+$　　//匹配由26个英文字母组成的字符串</div><br><div>^[A-Z]+$　　//匹配由26个英文字母的大写组成的字符串</div><br><div>^[a-z]+$　　//匹配由26个英文字母的小写组成的字符串</div><br><div>^[A-Za-z0-9]+$　　//匹配由数字和26个英文字母组成的字符串</div><br><div>^\w+$　　//匹配由数字、26个英文字母或者下划线组成的字符串</div><br><div>&nbsp;</div><br><div>验证1900-2099年日期 &nbsp; /^((19|20)[0-9]{2})-(([1-9]{1})|10|11|12)$/ &nbsp; /^\d{4}-([1-9]|1[012])$/</div><br><div>验证一年的12个月：“^(0?[1-9]|1[0-2])$”正确格式为： &nbsp; “01”-“09”和“1”“12”</div><br><div>验证一个月的31天：“^((0?[1-9])|((1|2)[0-9])|30|31)$” &nbsp;正确格式为：“01”“09”和“1”“31”。</div><br><div>&nbsp;</div><br><div>&nbsp;</div><br><div>&nbsp;</div><br><div>只能输入数字：“^[0-9]$”</div><br><div>只能输入n位的数字：“^\d{n}$”</div><br><div>只能输入至少n位数字：“^\d{n,}$”</div><br><div>只能输入m-n位的数字：“^\d{m,n}$”</div><br><div>只能输入零和非零开头的数字：“^(0|[1-9][0-9]<em>)$”</em></div><br><div>只能输入有两位小数的正实数：“^[0-9]+(.[0-9]{2})?$”</div><br><div>只能输入有1-3位小数的正实数：“^[0-9]+(.[0-9]{1,3})?$”</div><br><div>只能输入非零的正整数：“^+?[1-9][0-9]$”</div><br><div>只能输入非零的负整数：“^-[1-9][0-9]<em>$”</em></div><br><div>只能输入长度为3的字符：“^.{3}$”</div><br><div>只能输入由26个英文字母组成的字符串：“^[A-Za-z]+$”</div><br><div>只能输入由26个大写英文字母组成的字符串：“^[A-Z]+$”</div><br><div>只能输入由26个小写英文字母组成的字符串：“^[a-z]+$”</div><br><div>只能输入由数字和26个英文字母组成的字符串：“^[A-Za-z0-9]+$”</div><br><div>只能输入由数字、26个英文字母或者下划线组成的字符串：“^\w+$”</div><br><div>验证用户密码:“^[a-zA-Z]\w{5,17}$”正确格式为：以字母开头，长度在6-18之间，</div><br><div>&nbsp;</div><br><div>只能包含字符、数字和下划线。</div><br><div>验证是否含有^%&amp;’,;=?$\”等字符：“[^%&amp;’,;=?$\x22]+”</div><br><div>只能输入汉字：“^[\u4e00-\u9fa5],{0,}$”</div><br><div>验证Email地址：“^\w+[-+.]\w+)@\w+([-.]\w+)<em>.\w+([-.]\w+)</em>$”</div><br><div>验证InternetURL：“^http://([\w-]+.)+[\w-]+(/[\w-./?%&amp;=]<em>)?$”</em></div><br><div>验证电话号码：“^((\d{3,4})|\d{3,4}-)?\d{7,8}$”</div><br><div>&nbsp;</div><br><div>匹配格式为2005-1-1的日期 格式不能为2005-01-01</div><br><div>&lt;script language=javascript&gt;</div><br><div>var str=”2005-04-03”;</div><br><div>re=/\d{4}(-(?!0))\d{1,2}(-(?!0))\d{1,2}/</div><br><div>if(!re.test(str))</div><br><div>{</div><br><div>alert(“格式错误”)</div><br><div>}</div><br><div>else</div><br><div>{</div><br><div>alert(“正确”)</div><br><div>}</div><br><div>&lt;/script&gt;</div><br><div>&nbsp;</div><br><div>&nbsp;</div><br><div>本正则可以匹配国内的任何形式正确的电话号码包括0**1234567，0<strong><em>12345678，0</em></strong>-1234567，0<strong><em>-12345678</em></strong></div><br><div>手机号码13<strong>**</strong>，15<strong><strong>*</strong></strong>，013<strong><strong>*</strong></strong>，015<strong><strong>*</strong></strong></div><br><div>(^0[0-9]{2,3}-[0-9]{7,8}$)|(^[0-9]{7,8}$)|(^0[0-9]{2,3}[0-9]{7,8}$)|(^0{0,1}13[0-9]{9}$)|(^0{0,1}15[0-9]{9}$)</div>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1489,7 +1430,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">107</span>
+          <span class="site-state-item-count">108</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
