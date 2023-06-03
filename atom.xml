@@ -1,44 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>逐鹿IT,猛猛如玉</title>
+  <title>猛猛如玉</title>
   
-  <subtitle>书山有路勤为径，学海无涯苦作舟。</subtitle>
+  <subtitle>如果我们总是期待别人或者等待时机，改变永远不会到来。&lt;br&gt;我们自己就是我们一直等待的人，我们自身就是我们苦苦寻求的改变。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amonxu.com/"/>
-  <updated>2021-06-28T14:31:13.830Z</updated>
+  <updated>2023-06-03T08:48:01.564Z</updated>
   <id>https://amonxu.com/</id>
   
   <author>
-    <name>逐鹿IT, 猛猛如玉</name>
+    <name>猛猛如玉</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>采菊东篱下，悠然见南山</title>
+    <title>【置顶】</title>
     <link href="https://amonxu.com/2099/12/31/2099-12-31-Note/"/>
     <id>https://amonxu.com/2099/12/31/2099-12-31-Note/</id>
     <published>2099-12-31T15:59:59.000Z</published>
-    <updated>2021-06-28T14:31:13.830Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>Change will not come if we wait for some other person or some other time. We are the ones we’ve been waiting for. We are the change that we seek.</p><p>​                                                                                                                                                                                                        —— 奥观海</p></blockquote><p><strong>如果我们总是期待别人或者等待时机，改变永远不会到来。我们自己就是我们一直等待的人，我们自身就是我们苦苦寻求的改变。</strong></p>]]></content>
+    <updated>2023-06-03T08:48:01.564Z</updated>
     
     <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;Change will not come if we wait for some other person or some other time. We are the ones we’ve been waiting for. We are the
-      
     
     </summary>
     
       <category term="Note" scheme="https://amonxu.com/categories/Note/"/>
     
-    
-      <category term="名人名言" scheme="https://amonxu.com/tags/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/"/>
     
       <category term="Note" scheme="https://amonxu.com/tags/Note/"/>
     
@@ -47,28 +37,118 @@
   </entry>
   
   <entry>
-    <title>写于11月28日</title>
-    <link href="https://amonxu.com/2022/11/28/2022-11-28-Line-12/"/>
-    <id>https://amonxu.com/2022/11/28/2022-11-28-Line-12/</id>
-    <published>2022-11-28T13:13:01.000Z</published>
-    <updated>2022-11-28T13:44:12.694Z</updated>
+    <title>《我》</title>
+    <link href="https://amonxu.com/2023/04/07/2023-04-07-My-King/"/>
+    <id>https://amonxu.com/2023/04/07/2023-04-07-My-King/</id>
+    <published>2023-04-06T17:01:01.000Z</published>
+    <updated>2023-06-03T13:03:21.980Z</updated>
     
-    <content type="html"><![CDATA[<p>2022年11月28日，是鄙人的生日，也是家门口地铁开通的日子。感谢深圳地铁为我献上生日大礼。</p>]]></content>
+    <content type="html"><![CDATA[<p>早高峰的洪流中，<br>我被人群簇拥着，<br>仿佛生命之王。</p><p>我感觉自己，<br>活着。<br>但又感觉，<br>死了。</p><blockquote><p>ChatGPT辅助创作</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;2022年11月28日，是鄙人的生日，也是家门口地铁开通的日子。感谢深圳地铁为我献上生日大礼。&lt;/p&gt;
+        &lt;p&gt;早高峰的洪流中，&lt;br&gt;我被人群簇拥着，&lt;br&gt;仿佛生命之王。&lt;/p&gt;
+&lt;p&gt;我感觉自己，&lt;br&gt;活着。&lt;br&gt;但又感觉，&lt;br&gt;死了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ChatGPT辅助创作&lt;/p&gt;
+&lt;/blockquote&gt;
 
       
     
     </summary>
     
-      <category term="Note" scheme="https://amonxu.com/categories/Note/"/>
+      <category term="诗" scheme="https://amonxu.com/categories/%E8%AF%97/"/>
     
     
-      <category term="随笔" scheme="https://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="诗" scheme="https://amonxu.com/tags/%E8%AF%97/"/>
+    
+      <category term="2023" scheme="https://amonxu.com/tags/2023/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《山 · 其二》</title>
+    <link href="https://amonxu.com/2022/12/02/2022-12-02-Mountain/"/>
+    <id>https://amonxu.com/2022/12/02/2022-12-02-Mountain/</id>
+    <published>2022-12-01T17:01:01.000Z</published>
+    <updated>2023-06-03T12:59:26.925Z</updated>
+    
+    <content type="html"><![CDATA[<p>任务堆积如山，<br>债务堆积如山，<br>茫茫一片看不见。</p><p>我，<br>堆积如山。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;任务堆积如山，&lt;br&gt;债务堆积如山，&lt;br&gt;茫茫一片看不见。&lt;/p&gt;
+&lt;p&gt;我，&lt;br&gt;堆积如山。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="诗" scheme="https://amonxu.com/categories/%E8%AF%97/"/>
+    
+    
+      <category term="诗" scheme="https://amonxu.com/tags/%E8%AF%97/"/>
+    
+      <category term="2022" scheme="https://amonxu.com/tags/2022/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《山 · 其一》</title>
+    <link href="https://amonxu.com/2022/12/01/2022-12-01-Mountain/"/>
+    <id>https://amonxu.com/2022/12/01/2022-12-01-Mountain/</id>
+    <published>2022-11-30T17:01:01.000Z</published>
+    <updated>2023-06-03T12:21:51.797Z</updated>
+    
+    <content type="html"><![CDATA[<p>列车从远方，<br>卸下年轻人，<br>拉走父母妻儿，<br>和中老年。</p><p>他们身前，<br>是扬起的帆，<br>他们身后，<br>是累累的山。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;列车从远方，&lt;br&gt;卸下年轻人，&lt;br&gt;拉走父母妻儿，&lt;br&gt;和中老年。&lt;/p&gt;
+&lt;p&gt;他们身前，&lt;br&gt;是扬起的帆，&lt;br&gt;他们身后，&lt;br&gt;是累累的山。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="诗" scheme="https://amonxu.com/categories/%E8%AF%97/"/>
+    
+    
+      <category term="诗" scheme="https://amonxu.com/tags/%E8%AF%97/"/>
+    
+      <category term="2022" scheme="https://amonxu.com/tags/2022/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《地铁》</title>
+    <link href="https://amonxu.com/2022/11/30/2022-11-30-Metro-Train/"/>
+    <id>https://amonxu.com/2022/11/30/2022-11-30-Metro-Train/</id>
+    <published>2022-11-29T17:01:01.000Z</published>
+    <updated>2023-06-03T12:36:15.147Z</updated>
+    
+    <content type="html"><![CDATA[<p>一头野兽，<br>在地下怒吼狂奔，<br>他吞掉情侣夫妻父母儿女，<br>吐出一个个沉默的打工人。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一头野兽，&lt;br&gt;在地下怒吼狂奔，&lt;br&gt;他吞掉情侣夫妻父母儿女，&lt;br&gt;吐出一个个沉默的打工人。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="诗" scheme="https://amonxu.com/categories/%E8%AF%97/"/>
+    
+    
+      <category term="诗" scheme="https://amonxu.com/tags/%E8%AF%97/"/>
     
       <category term="2022" scheme="https://amonxu.com/tags/2022/"/>
     
@@ -133,6 +213,38 @@
       <category term="阿里云" scheme="https://amonxu.com/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
     
       <category term="docker" scheme="https://amonxu.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《中国折叠》</title>
+    <link href="https://amonxu.com/2022/08/18/2022-08-18-Folding-World/"/>
+    <id>https://amonxu.com/2022/08/18/2022-08-18-Folding-World/</id>
+    <published>2022-08-17T17:01:01.000Z</published>
+    <updated>2023-06-03T13:03:02.056Z</updated>
+    
+    <content type="html"><![CDATA[<p>我折叠了中国，<br>因为我想你，<br>想你到突破几何距离。</p><p>广东和江西叠在一起，<br>你叠进我的身体。</p><blockquote><p>写给一对分隔粤赣两地的恋人</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我折叠了中国，&lt;br&gt;因为我想你，&lt;br&gt;想你到突破几何距离。&lt;/p&gt;
+&lt;p&gt;广东和江西叠在一起，&lt;br&gt;你叠进我的身体。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;写给一对分隔粤赣两地的恋人&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      
+    
+    </summary>
+    
+      <category term="诗" scheme="https://amonxu.com/categories/%E8%AF%97/"/>
+    
+    
+      <category term="诗" scheme="https://amonxu.com/tags/%E8%AF%97/"/>
+    
+      <category term="2022" scheme="https://amonxu.com/tags/2022/"/>
     
   </entry>
   
@@ -499,130 +611,6 @@
       <category term="读书笔记" scheme="https://amonxu.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
       <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>来一场“围城”之旅罢———记《围城》读后感</title>
-    <link href="https://amonxu.com/2020/07/28/2020-07-28-Fortress-Besieged/"/>
-    <id>https://amonxu.com/2020/07/28/2020-07-28-Fortress-Besieged/</id>
-    <published>2020-07-28T00:51:50.000Z</published>
-    <updated>2020-12-12T05:54:35.820Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://images.unsplash.com/photo-1532550256335-c281a64ac9f6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="green wooden door beside white wall"></p><p>故事从一艘回国的船开始，方鸿渐在国外荒废几年光阴，最后慌不迭买了一份假文凭回国。</p><p>回国的船上，方鸿渐邂逅了年轻时眼光高，最后剩下来只好便宜老实人的苏文纨，并与局部真理鲍小姐发生一夜情。</p><p>下船后，因为之前吹了牛皮，再经岳父一家添油加醋，方俨然成为附近名人。甚至阴差阳错去学校来一场关于梅毒和鸦片的西方文明演讲。</p><p>沾着老丈人的光去了国外留学，回国又去了老丈人的点金银行。方鸿渐开始和苏文纨交往起来，没曾想误打误撞方喜欢上了苏的表妹唐晓芙，又和苏的爱慕者赵辛楣成为铁哥们。</p><p>得不到的永远在骚动，被偏爱的有恃无恐。赵喜欢苏，苏喜欢方，方游离于酥糖小姐之间，唐喜欢方但又碍于表姐情面。</p><p>感情最能折磨人，后果是方与酥糖小姐都闹掰了，苏另寻新欢死了赵辛楣的心，然后一对感情上的难兄弟结伴，去到内地三闾大学任教。</p><p>一路颠簸流离之下，终于抵达。方也认识了同行的孙柔嘉。在内地闭塞的三闾大学，方不巧与孙柔嘉结为伴侣。而赵辛楣与汪太太的偷情发现，也使得他再次出走重庆。</p><p>少了赵辛楣的方，携妻回上海，开始与孙柔嘉疲于琐碎的家庭生活。平淡的生活甚至捏不出半点水来，生活总在吵架中和吵架后来回切换。</p><p>方是一个“你不讨厌，但全无用处”的人，没有继承方老的大家风范，也没有赵辛楣的雄厚人脉和左右逢源的能力，虽留洋归来却高不成低不就，夸张一点心比天高 命比纸薄。</p><p>孙是一个刚毕业的普通大学生，青年有志不愿留在上海，相貌可以算上平庸，性格也没什么亮点，甚为怕生。没有苏文纨的留洋经历，也没有苏的家庭背景，更没有唐晓芙的相貌和气质。</p><p>两个普通的人，也算得上一对相爱的人，但结婚的人们大都像两只亲密的刺猬，靠的太近容易扎得彼此遍体鳞伤，用创造新伤口和治愈旧伤口的痛苦，以对抗苦闷的生活。</p><p>没有蚊子血，没有白月光，有的只是平庸的人和困乏的生活。最后方下决心待孙好，孙等方回家吃饭，然而阴差阳错地饭没吃成，又大吵一架，孙离家远去。</p><p>方在痛苦中，那座号称每点钟走慢7分的旧钟，敲响了五个钟头前的时间。五个钟头前，是一切看起来将要美好的时候，而现实，总会令人陷入泥潭。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1532550256335-c281a64ac9f6?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;f
-      
-    
-    </summary>
-    
-      <category term="书" scheme="https://amonxu.com/categories/%E4%B9%A6/"/>
-    
-    
-      <category term="随笔" scheme="https://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="小说" scheme="https://amonxu.com/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
-      <category term="读书笔记" scheme="https://amonxu.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
-    
-      <category term="婚姻" scheme="https://amonxu.com/tags/%E5%A9%9A%E5%A7%BB/"/>
-    
-      <category term="生活" scheme="https://amonxu.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《百年孤独》读后感</title>
-    <link href="https://amonxu.com/2020/05/09/2020-05-09-One-Hundred-Years-of-Solitude/"/>
-    <id>https://amonxu.com/2020/05/09/2020-05-09-One-Hundred-Years-of-Solitude/</id>
-    <published>2020-05-09T09:14:50.000Z</published>
-    <updated>2020-12-12T10:47:15.142Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607780054958&di=44e15b14c2670103ba2f611e644348ae&imgtype=0&src=http%3A%2F%2Fimg3.doubanio.com%2Fview%2Fnote%2Fl%2Fpublic%2Fp50874735.jpg" alt="img" style="zoom:50%;"></p><p>书名：<a href="https://book.douban.com/subject/6082808/" target="_blank" rel="noopener">百年孤独</a>，但直到最后一刻，“百年孤独”四个字才出现在文中，第一次，也是最后一次。<br>这是一部家族史，也是一部民族史，国家史，拉丁美洲史。<br>从开山辟地开始，种族逐渐兴旺发达，历经神话，科学，战争，现代化等等等等，到最后逐渐衰落、灭亡，乃至为飓风所吞噬。<br>似能读到全世界，又似乎什么也没有读到。<br>如果用一个词来总结全书，我想是：黄粱一梦。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1607780054958&amp;di=44e15b14c2670103ba2f611e644348ae&amp;imgtype=0
-      
-    
-    </summary>
-    
-      <category term="书" scheme="https://amonxu.com/categories/%E4%B9%A6/"/>
-    
-    
-      <category term="随笔" scheme="https://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="读书笔记" scheme="https://amonxu.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你没苦过，你不懂</title>
-    <link href="https://amonxu.com/2020/01/07/2020-01-07-Too-Hard/"/>
-    <id>https://amonxu.com/2020/01/07/2020-01-07-Too-Hard/</id>
-    <published>2020-01-07T14:22:23.000Z</published>
-    <updated>2020-12-12T09:03:48.019Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://cdn.pixabay.com/photo/2019/12/01/11/53/background-4665313_960_720.jpg" alt="2020"></p><h3 id="一"><a href="#一" class="headerlink" title="一"></a>一</h3><p>前几天的早上一个技术群里大家又热闹起来，惯例讨论起了最近的形势，瞎扯一气，什么工作压力，消灭贫困，996的正确性，加班等等。</p><p>每逢这种讨论，我是没多大兴趣的。直到看到他们说着说着，一位大神前辈（大龄可优化对象/狗头）说道：</p><blockquote><p>我见过不少人，没有反思过自己的状况，明明处于这种危墙下，还糊里糊涂地生了俩（孩子）。</p></blockquote><p>我顿时来了精神。大神紧接着指出：</p><blockquote><p>结果就是，工作的巨大压力虽能保证一个一般的所谓高薪收入，但是实际上，离破产只差一层窗户纸。自己和家人却浑然不知如何面对意外。</p></blockquote><p>听罢此言，忽觉后背发凉，再回想自身处境，犹如一脚踏在悬崖边上，往上看似开阔平地，往下则是万丈深渊。</p><p>接着他</p><p>未完待续…</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://cdn.pixabay.com/photo/2019/12/01/11/53/background-4665313_960_720.jpg&quot; alt=&quot;2020&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;一&quot;&gt;&lt;a href=&quot;#一&quot; class=&quot;h
-      
-    
-    </summary>
-    
-      <category term="职说" scheme="https://amonxu.com/categories/%E8%81%8C%E8%AF%B4/"/>
-    
-    
-      <category term="职场" scheme="https://amonxu.com/tags/%E8%81%8C%E5%9C%BA/"/>
-    
-      <category term="996" scheme="https://amonxu.com/tags/996/"/>
-    
-      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>那雪落下的一砖一瓦啊，是魂牵梦绕的故乡</title>
-    <link href="https://amonxu.com/2020/01/01/2020-01-01-Snow-Hometown/"/>
-    <id>https://amonxu.com/2020/01/01/2020-01-01-Snow-Hometown/</id>
-    <published>2020-01-01T14:22:23.000Z</published>
-    <updated>2020-12-12T08:16:13.060Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2020/02/01/jKAqd41aMmn2OIN.gif" alt="下载 _1_.gif"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/01/jKAqd41aMmn2OIN.gif&quot; alt=&quot;下载 _1_.gif&quot;&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-      <category term="Note" scheme="https://amonxu.com/categories/Note/"/>
-    
-    
-      <category term="故乡" scheme="https://amonxu.com/tags/%E6%95%85%E4%B9%A1/"/>
-    
-      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
-    
-      <category term="雪" scheme="https://amonxu.com/tags/%E9%9B%AA/"/>
     
   </entry>
   
