@@ -1216,8 +1216,8 @@
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2019/04/04/zh-CN/2019-04-04-Refactoring/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2019/04/04/en/2019-04-04-Refactoring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Amon">
@@ -1232,7 +1232,7 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/2019/04/04/zh-CN/2019-04-04-Refactoring/" class="post-title-link" itemprop="url">如何来一次说干就干的重构 (流程篇)</a>
+            <a href="/2019/04/04/en/2019-04-04-Refactoring/" class="post-title-link" itemprop="url">Best Practices for Backend System Refactoring: How to do backend system refactoring efficiently and with high quality</a>
           
         </h1>
 
@@ -1279,8 +1279,8 @@
       
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2019/04/04/zh-CN/2019-04-04-Refactoring/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/04/zh-CN/2019-04-04-Refactoring/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2019/04/04/en/2019-04-04-Refactoring/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/04/en/2019-04-04-Refactoring/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1296,56 +1296,55 @@
 
       
           <p><img src="https://images.unsplash.com/photo-1491406213019-05b162a72c20?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="coverimg"></p>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>随着公司业务的爆炸式的增长，需求规模和用户规模也迅速地膨胀起来，这样给系统的三高(高性能、高并发、高可用)以及扩展性、可维护性都带来了考验。而旧系统因为早期设计的各种局限性（如早期参与人员的水平、架构设计的前瞻性、老板的急性子等等），逐渐满足不了现状和未来的新需求，暴露出各种问题。开发人员们像是拖着老破车上高速，苦不堪言。（说人话：老系统代码的坑太深了，开发们填不住了，要么被坑埋了，要么弃坑逃跑了…）</p>
-<p>那么这个时候，通常要面临一个问题：是继续填坑还是<del>跑路走人</del> 选择重构。填坑是不可能的，这辈子都不可能的。而选择重构是需要壮士断腕的勇气，因为重构是一项老大难、一件耗时耗力的事情，且多少会对现有业务开发造成影响，甚至是停滞。因此大多时候得不到产品经理和老板的支持，他们关心的只有一个：下个需求什么时候能上！至于其他的，都是你们研发该操心的。</p>
-<p>自己选择的重构路，跪着也要走完。如何来一次就干就干的重构呢？根据互联网常见项目重构流程，以及我的亲身参与的重构项目经历，梳理大中小型系统的常见重构流程如下：</p>
-<h3 id="零：说服业务方"><a href="#零：说服业务方" class="headerlink" title="零：说服业务方"></a>零：说服业务方</h3><p>重构不单是研发团队的事情，更是整个项目团队的事情。重构可以提升系统的三高，也可以优化改善业务流程，满足新的业务诉求等等。重构需要投入大量资源，必须要得到业务方的支持。通常这个时候需要对他们晓之以理，动之以情，阐述清楚重构的利弊，以及不重构的要害。在得到他们的支持后，重构的工作便正式开展。</p>
-<p>参与人员：技术 Leader</p>
-<h3 id="一：树立重构目标，有的放矢"><a href="#一：树立重构目标，有的放矢" class="headerlink" title="一：树立重构目标，有的放矢"></a>一：树立重构目标，有的放矢</h3><p>重构是一项工程，是一场持久战，它不是一两个迭代、甚至一两个月能做好的事情，需要投入大量的人力、物力、时间精力等。那么在这场旷日持久的战斗中，我们的目标是什么？是通过更优秀更合理的架构来满足系统三高的需求，还是想通过重构来提高代码质量，或者引入新的技术和框架来升级整个系统，抑或通过重构来优化业务流程，实现原来实现不了的需求。有了目标后，才能做到有的放矢。</p>
-<p>参与人员：技术 Leader，架构师</p>
-<h3 id="二：确定重构的范围，并对重构作出预测"><a href="#二：确定重构的范围，并对重构作出预测" class="headerlink" title="二：确定重构的范围，并对重构作出预测"></a>二：确定重构的范围，并对重构作出预测</h3><p>重构通常有以下几个级别的重构</p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>As the company’s business experiences explosive growth, both the scale of requirements and the user base are rapidly expanding. This presents challenges to the system in terms of the three high (high performance, high concurrency, high availability), scalability, and maintainability. The old system, due to various limitations in its early design (such as the expertise of early participants, the foresight of architectural design, impatience of management, etc.), gradually becomes inadequate to meet current and future demands, exposing various issues. Developers find themselves dragging an old, worn-out car on the highway, which is a daunting task. In simpler terms, the codebase of the old system has become too problematic to fix, leading to a situation where developers either get buried in its issues or abandon the project altogether.</p>
+<p>At this point, a common question arises: should we continue trying to patch the issues, or should we choose to refactor? Patching is simply not feasible, not in this lifetime. Refactoring, on the other hand, requires the courage of a true hero because it’s a complex and time-consuming task. Moreover, it can impact ongoing business development or even bring it to a standstill. Often, product managers and executives are not supportive because they only care about one thing: when will the next feature be ready? Everything else is your development team’s problem.</p>
+<p>If you choose the path of refactoring, you must be prepared to see it through, no matter what. How can you ensure a successful refactoring from the get-go? Based on common practices in internet projects and my personal experience in refactoring projects, here is an outline of the common steps for refactoring systems of various sizes:</p>
+<h3 id="Step-0-Convincing-Stakeholders"><a href="#Step-0-Convincing-Stakeholders" class="headerlink" title="Step 0: Convincing Stakeholders"></a>Step 0: Convincing Stakeholders</h3><p>Refactoring is not just the responsibility of the development team; it’s a collective effort involving the entire project team. Refactoring can improve the system’s performance, availability, and scalability, as well as optimize and streamline business processes to meet new demands. It requires a significant investment of resources and must have the support of stakeholders. Typically, this requires explaining the benefits and drawbacks of refactoring, as well as the critical issues that would arise if refactoring is not done. Once you have their support, the refactoring work can officially begin.</p>
+<p>Participants: Technical Leader</p>
+<h3 id="Step-1-Establish-Clear-Refactoring-Goals"><a href="#Step-1-Establish-Clear-Refactoring-Goals" class="headerlink" title="Step 1: Establish Clear Refactoring Goals"></a>Step 1: Establish Clear Refactoring Goals</h3><p>Refactoring is a long-term endeavor; it’s not something that can be completed in one or two iterations, or even within a few months. It requires a substantial investment of manpower, resources, time, and effort. So, what are our goals in this prolonged battle? Are we aiming to meet the system’s high-performance requirements through a more efficient architecture? Or do we want to enhance code quality through refactoring? Perhaps we aim to introduce new technologies and frameworks to upgrade the entire system or optimize business processes to address previously unmet requirements. Once you have clear goals, you can work purposefully.</p>
+<p>Participants: Technical Leader, Architect</p>
+<h3 id="Step-2-Define-the-Scope-of-Refactoring-and-Make-Predictions"><a href="#Step-2-Define-the-Scope-of-Refactoring-and-Make-Predictions" class="headerlink" title="Step 2: Define the Scope of Refactoring and Make Predictions"></a>Step 2: Define the Scope of Refactoring and Make Predictions</h3><p>Refactoring typically falls into several levels:</p>
 <ul>
-<li>平台级别重构。针对整体平台的重构，如阿里早期是 LAMP 架构，后来整体迁移到了 Java 平台。</li>
-<li>系统级别重构。针对业务系统的重构，如通过引入微服务架构或者 SOA 架构，分解单体应用。</li>
-<li>架构级别重构。如通过架构的调整和重新设计，改善原有架构的不合理之处。如通过分层使业务解耦，引入缓存设计提升系统高并发等。</li>
-<li>业务级别重构。常见为某些业务需求因为系统设计的不合理性导致无法满足或有缺陷满足，需要通过业务系统的重构调整或数据库的重构来解决。</li>
-<li>模块/代码级别重构。这是最常见的重构。通常指使用设计模式、封装继承、优化拆解代码，使得代码的结构更良好，运行效率更高。</li>
+<li>Platform-level refactoring: Refactoring the entire platform, such as Alibaba transitioning from the LAMP stack to the Java platform.</li>
+<li>System-level refactoring: Refactoring specific business systems, such as introducing microservices or SOA architecture to break down monolithic applications.</li>
+<li>Architecture-level refactoring: Improving the existing architecture through adjustments and redesign, addressing architectural shortcomings, like decoupling business logic through layered design or introducing caching for improved concurrency.</li>
+<li>Business-level refactoring: Addressing specific business requirements that cannot be met due to the limitations of the current system, often involving the refactoring of business processes or database structures.</li>
+<li>Module/code-level refactoring: The most common form of refactoring, typically involving the use of design patterns, encapsulation, and code optimization to improve code structure and performance.</li>
 </ul>
-<p>确定这次重构是属于什么级别，确定重构的整体范围的大小，确定重构的技术选型，进而对重构工作进行科学的评测和预估。比如需要投入哪些成本，需要投入的人力和时间是多少，在重构的过程中能否支撑正常业务需求等等。在有了这些预测后，也对业务方有个交代，尤其是当他们追在后面问什么时候能上新需求。</p>
-<p>参与人员：技术 Leader，架构师，研发人员</p>
-<h3 id="三：旧系统的熟悉和业务梳理"><a href="#三：旧系统的熟悉和业务梳理" class="headerlink" title="三：旧系统的熟悉和业务梳理"></a>三：旧系统的熟悉和业务梳理</h3><p>重构不是和旧系统说散就散，而是要不断和旧系统战斗的过程。知己知彼，百战不殆。重构不仅需要清楚新系统的目标和未来，更需要对旧系统非常熟悉(尤其是坑)。此时需要参与重构的人员(尤其是参与旧系统的人员)来对旧系统业务和系统进行梳理，对原有资料信息进行收益和整理的工作，对旧系统的关键代码和数据库设计进行 Review等等。</p>
-<p>以下是重构旧系统前需要准备的常见工作：</p>
+<p>Determine the level of refactoring required, the overall scope, and the technology stack for refactoring. Then, conduct a scientific assessment and estimation of the refactoring work. This includes identifying the costs, required resources, and time commitments, as well as assessing whether ongoing business requirements can be accommodated during the refactoring process. Once these predictions are established, you can provide stakeholders with a clear understanding, especially when they ask when new requirements can be delivered.</p>
+<p>Participants: Technical Leader, Architect, Developers</p>
+<h3 id="Step-3-Familiarize-Yourself-with-the-Old-System-and-Document-Business-Processes"><a href="#Step-3-Familiarize-Yourself-with-the-Old-System-and-Document-Business-Processes" class="headerlink" title="Step 3: Familiarize Yourself with the Old System and Document Business Processes"></a>Step 3: Familiarize Yourself with the Old System and Document Business Processes</h3><p>Refactoring is not about abandoning the old system; it’s about continuously working with it. Knowing your enemy is the key to victory. Refactoring not only requires a clear understanding of the new system’s goals and future, but also a deep familiarity with the old system, especially its pitfalls. At this stage, the participants in the refactoring project, especially those who worked on the old system, should document and organize information related to the old system’s business and technical details. This includes collecting documents such as design documents, technical documents, architecture diagrams, UML diagrams, and ER diagrams related to the system.</p>
+<p>The following are common preparation tasks before refactoring the old system:</p>
 <ul>
-<li>旧系统资料和信息的收集，包含且不限于系统相关的设计文档和技术文档等文档资料，架构图、UML 图，数据库设计 ER 图等图形化资料</li>
-<li>业务线和业务流程的梳理，整理业务线上的各大项目、业务流程，并输出为文档</li>
-<li>旧系统关键代码的 Review</li>
+<li>Gathering information and documentation related to the old system, including design documents, technical documents, architectural diagrams, UML diagrams, ER diagrams, and other graphical materials.</li>
+<li>Mapping and documenting business lines and processes, outlining projects and business flows, and documenting them.</li>
+<li>Reviewing key code and database designs in the old system.</li>
 </ul>
-<p>有相关疑难点及时与相关与业务线上的人员沟通，将问题解决在”襁褓”中。</p>
-<p>参与人员：技术 Leader，架构师，研发人员</p>
-<h3 id="四：数据库重构"><a href="#四：数据库重构" class="headerlink" title="四：数据库重构"></a>四：数据库重构</h3><p>如果在重构中需要涉及数据库的重构，数据库的重构一般是最先开始的一步。系统需要重构的直接原因，也大多和数据库有关。在数据库重构时，我们清楚旧系统中数据库的各种设计缺陷和使用障碍，那么就可以对症下药，如通过三大范式或反范式来设计表，是否需要分库分表等等。</p>
-<p>参与人员：DBA，架构师</p>
-<h3 id="五：后台系统重构"><a href="#五：后台系统重构" class="headerlink" title="五：后台系统重构"></a>五：后台系统重构</h3><p>后台系统重构前，必须需要依照前文所述的一些设计和技术文档。这些文档输出后并经讨论成型后，架构师进行系统架构设计，后台开发人员进行具体编码工作。通常这个过程是耗时最长的，也是非常重要的一环。后台的架构设计水平，决定着系统重构的水平，业务代码的质量，决定着系统重构的质量。</p>
-<p>因为这个过程比较漫长，且成果无法立竿见影。所以通常采用敏捷开发的模式，通过迭代的方式来进行后台系统重构。迭代的方式有几个好处：</p>
+<p>Any issues or uncertainties should be addressed promptly through communication with relevant personnel from the business side, ensuring that problems are resolved early in the process.</p>
+<p>Participants: Technical Leader, Architect, Developers</p>
+<h3 id="Step-4-Database-Refactoring"><a href="#Step-4-Database-Refactoring" class="headerlink" title="Step 4: Database Refactoring"></a>Step 4: Database Refactoring</h3><p>If the refactoring involves changes to the database, database refactoring is typically the first step. Many refactoring initiatives are triggered by issues related to the database. During database refactoring, the deficiencies and obstacles in the old system’s database design are addressed. This may involve redesigning tables using normalization or denormalization techniques, considering sharding or partitioning strategies, and more.</p>
+<p>Participants: DBA, Architect</p>
+<h3 id="Step-5-Backend-System-Refactoring"><a href="#Step-5-Backend-System-Refactoring" class="headerlink" title="Step 5: Backend System Refactoring"></a>Step 5: Backend System Refactoring</h3><p>Before starting the backend system refactoring, it’s essential to have design and technical documentation in place, as mentioned earlier. Once these documents are finalized through discussions and planning, the architect can proceed with system architecture design, and backend developers can begin coding. This phase is often the most time-consuming and critical part of the refactoring process. The quality of the backend architecture directly affects the success of the refactoring, the quality of the business code, and the overall refactoring quality.</p>
+<p>Due to the extended timeline of this phase and the fact that its results may not be immediately visible, Agile development methodologies are often used. This allows for iterative development, ensuring effective planning and continuous progress. The advantages of using iterations include:</p>
 <ol>
-<li>需要将整个重构过程进行有效规划和量化，做到胸有成竹</li>
-<li>每个阶段能有可见的成果，确保团队在长时间的重构过程中不陷于泥潭</li>
-<li>对已重构好的部分可以及时进行联调测试或观察，不断在迭代中总结、在总结中迭代</li>
+<li>Effective planning and quantification of the entire refactoring process.</li>
+<li>Visible achievements at each stage, preventing the team from getting stuck in a long refactoring process.</li>
+<li>The ability to test or observe refactored parts promptly during iterations, allowing continuous learning and improvement.</li>
 </ol>
-<p>另外在后台系统重构时，也需要有明确量化的目标和标准，比如各系统和业务模块支持多少 QPS，接口响应时间多长时间等，这样团队才能在重构的过程中不至于为了重构而重构。</p>
-<p>在重构过程中，定期进行 Code Review，及时发现重构的问题和质量的问题，避免出现破窗效应，引入拙劣的设计或垃圾代码，进而破坏整个系统。</p>
-<p>参与人员：技术 Leader，架构师，研发人员</p>
-<h3 id="六：数据迁移与检查"><a href="#六：数据迁移与检查" class="headerlink" title="六：数据迁移与检查"></a>六：数据迁移与检查</h3><p>如果涉及数据库重构时，在新的数据库设计好后，就会有面临数据迁移的问题。一般分为全量迁移和增量迁移，全量迁移是将旧系统的数据一次性迁移到新的数据库中，增量迁移是在实行全量迁移后旧系统新产生的数据迁移到新系统上来，增量迁移一直到旧系统下线不再产生新数据后。通常迁移都是通过编写脚本或程序来实现，拒绝人工操作。</p>
-<p>迁移后自然需要对比新旧系统的数据，同样可以通过脚本或程序来进行对比，查缺补漏，定位分析。</p>
-<p>参与人员：DBA，研发人员</p>
-<h3 id="七：系统检查、联调与测试"><a href="#七：系统检查、联调与测试" class="headerlink" title="七：系统检查、联调与测试"></a>七：系统检查、联调与测试</h3><p>在后台系统重构到一定程度时，同样也需要编写脚本和程序来对新旧系统的业务接口进行检查，及时发现重构中的问题，必要时候进行架构调整和数据库调整。当然，在重构时，开发人员能提高单元测试覆盖率当然是更好不过。当各系统和模块的依赖解决的差不多时，可以开始联调工作。</p>
-<p>当然最后还需要系统性的测试，如功能性测试、稳定性测试、性能测试，本地测试、模拟线上环境测试等。测试中发现的问题经验证修复后，达到上线的标准，即可灰度上线。</p>
-<p>参与人员：架构师，研发人员，测试人员</p>
-<h3 id="八：灰度发布与观察"><a href="#八：灰度发布与观察" class="headerlink" title="八：灰度发布与观察"></a>八：灰度发布与观察</h3><p>万里长征已经走到最后，也到了最紧要的关头。灰度发布时，只接入一小部分流量，并及时跟踪和分析线上的 log 与监控告警，一有问题及时解决。当新系统趋于稳定时，可以逐渐加大灰度发布的范围和接入的流量，同时继续跟踪线上 log 与监控告警。</p>
-<p>参与人员：运维人员，测试人员，研发人员</p>
-<h3 id="九：系统切换"><a href="#九：系统切换" class="headerlink" title="九：系统切换"></a>九：系统切换</h3><p>在系统切换时，需要提前制订系统切换方案，包含相应的规划与流程，甚至是应急预案与回滚方案，避免走一步看一步。</p>
-<p>参与人员：运维人员，测试人员</p>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>通过上述几个步骤后，我们成功对系统进行重构。</p>
-<p>重构是一项大工程，但经历重构后的系统也并非完美无缺。重构不是终点，更像是起点。</p>
+<p>During backend system refactoring, it’s essential to have clear, quantifiable goals and standards. For example, defining the QPS (Queries Per Second) supported by various systems and business modules, the expected response times for interfaces, etc. This enables the team to focus on achieving these goals during refactoring.</p>
+<p>Regular code reviews should also be conducted throughout the refactoring process to identify and address issues with the refactoring itself and the quality of the code. This helps prevent the introduction of poor designs or subpar code that could harm the entire system.</p>
+<p>Participants: Technical Leader, Architect, Developers</p>
+<h3 id="Step-6-Data-Migration-and-Verification"><a href="#Step-6-Data-Migration-and-Verification" class="headerlink" title="Step 6: Data Migration and Verification"></a>Step 6: Data Migration and Verification</h3><p>If database refactoring is part of the project, data migration becomes a crucial step. It generally involves two types of migration: full migration and incremental migration. Full migration transfers all data from the old system to the new one in one go, while incremental migration handles data created in the old system after full migration until the old system is retired. These migrations are typically scripted or programmed to avoid manual errors.</p>
+<p>After migration, it’s essential to compare the data between the old and new systems. This comparison can also be automated through scripts or programs to identify discrepancies and perform any necessary adjustments or investigations.</p>
+<p>Participants: DBA, Developers</p>
+<h3 id="Step-7-System-Validation-Integration-and-Testing"><a href="#Step-7-System-Validation-Integration-and-Testing" class="headerlink" title="Step 7: System Validation, Integration, and Testing"></a>Step 7: System Validation, Integration, and Testing</h3><p>As the backend system refactoring progresses, scripts and programs should be developed to validate the business interfaces between the old and new systems. This ensures that issues in the refactoring process are detected promptly, and, if necessary, architectural and database adjustments can be made. Additionally, increasing unit test coverage during refactoring is highly beneficial.</p>
+<p>Once the dependencies between systems and modules are resolved, integration testing can begin. Comprehensive testing, including functional testing, stability testing, performance testing, local testing, and simulating production environments, should be performed. Any issues identified during testing should be addressed, verified, and fixed to meet the standards required for a smooth release.</p>
+<p>Participants: Architect, Developers, Testers</p>
+<h3 id="Step-8-Gradual-Deployment-and-Monitoring"><a href="#Step-8-Gradual-Deployment-and-Monitoring" class="headerlink" title="Step 8: Gradual Deployment and Monitoring"></a>Step 8: Gradual Deployment and Monitoring</h3><p>When the backend system refactoring reaches a certain level of stability, it’s time to initiate gradual deployment. During this phase, only a portion of the traffic is directed to the new system. This allows for real-time tracking and analysis of logs and monitoring alarms. Any issues or anomalies can be addressed promptly. As confidence in the new system’s stability grows, the scope and volume of the deployment can be gradually increased. Continuous monitoring of logs and alarms should be maintained throughout this phase.</p>
+<p>Participants: DevOps Team, Testers, Developers</p>
+<h3 id="Step-9-System-Transition"><a href="#Step-9-System-Transition" class="headerlink" title="Step 9: System Transition"></a>Step 9: System Transition</h3><p>When it comes to transitioning to the new system, it’s crucial to have a well-defined transition plan in place. This plan should include detailed processes, workflows, and contingency plans, including rollback procedures in case unexpected issues arise. This step ensures that the transition is smooth and minimizes disruption to the business.</p>
+<p>Participants: DevOps Team, Testers</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>After completing the above steps, the system has undergone successful refactoring. However, it’s essential to understand that refactoring is a substantial undertaking, and even after the process, the system may not be flawless. Refactoring is not the endpoint but rather a new beginning.</p>
 
         
       
