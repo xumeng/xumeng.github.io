@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en,zh-CN,default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+<meta name="referrer" content="no-referrer" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Amon's Blog" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="接手了他的项目后，  心里总会感觉怪怪的，  因为他前阵子过世了，  因为过劳。   现在我每天都会很忙，  有时候，  读到他写的代码，  思考他的逻辑。  思考一个死去人的逻辑，  揣摩一个死去人的想法，  这种感觉真的很奇怪，  就像深夜在深山老林的山路缓行：幽冷而又孤独。  就像触摸一个死人的身体：冰凉屏气。   每当这个时候，  脑子里不自觉的想起他，  他和我以前一起上下班，  一起喝">
+<meta name="keywords" content="随笔,悼文,小说,码农">
+<meta property="og:type" content="article">
+<meta property="og:title" content="某码农意外去世了，我接手了他的代码">
+<meta property="og:url" content="https://amonxu.com/2015/10/31/zh-CN/2015-10-31-Death-Code/index.html">
+<meta property="og:site_name" content="Amon&#39;s Blog">
+<meta property="og:description" content="接手了他的项目后，  心里总会感觉怪怪的，  因为他前阵子过世了，  因为过劳。   现在我每天都会很忙，  有时候，  读到他写的代码，  思考他的逻辑。  思考一个死去人的逻辑，  揣摩一个死去人的想法，  这种感觉真的很奇怪，  就像深夜在深山老林的山路缓行：幽冷而又孤独。  就像触摸一个死人的身体：冰凉屏气。   每当这个时候，  脑子里不自觉的想起他，  他和我以前一起上下班，  一起喝">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-09-04T09:59:51.031Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="某码农意外去世了，我接手了他的代码">
+<meta name="twitter:description" content="接手了他的项目后，  心里总会感觉怪怪的，  因为他前阵子过世了，  因为过劳。   现在我每天都会很忙，  有时候，  读到他写的代码，  思考他的逻辑。  思考一个死去人的逻辑，  揣摩一个死去人的想法，  这种感觉真的很奇怪，  就像深夜在深山老林的山路缓行：幽冷而又孤独。  就像触摸一个死人的身体：冰凉屏气。   每当这个时候，  脑子里不自觉的想起他，  他和我以前一起上下班，  一起喝">
+  <link rel="canonical" href="https://amonxu.com/2015/10/31/zh-CN/2015-10-31-Death-Code/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>某码农意外去世了，我接手了他的代码 | Amon's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66727739-1"></script>
+    <script>
+      var host = window.location.hostname;
+      if (host !== "localhost" || !true) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-66727739-1');
+      }
+    </script>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bb453e3ffbbd5a718313dd9977009208";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Amon's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">猛猛如玉</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+        
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      
+    
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/xumeng" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/10/31/zh-CN/2015-10-31-Death-Code/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Amon">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            某码农意外去世了，我接手了他的代码
+            
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2015-10-31 11:11:11" itemprop="dateCreated datePublished" datetime="2015-10-31T11:11:11+08:00">2015-10-31</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
+                    <span itemprop="name">鬼画弧</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2015/10/31/zh-CN/2015-10-31-Death-Code/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/31/zh-CN/2015-10-31-Death-Code/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>接手了他的项目后， </p>
+<p>心里总会感觉怪怪的， </p>
+<p>因为他前阵子过世了， </p>
+<p>因为过劳。 </p>
+<p><br></p>
+<p>现在我每天都会很忙， </p>
+<p>有时候， </p>
+<p>读到他写的代码， </p>
+<p>思考他的逻辑。 </p>
+<p>思考一个死去人的逻辑， </p>
+<p>揣摩一个死去人的想法， </p>
+<p>这种感觉真的很奇怪， </p>
+<p>就像深夜在深山老林的山路缓行：幽冷而又孤独。 </p>
+<p>就像触摸一个死人的身体：冰凉屏气。 </p>
+<p><br></p>
+<p>每当这个时候， </p>
+<p>脑子里不自觉的想起他， </p>
+<p>他和我以前一起上下班， </p>
+<p>一起喝酒， </p>
+<p>一起讨论项目问题， </p>
+<p>每写一会代码， </p>
+<p>都要想起他。 </p>
+<p>甚至想起他临死前的情形， </p>
+<p>虽然我并没有见识过， </p>
+<p>可是它却像真实发生的一样： </p>
+<p><br></p>
+<p>在一个深夜， </p>
+<p>这夜天很黑， </p>
+<p>无星无月， </p>
+<p>风呜呜吹。 </p>
+<p>他一个人挑灯在公司奋战， </p>
+<p>大楼里早已人去楼空， </p>
+<p>走廊里的灯也黑不见物。 </p>
+<p>同事们早已下班， </p>
+<p>他只打开他头上那个灯， </p>
+<p>昏暗的灯正好只照亮了他周围的一块。 </p>
+<p><br></p>
+<p>他在写代码， </p>
+<p>是的， </p>
+<p>此时无关这个世界， </p>
+<p>他脑中只有项目的模块还有哪些没完成， </p>
+<p>他手下只有 26 个字母 10 个数字和符号， </p>
+<p>他心里只有赶紧弄最晚 2 点要回家不然明天没精神继续 coding 了。 </p>
+<p><br></p>
+<p>键盘嚓嚓， </p>
+<p>他觉得有点口渴， </p>
+<p>时间是 9:41， </p>
+<p>他脑子终于下达命令让自己拿水杯喝水， </p>
+<p>时间是 10:24。 </p>
+<p><br></p>
+<p>键盘嚓嚓， </p>
+<p>他手机来了推送信息， </p>
+<p>时间是 10:30， </p>
+<p>他拿起手机看了一眼， </p>
+<p>是他定的睡眠闹钟提醒。 </p>
+<p>时间是 10:38。 </p>
+<p>他规定自己 10:30 要睡觉， </p>
+<p>尽管他从来没有遵守过， </p>
+<p>但他根本不打算删掉这个闹钟或者调整时间， </p>
+<p>因为他相信总有一天他会严格遵守它。 </p>
+<p><br></p>
+<p>键盘嚓嚓， </p>
+<p>他突然想起了隔壁住的女孩， </p>
+<p>头发很长， </p>
+<p>笑起来很美。 </p>
+<p>时间是 10:47。 </p>
+<p>他继续写着， </p>
+<p>这个模块快写完了， </p>
+<p>这段代码要不要优化一下， </p>
+<p>优化吧，明显看起来不优雅， </p>
+<p>优化个啥啊，时间不多了得赶紧写完回家。 </p>
+<p>优雅？像她那样？ </p>
+<p>又想起了隔壁那个优雅的女孩。 </p>
+<p>前天早上出门的时候正好碰见她出门， </p>
+<p>她看了他一眼， </p>
+<p>持续 0.4 秒。 </p>
+<p>想到这里， </p>
+<p>他的嘴角弯了。 </p>
+<p>时间是 10:54。</p>
+<p><br></p>
+<p>再定神时，</p>
+<p>他责备自己不该写代码总跑神。<em>（Stinger: 我定神再写时，已是 17 个月后的 2015 年 12 月） </em></p>
+<p>沉气写完一段逻辑后，</p>
+<p>他边打上分号边低头扫了一眼显示器右下角，</p>
+<p>时间是 10:58。</p>
+<p><br></p>
+<p>整理一下思绪，</p>
+<p>他吁了一口气，</p>
+<p>竟感觉有些饿了。</p>
+<p>是的，他夜晚在楼下快餐厅匆匆吃完便上来工作了，</p>
+<p>连打的紫菜汤都未来及喝上几口。</p>
+<p>他本想坐在窗前趁着吃饭时看看夜晚的城市，</p>
+<p>他得有半个月没有好好吃饭了，</p>
+<p>没有好好的看看白天的城市，</p>
+<p>看看夜晚的城市，</p>
+<p>看看行走的人群。</p>
+<p>仔细想想上一次好好吃顿饭是上个月，也可能是上上个月时去同学家里蹭饭。</p>
+<p>毕业时一起十来人说好要在这个城市当主人，</p>
+<p>如今回老家、换城市只剩下他和另外两个同学。</p>
+<p>自己勉强留下来，</p>
+<p>却也战战兢兢地呆着。</p>
+<p><br></p>
+<p>同学的一家子在一起很热闹，</p>
+<p>有家的气氛。</p>
+<p>家，他的家，</p>
+<p>在一千两百公里外。</p>
+<p>两站路外的那个一室一厅，</p>
+<p>是这个城市属于他的地方之一。</p>
+<p>另一个之一是现在头顶灯光刚好照的位置。</p>
+<p>尽管认真说来这些并不属于他。</p>
+<p><br></p>
+<p>操，他小声的骂自己。</p>
+<p>又跑神了。</p>
+<p>他不总是这样容易跑神。</p>
+<p>白天上班时，办公室熙熙攘攘，</p>
+<p>他总是专注的写代码，</p>
+<p>即使偶尔跑神也很快被同事们的交谈声和办公室此起彼伏的手机通知声和键盘声打断。</p>
+<p>今天这么安静，</p>
+<p>他倒是很容易走神了。</p>
+<p><br></p>
+<p>键盘嚓嚓，</p>
+<p>他迫不及待的想给这个模块收尾了。</p>
+<p>这个模块写了三四天了，</p>
+<p>像这样的模块，</p>
+<p>还有几个。</p>
+<p>他喜欢这种有事做的感觉，</p>
+<p>这种被需要的感觉。</p>
+<p>他喜欢开发一些新功能，</p>
+<p>像打一场硬仗。</p>
+<p>搭好架构、定义好接口，</p>
+<p>就像排兵布阵、运筹帷幄，</p>
+<p>具体的实现时就像硬弓硬马、真刀真枪，</p>
+<p>策马平川、气吞三军，</p>
+<p>完成一个模块犹如征服一块领地，踏平一座山。</p>
+<p>他喜欢这种编程像打仗、血战沙场、戎马生涯的感觉，</p>
+<p>每每兴致所至，无不有一种提刀上马的冲动。</p>
+<p>如果生活也只有铁与血这么简单就好了。</p>
+<p>一股热血涌上胸腔，</p>
+<p>他不由得由倚在椅子上挣扎着坐正，</p>
+<p>时间是 11:19，外面风声正劲。</p>
+<p><br><br><em>未完待续…</em><br><br></p>
+<ul>
+<li><em>老文新发，原文于 2014 年 7 月 24 看到一帖《 假如一个码农突然出意外去世了，你们觉得接手他写过的代码是什么心情？》后有感而发。</em></li>
+<li><em>2015 年 12 月 16 日 续作。</em></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+      
+
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="Amon wechat" style="width: 200px; max-width: 100%;">
+  <div>扫一扫关注我，有惊喜不迷路 <br/>（转载本站文章请注明作者和出处: <b>猛猛如玉</b>）<br/> 网址: <a href='https://amonxu.com'>https://amonxu.com</a> 微信公众号: <b>itcraft</b> </div>
+</div>
+
+      
+        
+      
+        <div class="reward-container">
+  <div>可以请我喝瓶水吗:)</div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block;">
+        <img src="/images/wxpay.jpg" alt="Amon 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="Amon 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/随笔/" rel="tag"># 随笔</a>
+            
+              <a href="/tags/悼文/" rel="tag"># 悼文</a>
+            
+              <a href="/tags/小说/" rel="tag"># 小说</a>
+            
+              <a href="/tags/码农/" rel="tag"># 码农</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2015/10/30/zh-CN/2015-10-29-Life-Marathon/" rel="next" title="人生马拉松">
+                  <i class="fa fa-chevron-left"></i> 人生马拉松
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2015/11/08/zh-CN/2015-11-08-YangQ-is-dead/" rel="prev" title="悼同学杨X/Y之父">
+                  悼同学杨X/Y之父 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460"
+      alt="Amon">
+  <p class="site-author-name" itemprop="name">Amon</p>
+  <div class="site-description" itemprop="description">Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">categories</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">120</span>
+        <span class="site-state-item-name">tags</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/xumeng" title="GitHub &rarr; https://github.com/xumeng" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:gosuxm@gmail.com" title="E-Mail &rarr; mailto:gosuxm@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-inbox"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="http://zhihu.com/people/amonxu" title="知乎 &rarr; http://zhihu.com/people/amonxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-zhihu"></i>知乎</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://www.douban.com/people/gosu" title="豆瓣 &rarr; https://www.douban.com/people/gosu" rel="noopener" target="_blank"><i class="fa fa-fw fa-douban"></i>豆瓣</a>
+      </span>
+    
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://amonxu.com" title="https://amonxu.com">猛猛如玉</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://www.frontendjs.com" title="http://www.frontendjs.com" rel="noopener" target="_blank">前站导航</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://geekplux.com" title="http://geekplux.com" rel="noopener" target="_blank">GeekPlux</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://wmdpd.com" title="https://wmdpd.com" rel="noopener" target="_blank">完美的胖达</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.forecho.com" title="https://blog.forecho.com" rel="noopener" target="_blank">forecho</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://www.lcddjm.com" title="https://www.lcddjm.com" rel="noopener" target="_blank">lcddjm's website</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://www.fi-ads.com" title="https://www.fi-ads.com" rel="noopener" target="_blank">Future iDeal</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://mout.me/" title="https://mout.me/" rel="noopener" target="_blank">MouT.me</a>
+        </li>
+      
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  &copy; 2012 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Amon</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a>
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+      
+    Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
+<script src="/js/schemes/muse.js?v=7.4.1"></script>
+<script src="/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://amonxu.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  function disqus_config() {
+    this.page.url = "https://amonxu.com/2015/10/31/zh-CN/2015-10-31-Death-Code/";
+    this.page.identifier = "2015/10/31/zh-CN/2015-10-31-Death-Code/";
+    this.page.title = '某码农意外去世了，我接手了他的代码';
+  }
+  function loadComments() {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://amonxu.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+</body>
+</html>

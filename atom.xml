@@ -1,47 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>猛猛如玉</title>
+  <title>Amon&#39;s Blog</title>
   
-  <subtitle>如果我们总是期待别人或者等待时机，改变永远不会到来。&lt;br&gt;我们自己就是我们一直等待的人，我们自身就是我们苦苦寻求的改变。</subtitle>
+  <subtitle>猛猛如玉</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amonxu.com/"/>
-  <updated>2023-06-03T08:48:01.564Z</updated>
+  <updated>2023-09-18T12:10:36.443Z</updated>
   <id>https://amonxu.com/</id>
   
   <author>
-    <name>猛猛如玉</name>
+    <name>Amon</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>【置顶】</title>
-    <link href="https://amonxu.com/2099/12/31/2099-12-31-Note/"/>
-    <id>https://amonxu.com/2099/12/31/2099-12-31-Note/</id>
-    <published>2099-12-31T15:59:59.000Z</published>
-    <updated>2023-06-03T08:48:01.564Z</updated>
+    <title>Hello, This is Amon</title>
+    <link href="https://amonxu.com/2023/09/03/en/2023-09-03-Hexo-Title-Symbol-Error/"/>
+    <id>https://amonxu.com/2023/09/03/en/2023-09-03-Hexo-Title-Symbol-Error/</id>
+    <published>2023-09-03T05:42:55.000Z</published>
+    <updated>2023-09-18T12:10:36.443Z</updated>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><hr><p>In my Hexo blog, when I include special symbols inside the title in posts, it reports this error:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ERROR Process failed: _posts/en/XXX.md</span><br><span class="line">YAMLException: incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 54:</span><br><span class="line">     ...  for Backend System Refactoring\: How to do backend system refac ...</span><br></pre></td></tr></table></figure></p><p><strong>Solution:</strong><br>Include the title in single quotes, like:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: &apos;How to read a book&apos;</span><br><span class="line">lang: en</span><br><span class="line">date: 2023-01-01</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+
+&lt;hr&gt;
+&lt;p&gt;In my Hexo blog, when I include special symbols inside the title in posts, it reports 
+      
+    
     </summary>
     
-      <category term="Note" scheme="https://amonxu.com/categories/Note/"/>
     
+      <category term="Blog" scheme="https://amonxu.com/tags/Blog/"/>
     
-      <category term="Note" scheme="https://amonxu.com/tags/Note/"/>
-    
-      <category term="2099" scheme="https://amonxu.com/tags/2099/"/>
+      <category term="Hexo" scheme="https://amonxu.com/tags/Hexo/"/>
     
   </entry>
   
   <entry>
-    <title>《一个地方，又名：人满为患》</title>
-    <link href="https://amonxu.com/2023/07/22/2023-04-07-11/"/>
-    <id>https://amonxu.com/2023/07/22/2023-04-07-11/</id>
+    <title>《一个地方，人满为患》</title>
+    <link href="https://amonxu.com/2023/07/22/zh-CN/2023-07-22-Hospital/"/>
+    <id>https://amonxu.com/2023/07/22/zh-CN/2023-07-22-Hospital/</id>
     <published>2023-07-21T17:01:01.000Z</published>
-    <updated>2023-07-24T07:31:13.781Z</updated>
+    <updated>2023-09-04T09:48:48.528Z</updated>
     
     <content type="html"><![CDATA[<p>里面，</p><p>取号，<br>排队，<br>叫号，<br>付费。</p><p>一切为了活着。</p><hr><p>外面，</p><p>工作，<br>生活，<br>享乐，<br>受罪。</p><p>活着为了一切。</p>]]></content>
     
@@ -72,10 +80,10 @@
   
   <entry>
     <title>《我》</title>
-    <link href="https://amonxu.com/2023/04/07/2023-04-07-My-King/"/>
-    <id>https://amonxu.com/2023/04/07/2023-04-07-My-King/</id>
+    <link href="https://amonxu.com/2023/04/07/zh-CN/2023-04-07-My-King/"/>
+    <id>https://amonxu.com/2023/04/07/zh-CN/2023-04-07-My-King/</id>
     <published>2023-04-06T17:01:01.000Z</published>
-    <updated>2023-06-03T13:03:21.980Z</updated>
+    <updated>2023-09-04T09:49:02.398Z</updated>
     
     <content type="html"><![CDATA[<p>早高峰的洪流中，<br>我被人群簇拥着，<br>仿佛生命之王。</p><p>我感觉自己，<br>活着。<br>但又感觉，<br>死了。</p><blockquote><p>ChatGPT辅助创作</p></blockquote>]]></content>
     
@@ -104,10 +112,10 @@
   
   <entry>
     <title>《山 · 其二》</title>
-    <link href="https://amonxu.com/2022/12/02/2022-12-02-Mountain/"/>
-    <id>https://amonxu.com/2022/12/02/2022-12-02-Mountain/</id>
+    <link href="https://amonxu.com/2022/12/02/zh-CN/2022-12-02-Mountain/"/>
+    <id>https://amonxu.com/2022/12/02/zh-CN/2022-12-02-Mountain/</id>
     <published>2022-12-01T17:01:01.000Z</published>
-    <updated>2023-06-03T12:59:26.925Z</updated>
+    <updated>2023-09-04T09:54:17.938Z</updated>
     
     <content type="html"><![CDATA[<p>任务堆积如山，<br>债务堆积如山，<br>茫茫一片看不见。</p><p>我，<br>堆积如山。</p>]]></content>
     
@@ -133,10 +141,10 @@
   
   <entry>
     <title>《山 · 其一》</title>
-    <link href="https://amonxu.com/2022/12/01/2022-12-01-Mountain/"/>
-    <id>https://amonxu.com/2022/12/01/2022-12-01-Mountain/</id>
+    <link href="https://amonxu.com/2022/12/01/zh-CN/2022-12-01-Mountain/"/>
+    <id>https://amonxu.com/2022/12/01/zh-CN/2022-12-01-Mountain/</id>
     <published>2022-11-30T17:01:01.000Z</published>
-    <updated>2023-06-03T12:21:51.797Z</updated>
+    <updated>2023-09-04T09:54:21.567Z</updated>
     
     <content type="html"><![CDATA[<p>列车从远方，<br>卸下年轻人，<br>拉走父母妻儿，<br>和中老年。</p><p>他们身前，<br>是扬起的帆，<br>他们身后，<br>是累累的山。</p>]]></content>
     
@@ -162,10 +170,10 @@
   
   <entry>
     <title>《地铁》</title>
-    <link href="https://amonxu.com/2022/11/30/2022-11-30-Metro-Train/"/>
-    <id>https://amonxu.com/2022/11/30/2022-11-30-Metro-Train/</id>
+    <link href="https://amonxu.com/2022/11/30/zh-CN/2022-11-30-Metro-Train/"/>
+    <id>https://amonxu.com/2022/11/30/zh-CN/2022-11-30-Metro-Train/</id>
     <published>2022-11-29T17:01:01.000Z</published>
-    <updated>2023-06-03T12:36:15.147Z</updated>
+    <updated>2023-09-04T09:54:24.382Z</updated>
     
     <content type="html"><![CDATA[<p>一头野兽，<br>在地下怒吼狂奔，<br>他吞掉情侣夫妻父母儿女，<br>吐出一个个沉默的打工人。</p>]]></content>
     
@@ -190,10 +198,10 @@
   
   <entry>
     <title>写于11月27日</title>
-    <link href="https://amonxu.com/2022/11/27/2022-11-27-Date/"/>
-    <id>https://amonxu.com/2022/11/27/2022-11-27-Date/</id>
+    <link href="https://amonxu.com/2022/11/27/zh-CN/2022-11-27-Date/"/>
+    <id>https://amonxu.com/2022/11/27/zh-CN/2022-11-27-Date/</id>
     <published>2022-11-27T14:18:01.000Z</published>
-    <updated>2022-11-27T14:20:42.975Z</updated>
+    <updated>2023-09-04T09:54:27.000Z</updated>
     
     <content type="html"><![CDATA[<p>8年前的一天，在一家粤菜店吃不是饭点的午饭时，我一边品着大麦茶，一边对着左顾右盼着餐厅不多的客人。</p><p>餐厅播放着无聊的节目，但当我转头看向电子时钟，上面跳动着猩红色的数字：2014年11月27日。</p><p>恍惚间，这年这月这日组成这一串，于我陌生无比，不知是外星数字来了地球，还是我这地球人去了外星。</p><p>2-0-1-4，2014年？我印象中并没有这么个年，要说有的，大概是些刚毕业时上大学，刚高考完读高中，刚升高中读初中，升初中时读小学的那些年。</p><p>1-1-2-7，11月27日？还早呢。我并没有十一长假，也未曾过过中秋，说起端午，粽子也没吃过，五一呢，我倒没什么记忆深刻的事情。</p><p>现在，又是11月27日。</p>]]></content>
     
@@ -219,20 +227,19 @@
   
   <entry>
     <title>从优雅地查看K8s应用日志聊到日志管理</title>
-    <link href="https://amonxu.com/2022/10/12/2022-10-12-K8S-Logs/"/>
-    <id>https://amonxu.com/2022/10/12/2022-10-12-K8S-Logs/</id>
+    <link href="https://amonxu.com/2022/10/12/zh-CN/2022-10-12-K8S-Logs/"/>
+    <id>https://amonxu.com/2022/10/12/zh-CN/2022-10-12-K8S-Logs/</id>
     <published>2022-10-12T13:00:01.000Z</published>
-    <updated>2022-11-27T14:23:26.741Z</updated>
+    <updated>2023-09-15T09:46:55.067Z</updated>
     
-    <content type="html"><![CDATA[<p>曾不知在哪听过一经典名句：程序员的工作只有两件事，一是写 Bug，二是找 Bug。</p><p>说归说笑归笑，奈何话糙理不糙。而在真正排查 Bug 时，才深刻体会到另一名句：不写日志一时爽，排查 Bug 火Z场。</p><p>日志管理，一直是开发人员的老大难题。这个老大难题，大致分为几块内容：</p><h3 id="1-打印日志"><a href="#1-打印日志" class="headerlink" title="1. 打印日志"></a>1. 打印日志</h3><p>狭义上的日志管理，也即打印日志。套用 3W1H 分析方法可以分为几个子问题：</p><ol><li>Why 为什么要打日志<br> 显而易见，日志是记录关键信息和数据的地方，以备未来排查问题和数据统计分析之用。</li><li><p>What 要打什么样的日志</p></li><li><p>Where/When 在哪里/什么时候打日志</p></li><li>How 怎么打日志</li></ol><h3 id="2-记录日志"><a href="#2-记录日志" class="headerlink" title="2. 记录日志"></a>2. 记录日志</h3><h3 id="3-查看日志"><a href="#3-查看日志" class="headerlink" title="3. 查看日志"></a>3. 查看日志</h3>]]></content>
+    <content type="html"><![CDATA[<p>曾不知在哪听过一经典名句：程序员的工作有两件事，一是写 Bug，二是找 Bug。</p><p>说归说笑归笑，奈何话糙理不糙：在程序员的工作中，Bug的排查分析和解决验证确实占相当可观的一部分时间。<br>那么说到，而在真正排查 Bug 时，才深刻体会到另一名句：不写日志一时爽，排查 Bug 火Z场。</p><p>日志管理，一直是开发人员的老大难题。这个老大难题，大致分为几块内容：</p><h3 id="1-打印日志"><a href="#1-打印日志" class="headerlink" title="1. 打印日志"></a>1. 打印日志</h3><p>狭义上的日志管理，也即打印日志。套用 3W1H 分析方法可以分为几个子问题：</p><ol><li>Why 为什么要打日志<br> 显而易见，日志是记录关键信息和数据的地方，以备未来排查问题和数据统计分析之用。</li><li><p>What 要打什么样的日志</p></li><li><p>Where/When 在哪里/什么时候打日志</p></li><li>How 怎么打日志</li></ol><h3 id="2-记录日志"><a href="#2-记录日志" class="headerlink" title="2. 记录日志"></a>2. 记录日志</h3><h3 id="3-查看日志"><a href="#3-查看日志" class="headerlink" title="3. 查看日志"></a>3. 查看日志</h3>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;曾不知在哪听过一经典名句：程序员的工作只有两件事，一是写 Bug，二是找 Bug。&lt;/p&gt;
-&lt;p&gt;说归说笑归笑，奈何话糙理不糙。而在真正排查 Bug 时，才深刻体会到另一名句：不写日志一时爽，排查 Bug 火Z场。&lt;/p&gt;
-&lt;p&gt;日志管理，一直是开发人员的老大难题。这个老大
+        &lt;p&gt;曾不知在哪听过一经典名句：程序员的工作有两件事，一是写 Bug，二是找 Bug。&lt;/p&gt;
+&lt;p&gt;说归说笑归笑，奈何话糙理不糙：在程序员的工作中，Bug的排查分析和解决验证确实占相当可观的一部分时间。&lt;br&gt;那么说到，而在真正排查 Bug 时，才深刻体会到另一名句：不写日志一
       
     
     </summary>
@@ -252,10 +259,10 @@
   
   <entry>
     <title>《中国折叠》</title>
-    <link href="https://amonxu.com/2022/08/18/2022-08-18-Folding-World/"/>
-    <id>https://amonxu.com/2022/08/18/2022-08-18-Folding-World/</id>
+    <link href="https://amonxu.com/2022/08/18/zh-CN/2022-08-18-Folding-World/"/>
+    <id>https://amonxu.com/2022/08/18/zh-CN/2022-08-18-Folding-World/</id>
     <published>2022-08-17T17:01:01.000Z</published>
-    <updated>2023-06-03T13:03:02.056Z</updated>
+    <updated>2023-09-04T09:54:34.199Z</updated>
     
     <content type="html"><![CDATA[<p>我折叠了中国，<br>因为我想你，<br>想你到突破几何距离。</p><p>广东和江西叠在一起，<br>你叠进我的身体。</p><blockquote><p>写给一对分隔粤赣两地的恋人</p></blockquote>]]></content>
     
@@ -284,10 +291,10 @@
   
   <entry>
     <title>中国人民的老朋友——从书中人物的角度读 《红星照耀中国》</title>
-    <link href="https://amonxu.com/2022/05/04/2022-05-04-Red-Star-Over-China/"/>
-    <id>https://amonxu.com/2022/05/04/2022-05-04-Red-Star-Over-China/</id>
+    <link href="https://amonxu.com/2022/05/04/zh-CN/2022-05-04-Red-Star-Over-China/"/>
+    <id>https://amonxu.com/2022/05/04/zh-CN/2022-05-04-Red-Star-Over-China/</id>
     <published>2022-05-04T10:21:21.000Z</published>
-    <updated>2022-05-08T11:55:19.679Z</updated>
+    <updated>2023-09-04T09:56:25.872Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://img2.doubanio.com/view/subject/l/public/s29109031.jpg" alt="cover" style="zoom: 50%;"></p><p>我们知道，对于一个外国人来说，在中国所能获得的最高荣誉，大概是：“中国人民的老朋友”。<br>而今天谈到这本书的作者埃德加·斯诺，正是其中一员。</p><p>理解这个人物并不太难，大致等于我们国内有个年轻人，20岁出头时奔赴一个贫穷落后、内忧外患、战乱丛生的国家当记者，且一干就是14年。另外当了2年大学讲师，结识了这个国家很多的名人名士。<br>该国内忧外患之际，内部派别纷争，他冒着枪林弹雨风险突破顽固派的封锁线，前往进步派的根据地采访，与进步派的领导人和平民们深入沟通交流，并为世界第一次呈现进步派在被顽固派多年的打压和封锁下的情况与精神面貌。<br>后来该国遭遇外部侵略战争，他积极活动参与该国的抗战解放斗争，著作了大量的进步书籍，向世界揭露进步派的真实形象。<br>等到胜利解放后，他又几次故国重游，受到广泛的热烈欢迎。他逝世时，甚至将部分骨灰撒在这个国家，许多该国领导人和名人都来参加安葬仪式。<br>这，大致就是斯诺与中国的渊源。</p><p>未完待续…</p>]]></content>
     
@@ -314,10 +321,10 @@
   
   <entry>
     <title>峥嵘岁月宏图起，东风荡，春来早</title>
-    <link href="https://amonxu.com/2021/12/04/2021-12-04-Mao/"/>
-    <id>https://amonxu.com/2021/12/04/2021-12-04-Mao/</id>
+    <link href="https://amonxu.com/2021/12/04/zh-CN/2021-12-04-Mao/"/>
+    <id>https://amonxu.com/2021/12/04/zh-CN/2021-12-04-Mao/</id>
     <published>2021-12-04T13:00:01.000Z</published>
-    <updated>2022-05-08T12:06:00.083Z</updated>
+    <updated>2023-09-04T09:56:29.552Z</updated>
     
     <content type="html"><![CDATA[<p>革命江山风光好，红旗飘，干劲高，大地争艳，比学赶帮超。磊磊胸怀盛世界，私全抛，难不倒。</p><p>万里征途奋今朝，党领导，人年少，万紫千红竟妖娆。<strong>峥嵘岁月宏图起，东风荡，春来早。</strong></p>]]></content>
     
@@ -343,10 +350,10 @@
   
   <entry>
     <title>《Redis设计与实现》读后感</title>
-    <link href="https://amonxu.com/2021/06/28/2021-06-28-Redis-Book/"/>
-    <id>https://amonxu.com/2021/06/28/2021-06-28-Redis-Book/</id>
+    <link href="https://amonxu.com/2021/06/28/zh-CN/2021-06-28-Redis-Book/"/>
+    <id>https://amonxu.com/2021/06/28/zh-CN/2021-06-28-Redis-Book/</id>
     <published>2021-06-28T14:00:01.000Z</published>
-    <updated>2022-05-08T12:06:12.692Z</updated>
+    <updated>2023-09-04T09:56:32.601Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://img1.doubanio.com/view/subject/l/public/s27297117.jpg" alt="img" style="zoom: 33%;"></p><p>认识这本书是好几年前了，那时候在一个胖胖哒同事桌前翻了几页；第一次看是3年前，看过几章大概到跳表那里；重新看完是3年后的今天，用时13时14分。</p><p>这本书确实是好书，以前对Redis的理解太过浅显（当然现在也未必多佳，但拜本书所赐，必不可同当年而语）。</p><p>书的结构非常好，从底层数据结构讲起，再到基本功能，高级功能，扩展功能。即使是每一节的内容，也非常有趣。从大致说明，基本用法，解释原理，数据结构图示，再到最后的总结。读来不觉乏味，这也和Redis本身清晰简洁的设计相符。</p><p>感谢本书作者，也感谢阅读中那些精彩的读者分享和讨论。 </p>]]></content>
     
@@ -373,10 +380,10 @@
   
   <entry>
     <title>关于书包的事</title>
-    <link href="https://amonxu.com/2021/06/03/2021-06-03-School-Bag/"/>
-    <id>https://amonxu.com/2021/06/03/2021-06-03-School-Bag/</id>
+    <link href="https://amonxu.com/2021/06/03/zh-CN/2021-06-03-School-Bag/"/>
+    <id>https://amonxu.com/2021/06/03/zh-CN/2021-06-03-School-Bag/</id>
     <published>2021-06-03T15:21:22.000Z</published>
-    <updated>2021-06-04T13:35:54.213Z</updated>
+    <updated>2023-09-04T09:56:35.371Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://pic2.zhimg.com/80/v2-c1183d4a75bb9d253caee6d1f379094a_1440w.jpg?source=1940ef5c" alt="img" style="zoom:67%;"></p><blockquote><p><em>（题图：书包与骨头，取自《阳光灿烂的日子》 &amp; 《2001太空漫游》）</em></p></blockquote><h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>小男孩跟随母亲，步行很远来到热闹的集市。母亲挤在拥挤的人群，对着两旁铺位的商品左顾右盼，男孩从人群的手臂和大腿中钻过，直到停在一家卖箱包的铺位前。男孩的头，刚好超出铺位，能看到上面整齐摆列的包。</p><p>老板是一个擅长使嘴的中年女人，来往的行人，不管男女老幼美丑富贫，都被她喋喋不休的嘴，说得不由流连驻足。男孩听过唾沫横飞之类的词语，但觉得唾沫不应该是横飞的，而是上下翻飞，从老板并不优美的嘴唇里蹦出，跳着并不优美的舞蹈。</p><p>男孩眼光还在被各式各样的书包吸引的目不暇接，但母亲已和老板开始了对价格的彼此试探，于是男孩眼看着心仪的书包们一一从货架上取了下来，又一一挂了回去。最终，一个样式略普通的书包幸运地留了下来，在母亲一阵并不利索的掏钱付款后，老板将包装好的书包拿给男孩。</p><p>男孩接过新书包，欢天喜地地抱在怀里，自然很快将刚才看过那些花花绿绿的书包，通通抛诸脑后。甚至不舍得现在立刻背上它，一定要等到开学的那天，才能享用。</p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>这是一块被压缩存储、且正处于被清理边缘的记忆。来源于周末忽然地，手洗儿童书包。</p><p>一个普通的儿童背包，布料、结构和拉锁都是扎实的，只有边角处曾被洗衣机绞出一个小洞。</p><p>很久没有仔细看过儿童书包，儿童书包的样式，也几十年也鲜有变化。两根带子，几个拉锁分出来不同的包，左右两个口袋，正面再印上小朋友时下喜欢的图案。一个书包就这样制造完毕。</p><p>在我记忆里，小时候书包的种类还有不少：双肩包、挎包、拉锁的、系绳的、粘带的等等，样式各异，价格也差距不小。</p><p>普通一点的书包，自然没什么好看的图案，大多是印着字，比如一个“派”字。每每看到都会疑惑这个派字是何含义，又不免联想到派出所、帮派之意，以致在集市卖书包的铺位上，总会仔细寻找有没有带有“警”或“帮”的书包，以验证自己不成熟的猜测。</p><p>直到初中学了几年英语，才终于明白“派”大抵是由“Style”翻译而来，至于为何不加个“头”，想来便是“派头”虽更容易理解，却无疑就多了一个字的制作成本。</p><p>除了“派”字书包，好一些的便是印有各种图案的书包，这种自然也贵一些，非家境殷实一些的不会买。图案多是些奥特曼、动画角色之类，类似现在的冰雪奇缘与超级飞侠之类。可惜我已忘却我有没有背过这种书包（大概是没有的）。小学时光最后留下的一个书包，是没有图案的系绳书包，我用它来把少时所有的“玩具”都装了进去。（这些玩具且值一提，见又一篇<a href="">《我的玩具史》</a>）</p><h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>这是另一个男孩的故事。王焱，哥哥名叫王垚，兄弟俩五行一个缺火、一个缺土。他们的母亲是一个精明讲究的女人，由为哥俩看生辰八字便可略知一二。除此之外，哥俩稍大了些，她独自带着两兄弟从乡下来到城里上学。</p><p>在城里租房子的同一院内，除了这俩上幼儿园和小学三年级的兄弟，另有一对初三的姐弟和一对高三的姐弟。王家兄弟继承了其母亲的精明，哥哥多了几分正经与狡猾，弟弟则多了些可爱与温柔。平日里大家多喜欢逗弟弟玩。</p><p>每天上学的早上，弟弟准时背上他硕大的书包，大到里面估计装进了他所有的东西，仰着他稚气的脸，一颠一颠地跟在他母亲的后面。他母亲一边赶着那辆不再崭新的自行车，一边对着屋子里的哥哥念念叨叨，嘱咐些什么，直至走出大门，方才听不到她的声音。</p><p>他母亲是不会帮他背书包的，仿佛只有让他背着这个远远超出他年龄的书包，他才能快速长大。每每此时，站在二楼往下看他们背影的我，那个高三的弟弟，总会眼睛跟着一颠一颠的书包，疑惑它里面究竟装了些什么。</p><h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p>我本想同住院里一年半载，能竹筒倒豆搬出一些这哥俩的轶事，但到这里关于他们更多的，竟也憋不出一二。又想到，如今的王家弟弟年纪和我当时一样，在高三升大学的年纪，王家哥哥则应该已踏入社会。而我如今，打工人尔。</p><p>王家弟弟变成那时的我，我变成了那时他们的母亲，他们的母亲变成了那时我的母亲，我的孩子变成那时的他们。</p><p>我们都以为自己不会变，但不知不觉间还是变成了其他人。世界没有变，我们却说世界变了，我们没变。</p><p>—— 2021.6.4.夜</p>]]></content>
     
@@ -401,10 +408,10 @@
   
   <entry>
     <title>商业案例——如何“快速体面”地退出市场</title>
-    <link href="https://amonxu.com/2021/03/25/2021-03-25-Made-Stupid-Again/"/>
-    <id>https://amonxu.com/2021/03/25/2021-03-25-Made-Stupid-Again/</id>
+    <link href="https://amonxu.com/2021/03/25/zh-CN/2021-03-25-Made-Stupid-Again/"/>
+    <id>https://amonxu.com/2021/03/25/zh-CN/2021-03-25-Made-Stupid-Again/</id>
     <published>2021-03-25T13:26:33.000Z</published>
-    <updated>2021-03-25T13:49:51.392Z</updated>
+    <updated>2023-09-04T09:56:39.096Z</updated>
     
     <content type="html"><![CDATA[<p>Boss：“近几年，人傻钱多不太好使，开始嫌弃我们是洋垃圾品牌。我们总不能等到灰溜溜打包走人那一天，想个辙吧，我想光速从这消失”<br>“公告：拒绝使用xj棉花”<br>（一夜消失）<br>Boss：“道理我都懂，我问你这脸上的404从哪来的”</p><p><img src="https://z3.ax1x.com/2021/03/25/6XUPWF.png" alt="image 20210325212538940"></p>]]></content>
     
@@ -429,10 +436,10 @@
   
   <entry>
     <title>我的 2021-1 读书清单（小说类2）</title>
-    <link href="https://amonxu.com/2021/03/04/2021-03-04-2020-Wu-Xia/"/>
-    <id>https://amonxu.com/2021/03/04/2021-03-04-2020-Wu-Xia/</id>
+    <link href="https://amonxu.com/2021/03/04/zh-CN/2021-03-04-2020-Wu-Xia/"/>
+    <id>https://amonxu.com/2021/03/04/zh-CN/2021-03-04-2020-Wu-Xia/</id>
     <published>2021-03-04T14:22:22.000Z</published>
-    <updated>2021-03-04T14:00:40.918Z</updated>
+    <updated>2023-09-04T09:56:43.682Z</updated>
     
     <content type="html"><![CDATA[<p>《射雕英雄传》</p><p><img src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/1b4c510fd9f9d72ae2b9e7afdf2a2834359bbba7.jpg" alt="img" style="zoom:80%;"></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=25638777&auto=1&height=66"></iframe><p>和很多小男孩一样，小时候我是个十足的武侠迷，常常幻想着飞檐走壁，劫富济贫，弹指间敌人灰飞烟灭，最后厌倦了江湖的尔虞我诈，携美人退隐山林，过着哥虽不在江湖但江湖有哥传说的日子。</p><p>不知从何时起，逐渐意识到电视上的高手都是演员，飞檐走壁是吊了威亚，降龙十八掌是加了特效，鹤顶红、断肠散之流可能是道具饮料，甚至被坏人害死的人趁着观众哭泣的时候在对盒饭大快朵颐…然后，慢慢洗去了身体和心理上的武侠气息，不再准备仗剑走天涯，安心做个阳光宅男。</p><p>又不知多少年后，一个动荡的2020年，偶然翻出一本《射雕英雄传》，一发不可收拾地扎入了消失已久的武侠世界中。</p><p>这个世界，人们好讲武德，话不投机拳脚上比高低，毋庸顾虑太多，不服就干。人们别无他求，只为获得绝世武功，扬名立万。身首异处，在所不惜。</p><p>射雕英雄传，本质上是讲一个刻意练习的案例，天资愚钝的郭靖，凭借着自己超乎寻常的刻苦训练，和全真七子、江南七怪、洪七公、黄蓉等各路名家大师，以及科学的方法，最终成为武学翘楚。</p><p>又想到，郭靖成为一代高手，又与世上绝顶聪明的黄蓉在一起，却也最后落个师父各个惨死桃花岛，桃花岛人去岛空。二人跟随成吉思汗大军西征，建功立业可谓信手拈来，然而大汗驾崩之后，二人也自枯草和白骨之间，返回故土。</p><p>可见武侠世界也并非为所欲为，亦然有悲欢离合，大侠亦然会失去亲情友情，荣华富贵皆过眼烟云。凡世间的那点苦痛，又算几何。</p><p>未完待续…</p>]]></content>
     
@@ -461,10 +468,10 @@
   
   <entry>
     <title>我的 2021-1 读书清单（小说类）</title>
-    <link href="https://amonxu.com/2021/02/22/2021-02-22-2020-Reading-Report/"/>
-    <id>https://amonxu.com/2021/02/22/2021-02-22-2020-Reading-Report/</id>
+    <link href="https://amonxu.com/2021/02/22/zh-CN/2021-02-22-2020-Reading-Report/"/>
+    <id>https://amonxu.com/2021/02/22/zh-CN/2021-02-22-2020-Reading-Report/</id>
     <published>2021-02-22T13:21:21.000Z</published>
-    <updated>2021-03-04T13:46:27.160Z</updated>
+    <updated>2023-09-04T09:56:46.009Z</updated>
     
     <content type="html"><![CDATA[<p>《冰与火之歌》</p><p><img src="https://gss0.baidu.com/70cFfyinKgQFm2e88IuM_a/baike/pic/item/2fdda3cc7cd98d10275970bb2a3fb80e7aec90ae.jpg" alt="img" style="zoom: 80%;"></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=34828458&auto=1&height=66"></iframe><p>2011年，美剧《权力的游戏》第一季首播，等到我接触时，已经是2014年。在快速看完已出的四季之后，一年一更的等待显然不能满足我的热爱，于是开始翻原著小说。等到完全读完原著小说五卷后，时间已经来到了2020年。</p><p>原著小说我是把整个五卷下载起来，导入到Kindle中看的。因为内容太长，加上莫名的Bug，没有进度条。至于目录嘛，差不多长这样：</p><blockquote><p>POV 1 布兰</p><p>POV 2 凯特琳</p><p>POV 3 丹妮莉丝</p><p>POV n 猛猛如玉</p></blockquote><p>没有阅读进度，形容虚设的目录功能，导致整个阅读体验像是被判无期徒刑。</p><hr><p>六年是段漫长的日子，在这漫长的日子里，太多的阻碍诱惑阻止人读下去。因为疫情缘故，忽然多了很多时间，于是把Kindle充满电，重新进入维斯特洛大陆。</p><p>后来偶然得知一个朋友也在看原著，瞬间有种划着船在大海上漂流、看到其他船只的感觉。看着朋友的阅读进度，对着我当时看的故事情节，像跟着水痕行船。在之后听说对方已经看完的时候，我也意识到：故事，早晚会结束的。</p><p>结束来临的时候，没有任何预兆。凯冯爵士刚准备重振狮家荣耀，转眼领了盒饭（剧集中改编成了大学士派席尔的领盒饭方式），脑中还没猜好接下来会发生什么，故事戛然而止。像之前看过的伟人传记一样，当生命结束之时，没有任何的总结概述，也没有任何的抒情，像一本未完的书，永远地停留在那一页。</p><hr><p>关于此书，毋庸多言。横跨几年的阅读，诸多的感受和故事情节早已模糊。而印象最深刻的，要属其细腻丰富的文笔（当然我看的是中文翻译版的，而恰是中文翻译版，亦颇有中国现代文学之散文的风范。可知原著只会有过之而无不及，虽然可能咱这辈子也感受不到了&gt;_&lt;）</p><p>弱水三千只取一瓢，这里就摘一小段聊作意思罢。摘自《冰与火之歌》卷三 《冰雨的风暴》。</p><blockquote><p>​    雪花飘进房间，侍女下意识地裹紧毯子。珊莎打开房门，走下螺旋梯。当她接着<br> 打开通往花园的大门时，眼前的美景让她不由得屏住呼吸，惊讶于那份不属于人间<br> 的宁静。雪花飘啊飘，悠远的暗香与孤寂，它们沉甸甸、不受打扰地着陆。人间的全<br> 部色彩纷纷败下阵来，遁逃无踪，唯有黑、白和灰：白的高塔、白的雪和白的雕像，黑<br> 的影子与黑的树，灰的天空。一个纯粹的世界，珊莎心想，一个不属于我的世<br> 界。<br>​    她如梦似幻地踏步出门，靴子在顺滑的白雪表面留下及踝深的孔洞，却没发出<br> 任何声音。她走过结霜的矮木丛，望着细瘦的黑树干，不知自己是否仍在梦中。飘飞<br> 的雪花犹如情人温柔的亲吻，划过脸庞，因体温而融化。她来到花园中央，站在倒<br> 塌、半埋没的哭泣女人雕像旁，闭上双眼，举头向天。她闻到雪花的舞蹈，品尝着雪<br> 的滋味。这是临冬城的滋味，清白的滋味，梦的滋味。<br>​    当她睁开眼睛，发觉自己已然下跪，却不记得其中经过。天空泛白，黎明来到。<br> 这是新的一天，她心想，指引着未来。可她渴望的却是回到过去，祈祷能回到过<br> 去。她应该对谁祈祷?这座小花园原本是要栽培成神木林的，但土壤过于细薄多石，<br> 鱼梁木难以生根。一座没有心树、没有神灵的神木林，和我一样，空虚，空<br> 虚。</p></blockquote><p>看完这一段，是不是像极了我们读过的那些散文，甚至有点老舍《济南的冬天》那味儿。单独拎出来弄不好可以成一篇《鹰巢城的冬天》/狗头。</p><p>故事至此时，珊莎一家，父亲在君临城身首异处，妹妹毫无音信，母亲和哥哥奔流城遭遇血色婚礼，两个弟弟在北境不知所踪。经历了君临的闹剧后，她随小指头来到了母亲妹妹所在的鹰巢城，像一颗任人摆布的棋子，而即使身为棋子的过程，也是非常曲折和戏剧性的。</p><p><strong><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg3.doubanio.com%2Fview%2Fgroup_topic%2Fl%2Fpublic%2Fp174168920.jpg&refer=http%3A%2F%2Fimg3.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617371635&t=259190a564dca9016fd3644b03566365" alt="img" style="zoom: 80%;"></strong></p><p>这场大雪的描写和人物心理的刻画，无疑是瞎眼可见的震撼，我能想到的形容词唯有：<del>鹅妹子嘤</del> Amazing！</p><hr><p>后记：</p><p>本文写于2020年底，成文时间<strong>不详</strong>，据说不早于今日，未经求证。</p>]]></content>
     
@@ -493,10 +500,10 @@
   
   <entry>
     <title>《诗云》读后感</title>
-    <link href="https://amonxu.com/2021/02/04/2021-02-04-Poem-Cloud/"/>
-    <id>https://amonxu.com/2021/02/04/2021-02-04-Poem-Cloud/</id>
+    <link href="https://amonxu.com/2021/02/04/zh-CN/2021-02-04-Poem-Cloud/"/>
+    <id>https://amonxu.com/2021/02/04/zh-CN/2021-02-04-Poem-Cloud/</id>
     <published>2021-02-04T14:02:20.000Z</published>
-    <updated>2022-05-08T12:07:00.086Z</updated>
+    <updated>2023-09-04T09:56:48.018Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.ting456.com%2Fpic%2Fuploadimg%2F2014-6%2F611.jpg&refer=http%3A%2F%2Fwww.ting456.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1615035146&t=9fa2644ef3f1d2eb4be0ff378d4e5e21" alt="img" style="zoom: 80%;"></p><p>还有什么比神化作中国古代最杰出的文学艺术家之一的李白更浪漫的呢；</p><p>还有什么比神对人类古诗词产生兴趣更浪漫的呢；</p><p>还有什么比神弹指间毁灭太阳系只为作诗更浪漫的呢，</p><p>还有什么比一朵诗云创作出所有诗词可能性更浪漫的呢。</p><p>往前看，这个星球以前的虫子们创作出的诗词，没有创作出的诗词，都在诗云之中；往后看，这个星球未来的虫子们可能创作出的诗词，没有创作出的诗词，也都在诗云之中。</p><p>念天地之悠悠，独怆然而涕下。 </p>]]></content>
     
@@ -528,10 +535,10 @@
   
   <entry>
     <title>我的 2020 读书清单（外国文学类）</title>
-    <link href="https://amonxu.com/2021/01/22/2021-01-22-2020-Reading-Report/"/>
-    <id>https://amonxu.com/2021/01/22/2021-01-22-2020-Reading-Report/</id>
+    <link href="https://amonxu.com/2021/01/22/zh-CN/2021-01-22-2020-Reading-Report/"/>
+    <id>https://amonxu.com/2021/01/22/zh-CN/2021-01-22-2020-Reading-Report/</id>
     <published>2021-01-22T14:02:20.000Z</published>
-    <updated>2022-05-08T12:07:05.539Z</updated>
+    <updated>2023-09-04T09:56:50.058Z</updated>
     
     <content type="html"><![CDATA[<h3 id="《百年孤独》"><a href="#《百年孤独》" class="headerlink" title="《百年孤独》"></a>《百年孤独》</h3><p><img src="https://mmbiz.qlogo.cn/mmbiz_jpg/JOB96YWrQHdLPaGRxrcoRY0e1ac7M2y6wxazleN7wFuNPM5sbPTibZ1BSKUAcHGXbibULrkSYHEAYsxzZaLnDS9Q/0?wx_fmt=jpeg" alt="img" style="zoom: 25%;"></p><p>在网上各样推荐书单和排行榜中，《百年孤独》肯定要代表外国文学占上一席。如果要玩一个一句话猜作品的游戏，肯定会有人在下面写道：“<strong><em>多年以后，面对行刑队，奥雷里亚诺·布恩迪亚上校将会回想起父亲带他去见识冰块的那个遥远的下午</em></strong>”，或者玩出下雨梗，“<strong><em>马孔多在下雨</em></strong>”。</p><p>这一句，是书中第一句话，也是很多人看过这书的最后一句话，因为“奥雷里亚诺·布恩迪亚”这个名字实在太劝退人了。即使读者朋友勉强撑过第一句，接着出场的一位自称“梅尔基亚德斯”的炼金术士又成功劝退一批。哪怕顽强硬着头皮看下去，马上“何塞·阿尔卡蒂奥·布恩迪亚”让人彻底一口热血喷在书上。</p><p>这部书，看过的人很多，看完的人很少，看懂的人更少。如果说你看懂了，说明你没看明白；如果说你看明白了，说明你没看懂。一千个读者眼中有一千个哈姆雷特。在这部书中，有的人看到是民族历史，有的人看到是家族的兴亡，有的人看到的是家人乱伦，有的人看到魔幻现实等等…</p><p>说回我看这本书的历程，开书第一章的长名三连差点没把我也逼退，书中每出现一次角色名字，对我都是暴击（偏偏因为姓名重复度太高，书中角色名字大多数情况下都是姓+名的全称）。迫于(<del>无聊</del>)对名著的阅读渴求，在读了几十页，并且成功接受儿子和老子的姓名完全一样后，恭喜我自己，终于踏过这本书的第一道门槛了。</p><p>即使如此，看书的过程中，还是无数次有放下此书的冲动，布恩迪亚家族在男性取名方面，一直在用奥雷里亚诺和阿尔卡蒂奥做排列组合。经常读着读着不知道谁是谁，只好在网上找了一张人物关系图谱（如下）对照来看，生怕囫囵吞枣。</p><p>亲爱的读者，不要害怕看了这张图会被剧透，反正也看不懂，看懂了也记不住，记住了也不知道谁是谁<img src="https://mmbiz.qlogo.cn/mmbiz_png/JOB96YWrQHdLPaGRxrcoRY0e1ac7M2y6gW6g3IF8R2s9dsO4yCFloLzC1ibJZPS7SKAdMk9VQoVWjuSovjTzxaQ/0?wx_fmt=png" alt="img"></p><p><img src="https://mmbiz.qlogo.cn/mmbiz_jpg/JOB96YWrQHdLPaGRxrcoRY0e1ac7M2y6Gia1b0JHIKDhiaTwt28H3PEVJXZycfPkLNZ81tFaX54jFe43RyBHYQDw/0?wx_fmt=jpeg" alt="11"></p><p>看书时，经常有种哪里读过、似曾相识的感觉，总感觉有另一本书的影子。搜了一下，确实看到网上有一些关于这两本书的讨论。我只能感叹一句：“百年孤独，和白鹿原，真的好像啊。不同国家不同族群，演绎着一样的故事”。</p><p>在庞大家族和伟大著作同时戛然而止时，我唯有欲说还休。鲁迅在《再论雷峰塔的倒掉》中写道：<strong><em>悲剧将人生的有价值的东西毁灭给人看\</em></strong>。莫不如此。</p><p>摘录当时的阅后感：</p><blockquote><p>书名：百年孤独，但直到最后一刻、全书的最后一句，“百年孤独”四个字才出现在书中，第一次，也是唯一一次。<br>这是一部家族史，也是一部民族史，国家史，拉丁美洲史。<br>从开山辟地开始，种族逐渐兴旺发达，历经神话，科学，战争，现代化等等等等，到最后逐渐衰落、灭亡，乃至为飓风所吞噬。<br>似能读到全世界，又似乎什么也没有读到。<br>如果用一个词来总结全书，我能想到的只有：黄粱一梦。</p></blockquote><hr><h3 id="《人类群星闪耀时》"><a href="#《人类群星闪耀时》" class="headerlink" title="《人类群星闪耀时》"></a>《人类群星闪耀时》</h3><p><img src="https://mmbiz.qlogo.cn/mmbiz_jpg/JOB96YWrQHdLPaGRxrcoRY0e1ac7M2y6dMSEQKBghfYmzE1sibL3yPwic5Vb1ib1JBUkyCw5vRhsAGXFmoXK5ZfMg/0?wx_fmt=jpeg" alt="img" style="zoom:25%;"></p><p>未读此书时，我以为这本书听起来像是一部艺术类，至少是个历史类，但没想到是一部传记类，作者是人类“历史上最好的传记作家”。</p><p>跟随此书，我们都成了历史的见证者，亲历了太平洋的发现命名，君士坦丁堡的陷落，滑铁卢的拿破仑惨败，西塞罗的人头落地，和威尔逊总统超越时代的计划破产…</p><p>看完此书，我只有一个想法：</p><blockquote><p>不如叫《西方群星闪耀时》</p></blockquote>]]></content>
     
@@ -557,10 +564,10 @@
   
   <entry>
     <title>我的 2020 读书清单（中国文学类）</title>
-    <link href="https://amonxu.com/2021/01/05/2021-01-05-2020-Reading-Report/"/>
-    <id>https://amonxu.com/2021/01/05/2021-01-05-2020-Reading-Report/</id>
+    <link href="https://amonxu.com/2021/01/05/zh-CN/2021-01-05-2020-Reading-Report/"/>
+    <id>https://amonxu.com/2021/01/05/zh-CN/2021-01-05-2020-Reading-Report/</id>
     <published>2021-01-05T12:20:20.000Z</published>
-    <updated>2022-05-08T12:07:09.787Z</updated>
+    <updated>2023-09-04T09:56:53.455Z</updated>
     
     <content type="html"><![CDATA[<p><del>最开始想写完全部清单总结，再发出文章。但是一列清单，发现有点多，害怕断更，所以发到哪算哪吧。</del><br>上一篇文章发出后，幸而得到几笔不菲的赞助，这激发了我创作的热情，使我赶紧推出下一篇。感谢大胆破费的各位和不嫌弃的阅读者们。</p><ul><li><p>《一只特立独行的猪》</p><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Filib.byau.edu.cn%2F_upload%2Farticle%2Fimages%2Fd2%2Fbc%2F7af62fb747918f3238af1b6b5fe9%2F2d723266-43b6-4826-bfcc-fb4a4e0a6fbe.jpg&refer=http%3A%2F%2Filib.byau.edu.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612448266&t=861d472c2a6d5c6dfc59becdb28ed33b" alt="img" style="zoom:33%;"></p><p>早些年上中学时，对课外书籍阅读和对非教科书知识的求知欲望，和青春期那时其它的欲望一样强烈。只要落到手头上不是交完书杂费后发下来的教材，都要反复翻上几翻，连同桌的成语词典和牛津英汉词典都不能幸免。</p><p>那时为了提高学生们的作文写作能力，学生们似乎普遍有一种短篇集小册子，里面收录各种近现代的短篇散文、小说、杂文等等。自己甚至也曾厚着脸皮临摹过其中几篇，在文中借着别人的笔，描述着我没见过的风景，做着没干过的事。</p><p>其中有篇印象特别深刻，便是这篇《一只特立独行的猪》。文中，一头猪，拥有了智慧动物-人的特质，所以看起来它更像是一个人，而不是一头猪。这头猪对每天吃饭、睡觉、交配的生活产生了思考，开始有了自己和生活的对抗。</p><p>但很可惜，它的同伴是猪，而不是人。迎接它的也不是劳动模范或者优秀员工奖，而是猎人的围杀。到后来，它可能被铁锤给锤扁了，又或许从猎人的枪下逃走，躲进了山林里，又长回了獠牙。</p><p>书中后续的一些杂文，除了让我惊掉下巴，甚至一度萌发了像作者一样拿起笔杆子的冲动。但是很快就从这种虚拟快感中脱离，并进入了长久的贤者时间。</p><p>摘录当时的阅后感：</p><blockquote><p>引用作者文中的话做点评：<br>“从事这种研究，因为预知了的结果，同手淫很相似。一个男人在手淫之先，就预知结果是本人的射精。然而这不妨碍手淫在他的想象中有声有色地进行，这是因为有快感在支持。”<br>我们在读这本书前，已经预知了结果。然而这并不妨碍我们在想象中有声有色地进行，最终什么也没有看到，什么也没有读懂。</p></blockquote></li><li><p>《活着》</p><p><img src="https://img3.doubanio.com/view/subject/l/public/s29053580.jpg" alt="img" style="zoom: 67%;"></p><p>苦难文学，和伤痕文学，是我一直不想读不愿碰的领域。因为它们真的太沉重了，并且离我又并不遥远。每当看到这种书籍或者影视作品，就有种揭开伤疤的疼痛。</p><p>现在我们大都知道，我们身处一个技术爆炸的时代，人类最近短短几十年的发展速度，已经远超过去几千年人类的发展水平。指数级增长、摩尔定律，这些名词，已经不足以形容我们飞速进取的步伐。但农村和城市的世界是割裂的，农村的时间是缓慢的，慢到外面激流勇进、日新月异，里面却静水流深、几十年如一日。</p><p>对于从小生活在农村的我，苦难文学它并不只是文学的艺术，不只是挂在墙上发黄的老照片，不只是压在柜底的一条破毛巾，而是真正勒紧裤带饿肚皮的体验。</p><p>摘录当时的阅后感，感受福贵与生活扼住咽喉的对抗：</p><blockquote><p>生活可以赋予他所有苦难，唯独赋予不了绝望；生活可以剥夺他的所有一切，唯独剥夺不了他要活着。<br>用涓涓细流的时间，缓缓记下了福贵一生的流水账。福贵败光了家产，老爹在粪缸前摔死，老娘在福贵被抓去拉大炮后担心死，儿子有庆抽血至死，女儿凤霞难产而死，妻子家珍病怏怏而死，女婿干活出事故而死，外孙吃豆子噎死。<br>福贵后来买了一头老牛，和它生活在了一起。</p></blockquote></li><li><p>《围城》</p><p><img src="https://img1.doubanio.com/view/subject/l/public/s11276847.jpg" alt="img" style="zoom: 67%;"></p><p>读好书时，我们会萌发一种自己也要拿起笔杆子写作的冲动；读好到不行的书时，会萌发一种自己十年一百年也写不出来这种作品，索性放弃了罢。钱老的书属于后一类。</p><p>对于此书，我不敢多言，文中金句颇多，语言艺术极高。如果不能把你笑到肚子痛，算你肚子是铁做的。</p><p>“对于丑人，细看是一种残忍——除非他是坏人，你要惩罚他。”，对于这篇文章，细看也是一种残忍——除非你要惩罚我(T＿T)</p><p>摘录当时的阅后感：</p><blockquote><p>故事从一艘回国的船开始，方鸿渐在国外荒废几年光阴，最后慌不迭买了一份假文凭回国。</p><p>回国的船上，方鸿渐邂逅了年轻时眼光高，最后剩下来只好便宜老实人的苏文纨，并与局部真理鲍小姐发生一夜情。</p><p>下船后，因为之前吹了牛皮，再经岳父一家添油加醋，方俨然成为附近名人。甚至阴差阳错去学校来一场关于梅毒和鸦片的西方文明演讲。</p><p>沾着老丈人的光去了国外留学，回国又去了老丈人的点金银行。方鸿渐开始和苏文纨交往起来，没曾想误打误撞方喜欢上了苏的表妹唐晓芙，又和苏的爱慕者赵辛楣成为铁哥们。</p><p>得不到的永远在骚动，被偏爱的有恃无恐。赵喜欢苏，苏喜欢方，方游离于酥糖小姐之间，唐喜欢方但又碍于表姐情面。</p><p>感情最能折磨人，后果是方与酥糖小姐都闹掰了，苏另寻新欢死了赵辛楣的心，然后一对感情上的难兄弟结伴，去到内地三闾大学任教。</p><p>一路颠簸流离之下，终于抵达。方也认识了同行的孙柔嘉。在内地闭塞的三闾大学，方不巧与孙柔嘉结为伴侣。而赵辛楣与汪太太的偷情发现，也使得他再次出走重庆。</p><p>少了赵辛楣的方，携妻回上海，开始与孙柔嘉疲于琐碎的家庭生活。平淡的生活甚至捏不出半点水来，生活总在吵架中和吵架后来回切换。</p><p>方是一个“你不讨厌，但全无用处”的人，没有继承方老的大家风范，也没有赵辛楣的雄厚人脉和左右逢源的能力，虽留洋归来却高不成低不就，夸张一点心比天高 命比纸薄。</p><p>孙是一个刚毕业的普通大学生，青年有志不愿留在上海，相貌可以算上平庸，性格也没什么亮点，甚为怕生。没有苏文纨的留洋经历，也没有苏的家庭背景，更没有唐晓芙的相貌和气质。</p><p>两个普通的人，也算得上一对相爱的人，但结婚的人们大都像两只亲密的刺猬，靠的太近容易扎得彼此遍体鳞伤，用创造新伤口和治愈旧伤口的痛苦，以对抗苦闷的生活。</p><p>没有蚊子血，没有白月光，有的只是平庸的人和困乏的生活。最后方下决心待孙好，孙等方回家吃饭，然而阴差阳错地饭没吃成，又大吵一架，孙离家远去。</p><p>方在痛苦中，那座号称每点钟走慢7分的旧钟，敲响了五个钟头前的时间。五个钟头前，是一切看起来将要美好的时候，而现实，总会令人陷入泥潭。</p></blockquote></li></ul>]]></content>
     
@@ -588,10 +595,10 @@
   
   <entry>
     <title>我的 2020 读书清单（历史类）</title>
-    <link href="https://amonxu.com/2021/01/01/2021-01-01-2020-Reading-Note-History/"/>
-    <id>https://amonxu.com/2021/01/01/2021-01-01-2020-Reading-Note-History/</id>
+    <link href="https://amonxu.com/2021/01/01/zh-CN/2021-01-01-2020-Reading-Note-History/"/>
+    <id>https://amonxu.com/2021/01/01/zh-CN/2021-01-01-2020-Reading-Note-History/</id>
     <published>2021-01-01T02:10:10.000Z</published>
-    <updated>2022-05-08T12:07:13.599Z</updated>
+    <updated>2023-09-04T09:56:56.738Z</updated>
     
     <content type="html"><![CDATA[<ul><li><p>《万历十五年》</p><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-d3d88ecec3cfd6ae7287c116a7d5a0ad_1200x500.jpg&refer=http%3A%2F%2Fpic1.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612359116&t=5129f04dec5bed51cac82e139a871847" alt="img" style="zoom: 50%;"></p><p>这本书，算是历史类书籍的网红书了，凡推荐历史类书籍者，此书无不赫然在列。原本以为它是一本晦涩难懂的历史著作，结果并非如此。文中分别从万历皇帝、申时行、张居正、海瑞、戚继光、李贽这几位文官武将的角度，来显微镜般观察大明王朝。</p><p>于是我们知道了，万历皇帝并非一个无所事事的皇帝，即使28年不上朝，也并未远离朝堂之高。28年不上朝，是对苦闷生活的烦恼，对治理国家的厌倦，对明白身为皇帝并非无所不能真相的妥协，对想成为好皇帝而不成的最后倔强。<strong>万历确实是位好皇帝，或者说每个皇帝可能都是好皇帝，至少曾经是。</strong></p><p>摘录当时的阅后感，感受成为历史一部分的绝望：</p><blockquote><p>引用原文：</p><p>当一个人口众多的国家，各人行动全凭儒家简单粗浅而又无法固定的原则所限制，而法律又缺乏创造性，则其社会发展的程度，必然受到限制。即便是宗旨善良，也不能补助技术之不及。1587年，是为万历十五年，丁亥次岁，表面上似乎是四海升平，无事可记，实际上我们的大明帝国却已经走到了它发展的尽头。在这个时候，皇帝的励精图治或者宴安耽乐，首辅的独裁或者调和，高级将领的富于创造或者习于苟安，文官的廉洁奉公或者贪污舞弊，思想家的极端进步或者绝对保守，最后的结果，都是无分善恶，统统不能在事业上取得有意义的发展，有的身败，有的名裂，还有的人则身败而兼名裂。因此我们的故事只好在这里作悲剧性的结束。万历丁亥年的年鉴，是为历史上一部失败的总记录。</p></blockquote></li><li><p>《资治通鉴》</p><p><img src="https://graph.baidu.com/thumb/v4/2636712919,1535833181.jpg" alt="img" style="zoom: 80%;"></p><p>从小我们便念顺口溜般唱出：“<em>夏商与西周，东周分两段。春秋和战国，一统秦两汉。三国魏蜀吴，两晋前后延。南北朝并立，隋唐五代传。宋元明清后，王朝至此完。</em>”。</p><p>历史于我们，是古代建国立朝的雄伟，是开拓边疆的威武，是权力斗争的狡诈，是王朝更迭的哀叹。而真正在读《资治通鉴》时，唯有一种寒彻骨的绝望，那一刻只有想起《狂人日记》中鲁迅如是写道：</p><blockquote><p>我翻开历史一查，这历史没有年代，歪歪斜斜的每页上都写着“仁义道德”几个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是“吃人”！</p></blockquote><p>是的，这历史一点都不酷。几千年来历朝历代无非是各种重复，伟人的雄心壮志，奸人的争权夺利、误国误民，吃人者的祸害世人，草芥的兴百姓苦亡百姓苦。偶有超越时代的杰出者，以一己之力改变时代，但也很快为落后的时代所裹挟吞噬，剩余时间都是历史的重复倒退罢了。</p><p>难怪《资治通鉴》寓意：“<em>鉴于往事，有资于治道</em>”。可惜这部书并没有使宋朝“<em>子孙帝王万世之业也</em>”，该犯的错依然会犯，该兴亡的依然会兴亡。</p></li></ul><ul><li><p>《毛泽东传：名著珍藏版》</p><p><img src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/baike/g=0;w=268/sign=bc1f3ff5d01b0ef47ce89d55aaf963ec/37d3d539b6003af3225aabbb372ac65c1138b60c.jpg" alt="img"></p><p>我(们)很容易认为，毛泽东一开始便是油画里的人物模样，一开始便是历史人物，一开始便是党的领导人。我们对他的认识，是从宣布“<em>中国人民从此站起来了</em>”的开国大典开始，从革命的中心延安开始，从“<em>三军过后尽开颜</em>”的两万五千里长征开始，从“<em>独立寒秋 湘江北去</em>”的橘子洲头开始。</p><p>我们忘记他是在老家韶山长大直到十几岁，种地、当兵、流浪、辗转多个学校和职业，即使在后来党内身居高位，也多次历经挫折，伴随着一步步成长，也伴随着一部部的著作。尤其是每一首诗词，都拥有其独特的豪迈之情，又非常符合当时的历史背景。</p><p>引用文中一段，这时，他刚刚经历两万五千里长征，九死一生，由沦落权力的边缘重回权力中心：</p><blockquote><p>长征结束时，他甚至引出一条山脉，作为超出中国自己的革命之上的世界和平的景象：</p><p>而今我谓昆仑：</p><p>不要这高，</p><p>不要这多雪。</p><p>安得倚天抽宝剑，</p><p>把汝裁为三截？</p><p>一截遗欧，</p><p>一截赠美，</p><p>一截还东国。</p><p>太平世界，</p><p>环球同此凉热。</p></blockquote></li></ul>]]></content>
     
