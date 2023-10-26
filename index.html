@@ -351,6 +351,155 @@
         
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2023/09/01/en/2023-09-01-Refactoring/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Amon">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2023/09/01/en/2023-09-01-Refactoring/" class="post-title-link" itemprop="url">Best Practices for Backend System Refactoring: How to do backend system refactoring efficiently and with high quality</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2023-09-01 22:10:33" itemprop="dateCreated datePublished" datetime="2023-09-01T22:10:33+08:00">2023-09-01</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2023/09/01/en/2023-09-01-Refactoring/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/09/01/en/2023-09-01-Refactoring/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://images.unsplash.com/photo-1491406213019-05b162a72c20?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="coverimg"></p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>As the company’s business experiences explosive growth, both the scale of requirements and the user base are rapidly expanding. This presents challenges to the system in terms of the three high (high performance, high concurrency, high availability), scalability, and maintainability. The old system, due to various limitations in its early design (such as the expertise of early participants, the foresight of architectural design, impatience of management, etc.), gradually becomes inadequate to meet current and future demands, exposing various issues. Developers find themselves dragging an old, worn-out car on the highway, which is a daunting task. In simpler terms, the codebase of the old system has become too problematic to fix, leading to a situation where developers either get buried in its issues or abandon the project altogether.</p>
+<p>At this point, a common question arises: should we continue trying to patch the issues, or should we choose to refactor? Patching is simply not feasible, not in this lifetime. Refactoring, on the other hand, requires the courage of a true hero because it’s a complex and time-consuming task. Moreover, it can impact ongoing business development or even bring it to a standstill. Often, product managers and executives are not supportive because they only care about one thing: when will the next feature be ready? Everything else is your development team’s problem.</p>
+<p>If you choose the path of refactoring, you must be prepared to see it through, no matter what. How can you ensure a successful refactoring from the get-go? Based on common practices in internet projects and my personal experience in refactoring projects, here is an outline of the common steps for refactoring systems of various sizes:</p>
+<h3 id="Step-0-Convincing-Stakeholders"><a href="#Step-0-Convincing-Stakeholders" class="headerlink" title="Step 0: Convincing Stakeholders"></a>Step 0: Convincing Stakeholders</h3><p>Refactoring is not just the responsibility of the development team; it’s a collective effort involving the entire project team. Refactoring can improve the system’s performance, availability, and scalability, as well as optimize and streamline business processes to meet new demands. It requires a significant investment of resources and must have the support of stakeholders. Typically, this requires explaining the benefits and drawbacks of refactoring, as well as the critical issues that would arise if refactoring is not done. Once you have their support, the refactoring work can officially begin.</p>
+<p>Participants: Technical Leader</p>
+<h3 id="Step-1-Establish-Clear-Refactoring-Goals"><a href="#Step-1-Establish-Clear-Refactoring-Goals" class="headerlink" title="Step 1: Establish Clear Refactoring Goals"></a>Step 1: Establish Clear Refactoring Goals</h3><p>Refactoring is a long-term endeavor; it’s not something that can be completed in one or two iterations, or even within a few months. It requires a substantial investment of manpower, resources, time, and effort. So, what are our goals in this prolonged battle? Are we aiming to meet the system’s high-performance requirements through a more efficient architecture? Or do we want to enhance code quality through refactoring? Perhaps we aim to introduce new technologies and frameworks to upgrade the entire system or optimize business processes to address previously unmet requirements. Once you have clear goals, you can work purposefully.</p>
+<p>Participants: Technical Leader, Architect</p>
+<h3 id="Step-2-Define-the-Scope-of-Refactoring-and-Make-Predictions"><a href="#Step-2-Define-the-Scope-of-Refactoring-and-Make-Predictions" class="headerlink" title="Step 2: Define the Scope of Refactoring and Make Predictions"></a>Step 2: Define the Scope of Refactoring and Make Predictions</h3><p>Refactoring typically falls into several levels:</p>
+<ul>
+<li>Platform-level refactoring: Refactoring the entire platform, such as Alibaba transitioning from the LAMP stack to the Java platform.</li>
+<li>System-level refactoring: Refactoring specific business systems, such as introducing microservices or SOA architecture to break down monolithic applications.</li>
+<li>Architecture-level refactoring: Improving the existing architecture through adjustments and redesign, addressing architectural shortcomings, like decoupling business logic through layered design or introducing caching for improved concurrency.</li>
+<li>Business-level refactoring: Addressing specific business requirements that cannot be met due to the limitations of the current system, often involving the refactoring of business processes or database structures.</li>
+<li>Module/code-level refactoring: The most common form of refactoring, typically involving the use of design patterns, encapsulation, and code optimization to improve code structure and performance.</li>
+</ul>
+<p>Determine the level of refactoring required, the overall scope, and the technology stack for refactoring. Then, conduct a scientific assessment and estimation of the refactoring work. This includes identifying the costs, required resources, and time commitments, as well as assessing whether ongoing business requirements can be accommodated during the refactoring process. Once these predictions are established, you can provide stakeholders with a clear understanding, especially when they ask when new requirements can be delivered.</p>
+<p>Participants: Technical Leader, Architect, Developers</p>
+<h3 id="Step-3-Familiarize-Yourself-with-the-Old-System-and-Document-Business-Processes"><a href="#Step-3-Familiarize-Yourself-with-the-Old-System-and-Document-Business-Processes" class="headerlink" title="Step 3: Familiarize Yourself with the Old System and Document Business Processes"></a>Step 3: Familiarize Yourself with the Old System and Document Business Processes</h3><p>Refactoring is not about abandoning the old system; it’s about continuously working with it. Knowing your enemy is the key to victory. Refactoring not only requires a clear understanding of the new system’s goals and future, but also a deep familiarity with the old system, especially its pitfalls. At this stage, the participants in the refactoring project, especially those who worked on the old system, should document and organize information related to the old system’s business and technical details. This includes collecting documents such as design documents, technical documents, architecture diagrams, UML diagrams, and ER diagrams related to the system.</p>
+<p>The following are common preparation tasks before refactoring the old system:</p>
+<ul>
+<li>Gathering information and documentation related to the old system, including design documents, technical documents, architectural diagrams, UML diagrams, ER diagrams, and other graphical materials.</li>
+<li>Mapping and documenting business lines and processes, outlining projects and business flows, and documenting them.</li>
+<li>Reviewing key code and database designs in the old system.</li>
+</ul>
+<p>Any issues or uncertainties should be addressed promptly through communication with relevant personnel from the business side, ensuring that problems are resolved early in the process.</p>
+<p>Participants: Technical Leader, Architect, Developers</p>
+<h3 id="Step-4-Database-Refactoring"><a href="#Step-4-Database-Refactoring" class="headerlink" title="Step 4: Database Refactoring"></a>Step 4: Database Refactoring</h3><p>If the refactoring involves changes to the database, database refactoring is typically the first step. Many refactoring initiatives are triggered by issues related to the database. During database refactoring, the deficiencies and obstacles in the old system’s database design are addressed. This may involve redesigning tables using normalization or denormalization techniques, considering sharding or partitioning strategies, and more.</p>
+<p>Participants: DBA, Architect</p>
+<h3 id="Step-5-Backend-System-Refactoring"><a href="#Step-5-Backend-System-Refactoring" class="headerlink" title="Step 5: Backend System Refactoring"></a>Step 5: Backend System Refactoring</h3><p>Before starting the backend system refactoring, it’s essential to have design and technical documentation in place, as mentioned earlier. Once these documents are finalized through discussions and planning, the architect can proceed with system architecture design, and backend developers can begin coding. This phase is often the most time-consuming and critical part of the refactoring process. The quality of the backend architecture directly affects the success of the refactoring, the quality of the business code, and the overall refactoring quality.</p>
+<p>Due to the extended timeline of this phase and the fact that its results may not be immediately visible, Agile development methodologies are often used. This allows for iterative development, ensuring effective planning and continuous progress. The advantages of using iterations include:</p>
+<ol>
+<li>Effective planning and quantification of the entire refactoring process.</li>
+<li>Visible achievements at each stage, preventing the team from getting stuck in a long refactoring process.</li>
+<li>The ability to test or observe refactored parts promptly during iterations, allowing continuous learning and improvement.</li>
+</ol>
+<p>During backend system refactoring, it’s essential to have clear, quantifiable goals and standards. For example, defining the QPS (Queries Per Second) supported by various systems and business modules, the expected response times for interfaces, etc. This enables the team to focus on achieving these goals during refactoring.</p>
+<p>Regular code reviews should also be conducted throughout the refactoring process to identify and address issues with the refactoring itself and the quality of the code. This helps prevent the introduction of poor designs or subpar code that could harm the entire system.</p>
+<p>Participants: Technical Leader, Architect, Developers</p>
+<h3 id="Step-6-Data-Migration-and-Verification"><a href="#Step-6-Data-Migration-and-Verification" class="headerlink" title="Step 6: Data Migration and Verification"></a>Step 6: Data Migration and Verification</h3><p>If database refactoring is part of the project, data migration becomes a crucial step. It generally involves two types of migration: full migration and incremental migration. Full migration transfers all data from the old system to the new one in one go, while incremental migration handles data created in the old system after full migration until the old system is retired. These migrations are typically scripted or programmed to avoid manual errors.</p>
+<p>After migration, it’s essential to compare the data between the old and new systems. This comparison can also be automated through scripts or programs to identify discrepancies and perform any necessary adjustments or investigations.</p>
+<p>Participants: DBA, Developers</p>
+<h3 id="Step-7-System-Validation-Integration-and-Testing"><a href="#Step-7-System-Validation-Integration-and-Testing" class="headerlink" title="Step 7: System Validation, Integration, and Testing"></a>Step 7: System Validation, Integration, and Testing</h3><p>As the backend system refactoring progresses, scripts and programs should be developed to validate the business interfaces between the old and new systems. This ensures that issues in the refactoring process are detected promptly, and, if necessary, architectural and database adjustments can be made. Additionally, increasing unit test coverage during refactoring is highly beneficial.</p>
+<p>Once the dependencies between systems and modules are resolved, integration testing can begin. Comprehensive testing, including functional testing, stability testing, performance testing, local testing, and simulating production environments, should be performed. Any issues identified during testing should be addressed, verified, and fixed to meet the standards required for a smooth release.</p>
+<p>Participants: Architect, Developers, Testers</p>
+<h3 id="Step-8-Gradual-Deployment-and-Monitoring"><a href="#Step-8-Gradual-Deployment-and-Monitoring" class="headerlink" title="Step 8: Gradual Deployment and Monitoring"></a>Step 8: Gradual Deployment and Monitoring</h3><p>When the backend system refactoring reaches a certain level of stability, it’s time to initiate gradual deployment. During this phase, only a portion of the traffic is directed to the new system. This allows for real-time tracking and analysis of logs and monitoring alarms. Any issues or anomalies can be addressed promptly. As confidence in the new system’s stability grows, the scope and volume of the deployment can be gradually increased. Continuous monitoring of logs and alarms should be maintained throughout this phase.</p>
+<p>Participants: DevOps Team, Testers, Developers</p>
+<h3 id="Step-9-System-Transition"><a href="#Step-9-System-Transition" class="headerlink" title="Step 9: System Transition"></a>Step 9: System Transition</h3><p>When it comes to transitioning to the new system, it’s crucial to have a well-defined transition plan in place. This plan should include detailed processes, workflows, and contingency plans, including rollback procedures in case unexpected issues arise. This step ensures that the transition is smooth and minimizes disruption to the business.</p>
+<p>Participants: DevOps Team, Testers</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>After completing the above steps, the system has undergone successful refactoring. However, it’s essential to understand that refactoring is a substantial undertaking, and even after the process, the system may not be flawless. Refactoring is not the endpoint but rather a new beginning.</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2023/07/22/zh-CN/2023-07-22-Hospital/">
 
@@ -1180,109 +1329,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2022/05/04/zh-CN/2022-05-04-Red-Star-Over-China/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2022/05/04/zh-CN/2022-05-04-Red-Star-Over-China/" class="post-title-link" itemprop="url">中国人民的老朋友——从书中人物的角度读 《红星照耀中国》</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2022-05-04 18:21:21" itemprop="dateCreated datePublished" datetime="2022-05-04T18:21:21+08:00">2022-05-04</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/书/" itemprop="url" rel="index">
-                    <span itemprop="name">书</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2022/05/04/zh-CN/2022-05-04-Red-Star-Over-China/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/05/04/zh-CN/2022-05-04-Red-Star-Over-China/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="https://img2.doubanio.com/view/subject/l/public/s29109031.jpg" alt="cover" style="zoom: 50%;"></p>
-<p>我们知道，对于一个外国人来说，在中国所能获得的最高荣誉，大概是：“中国人民的老朋友”。<br>而今天谈到这本书的作者埃德加·斯诺，正是其中一员。</p>
-<p>理解这个人物并不太难，大致等于我们国内有个年轻人，20岁出头时奔赴一个贫穷落后、内忧外患、战乱丛生的国家当记者，且一干就是14年。另外当了2年大学讲师，结识了这个国家很多的名人名士。<br>该国内忧外患之际，内部派别纷争，他冒着枪林弹雨风险突破顽固派的封锁线，前往进步派的根据地采访，与进步派的领导人和平民们深入沟通交流，并为世界第一次呈现进步派在被顽固派多年的打压和封锁下的情况与精神面貌。<br>后来该国遭遇外部侵略战争，他积极活动参与该国的抗战解放斗争，著作了大量的进步书籍，向世界揭露进步派的真实形象。<br>等到胜利解放后，他又几次故国重游，受到广泛的热烈欢迎。他逝世时，甚至将部分骨灰撒在这个国家，许多该国领导人和名人都来参加安葬仪式。<br>这，大致就是斯诺与中国的渊源。</p>
-<p>未完待续…</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1335,7 +1381,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-count">115</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1361,7 +1407,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">120</span>
+        <span class="site-state-item-count">123</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>
