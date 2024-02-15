@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amonxu.com/"/>
-  <updated>2023-09-18T14:19:15.261Z</updated>
+  <updated>2024-02-15T14:55:57.765Z</updated>
   <id>https://amonxu.com/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>《游子》</title>
+    <link href="https://amonxu.com/2024/02/07/zh-CN/2023-04-07-Go-Home/"/>
+    <id>https://amonxu.com/2024/02/07/zh-CN/2023-04-07-Go-Home/</id>
+    <published>2024-02-07T00:01:01.000Z</published>
+    <updated>2024-02-15T14:55:57.765Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png" alt="1"></p><p>拖着行李箱的人们，</p><p>满载着一年的劳累，</p><p>穿过长长的铁道，</p><p>回到母亲怀内，</p><p>妈妈</p><p>我想再睡会</p><blockquote><p>2024.2.7 <a href="https://www.zhihu.com/search?q=腊月二十八&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={&quot;sourceType&quot;%3A&quot;answer&quot;%2C&quot;sourceId&quot;%3A3389717530}" target="_blank" rel="noopener">腊月二十八</a> 晨</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;拖着行李箱的人们，&lt;/p&gt;
+&lt;p&gt;满载着一年的劳累，&lt;/p&gt;
+&lt;p&gt;穿过长长的铁道，&lt;/p
+      
+    
+    </summary>
+    
+      <category term="诗" scheme="https://amonxu.com/categories/%E8%AF%97/"/>
+    
+    
+      <category term="诗" scheme="https://amonxu.com/tags/%E8%AF%97/"/>
+    
+      <category term="2024" scheme="https://amonxu.com/tags/2024/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo blog title include special symbols reports error</title>
     <link href="https://amonxu.com/2023/09/18/en/2023-09-03-Hexo-Title-Symbol-Error/"/>
     <id>https://amonxu.com/2023/09/18/en/2023-09-03-Hexo-Title-Symbol-Error/</id>
     <published>2023-09-18T05:42:55.000Z</published>
-    <updated>2023-09-18T14:19:15.261Z</updated>
+    <updated>2023-09-18T14:19:16.000Z</updated>
     
     <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><hr><p>In my Hexo blog, when I include special symbols inside the title in posts, it reports this error:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ERROR Process failed: _posts/en/XXX.md</span><br><span class="line">YAMLException: incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 54:</span><br><span class="line">     ...  for Backend System Refactoring\: How to do backend system refac ...</span><br></pre></td></tr></table></figure></p><p><strong>Solution:</strong><br>Include the title in single quotes, like:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: &apos;How to read a book&apos;</span><br><span class="line">lang: en</span><br><span class="line">date: 2023-01-01</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -38,9 +68,9 @@
     </summary>
     
     
-      <category term="Blog" scheme="https://amonxu.com/tags/Blog/"/>
-    
       <category term="Hexo" scheme="https://amonxu.com/tags/Hexo/"/>
+    
+      <category term="Blog" scheme="https://amonxu.com/tags/Blog/"/>
     
   </entry>
   
@@ -49,7 +79,7 @@
     <link href="https://amonxu.com/2023/09/01/en/2023-09-01-Refactoring/"/>
     <id>https://amonxu.com/2023/09/01/en/2023-09-01-Refactoring/</id>
     <published>2023-09-01T14:10:33.000Z</published>
-    <updated>2023-10-26T03:33:53.318Z</updated>
+    <updated>2023-10-26T03:33:54.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://images.unsplash.com/photo-1491406213019-05b162a72c20?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="coverimg"></p><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>As the company’s business experiences explosive growth, both the scale of requirements and the user base are rapidly expanding. This presents challenges to the system in terms of the three high (high performance, high concurrency, high availability), scalability, and maintainability. The old system, due to various limitations in its early design (such as the expertise of early participants, the foresight of architectural design, impatience of management, etc.), gradually becomes inadequate to meet current and future demands, exposing various issues. Developers find themselves dragging an old, worn-out car on the highway, which is a daunting task. In simpler terms, the codebase of the old system has become too problematic to fix, leading to a situation where developers either get buried in its issues or abandon the project altogether.</p><p>At this point, a common question arises: should we continue trying to patch the issues, or should we choose to refactor? Patching is simply not feasible, not in this lifetime. Refactoring, on the other hand, requires the courage of a true hero because it’s a complex and time-consuming task. Moreover, it can impact ongoing business development or even bring it to a standstill. Often, product managers and executives are not supportive because they only care about one thing: when will the next feature be ready? Everything else is your development team’s problem.</p><p>If you choose the path of refactoring, you must be prepared to see it through, no matter what. How can you ensure a successful refactoring from the get-go? Based on common practices in internet projects and my personal experience in refactoring projects, here is an outline of the common steps for refactoring systems of various sizes:</p><h3 id="Step-0-Convincing-Stakeholders"><a href="#Step-0-Convincing-Stakeholders" class="headerlink" title="Step 0: Convincing Stakeholders"></a>Step 0: Convincing Stakeholders</h3><p>Refactoring is not just the responsibility of the development team; it’s a collective effort involving the entire project team. Refactoring can improve the system’s performance, availability, and scalability, as well as optimize and streamline business processes to meet new demands. It requires a significant investment of resources and must have the support of stakeholders. Typically, this requires explaining the benefits and drawbacks of refactoring, as well as the critical issues that would arise if refactoring is not done. Once you have their support, the refactoring work can officially begin.</p><p>Participants: Technical Leader</p><h3 id="Step-1-Establish-Clear-Refactoring-Goals"><a href="#Step-1-Establish-Clear-Refactoring-Goals" class="headerlink" title="Step 1: Establish Clear Refactoring Goals"></a>Step 1: Establish Clear Refactoring Goals</h3><p>Refactoring is a long-term endeavor; it’s not something that can be completed in one or two iterations, or even within a few months. It requires a substantial investment of manpower, resources, time, and effort. So, what are our goals in this prolonged battle? Are we aiming to meet the system’s high-performance requirements through a more efficient architecture? Or do we want to enhance code quality through refactoring? Perhaps we aim to introduce new technologies and frameworks to upgrade the entire system or optimize business processes to address previously unmet requirements. Once you have clear goals, you can work purposefully.</p><p>Participants: Technical Leader, Architect</p><h3 id="Step-2-Define-the-Scope-of-Refactoring-and-Make-Predictions"><a href="#Step-2-Define-the-Scope-of-Refactoring-and-Make-Predictions" class="headerlink" title="Step 2: Define the Scope of Refactoring and Make Predictions"></a>Step 2: Define the Scope of Refactoring and Make Predictions</h3><p>Refactoring typically falls into several levels:</p><ul><li>Platform-level refactoring: Refactoring the entire platform, such as Alibaba transitioning from the LAMP stack to the Java platform.</li><li>System-level refactoring: Refactoring specific business systems, such as introducing microservices or SOA architecture to break down monolithic applications.</li><li>Architecture-level refactoring: Improving the existing architecture through adjustments and redesign, addressing architectural shortcomings, like decoupling business logic through layered design or introducing caching for improved concurrency.</li><li>Business-level refactoring: Addressing specific business requirements that cannot be met due to the limitations of the current system, often involving the refactoring of business processes or database structures.</li><li>Module/code-level refactoring: The most common form of refactoring, typically involving the use of design patterns, encapsulation, and code optimization to improve code structure and performance.</li></ul><p>Determine the level of refactoring required, the overall scope, and the technology stack for refactoring. Then, conduct a scientific assessment and estimation of the refactoring work. This includes identifying the costs, required resources, and time commitments, as well as assessing whether ongoing business requirements can be accommodated during the refactoring process. Once these predictions are established, you can provide stakeholders with a clear understanding, especially when they ask when new requirements can be delivered.</p><p>Participants: Technical Leader, Architect, Developers</p><h3 id="Step-3-Familiarize-Yourself-with-the-Old-System-and-Document-Business-Processes"><a href="#Step-3-Familiarize-Yourself-with-the-Old-System-and-Document-Business-Processes" class="headerlink" title="Step 3: Familiarize Yourself with the Old System and Document Business Processes"></a>Step 3: Familiarize Yourself with the Old System and Document Business Processes</h3><p>Refactoring is not about abandoning the old system; it’s about continuously working with it. Knowing your enemy is the key to victory. Refactoring not only requires a clear understanding of the new system’s goals and future, but also a deep familiarity with the old system, especially its pitfalls. At this stage, the participants in the refactoring project, especially those who worked on the old system, should document and organize information related to the old system’s business and technical details. This includes collecting documents such as design documents, technical documents, architecture diagrams, UML diagrams, and ER diagrams related to the system.</p><p>The following are common preparation tasks before refactoring the old system:</p><ul><li>Gathering information and documentation related to the old system, including design documents, technical documents, architectural diagrams, UML diagrams, ER diagrams, and other graphical materials.</li><li>Mapping and documenting business lines and processes, outlining projects and business flows, and documenting them.</li><li>Reviewing key code and database designs in the old system.</li></ul><p>Any issues or uncertainties should be addressed promptly through communication with relevant personnel from the business side, ensuring that problems are resolved early in the process.</p><p>Participants: Technical Leader, Architect, Developers</p><h3 id="Step-4-Database-Refactoring"><a href="#Step-4-Database-Refactoring" class="headerlink" title="Step 4: Database Refactoring"></a>Step 4: Database Refactoring</h3><p>If the refactoring involves changes to the database, database refactoring is typically the first step. Many refactoring initiatives are triggered by issues related to the database. During database refactoring, the deficiencies and obstacles in the old system’s database design are addressed. This may involve redesigning tables using normalization or denormalization techniques, considering sharding or partitioning strategies, and more.</p><p>Participants: DBA, Architect</p><h3 id="Step-5-Backend-System-Refactoring"><a href="#Step-5-Backend-System-Refactoring" class="headerlink" title="Step 5: Backend System Refactoring"></a>Step 5: Backend System Refactoring</h3><p>Before starting the backend system refactoring, it’s essential to have design and technical documentation in place, as mentioned earlier. Once these documents are finalized through discussions and planning, the architect can proceed with system architecture design, and backend developers can begin coding. This phase is often the most time-consuming and critical part of the refactoring process. The quality of the backend architecture directly affects the success of the refactoring, the quality of the business code, and the overall refactoring quality.</p><p>Due to the extended timeline of this phase and the fact that its results may not be immediately visible, Agile development methodologies are often used. This allows for iterative development, ensuring effective planning and continuous progress. The advantages of using iterations include:</p><ol><li>Effective planning and quantification of the entire refactoring process.</li><li>Visible achievements at each stage, preventing the team from getting stuck in a long refactoring process.</li><li>The ability to test or observe refactored parts promptly during iterations, allowing continuous learning and improvement.</li></ol><p>During backend system refactoring, it’s essential to have clear, quantifiable goals and standards. For example, defining the QPS (Queries Per Second) supported by various systems and business modules, the expected response times for interfaces, etc. This enables the team to focus on achieving these goals during refactoring.</p><p>Regular code reviews should also be conducted throughout the refactoring process to identify and address issues with the refactoring itself and the quality of the code. This helps prevent the introduction of poor designs or subpar code that could harm the entire system.</p><p>Participants: Technical Leader, Architect, Developers</p><h3 id="Step-6-Data-Migration-and-Verification"><a href="#Step-6-Data-Migration-and-Verification" class="headerlink" title="Step 6: Data Migration and Verification"></a>Step 6: Data Migration and Verification</h3><p>If database refactoring is part of the project, data migration becomes a crucial step. It generally involves two types of migration: full migration and incremental migration. Full migration transfers all data from the old system to the new one in one go, while incremental migration handles data created in the old system after full migration until the old system is retired. These migrations are typically scripted or programmed to avoid manual errors.</p><p>After migration, it’s essential to compare the data between the old and new systems. This comparison can also be automated through scripts or programs to identify discrepancies and perform any necessary adjustments or investigations.</p><p>Participants: DBA, Developers</p><h3 id="Step-7-System-Validation-Integration-and-Testing"><a href="#Step-7-System-Validation-Integration-and-Testing" class="headerlink" title="Step 7: System Validation, Integration, and Testing"></a>Step 7: System Validation, Integration, and Testing</h3><p>As the backend system refactoring progresses, scripts and programs should be developed to validate the business interfaces between the old and new systems. This ensures that issues in the refactoring process are detected promptly, and, if necessary, architectural and database adjustments can be made. Additionally, increasing unit test coverage during refactoring is highly beneficial.</p><p>Once the dependencies between systems and modules are resolved, integration testing can begin. Comprehensive testing, including functional testing, stability testing, performance testing, local testing, and simulating production environments, should be performed. Any issues identified during testing should be addressed, verified, and fixed to meet the standards required for a smooth release.</p><p>Participants: Architect, Developers, Testers</p><h3 id="Step-8-Gradual-Deployment-and-Monitoring"><a href="#Step-8-Gradual-Deployment-and-Monitoring" class="headerlink" title="Step 8: Gradual Deployment and Monitoring"></a>Step 8: Gradual Deployment and Monitoring</h3><p>When the backend system refactoring reaches a certain level of stability, it’s time to initiate gradual deployment. During this phase, only a portion of the traffic is directed to the new system. This allows for real-time tracking and analysis of logs and monitoring alarms. Any issues or anomalies can be addressed promptly. As confidence in the new system’s stability grows, the scope and volume of the deployment can be gradually increased. Continuous monitoring of logs and alarms should be maintained throughout this phase.</p><p>Participants: DevOps Team, Testers, Developers</p><h3 id="Step-9-System-Transition"><a href="#Step-9-System-Transition" class="headerlink" title="Step 9: System Transition"></a>Step 9: System Transition</h3><p>When it comes to transitioning to the new system, it’s crucial to have a well-defined transition plan in place. This plan should include detailed processes, workflows, and contingency plans, including rollback procedures in case unexpected issues arise. This step ensures that the transition is smooth and minimizes disruption to the business.</p><p>Participants: DevOps Team, Testers</p><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>After completing the above steps, the system has undergone successful refactoring. However, it’s essential to understand that refactoring is a substantial undertaking, and even after the process, the system may not be flawless. Refactoring is not the endpoint but rather a new beginning.</p>]]></content>
     
@@ -78,7 +108,7 @@
     <link href="https://amonxu.com/2023/07/22/zh-CN/2023-07-22-Hospital/"/>
     <id>https://amonxu.com/2023/07/22/zh-CN/2023-07-22-Hospital/</id>
     <published>2023-07-21T17:01:01.000Z</published>
-    <updated>2023-09-04T09:48:48.528Z</updated>
+    <updated>2023-09-04T09:48:50.000Z</updated>
     
     <content type="html"><![CDATA[<p>里面，</p><p>取号，<br>排队，<br>叫号，<br>付费。</p><p>一切为了活着。</p><hr><p>外面，</p><p>工作，<br>生活，<br>享乐，<br>受罪。</p><p>活着为了一切。</p>]]></content>
     
@@ -112,7 +142,7 @@
     <link href="https://amonxu.com/2023/04/07/zh-CN/2023-04-07-My-King/"/>
     <id>https://amonxu.com/2023/04/07/zh-CN/2023-04-07-My-King/</id>
     <published>2023-04-06T17:01:01.000Z</published>
-    <updated>2023-09-04T09:49:02.398Z</updated>
+    <updated>2023-09-04T09:49:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>早高峰的洪流中，<br>我被人群簇拥着，<br>仿佛生命之王。</p><p>我感觉自己，<br>活着。<br>但又感觉，<br>死了。</p><blockquote><p>ChatGPT辅助创作</p></blockquote>]]></content>
     
@@ -144,7 +174,7 @@
     <link href="https://amonxu.com/2022/12/02/zh-CN/2022-12-02-Mountain/"/>
     <id>https://amonxu.com/2022/12/02/zh-CN/2022-12-02-Mountain/</id>
     <published>2022-12-01T17:01:01.000Z</published>
-    <updated>2023-09-04T09:54:17.938Z</updated>
+    <updated>2023-09-04T09:54:18.000Z</updated>
     
     <content type="html"><![CDATA[<p>任务堆积如山，<br>债务堆积如山，<br>茫茫一片看不见。</p><p>我，<br>堆积如山。</p>]]></content>
     
@@ -173,7 +203,7 @@
     <link href="https://amonxu.com/2022/12/01/zh-CN/2022-12-01-Mountain/"/>
     <id>https://amonxu.com/2022/12/01/zh-CN/2022-12-01-Mountain/</id>
     <published>2022-11-30T17:01:01.000Z</published>
-    <updated>2023-09-04T09:54:21.567Z</updated>
+    <updated>2023-09-04T09:54:22.000Z</updated>
     
     <content type="html"><![CDATA[<p>列车从远方，<br>卸下年轻人，<br>拉走父母妻儿，<br>和中老年。</p><p>他们身前，<br>是扬起的帆，<br>他们身后，<br>是累累的山。</p>]]></content>
     
@@ -202,7 +232,7 @@
     <link href="https://amonxu.com/2022/11/30/zh-CN/2022-11-30-Metro-Train/"/>
     <id>https://amonxu.com/2022/11/30/zh-CN/2022-11-30-Metro-Train/</id>
     <published>2022-11-29T17:01:01.000Z</published>
-    <updated>2023-09-04T09:54:24.382Z</updated>
+    <updated>2023-09-04T09:54:26.000Z</updated>
     
     <content type="html"><![CDATA[<p>一头野兽，<br>在地下怒吼狂奔，<br>他吞掉情侣夫妻父母儿女，<br>吐出一个个沉默的打工人。</p>]]></content>
     
@@ -230,7 +260,7 @@
     <link href="https://amonxu.com/2022/11/27/zh-CN/2022-11-27-Date/"/>
     <id>https://amonxu.com/2022/11/27/zh-CN/2022-11-27-Date/</id>
     <published>2022-11-27T14:18:01.000Z</published>
-    <updated>2023-09-04T09:54:27.000Z</updated>
+    <updated>2023-09-04T09:54:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>8年前的一天，在一家粤菜店吃不是饭点的午饭时，我一边品着大麦茶，一边对着左顾右盼着餐厅不多的客人。</p><p>餐厅播放着无聊的节目，但当我转头看向电子时钟，上面跳动着猩红色的数字：2014年11月27日。</p><p>恍惚间，这年这月这日组成这一串，于我陌生无比，不知是外星数字来了地球，还是我这地球人去了外星。</p><p>2-0-1-4，2014年？我印象中并没有这么个年，要说有的，大概是些刚毕业时上大学，刚高考完读高中，刚升高中读初中，升初中时读小学的那些年。</p><p>1-1-2-7，11月27日？还早呢。我并没有十一长假，也未曾过过中秋，说起端午，粽子也没吃过，五一呢，我倒没什么记忆深刻的事情。</p><p>现在，又是11月27日。</p>]]></content>
     
@@ -259,7 +289,7 @@
     <link href="https://amonxu.com/2022/10/12/zh-CN/2022-10-12-K8S-Logs/"/>
     <id>https://amonxu.com/2022/10/12/zh-CN/2022-10-12-K8S-Logs/</id>
     <published>2022-10-12T13:00:01.000Z</published>
-    <updated>2023-09-15T09:46:55.067Z</updated>
+    <updated>2023-09-15T09:46:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>曾不知在哪听过一经典名句：程序员的工作有两件事，一是写 Bug，二是找 Bug。</p><p>说归说笑归笑，奈何话糙理不糙：在程序员的工作中，Bug的排查分析和解决验证确实占相当可观的一部分时间。<br>那么说到，而在真正排查 Bug 时，才深刻体会到另一名句：不写日志一时爽，排查 Bug 火Z场。</p><p>日志管理，一直是开发人员的老大难题。这个老大难题，大致分为几块内容：</p><h3 id="1-打印日志"><a href="#1-打印日志" class="headerlink" title="1. 打印日志"></a>1. 打印日志</h3><p>狭义上的日志管理，也即打印日志。套用 3W1H 分析方法可以分为几个子问题：</p><ol><li>Why 为什么要打日志<br> 显而易见，日志是记录关键信息和数据的地方，以备未来排查问题和数据统计分析之用。</li><li><p>What 要打什么样的日志</p></li><li><p>Where/When 在哪里/什么时候打日志</p></li><li>How 怎么打日志</li></ol><h3 id="2-记录日志"><a href="#2-记录日志" class="headerlink" title="2. 记录日志"></a>2. 记录日志</h3><h3 id="3-查看日志"><a href="#3-查看日志" class="headerlink" title="3. 查看日志"></a>3. 查看日志</h3>]]></content>
     
@@ -291,7 +321,7 @@
     <link href="https://amonxu.com/2022/08/18/zh-CN/2022-08-18-Folding-World/"/>
     <id>https://amonxu.com/2022/08/18/zh-CN/2022-08-18-Folding-World/</id>
     <published>2022-08-17T17:01:01.000Z</published>
-    <updated>2023-09-04T09:54:34.199Z</updated>
+    <updated>2023-09-04T09:54:36.000Z</updated>
     
     <content type="html"><![CDATA[<p>我折叠了中国，<br>因为我想你，<br>想你到突破几何距离。</p><p>广东和江西叠在一起，<br>你叠进我的身体。</p><blockquote><p>写给一对分隔粤赣两地的恋人</p></blockquote>]]></content>
     
@@ -323,7 +353,7 @@
     <link href="https://amonxu.com/2022/05/04/zh-CN/2022-05-04-Red-Star-Over-China/"/>
     <id>https://amonxu.com/2022/05/04/zh-CN/2022-05-04-Red-Star-Over-China/</id>
     <published>2022-05-04T10:21:21.000Z</published>
-    <updated>2023-09-04T09:56:25.872Z</updated>
+    <updated>2023-09-04T09:56:26.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://img2.doubanio.com/view/subject/l/public/s29109031.jpg" alt="cover" style="zoom: 50%;"></p><p>我们知道，对于一个外国人来说，在中国所能获得的最高荣誉，大概是：“中国人民的老朋友”。<br>而今天谈到这本书的作者埃德加·斯诺，正是其中一员。</p><p>理解这个人物并不太难，大致等于我们国内有个年轻人，20岁出头时奔赴一个贫穷落后、内忧外患、战乱丛生的国家当记者，且一干就是14年。另外当了2年大学讲师，结识了这个国家很多的名人名士。<br>该国内忧外患之际，内部派别纷争，他冒着枪林弹雨风险突破顽固派的封锁线，前往进步派的根据地采访，与进步派的领导人和平民们深入沟通交流，并为世界第一次呈现进步派在被顽固派多年的打压和封锁下的情况与精神面貌。<br>后来该国遭遇外部侵略战争，他积极活动参与该国的抗战解放斗争，著作了大量的进步书籍，向世界揭露进步派的真实形象。<br>等到胜利解放后，他又几次故国重游，受到广泛的热烈欢迎。他逝世时，甚至将部分骨灰撒在这个国家，许多该国领导人和名人都来参加安葬仪式。<br>这，大致就是斯诺与中国的渊源。</p><p>未完待续…</p>]]></content>
     
@@ -353,7 +383,7 @@
     <link href="https://amonxu.com/2021/12/04/zh-CN/2021-12-04-Mao/"/>
     <id>https://amonxu.com/2021/12/04/zh-CN/2021-12-04-Mao/</id>
     <published>2021-12-04T13:00:01.000Z</published>
-    <updated>2023-09-04T09:56:29.552Z</updated>
+    <updated>2023-09-04T09:56:30.000Z</updated>
     
     <content type="html"><![CDATA[<p>革命江山风光好，红旗飘，干劲高，大地争艳，比学赶帮超。磊磊胸怀盛世界，私全抛，难不倒。</p><p>万里征途奋今朝，党领导，人年少，万紫千红竟妖娆。<strong>峥嵘岁月宏图起，东风荡，春来早。</strong></p>]]></content>
     
@@ -382,7 +412,7 @@
     <link href="https://amonxu.com/2021/06/28/zh-CN/2021-06-28-Redis-Book/"/>
     <id>https://amonxu.com/2021/06/28/zh-CN/2021-06-28-Redis-Book/</id>
     <published>2021-06-28T14:00:01.000Z</published>
-    <updated>2023-09-04T09:56:32.601Z</updated>
+    <updated>2023-09-04T09:56:34.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://img1.doubanio.com/view/subject/l/public/s27297117.jpg" alt="img" style="zoom: 33%;"></p><p>认识这本书是好几年前了，那时候在一个胖胖哒同事桌前翻了几页；第一次看是3年前，看过几章大概到跳表那里；重新看完是3年后的今天，用时13时14分。</p><p>这本书确实是好书，以前对Redis的理解太过浅显（当然现在也未必多佳，但拜本书所赐，必不可同当年而语）。</p><p>书的结构非常好，从底层数据结构讲起，再到基本功能，高级功能，扩展功能。即使是每一节的内容，也非常有趣。从大致说明，基本用法，解释原理，数据结构图示，再到最后的总结。读来不觉乏味，这也和Redis本身清晰简洁的设计相符。</p><p>感谢本书作者，也感谢阅读中那些精彩的读者分享和讨论。 </p>]]></content>
     
@@ -412,7 +442,7 @@
     <link href="https://amonxu.com/2021/06/03/zh-CN/2021-06-03-School-Bag/"/>
     <id>https://amonxu.com/2021/06/03/zh-CN/2021-06-03-School-Bag/</id>
     <published>2021-06-03T15:21:22.000Z</published>
-    <updated>2023-09-04T09:56:35.371Z</updated>
+    <updated>2023-09-04T09:56:36.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://pic2.zhimg.com/80/v2-c1183d4a75bb9d253caee6d1f379094a_1440w.jpg?source=1940ef5c" alt="img" style="zoom:67%;"></p><blockquote><p><em>（题图：书包与骨头，取自《阳光灿烂的日子》 &amp; 《2001太空漫游》）</em></p></blockquote><h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>小男孩跟随母亲，步行很远来到热闹的集市。母亲挤在拥挤的人群，对着两旁铺位的商品左顾右盼，男孩从人群的手臂和大腿中钻过，直到停在一家卖箱包的铺位前。男孩的头，刚好超出铺位，能看到上面整齐摆列的包。</p><p>老板是一个擅长使嘴的中年女人，来往的行人，不管男女老幼美丑富贫，都被她喋喋不休的嘴，说得不由流连驻足。男孩听过唾沫横飞之类的词语，但觉得唾沫不应该是横飞的，而是上下翻飞，从老板并不优美的嘴唇里蹦出，跳着并不优美的舞蹈。</p><p>男孩眼光还在被各式各样的书包吸引的目不暇接，但母亲已和老板开始了对价格的彼此试探，于是男孩眼看着心仪的书包们一一从货架上取了下来，又一一挂了回去。最终，一个样式略普通的书包幸运地留了下来，在母亲一阵并不利索的掏钱付款后，老板将包装好的书包拿给男孩。</p><p>男孩接过新书包，欢天喜地地抱在怀里，自然很快将刚才看过那些花花绿绿的书包，通通抛诸脑后。甚至不舍得现在立刻背上它，一定要等到开学的那天，才能享用。</p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>这是一块被压缩存储、且正处于被清理边缘的记忆。来源于周末忽然地，手洗儿童书包。</p><p>一个普通的儿童背包，布料、结构和拉锁都是扎实的，只有边角处曾被洗衣机绞出一个小洞。</p><p>很久没有仔细看过儿童书包，儿童书包的样式，也几十年也鲜有变化。两根带子，几个拉锁分出来不同的包，左右两个口袋，正面再印上小朋友时下喜欢的图案。一个书包就这样制造完毕。</p><p>在我记忆里，小时候书包的种类还有不少：双肩包、挎包、拉锁的、系绳的、粘带的等等，样式各异，价格也差距不小。</p><p>普通一点的书包，自然没什么好看的图案，大多是印着字，比如一个“派”字。每每看到都会疑惑这个派字是何含义，又不免联想到派出所、帮派之意，以致在集市卖书包的铺位上，总会仔细寻找有没有带有“警”或“帮”的书包，以验证自己不成熟的猜测。</p><p>直到初中学了几年英语，才终于明白“派”大抵是由“Style”翻译而来，至于为何不加个“头”，想来便是“派头”虽更容易理解，却无疑就多了一个字的制作成本。</p><p>除了“派”字书包，好一些的便是印有各种图案的书包，这种自然也贵一些，非家境殷实一些的不会买。图案多是些奥特曼、动画角色之类，类似现在的冰雪奇缘与超级飞侠之类。可惜我已忘却我有没有背过这种书包（大概是没有的）。小学时光最后留下的一个书包，是没有图案的系绳书包，我用它来把少时所有的“玩具”都装了进去。（这些玩具且值一提，见又一篇<a href="">《我的玩具史》</a>）</p><h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>这是另一个男孩的故事。王焱，哥哥名叫王垚，兄弟俩五行一个缺火、一个缺土。他们的母亲是一个精明讲究的女人，由为哥俩看生辰八字便可略知一二。除此之外，哥俩稍大了些，她独自带着两兄弟从乡下来到城里上学。</p><p>在城里租房子的同一院内，除了这俩上幼儿园和小学三年级的兄弟，另有一对初三的姐弟和一对高三的姐弟。王家兄弟继承了其母亲的精明，哥哥多了几分正经与狡猾，弟弟则多了些可爱与温柔。平日里大家多喜欢逗弟弟玩。</p><p>每天上学的早上，弟弟准时背上他硕大的书包，大到里面估计装进了他所有的东西，仰着他稚气的脸，一颠一颠地跟在他母亲的后面。他母亲一边赶着那辆不再崭新的自行车，一边对着屋子里的哥哥念念叨叨，嘱咐些什么，直至走出大门，方才听不到她的声音。</p><p>他母亲是不会帮他背书包的，仿佛只有让他背着这个远远超出他年龄的书包，他才能快速长大。每每此时，站在二楼往下看他们背影的我，那个高三的弟弟，总会眼睛跟着一颠一颠的书包，疑惑它里面究竟装了些什么。</p><h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p>我本想同住院里一年半载，能竹筒倒豆搬出一些这哥俩的轶事，但到这里关于他们更多的，竟也憋不出一二。又想到，如今的王家弟弟年纪和我当时一样，在高三升大学的年纪，王家哥哥则应该已踏入社会。而我如今，打工人尔。</p><p>王家弟弟变成那时的我，我变成了那时他们的母亲，他们的母亲变成了那时我的母亲，我的孩子变成那时的他们。</p><p>我们都以为自己不会变，但不知不觉间还是变成了其他人。世界没有变，我们却说世界变了，我们没变。</p><p>—— 2021.6.4.夜</p>]]></content>
     
@@ -440,7 +470,7 @@
     <link href="https://amonxu.com/2021/03/25/zh-CN/2021-03-25-Made-Stupid-Again/"/>
     <id>https://amonxu.com/2021/03/25/zh-CN/2021-03-25-Made-Stupid-Again/</id>
     <published>2021-03-25T13:26:33.000Z</published>
-    <updated>2023-09-04T09:56:39.096Z</updated>
+    <updated>2023-09-04T09:56:40.000Z</updated>
     
     <content type="html"><![CDATA[<p>Boss：“近几年，人傻钱多不太好使，开始嫌弃我们是洋垃圾品牌。我们总不能等到灰溜溜打包走人那一天，想个辙吧，我想光速从这消失”<br>“公告：拒绝使用xj棉花”<br>（一夜消失）<br>Boss：“道理我都懂，我问你这脸上的404从哪来的”</p><p><img src="https://z3.ax1x.com/2021/03/25/6XUPWF.png" alt="image 20210325212538940"></p>]]></content>
     
@@ -468,7 +498,7 @@
     <link href="https://amonxu.com/2021/03/04/zh-CN/2021-03-04-2020-Wu-Xia/"/>
     <id>https://amonxu.com/2021/03/04/zh-CN/2021-03-04-2020-Wu-Xia/</id>
     <published>2021-03-04T14:22:22.000Z</published>
-    <updated>2023-09-04T09:56:43.682Z</updated>
+    <updated>2023-09-04T09:56:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>《射雕英雄传》</p><p><img src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/1b4c510fd9f9d72ae2b9e7afdf2a2834359bbba7.jpg" alt="img" style="zoom:80%;"></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=25638777&auto=1&height=66"></iframe><p>和很多小男孩一样，小时候我是个十足的武侠迷，常常幻想着飞檐走壁，劫富济贫，弹指间敌人灰飞烟灭，最后厌倦了江湖的尔虞我诈，携美人退隐山林，过着哥虽不在江湖但江湖有哥传说的日子。</p><p>不知从何时起，逐渐意识到电视上的高手都是演员，飞檐走壁是吊了威亚，降龙十八掌是加了特效，鹤顶红、断肠散之流可能是道具饮料，甚至被坏人害死的人趁着观众哭泣的时候在对盒饭大快朵颐…然后，慢慢洗去了身体和心理上的武侠气息，不再准备仗剑走天涯，安心做个阳光宅男。</p><p>又不知多少年后，一个动荡的2020年，偶然翻出一本《射雕英雄传》，一发不可收拾地扎入了消失已久的武侠世界中。</p><p>这个世界，人们好讲武德，话不投机拳脚上比高低，毋庸顾虑太多，不服就干。人们别无他求，只为获得绝世武功，扬名立万。身首异处，在所不惜。</p><p>射雕英雄传，本质上是讲一个刻意练习的案例，天资愚钝的郭靖，凭借着自己超乎寻常的刻苦训练，和全真七子、江南七怪、洪七公、黄蓉等各路名家大师，以及科学的方法，最终成为武学翘楚。</p><p>又想到，郭靖成为一代高手，又与世上绝顶聪明的黄蓉在一起，却也最后落个师父各个惨死桃花岛，桃花岛人去岛空。二人跟随成吉思汗大军西征，建功立业可谓信手拈来，然而大汗驾崩之后，二人也自枯草和白骨之间，返回故土。</p><p>可见武侠世界也并非为所欲为，亦然有悲欢离合，大侠亦然会失去亲情友情，荣华富贵皆过眼烟云。凡世间的那点苦痛，又算几何。</p><p>未完待续…</p>]]></content>
     
@@ -500,7 +530,7 @@
     <link href="https://amonxu.com/2021/02/22/zh-CN/2021-02-22-2020-Reading-Report/"/>
     <id>https://amonxu.com/2021/02/22/zh-CN/2021-02-22-2020-Reading-Report/</id>
     <published>2021-02-22T13:21:21.000Z</published>
-    <updated>2023-09-04T09:56:46.009Z</updated>
+    <updated>2023-09-04T09:56:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>《冰与火之歌》</p><p><img src="https://gss0.baidu.com/70cFfyinKgQFm2e88IuM_a/baike/pic/item/2fdda3cc7cd98d10275970bb2a3fb80e7aec90ae.jpg" alt="img" style="zoom: 80%;"></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=34828458&auto=1&height=66"></iframe><p>2011年，美剧《权力的游戏》第一季首播，等到我接触时，已经是2014年。在快速看完已出的四季之后，一年一更的等待显然不能满足我的热爱，于是开始翻原著小说。等到完全读完原著小说五卷后，时间已经来到了2020年。</p><p>原著小说我是把整个五卷下载起来，导入到Kindle中看的。因为内容太长，加上莫名的Bug，没有进度条。至于目录嘛，差不多长这样：</p><blockquote><p>POV 1 布兰</p><p>POV 2 凯特琳</p><p>POV 3 丹妮莉丝</p><p>POV n 猛猛如玉</p></blockquote><p>没有阅读进度，形容虚设的目录功能，导致整个阅读体验像是被判无期徒刑。</p><hr><p>六年是段漫长的日子，在这漫长的日子里，太多的阻碍诱惑阻止人读下去。因为疫情缘故，忽然多了很多时间，于是把Kindle充满电，重新进入维斯特洛大陆。</p><p>后来偶然得知一个朋友也在看原著，瞬间有种划着船在大海上漂流、看到其他船只的感觉。看着朋友的阅读进度，对着我当时看的故事情节，像跟着水痕行船。在之后听说对方已经看完的时候，我也意识到：故事，早晚会结束的。</p><p>结束来临的时候，没有任何预兆。凯冯爵士刚准备重振狮家荣耀，转眼领了盒饭（剧集中改编成了大学士派席尔的领盒饭方式），脑中还没猜好接下来会发生什么，故事戛然而止。像之前看过的伟人传记一样，当生命结束之时，没有任何的总结概述，也没有任何的抒情，像一本未完的书，永远地停留在那一页。</p><hr><p>关于此书，毋庸多言。横跨几年的阅读，诸多的感受和故事情节早已模糊。而印象最深刻的，要属其细腻丰富的文笔（当然我看的是中文翻译版的，而恰是中文翻译版，亦颇有中国现代文学之散文的风范。可知原著只会有过之而无不及，虽然可能咱这辈子也感受不到了&gt;_&lt;）</p><p>弱水三千只取一瓢，这里就摘一小段聊作意思罢。摘自《冰与火之歌》卷三 《冰雨的风暴》。</p><blockquote><p>​    雪花飘进房间，侍女下意识地裹紧毯子。珊莎打开房门，走下螺旋梯。当她接着<br> 打开通往花园的大门时，眼前的美景让她不由得屏住呼吸，惊讶于那份不属于人间<br> 的宁静。雪花飘啊飘，悠远的暗香与孤寂，它们沉甸甸、不受打扰地着陆。人间的全<br> 部色彩纷纷败下阵来，遁逃无踪，唯有黑、白和灰：白的高塔、白的雪和白的雕像，黑<br> 的影子与黑的树，灰的天空。一个纯粹的世界，珊莎心想，一个不属于我的世<br> 界。<br>​    她如梦似幻地踏步出门，靴子在顺滑的白雪表面留下及踝深的孔洞，却没发出<br> 任何声音。她走过结霜的矮木丛，望着细瘦的黑树干，不知自己是否仍在梦中。飘飞<br> 的雪花犹如情人温柔的亲吻，划过脸庞，因体温而融化。她来到花园中央，站在倒<br> 塌、半埋没的哭泣女人雕像旁，闭上双眼，举头向天。她闻到雪花的舞蹈，品尝着雪<br> 的滋味。这是临冬城的滋味，清白的滋味，梦的滋味。<br>​    当她睁开眼睛，发觉自己已然下跪，却不记得其中经过。天空泛白，黎明来到。<br> 这是新的一天，她心想，指引着未来。可她渴望的却是回到过去，祈祷能回到过<br> 去。她应该对谁祈祷?这座小花园原本是要栽培成神木林的，但土壤过于细薄多石，<br> 鱼梁木难以生根。一座没有心树、没有神灵的神木林，和我一样，空虚，空<br> 虚。</p></blockquote><p>看完这一段，是不是像极了我们读过的那些散文，甚至有点老舍《济南的冬天》那味儿。单独拎出来弄不好可以成一篇《鹰巢城的冬天》/狗头。</p><p>故事至此时，珊莎一家，父亲在君临城身首异处，妹妹毫无音信，母亲和哥哥奔流城遭遇血色婚礼，两个弟弟在北境不知所踪。经历了君临的闹剧后，她随小指头来到了母亲妹妹所在的鹰巢城，像一颗任人摆布的棋子，而即使身为棋子的过程，也是非常曲折和戏剧性的。</p><p><strong><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg3.doubanio.com%2Fview%2Fgroup_topic%2Fl%2Fpublic%2Fp174168920.jpg&refer=http%3A%2F%2Fimg3.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617371635&t=259190a564dca9016fd3644b03566365" alt="img" style="zoom: 80%;"></strong></p><p>这场大雪的描写和人物心理的刻画，无疑是瞎眼可见的震撼，我能想到的形容词唯有：<del>鹅妹子嘤</del> Amazing！</p><hr><p>后记：</p><p>本文写于2020年底，成文时间<strong>不详</strong>，据说不早于今日，未经求证。</p>]]></content>
     
@@ -532,7 +562,7 @@
     <link href="https://amonxu.com/2021/02/04/zh-CN/2021-02-04-Poem-Cloud/"/>
     <id>https://amonxu.com/2021/02/04/zh-CN/2021-02-04-Poem-Cloud/</id>
     <published>2021-02-04T14:02:20.000Z</published>
-    <updated>2023-09-04T09:56:48.018Z</updated>
+    <updated>2023-09-04T09:56:50.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.ting456.com%2Fpic%2Fuploadimg%2F2014-6%2F611.jpg&refer=http%3A%2F%2Fwww.ting456.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1615035146&t=9fa2644ef3f1d2eb4be0ff378d4e5e21" alt="img" style="zoom: 80%;"></p><p>还有什么比神化作中国古代最杰出的文学艺术家之一的李白更浪漫的呢；</p><p>还有什么比神对人类古诗词产生兴趣更浪漫的呢；</p><p>还有什么比神弹指间毁灭太阳系只为作诗更浪漫的呢，</p><p>还有什么比一朵诗云创作出所有诗词可能性更浪漫的呢。</p><p>往前看，这个星球以前的虫子们创作出的诗词，没有创作出的诗词，都在诗云之中；往后看，这个星球未来的虫子们可能创作出的诗词，没有创作出的诗词，也都在诗云之中。</p><p>念天地之悠悠，独怆然而涕下。 </p>]]></content>
     
@@ -567,7 +597,7 @@
     <link href="https://amonxu.com/2021/01/22/zh-CN/2021-01-22-2020-Reading-Report/"/>
     <id>https://amonxu.com/2021/01/22/zh-CN/2021-01-22-2020-Reading-Report/</id>
     <published>2021-01-22T14:02:20.000Z</published>
-    <updated>2023-09-04T09:56:50.058Z</updated>
+    <updated>2023-09-04T09:56:52.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="《百年孤独》"><a href="#《百年孤独》" class="headerlink" title="《百年孤独》"></a>《百年孤独》</h3><p><img src="https://mmbiz.qlogo.cn/mmbiz_jpg/JOB96YWrQHdLPaGRxrcoRY0e1ac7M2y6wxazleN7wFuNPM5sbPTibZ1BSKUAcHGXbibULrkSYHEAYsxzZaLnDS9Q/0?wx_fmt=jpeg" alt="img" style="zoom: 25%;"></p><p>在网上各样推荐书单和排行榜中，《百年孤独》肯定要代表外国文学占上一席。如果要玩一个一句话猜作品的游戏，肯定会有人在下面写道：“<strong><em>多年以后，面对行刑队，奥雷里亚诺·布恩迪亚上校将会回想起父亲带他去见识冰块的那个遥远的下午</em></strong>”，或者玩出下雨梗，“<strong><em>马孔多在下雨</em></strong>”。</p><p>这一句，是书中第一句话，也是很多人看过这书的最后一句话，因为“奥雷里亚诺·布恩迪亚”这个名字实在太劝退人了。即使读者朋友勉强撑过第一句，接着出场的一位自称“梅尔基亚德斯”的炼金术士又成功劝退一批。哪怕顽强硬着头皮看下去，马上“何塞·阿尔卡蒂奥·布恩迪亚”让人彻底一口热血喷在书上。</p><p>这部书，看过的人很多，看完的人很少，看懂的人更少。如果说你看懂了，说明你没看明白；如果说你看明白了，说明你没看懂。一千个读者眼中有一千个哈姆雷特。在这部书中，有的人看到是民族历史，有的人看到是家族的兴亡，有的人看到的是家人乱伦，有的人看到魔幻现实等等…</p><p>说回我看这本书的历程，开书第一章的长名三连差点没把我也逼退，书中每出现一次角色名字，对我都是暴击（偏偏因为姓名重复度太高，书中角色名字大多数情况下都是姓+名的全称）。迫于(<del>无聊</del>)对名著的阅读渴求，在读了几十页，并且成功接受儿子和老子的姓名完全一样后，恭喜我自己，终于踏过这本书的第一道门槛了。</p><p>即使如此，看书的过程中，还是无数次有放下此书的冲动，布恩迪亚家族在男性取名方面，一直在用奥雷里亚诺和阿尔卡蒂奥做排列组合。经常读着读着不知道谁是谁，只好在网上找了一张人物关系图谱（如下）对照来看，生怕囫囵吞枣。</p><p>亲爱的读者，不要害怕看了这张图会被剧透，反正也看不懂，看懂了也记不住，记住了也不知道谁是谁<img src="https://mmbiz.qlogo.cn/mmbiz_png/JOB96YWrQHdLPaGRxrcoRY0e1ac7M2y6gW6g3IF8R2s9dsO4yCFloLzC1ibJZPS7SKAdMk9VQoVWjuSovjTzxaQ/0?wx_fmt=png" alt="img"></p><p><img src="https://mmbiz.qlogo.cn/mmbiz_jpg/JOB96YWrQHdLPaGRxrcoRY0e1ac7M2y6Gia1b0JHIKDhiaTwt28H3PEVJXZycfPkLNZ81tFaX54jFe43RyBHYQDw/0?wx_fmt=jpeg" alt="11"></p><p>看书时，经常有种哪里读过、似曾相识的感觉，总感觉有另一本书的影子。搜了一下，确实看到网上有一些关于这两本书的讨论。我只能感叹一句：“百年孤独，和白鹿原，真的好像啊。不同国家不同族群，演绎着一样的故事”。</p><p>在庞大家族和伟大著作同时戛然而止时，我唯有欲说还休。鲁迅在《再论雷峰塔的倒掉》中写道：<strong><em>悲剧将人生的有价值的东西毁灭给人看\</em></strong>。莫不如此。</p><p>摘录当时的阅后感：</p><blockquote><p>书名：百年孤独，但直到最后一刻、全书的最后一句，“百年孤独”四个字才出现在书中，第一次，也是唯一一次。<br>这是一部家族史，也是一部民族史，国家史，拉丁美洲史。<br>从开山辟地开始，种族逐渐兴旺发达，历经神话，科学，战争，现代化等等等等，到最后逐渐衰落、灭亡，乃至为飓风所吞噬。<br>似能读到全世界，又似乎什么也没有读到。<br>如果用一个词来总结全书，我能想到的只有：黄粱一梦。</p></blockquote><hr><h3 id="《人类群星闪耀时》"><a href="#《人类群星闪耀时》" class="headerlink" title="《人类群星闪耀时》"></a>《人类群星闪耀时》</h3><p><img src="https://mmbiz.qlogo.cn/mmbiz_jpg/JOB96YWrQHdLPaGRxrcoRY0e1ac7M2y6dMSEQKBghfYmzE1sibL3yPwic5Vb1ib1JBUkyCw5vRhsAGXFmoXK5ZfMg/0?wx_fmt=jpeg" alt="img" style="zoom:25%;"></p><p>未读此书时，我以为这本书听起来像是一部艺术类，至少是个历史类，但没想到是一部传记类，作者是人类“历史上最好的传记作家”。</p><p>跟随此书，我们都成了历史的见证者，亲历了太平洋的发现命名，君士坦丁堡的陷落，滑铁卢的拿破仑惨败，西塞罗的人头落地，和威尔逊总统超越时代的计划破产…</p><p>看完此书，我只有一个想法：</p><blockquote><p>不如叫《西方群星闪耀时》</p></blockquote>]]></content>
     
@@ -576,37 +606,6 @@
       
       
         &lt;h3 id=&quot;《百年孤独》&quot;&gt;&lt;a href=&quot;#《百年孤独》&quot; class=&quot;headerlink&quot; title=&quot;《百年孤独》&quot;&gt;&lt;/a&gt;《百年孤独》&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://mmbiz.qlogo.cn/mmbiz_jpg/JOB96YWrQHd
-      
-    
-    </summary>
-    
-      <category term="书" scheme="https://amonxu.com/categories/%E4%B9%A6/"/>
-    
-    
-      <category term="随笔" scheme="https://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="读书笔记" scheme="https://amonxu.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的 2020 读书清单（中国文学类）</title>
-    <link href="https://amonxu.com/2021/01/05/zh-CN/2021-01-05-2020-Reading-Report/"/>
-    <id>https://amonxu.com/2021/01/05/zh-CN/2021-01-05-2020-Reading-Report/</id>
-    <published>2021-01-05T12:20:20.000Z</published>
-    <updated>2023-09-04T09:56:53.455Z</updated>
-    
-    <content type="html"><![CDATA[<p><del>最开始想写完全部清单总结，再发出文章。但是一列清单，发现有点多，害怕断更，所以发到哪算哪吧。</del><br>上一篇文章发出后，幸而得到几笔不菲的赞助，这激发了我创作的热情，使我赶紧推出下一篇。感谢大胆破费的各位和不嫌弃的阅读者们。</p><ul><li><p>《一只特立独行的猪》</p><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Filib.byau.edu.cn%2F_upload%2Farticle%2Fimages%2Fd2%2Fbc%2F7af62fb747918f3238af1b6b5fe9%2F2d723266-43b6-4826-bfcc-fb4a4e0a6fbe.jpg&refer=http%3A%2F%2Filib.byau.edu.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612448266&t=861d472c2a6d5c6dfc59becdb28ed33b" alt="img" style="zoom:33%;"></p><p>早些年上中学时，对课外书籍阅读和对非教科书知识的求知欲望，和青春期那时其它的欲望一样强烈。只要落到手头上不是交完书杂费后发下来的教材，都要反复翻上几翻，连同桌的成语词典和牛津英汉词典都不能幸免。</p><p>那时为了提高学生们的作文写作能力，学生们似乎普遍有一种短篇集小册子，里面收录各种近现代的短篇散文、小说、杂文等等。自己甚至也曾厚着脸皮临摹过其中几篇，在文中借着别人的笔，描述着我没见过的风景，做着没干过的事。</p><p>其中有篇印象特别深刻，便是这篇《一只特立独行的猪》。文中，一头猪，拥有了智慧动物-人的特质，所以看起来它更像是一个人，而不是一头猪。这头猪对每天吃饭、睡觉、交配的生活产生了思考，开始有了自己和生活的对抗。</p><p>但很可惜，它的同伴是猪，而不是人。迎接它的也不是劳动模范或者优秀员工奖，而是猎人的围杀。到后来，它可能被铁锤给锤扁了，又或许从猎人的枪下逃走，躲进了山林里，又长回了獠牙。</p><p>书中后续的一些杂文，除了让我惊掉下巴，甚至一度萌发了像作者一样拿起笔杆子的冲动。但是很快就从这种虚拟快感中脱离，并进入了长久的贤者时间。</p><p>摘录当时的阅后感：</p><blockquote><p>引用作者文中的话做点评：<br>“从事这种研究，因为预知了的结果，同手淫很相似。一个男人在手淫之先，就预知结果是本人的射精。然而这不妨碍手淫在他的想象中有声有色地进行，这是因为有快感在支持。”<br>我们在读这本书前，已经预知了结果。然而这并不妨碍我们在想象中有声有色地进行，最终什么也没有看到，什么也没有读懂。</p></blockquote></li><li><p>《活着》</p><p><img src="https://img3.doubanio.com/view/subject/l/public/s29053580.jpg" alt="img" style="zoom: 67%;"></p><p>苦难文学，和伤痕文学，是我一直不想读不愿碰的领域。因为它们真的太沉重了，并且离我又并不遥远。每当看到这种书籍或者影视作品，就有种揭开伤疤的疼痛。</p><p>现在我们大都知道，我们身处一个技术爆炸的时代，人类最近短短几十年的发展速度，已经远超过去几千年人类的发展水平。指数级增长、摩尔定律，这些名词，已经不足以形容我们飞速进取的步伐。但农村和城市的世界是割裂的，农村的时间是缓慢的，慢到外面激流勇进、日新月异，里面却静水流深、几十年如一日。</p><p>对于从小生活在农村的我，苦难文学它并不只是文学的艺术，不只是挂在墙上发黄的老照片，不只是压在柜底的一条破毛巾，而是真正勒紧裤带饿肚皮的体验。</p><p>摘录当时的阅后感，感受福贵与生活扼住咽喉的对抗：</p><blockquote><p>生活可以赋予他所有苦难，唯独赋予不了绝望；生活可以剥夺他的所有一切，唯独剥夺不了他要活着。<br>用涓涓细流的时间，缓缓记下了福贵一生的流水账。福贵败光了家产，老爹在粪缸前摔死，老娘在福贵被抓去拉大炮后担心死，儿子有庆抽血至死，女儿凤霞难产而死，妻子家珍病怏怏而死，女婿干活出事故而死，外孙吃豆子噎死。<br>福贵后来买了一头老牛，和它生活在了一起。</p></blockquote></li><li><p>《围城》</p><p><img src="https://img1.doubanio.com/view/subject/l/public/s11276847.jpg" alt="img" style="zoom: 67%;"></p><p>读好书时，我们会萌发一种自己也要拿起笔杆子写作的冲动；读好到不行的书时，会萌发一种自己十年一百年也写不出来这种作品，索性放弃了罢。钱老的书属于后一类。</p><p>对于此书，我不敢多言，文中金句颇多，语言艺术极高。如果不能把你笑到肚子痛，算你肚子是铁做的。</p><p>“对于丑人，细看是一种残忍——除非他是坏人，你要惩罚他。”，对于这篇文章，细看也是一种残忍——除非你要惩罚我(T＿T)</p><p>摘录当时的阅后感：</p><blockquote><p>故事从一艘回国的船开始，方鸿渐在国外荒废几年光阴，最后慌不迭买了一份假文凭回国。</p><p>回国的船上，方鸿渐邂逅了年轻时眼光高，最后剩下来只好便宜老实人的苏文纨，并与局部真理鲍小姐发生一夜情。</p><p>下船后，因为之前吹了牛皮，再经岳父一家添油加醋，方俨然成为附近名人。甚至阴差阳错去学校来一场关于梅毒和鸦片的西方文明演讲。</p><p>沾着老丈人的光去了国外留学，回国又去了老丈人的点金银行。方鸿渐开始和苏文纨交往起来，没曾想误打误撞方喜欢上了苏的表妹唐晓芙，又和苏的爱慕者赵辛楣成为铁哥们。</p><p>得不到的永远在骚动，被偏爱的有恃无恐。赵喜欢苏，苏喜欢方，方游离于酥糖小姐之间，唐喜欢方但又碍于表姐情面。</p><p>感情最能折磨人，后果是方与酥糖小姐都闹掰了，苏另寻新欢死了赵辛楣的心，然后一对感情上的难兄弟结伴，去到内地三闾大学任教。</p><p>一路颠簸流离之下，终于抵达。方也认识了同行的孙柔嘉。在内地闭塞的三闾大学，方不巧与孙柔嘉结为伴侣。而赵辛楣与汪太太的偷情发现，也使得他再次出走重庆。</p><p>少了赵辛楣的方，携妻回上海，开始与孙柔嘉疲于琐碎的家庭生活。平淡的生活甚至捏不出半点水来，生活总在吵架中和吵架后来回切换。</p><p>方是一个“你不讨厌，但全无用处”的人，没有继承方老的大家风范，也没有赵辛楣的雄厚人脉和左右逢源的能力，虽留洋归来却高不成低不就，夸张一点心比天高 命比纸薄。</p><p>孙是一个刚毕业的普通大学生，青年有志不愿留在上海，相貌可以算上平庸，性格也没什么亮点，甚为怕生。没有苏文纨的留洋经历，也没有苏的家庭背景，更没有唐晓芙的相貌和气质。</p><p>两个普通的人，也算得上一对相爱的人，但结婚的人们大都像两只亲密的刺猬，靠的太近容易扎得彼此遍体鳞伤，用创造新伤口和治愈旧伤口的痛苦，以对抗苦闷的生活。</p><p>没有蚊子血，没有白月光，有的只是平庸的人和困乏的生活。最后方下决心待孙好，孙等方回家吃饭，然而阴差阳错地饭没吃成，又大吵一架，孙离家远去。</p><p>方在痛苦中，那座号称每点钟走慢7分的旧钟，敲响了五个钟头前的时间。五个钟头前，是一切看起来将要美好的时候，而现实，总会令人陷入泥潭。</p></blockquote></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;del&gt;最开始想写完全部清单总结，再发出文章。但是一列清单，发现有点多，害怕断更，所以发到哪算哪吧。&lt;/del&gt;&lt;br&gt;上一篇文章发出后，幸而得到几笔不菲的赞助，这激发了我创作的热情，使我赶紧推出下一篇。感谢大胆破费的各位和不嫌弃的阅读者们。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;
       
     
     </summary>
