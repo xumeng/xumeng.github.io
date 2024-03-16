@@ -265,6 +265,128 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2023/10/11/en/2023-10-11-CentOS-Error-libstdc++.so.6-version-GLIBCXX_3.4.xx-not-found/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Amon">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2023/10/11/en/2023-10-11-CentOS-Error-libstdc++.so.6-version-GLIBCXX_3.4.xx-not-found/" class="post-title-link" itemprop="url">How to solve error on CentOS "/lib64/libstdc++.so.6 version GLIBCXX_3.4.xx not found"</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2023-10-11 22:33:55" itemprop="dateCreated datePublished" datetime="2023-10-11T22:33:55+08:00">2023-10-11</time>
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2023/10/11/en/2023-10-11-CentOS-Error-libstdc++.so.6-version-GLIBCXX_3.4.xx-not-found/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/10/11/en/2023-10-11-CentOS-Error-libstdc++.so.6-version-GLIBCXX_3.4.xx-not-found/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <meta name="referrer" content="no-referrer">
+
+<hr>
+<p>My personal server uses <code>CentOS 7.9</code>, and there are often strange errors when deploying some AI applications.<br>For example, recently, an error was reported when deploying an application:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/lib64/libstdc++.so.6: version GLIBCXX_3.4.xx not found</span><br></pre></td></tr></table></figure>
+<p>Online search for solutions, there are different opinions, either reinstall <code>gcc</code>, or recompile and install <code>libstdc++</code>,<code>export LD_LIBRARY_PATH</code> and so on.<br>Several attempts have failed, and there is no way to upgrade the os version. Finally, a suitable solution is found, and it’s worked for me.</p>
+<ol>
+<li>Find and display all packages that provide <code>libstdc++.so.6</code> as a library file through yum</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum provides libstdc++.so.6</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Download new version <code>libstdc.so</code>.</li>
+</ol>
+<blockquote>
+<p>NOTICE: Since I need version <code>3.4.22+</code>, so I can just update it to <code>3.4.26</code>.  Other versions are the same.</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/lib64</span><br><span class="line">sudo wget http://www.vuln.cn/wp-content/uploads/2019/08/libstdc.so_.6.0.26.zip</span><br><span class="line">unzip libstdc.so_.6.0.26.zip</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>Copy <code>libstdc++.so.6.0.26</code> to <code>/usr/lib64</code></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp libstdc++.so.6.0.26 /usr/lib64</span><br><span class="line">cd /usr/lib64</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>Check the soft link version of <code>libstdc++.so.6</code>,</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l | grep libstdc++</span><br></pre></td></tr></table></figure>
+<p>It may shows like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libstdc++.so.6 -&gt;libstdc++.so.6.0.19</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>Remove /usr/lib64 original link libstdc++.so.6, you can backup it before remove.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm libstdc++.so.6</span><br></pre></td></tr></table></figure>
+<p>then, relink it. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s libstdc++.so.6.0.26 libstdc++.so.6</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>OK, check the newest link</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings /usr/lib64/libstdc++.so.6 | grep GLIBCXX</span><br></pre></td></tr></table></figure>
+<p>It may shows like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">GLIBCXX_3.4</span><br><span class="line">...</span><br><span class="line">GLIBCXX_3.4.25</span><br><span class="line">GLIBCXX_3.4.26</span><br><span class="line">GLIBCXX_DEBUG_MESSAGE_LENGTH</span><br></pre></td></tr></table></figure>
+<p>Well Done!</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2023/09/18/en/2023-09-03-Hexo-Title-Symbol-Error/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -685,7 +807,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">116</span>
+          <span class="site-state-item-count">117</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -711,7 +833,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">124</span>
+        <span class="site-state-item-count">130</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>
