@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amonxu.com/"/>
-  <updated>2024-02-15T14:55:57.765Z</updated>
+  <updated>2024-03-16T14:45:46.530Z</updated>
   <id>https://amonxu.com/</id>
   
   <author>
@@ -18,21 +18,18 @@
   
   <entry>
     <title>《游子》</title>
-    <link href="https://amonxu.com/2024/02/07/zh-CN/2023-04-07-Go-Home/"/>
-    <id>https://amonxu.com/2024/02/07/zh-CN/2023-04-07-Go-Home/</id>
+    <link href="https://amonxu.com/2024/02/07/zh-CN/2024-02-07-Go-Home/"/>
+    <id>https://amonxu.com/2024/02/07/zh-CN/2024-02-07-Go-Home/</id>
     <published>2024-02-07T00:01:01.000Z</published>
-    <updated>2024-02-15T14:55:57.765Z</updated>
+    <updated>2024-03-16T14:45:46.530Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png" alt="1"></p><p>拖着行李箱的人们，</p><p>满载着一年的劳累，</p><p>穿过长长的铁道，</p><p>回到母亲怀内，</p><p>妈妈</p><p>我想再睡会</p><blockquote><p>2024.2.7 <a href="https://www.zhihu.com/search?q=腊月二十八&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={&quot;sourceType&quot;%3A&quot;answer&quot;%2C&quot;sourceId&quot;%3A3389717530}" target="_blank" rel="noopener">腊月二十八</a> 晨</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>&lt;img src=<a href="https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png" target="_blank" rel="noopener">https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png</a> width=40% /&gt;</p><p>拖着行李箱的人们，</p><p>满载着一年的劳累，</p><p>穿过长长的铁道，</p><p>回到母亲怀内，</p><p>妈妈</p><p>我想再睡会</p><blockquote><p>2024.2.7 <a href="https://www.zhihu.com/search?q=腊月二十八&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={&quot;sourceType&quot;%3A&quot;answer&quot;%2C&quot;sourceId&quot;%3A3389717530}" target="_blank" rel="noopener">腊月二十八</a> 晨</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
-&lt;p&gt;拖着行李箱的人们，&lt;/p&gt;
-&lt;p&gt;满载着一年的劳累，&lt;/p&gt;
-&lt;p&gt;穿过长长的铁道，&lt;/p
+        &lt;p&gt;&amp;lt;img src=&lt;a href=&quot;https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pic3.zhimg.
       
     
     </summary>
@@ -204,6 +201,70 @@
       <category term="诗" scheme="https://amonxu.com/tags/%E8%AF%97/"/>
     
       <category term="2023" scheme="https://amonxu.com/tags/2023/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决错误 GitHub Permission denied fatal Could not read from remote repository</title>
+    <link href="https://amonxu.com/2023/01/01/zh-CN/2023-01-01-GitHub-Permission-denied-fatal-Could-not-read-from-remote-repository/"/>
+    <id>https://amonxu.com/2023/01/01/zh-CN/2023-01-01-GitHub-Permission-denied-fatal-Could-not-read-from-remote-repository/</id>
+    <published>2023-01-01T03:23:55.000Z</published>
+    <updated>2024-03-17T04:02:10.650Z</updated>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><hr><p>机器上使用了多个 Git 库，比如 GitHub/公司 Git 库等，Git 工具主要使用 Terminal 和 GitKraken，偶尔会出现奇怪的问题。比如前两天在部署 Hexo Blog 时，遇到以下报错：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure><p>通常的解决方案是重新生成 GitHub 的 SSH Key。</p><p>但是我本地的配置是没问题的，可以在 Terminal 和GitKraken正常提交代码。</p><p>猜想可能是哪个环节不通，于是使用：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi &#123;username&#125;! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure><p>再重新部署提交，搞定！</p><p>参考：</p><blockquote><p><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey" target="_blank" rel="noopener">https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+
+&lt;hr&gt;
+&lt;p&gt;机器上使用了多个 Git 库，比如 GitHub/公司 Git 库等，Git 工具主要使用 Terminal 和 GitKraken，偶尔会出现奇怪的问题。比如前两天在部署
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://amonxu.com/tags/Git/"/>
+    
+      <category term="GitHub" scheme="https://amonxu.com/tags/GitHub/"/>
+    
+      <category term="Hexo" scheme="https://amonxu.com/tags/Hexo/"/>
+    
+      <category term="ssh" scheme="https://amonxu.com/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to solve error GitHub Permission denied fatal Could not read from remote repository</title>
+    <link href="https://amonxu.com/2023/01/01/en/2023-01-01-GitHub-Permission-denied-fatal-Could-not-read-from-remote-repository/"/>
+    <id>https://amonxu.com/2023/01/01/en/2023-01-01-GitHub-Permission-denied-fatal-Could-not-read-from-remote-repository/</id>
+    <published>2023-01-01T03:23:55.000Z</published>
+    <updated>2024-03-17T04:15:36.380Z</updated>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><hr><p>There are multiple Git libraries are used on my machine, such as GitHub/Company Private Git repo, etc., the Git tool mainly uses Terminal and GitKraken, and occasionally strange issues will arise. For example, the following error occurred when deploying the Hexo Blog a few days ago:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure><p>The usual solution is to regenerate the SSH Key of GitHub.</p><p>But there’s no issue with my local configuration, I can push code normally in Terminal and GitKraken.</p><p>Guessing that there might be some hitch in the process, I used:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>And saw:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi &#123;username&#125;! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure><p>Then redeployed and pushed, It’s worked!</p><p>Reference:</p><blockquote><p><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey" target="_blank" rel="noopener">https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+
+&lt;hr&gt;
+&lt;p&gt;There are multiple Git libraries are used on my machine, such as GitHub/Company Privat
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://amonxu.com/tags/Git/"/>
+    
+      <category term="GitHub" scheme="https://amonxu.com/tags/GitHub/"/>
+    
+      <category term="Hexo" scheme="https://amonxu.com/tags/Hexo/"/>
+    
+      <category term="ssh" scheme="https://amonxu.com/tags/ssh/"/>
     
   </entry>
   
@@ -497,9 +558,9 @@
       <category term="鬼画弧" scheme="https://amonxu.com/categories/%E9%AC%BC%E7%94%BB%E5%BC%A7/"/>
     
     
-      <category term="拾忆集" scheme="https://amonxu.com/tags/%E6%8B%BE%E5%BF%86%E9%9B%86/"/>
-    
       <category term="随笔" scheme="https://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="拾忆集" scheme="https://amonxu.com/tags/%E6%8B%BE%E5%BF%86%E9%9B%86/"/>
     
   </entry>
   
@@ -560,73 +621,6 @@
       <category term="读书笔记" scheme="https://amonxu.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
       <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的 2021-1 读书清单（小说类）</title>
-    <link href="https://amonxu.com/2021/02/22/zh-CN/2021-02-22-2020-Reading-Report/"/>
-    <id>https://amonxu.com/2021/02/22/zh-CN/2021-02-22-2020-Reading-Report/</id>
-    <published>2021-02-22T13:21:21.000Z</published>
-    <updated>2023-09-04T09:56:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>《冰与火之歌》</p><p><img src="https://gss0.baidu.com/70cFfyinKgQFm2e88IuM_a/baike/pic/item/2fdda3cc7cd98d10275970bb2a3fb80e7aec90ae.jpg" alt="img" style="zoom: 80%;"></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=34828458&auto=1&height=66"></iframe><p>2011年，美剧《权力的游戏》第一季首播，等到我接触时，已经是2014年。在快速看完已出的四季之后，一年一更的等待显然不能满足我的热爱，于是开始翻原著小说。等到完全读完原著小说五卷后，时间已经来到了2020年。</p><p>原著小说我是把整个五卷下载起来，导入到Kindle中看的。因为内容太长，加上莫名的Bug，没有进度条。至于目录嘛，差不多长这样：</p><blockquote><p>POV 1 布兰</p><p>POV 2 凯特琳</p><p>POV 3 丹妮莉丝</p><p>POV n 猛猛如玉</p></blockquote><p>没有阅读进度，形容虚设的目录功能，导致整个阅读体验像是被判无期徒刑。</p><hr><p>六年是段漫长的日子，在这漫长的日子里，太多的阻碍诱惑阻止人读下去。因为疫情缘故，忽然多了很多时间，于是把Kindle充满电，重新进入维斯特洛大陆。</p><p>后来偶然得知一个朋友也在看原著，瞬间有种划着船在大海上漂流、看到其他船只的感觉。看着朋友的阅读进度，对着我当时看的故事情节，像跟着水痕行船。在之后听说对方已经看完的时候，我也意识到：故事，早晚会结束的。</p><p>结束来临的时候，没有任何预兆。凯冯爵士刚准备重振狮家荣耀，转眼领了盒饭（剧集中改编成了大学士派席尔的领盒饭方式），脑中还没猜好接下来会发生什么，故事戛然而止。像之前看过的伟人传记一样，当生命结束之时，没有任何的总结概述，也没有任何的抒情，像一本未完的书，永远地停留在那一页。</p><hr><p>关于此书，毋庸多言。横跨几年的阅读，诸多的感受和故事情节早已模糊。而印象最深刻的，要属其细腻丰富的文笔（当然我看的是中文翻译版的，而恰是中文翻译版，亦颇有中国现代文学之散文的风范。可知原著只会有过之而无不及，虽然可能咱这辈子也感受不到了&gt;_&lt;）</p><p>弱水三千只取一瓢，这里就摘一小段聊作意思罢。摘自《冰与火之歌》卷三 《冰雨的风暴》。</p><blockquote><p>​    雪花飘进房间，侍女下意识地裹紧毯子。珊莎打开房门，走下螺旋梯。当她接着<br> 打开通往花园的大门时，眼前的美景让她不由得屏住呼吸，惊讶于那份不属于人间<br> 的宁静。雪花飘啊飘，悠远的暗香与孤寂，它们沉甸甸、不受打扰地着陆。人间的全<br> 部色彩纷纷败下阵来，遁逃无踪，唯有黑、白和灰：白的高塔、白的雪和白的雕像，黑<br> 的影子与黑的树，灰的天空。一个纯粹的世界，珊莎心想，一个不属于我的世<br> 界。<br>​    她如梦似幻地踏步出门，靴子在顺滑的白雪表面留下及踝深的孔洞，却没发出<br> 任何声音。她走过结霜的矮木丛，望着细瘦的黑树干，不知自己是否仍在梦中。飘飞<br> 的雪花犹如情人温柔的亲吻，划过脸庞，因体温而融化。她来到花园中央，站在倒<br> 塌、半埋没的哭泣女人雕像旁，闭上双眼，举头向天。她闻到雪花的舞蹈，品尝着雪<br> 的滋味。这是临冬城的滋味，清白的滋味，梦的滋味。<br>​    当她睁开眼睛，发觉自己已然下跪，却不记得其中经过。天空泛白，黎明来到。<br> 这是新的一天，她心想，指引着未来。可她渴望的却是回到过去，祈祷能回到过<br> 去。她应该对谁祈祷?这座小花园原本是要栽培成神木林的，但土壤过于细薄多石，<br> 鱼梁木难以生根。一座没有心树、没有神灵的神木林，和我一样，空虚，空<br> 虚。</p></blockquote><p>看完这一段，是不是像极了我们读过的那些散文，甚至有点老舍《济南的冬天》那味儿。单独拎出来弄不好可以成一篇《鹰巢城的冬天》/狗头。</p><p>故事至此时，珊莎一家，父亲在君临城身首异处，妹妹毫无音信，母亲和哥哥奔流城遭遇血色婚礼，两个弟弟在北境不知所踪。经历了君临的闹剧后，她随小指头来到了母亲妹妹所在的鹰巢城，像一颗任人摆布的棋子，而即使身为棋子的过程，也是非常曲折和戏剧性的。</p><p><strong><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg3.doubanio.com%2Fview%2Fgroup_topic%2Fl%2Fpublic%2Fp174168920.jpg&refer=http%3A%2F%2Fimg3.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617371635&t=259190a564dca9016fd3644b03566365" alt="img" style="zoom: 80%;"></strong></p><p>这场大雪的描写和人物心理的刻画，无疑是瞎眼可见的震撼，我能想到的形容词唯有：<del>鹅妹子嘤</del> Amazing！</p><hr><p>后记：</p><p>本文写于2020年底，成文时间<strong>不详</strong>，据说不早于今日，未经求证。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;《冰与火之歌》&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gss0.baidu.com/70cFfyinKgQFm2e88IuM_a/baike/pic/item/2fdda3cc7cd98d10275970bb2a3fb80e7aec90ae.jpg&quot; alt=&quot;
-      
-    
-    </summary>
-    
-      <category term="书" scheme="https://amonxu.com/categories/%E4%B9%A6/"/>
-    
-    
-      <category term="随笔" scheme="https://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="小说" scheme="https://amonxu.com/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
-      <category term="读书笔记" scheme="https://amonxu.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="2020" scheme="https://amonxu.com/tags/2020/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《诗云》读后感</title>
-    <link href="https://amonxu.com/2021/02/04/zh-CN/2021-02-04-Poem-Cloud/"/>
-    <id>https://amonxu.com/2021/02/04/zh-CN/2021-02-04-Poem-Cloud/</id>
-    <published>2021-02-04T14:02:20.000Z</published>
-    <updated>2023-09-04T09:56:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.ting456.com%2Fpic%2Fuploadimg%2F2014-6%2F611.jpg&refer=http%3A%2F%2Fwww.ting456.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1615035146&t=9fa2644ef3f1d2eb4be0ff378d4e5e21" alt="img" style="zoom: 80%;"></p><p>还有什么比神化作中国古代最杰出的文学艺术家之一的李白更浪漫的呢；</p><p>还有什么比神对人类古诗词产生兴趣更浪漫的呢；</p><p>还有什么比神弹指间毁灭太阳系只为作诗更浪漫的呢，</p><p>还有什么比一朵诗云创作出所有诗词可能性更浪漫的呢。</p><p>往前看，这个星球以前的虫子们创作出的诗词，没有创作出的诗词，都在诗云之中；往后看，这个星球未来的虫子们可能创作出的诗词，没有创作出的诗词，也都在诗云之中。</p><p>念天地之悠悠，独怆然而涕下。 </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.ting456.com%2Fpic%2Fuploadimg%2F2014-6%2F611.jpg&amp;refer=http%3A%2F%2Fw
-      
-    
-    </summary>
-    
-      <category term="书" scheme="https://amonxu.com/categories/%E4%B9%A6/"/>
-    
-    
-      <category term="随笔" scheme="https://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="小说" scheme="https://amonxu.com/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
-      <category term="读书笔记" scheme="https://amonxu.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="科幻" scheme="https://amonxu.com/tags/%E7%A7%91%E5%B9%BB/"/>
-    
-      <category term="刘慈欣" scheme="https://amonxu.com/tags/%E5%88%98%E6%85%88%E6%AC%A3/"/>
-    
-      <category term="2021" scheme="https://amonxu.com/tags/2021/"/>
     
   </entry>
   

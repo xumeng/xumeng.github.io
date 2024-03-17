@@ -265,6 +265,257 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/05/10/zh-CN/2018-05-10-Hello-Gitment/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Amon">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2018/05/10/zh-CN/2018-05-10-Hello-Gitment/" class="post-title-link" itemprop="url">Hello Gitment</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2018-05-10 11:42:39" itemprop="dateCreated datePublished" datetime="2018-05-10T11:42:39+08:00">2018-05-10</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2018/05/10/zh-CN/2018-05-10-Hello-Gitment/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/05/10/zh-CN/2018-05-10-Hello-Gitment/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://images.unsplash.com/photo-1481622254766-0f0a35bf6e77?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=571f6724a7088c40e3f4cb2acf1bec87&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80" alt="cover"><br>换 Disqus 才一年，因为被 Q，本来就清静的博客更清静了，索性再也看不到任何评论，忧伤。</p>
+<p>最近又看到一个讨论国内社会化评论系统的帖子，兴之所致接入 Gitment。</p>
+<p>网上有不少教程，可以按照教程一步步操作。说说我的踩坑过程：</p>
+<hr>
+<h5 id="1-更新主题"><a href="#1-更新主题" class="headerlink" title="1. 更新主题"></a>1. 更新主题</h5><p>我的博客采用的是 <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">hexo</a> + <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">hexo-theme-yilia</a>，首先更新了<code>hexo-theme-yilia</code>主题。</p>
+<h5 id="2-配置信息"><a href="#2-配置信息" class="headerlink" title="2. 配置信息"></a>2. 配置信息</h5><p>发现<code>hexo-theme-yilia</code>主题自带支持<code>Gitment</code>，如下<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitment_owner:</span> <span class="comment">#      #你的 GitHub ID</span></span><br><span class="line"><span class="attr">gitment_repo:</span> <span class="string">'#'</span>          <span class="comment">#存储评论的 repo</span></span><br><span class="line"><span class="attr">gitment_oauth:</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">'#'</span>           <span class="comment">#client ID</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="string">'#'</span>       <span class="comment">#client secret</span></span><br></pre></td></tr></table></figure></p>
+<p>去<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">创建一个 OAuth application</a>，并获取相关信息填入其中。</p>
+<h5 id="3-部署博客"><a href="#3-部署博客" class="headerlink" title="3. 部署博客"></a>3. 部署博客</h5><p>进入博客文章详情，可以看到文章底部已经有评论模块了。</p>
+<h5 id="4-初始化评论"><a href="#4-初始化评论" class="headerlink" title="4. 初始化评论"></a>4. 初始化评论</h5><p>可以自己点进博客手动点击初始化，也可以使用<a href="https://draveness.me/git-comments-initialize" target="_blank" rel="noopener">自动初始化 Gitalk 和 Gitment 评论</a>。</p>
+<p>遇到一个蛋疼的问题是当文章链接过长的时候(超过 50 个字符)，会报<code>Validation Failed</code>错误。</p>
+<p>解决办法：</p>
+<ul>
+<li>如果是手动初始化的，可以考虑在 Gitment 配置里面用<code>page.date</code>代替<code>url</code>，这样就不会超出 50 个字符了。</li>
+<li>如果是使用自动初始化的 ruby 脚本，可以改下代码，思路有几种：<blockquote>
+<ol>
+<li>将 url 截取不超过 50 个字符</li>
+<li>将 url md5 加密或者 Base64 编码</li>
+<li>用时间来代替(估计比较蛋疼，涉及时间格式转换)</li>
+<li>设置博客的<code>permalink</code>，保证 url 长度在 50 个字符以内</li>
+<li>其它大胆的想法…<br>我采用的是第 1 种方案。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<p><strong>FBI Warning! FBI Warning! FBI Warning!</strong></p>
+<p>因为 Issue 需要和文章对应，改完代码后，还需要在博客源码里面改下 Gitment 的配置，使两处生成的值一致。</p>
+<p><em>Ruby 脚本修改一处：</em><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">req.body = &#123; <span class="symbol">body:</span> url, <span class="symbol">labels:</span> [kind, url[<span class="number">0</span>,<span class="number">48</span>]], <span class="symbol">title:</span> title &#125;.to_json</span><br></pre></td></tr></table></figure></p>
+<p><em>Gitment 配置修改一处：</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gitment = <span class="keyword">new</span> Gitment(&#123;</span><br><span class="line">  id: <span class="string">"&lt;%= url %&gt;"</span>.substring(<span class="number">0</span>,<span class="number">48</span>),</span><br></pre></td></tr></table></figure></p>
+<p>为方便还晕着的，再贴下原来的代码以便区分：</p>
+<p><em>原 Ruby 脚本：</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">req.body = &#123; body: url, labels: [kind, url], title: title &#125;.to_json</span><br></pre></td></tr></table></figure></p>
+<p><em>原 Gitment 配置：</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gitment = <span class="keyword">new</span> Gitment(&#123;</span><br><span class="line">  id: <span class="string">"&lt;%=url%&gt;"</span>,</span><br></pre></td></tr></table></figure></p>
+<h5 id="5-大功告成"><a href="#5-大功告成" class="headerlink" title="5. 大功告成"></a>5. 大功告成</h5><h5 id="6-后续问题"><a href="#6-后续问题" class="headerlink" title="6. 后续问题"></a>6. 后续问题</h5><ul>
+<li>之前旧的评论不能导入：理论上可以实现，解析 Disqus 导出的评论文件，然后添加到文章的评论内。看有无必要了。</li>
+<li>后续每次添加新文章，都需要手动初始化下评论：同样可以使用脚本初始化，或者发布文章部署时自动调用以初始化。</li>
+</ul>
+<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><p><a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="noopener">Gitment：使用 GitHub Issues 搭建评论系统</a></p>
+<p><a href="https://draveness.me/git-comments-initialize" target="_blank" rel="noopener">自动初始化 Gitalk 和 Gitment 评论</a></p>
+<p><a href="https://www.jianshu.com/p/57afa4844aaa" target="_blank" rel="noopener">Gitment评论功能接入踩坑教程</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/05/01/zh-CN/2018-05-01-Dog-Talk/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Amon">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2018/05/01/zh-CN/2018-05-01-Dog-Talk/" class="post-title-link" itemprop="url">狗与人说 - 五月</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2018-05-01 00:00:00" itemprop="dateCreated datePublished" datetime="2018-05-01T00:00:00+08:00">2018-05-01</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Note/" itemprop="url" rel="index">
+                    <span itemprop="name">Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2018/05/01/zh-CN/2018-05-01-Dog-Talk/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/05/01/zh-CN/2018-05-01-Dog-Talk/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>周五，天晴，午后。</p>
+<p>15:00 股票收盘后，放弃盯着泛绿的持仓，拿起水杯咕咚灌下几口，时光恍惚间变得慵懒了些。</p>
+<p>QQ 闪来一句消息，老家的表弟分享一条游戏抽奖链接。往上一条消息，是过年时候他群发的祝福。表弟差我十二岁，素来不甚亲近，我生他未生，他生我少年，等他少年我已结婚生子成年。</p>
+<hr>
+<p>表弟分享游戏里的抽奖链接，<br>我心想：这小家伙，放假玩游戏啦。<br>回复道：“。。”<br>表弟：“！”<br>“小家伙，回家了吗？”<br>“对”<br>“在干吗呢”<br>“打游戏”</p>
+<hr>
+<p>“嘿！怎么又在玩游戏？”。我本想问这一句。</p>
+<p>但那一刻忽然想起了，十几年前的初中，周五放学后，裹拥着人群出了校门，和几个同村的小伙伴一路迎着夕阳，边玩边走回到了家。放下书包望着一周未摸的小霸王，趁机耍把魂斗罗。不一会，小伙伴溜来，拉着要在门前趁着天色尚亮玩一波。</p>
+<p>几天不见的柳树又长出了新叶，田野里庄稼发的更绿，脚下的土地因为久无玩耍的我们而显得有些冰凉。</p>
+<p>家家烟囱里升起了晚饭的炊烟，窗户里飘出了香味。过不一会，回家吃饭的叫喊声此起彼伏，小伙伴依依不舍道别。</p>
+<hr>
+<p>我不该问这么扫兴的问题，十几岁的我，讨厌被说教、讨厌被上课，只想沉浸在自己的小小世界里。</p>
+<p>“拍张家里的照片看看天气如何”<br>过了些会，表弟发来如图。<br><img src="http://p9.pstatp.com/large/pgc-image/15251771417336b075e2465" alt="51"><br>水边的树，茂密的枝叶遮住了五月的天空，天空上满布白云。</p>
+<hr>
+<p>已是五月，该回家看看了。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/03/17/zh-CN/2018-03-17-Good-Bye-Big-Brother/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1248,234 +1499,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/01/01/zh-CN/2016-01-01-New-Year/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2016/01/01/zh-CN/2016-01-01-New-Year/" class="post-title-link" itemprop="url">旧年新年</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2016-01-01 00:00:01" itemprop="dateCreated datePublished" datetime="2016-01-01T00:00:01+08:00">2016-01-01</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Note/" itemprop="url" rel="index">
-                    <span itemprop="name">Note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2016/01/01/zh-CN/2016-01-01-New-Year/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/01/zh-CN/2016-01-01-New-Year/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>旧年新年</p>
-<p>2015，终于成为历史，一个无关紧要的数字。</p>
-<p>将来是诱惑的，现在是重要的，过去是没用的，就和女人一样。你以为没有追上的女神是遥不可及的，充满可能的，当你拿下了也发现不过如此。你以为现在的会永远在一起，也说不定转眼就成为过去式了。而过去的女人就成了黏在身上的一坨泥巴，虽然擦了洗了泼出去了，也会干了变成灰尘漂浮在你的周围，落在衣服上钻进鼻孔揉进眼睛，不时出现在你边上。</p>
-<p>回想 2015，大致可以分为几个时期：</p>
-<p>乱世：<br>持续了小上半年。首先上架了某图片社交应用，此举难度姑且堪称全年一难。</p>
-<p>混沌世：<br>持续了一个半月，期间成功脱坑。虽然不知入的是不是坑，但起码也算的上起起落落。</p>
-<p>朗世：<br>感觉混沌天空变成朗朗晴空，一切充满挑战与可能。可惜它只持续了将近两个月。</p>
-<p>浊世：<br>团队的磨合、产品方向的变更、人员的匮乏，堪称这几个月的几大痛处。好在最终都坚持了下来，然后，年底前，3.0（0.3）版本发布。伴随着 2016 新年的钟声，全年第一难结束了。新年的事，日后再说。</p>
-<p>这一年，读了点书，写了点字，呻了点吟，并没有赚什么钱，并没有陪什么家人。</p>
-<p>我算坚定的保守主义者，因为阳历到了 2016 而阴历还是 2015 时，我认为时间在此应该慢下来按阴历算。虽然你已然是 2016 了，但是应该停下来等一等阴历，待过完年新历旧历再一起携着小手一起欢快的奔腾。</p>
-<p>可惜事与愿违，新历大概永远不会停下来等一等旧历，至少在它被发明出来时并没打算加上这个功能。旧历的新年开始时，新历的一年也已去了几分之一。</p>
-<p>新年，且说几句：</p>
-<ul>
-<li>继续看书</li>
-<li>继续学习</li>
-<li>继续写</li>
-<li>继续思考</li>
-<li>继续执行</li>
-<li>继续输出</li>
-</ul>
-<p>这篇文章啰嗦到此了，赶着写铁拐李。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/12/15/zh-CN/2015-12-15-Eggs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2015/12/15/zh-CN/2015-12-15-Eggs/" class="post-title-link" itemprop="url">一只忘了下蛋的鸡</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2015-12-15 14:30:33" itemprop="dateCreated datePublished" datetime="2015-12-15T14:30:33+08:00">2015-12-15</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2015/12/15/zh-CN/2015-12-15-Eggs/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/15/zh-CN/2015-12-15-Eggs/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>  以前提到过，我自幼对文字有特殊的感觉。当然这里的以前未必真是以前，因为提及此的文章写于本文之前，却并未发出。故而读者如果感到疑惑，可理解为我在此确定一个如上前提条件，且是全局性的，前后文皆接受此条件，除非局部重新定义。</p>
-<p>  因为擅文字，好卖弄，这让不少人知道我是一个有才的家伙，无论真心的 (true) 和假意的 (false) 。但这一点都无法构成我很牛逼，因为 true &amp;&amp; false = false. 文字哪怕写的很好，也仅此而已了，既无法让你成为一个数理化很牛逼的学霸，也无法成为一个精通历史政治、能谈古说今的家伙。反倒让你看起来是个多长了条胳膊：往乐观了看是三头六臂，往悲观了看却是在你睡觉的时候硌着背，吃饭的时候恐怕会抢碗筷。</p>
-<p>  总之这让别人看来一个穿着长布衫扶着圆片眼镜的 nerd ：既闷而骚，还能写点文字。这里能写点文字就跟老母鸡能下蛋一样不值一提了，老母鸡就是下蛋的，这也算本事嘛？老母鸡会下蛋，所以干嘛不下蛋？你不下蛋我们便会对你老母鸡的身份重新定义。老母鸡之所以是老母鸡，盖因你会下蛋。假使老母鸡不会下蛋，那么与老公鸡无异，不能称之为老母鸡、下蛋的母鸡。老公鸡见到老母鸡便念叨：下只蛋罢，甭管老母鸡当时是心情不好或是刚来月经，或者刚拉完一泡鸡屎压根没想过下蛋。</p>
-<p>  因为上述原因加上自己的懒惰，为自己找来借口什么也不干。加上上述原因是借口之一，由此可见我为找借口是不遗余力的。每次决心写点什么，想好一个故事，确定好主人公的名字和关系，然后就放那了。只顾想不顾写。很多年后写代码这毛病再次复发：定义好 variable 和 Data Type，然后就不往下写了。算下来这么多年写下来的东西就是声明了一大摊 Interface 和 variable，不管实现。至于能遗留下来的，就更少了。所以其实可以算我其实什么也没”写过”，只是”想过”。</p>
-<p>  如果能写文字时写文字，可以姑且算个有才，那么能写文字时不写文字，等到老都再写文字，那么不叫有才，叫自传，写完自是读不到的，别人更不会读到。大家那么忙，自己的一辈子都操心不过来，哪还有时间关心你的一辈子。</p>
-<p>  那么现在写点什么到底算个什么呢？我想最大的意义便是对我的脑袋之前天马行空的一个交代，因为假使如上所说在能写点什么的时候写点什么，可以称之为有才，而最后我没有成为有才，只是一个普通的家伙，靠不了文字过日子，只能写些abcd123的代码吃饭，脑袋肯定是不满意的，不满意的早晚要造反，为了长久之计还是需要写点什么，尽管上述并不构成因果关系。</p>
-<p>  如果一只本会下蛋的鸡，一只没下什么蛋，那么最后我们可以认为它忘了下蛋，或者压根不会下蛋，那么它现在下的蛋究竟是些什么蛋，肯定不会是什么好蛋，是坏掉的蛋，畸形的蛋。</p>
-<p>  此文无特殊意义，仅为下蛋的碎碎念、咯咯叫。</p>
-<p>  <em>顺便祝自己 25 岁生日快乐 :)</em></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1528,7 +1551,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">117</span>
+          <span class="site-state-item-count">119</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1554,7 +1577,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">130</span>
+        <span class="site-state-item-count">132</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>
