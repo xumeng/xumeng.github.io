@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://amonxu.com/"/>
-  <updated>2024-03-16T14:45:46.530Z</updated>
+  <updated>2024-03-17T04:21:26.022Z</updated>
   <id>https://amonxu.com/</id>
   
   <author>
@@ -21,15 +21,18 @@
     <link href="https://amonxu.com/2024/02/07/zh-CN/2024-02-07-Go-Home/"/>
     <id>https://amonxu.com/2024/02/07/zh-CN/2024-02-07-Go-Home/</id>
     <published>2024-02-07T00:01:01.000Z</published>
-    <updated>2024-03-16T14:45:46.530Z</updated>
+    <updated>2024-03-17T04:21:26.022Z</updated>
     
-    <content type="html"><![CDATA[<p>&lt;img src=<a href="https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png" target="_blank" rel="noopener">https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png</a> width=40% /&gt;</p><p>拖着行李箱的人们，</p><p>满载着一年的劳累，</p><p>穿过长长的铁道，</p><p>回到母亲怀内，</p><p>妈妈</p><p>我想再睡会</p><blockquote><p>2024.2.7 <a href="https://www.zhihu.com/search?q=腊月二十八&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={&quot;sourceType&quot;%3A&quot;answer&quot;%2C&quot;sourceId&quot;%3A3389717530}" target="_blank" rel="noopener">腊月二十八</a> 晨</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png" width="40%"></p><p>拖着行李箱的人们，</p><p>满载着一年的劳累，</p><p>穿过长长的铁道，</p><p>回到母亲怀内，</p><p>妈妈</p><p>我想再睡会</p><blockquote><p>2024.2.7 <a href="https://www.zhihu.com/search?q=腊月二十八&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={&quot;sourceType&quot;%3A&quot;answer&quot;%2C&quot;sourceId&quot;%3A3389717530}" target="_blank" rel="noopener">腊月二十八</a> 晨</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&amp;lt;img src=&lt;a href=&quot;https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pic3.zhimg.
+        &lt;p&gt;&lt;img src=&quot;https://pic3.zhimg.com/v2-74eab3ea6cfe106c1e06a1f9eafe75a2_b.png&quot; width=&quot;40%&quot;&gt;&lt;/p&gt;
+&lt;p&gt;拖着行李箱的人们，&lt;/p&gt;
+&lt;p&gt;满载着一年的劳累，&lt;/p&gt;
+&lt;p&gt;穿过长长的铁道
       
     
     </summary>
@@ -205,38 +208,6 @@
   </entry>
   
   <entry>
-    <title>解决错误 GitHub Permission denied fatal Could not read from remote repository</title>
-    <link href="https://amonxu.com/2023/01/01/zh-CN/2023-01-01-GitHub-Permission-denied-fatal-Could-not-read-from-remote-repository/"/>
-    <id>https://amonxu.com/2023/01/01/zh-CN/2023-01-01-GitHub-Permission-denied-fatal-Could-not-read-from-remote-repository/</id>
-    <published>2023-01-01T03:23:55.000Z</published>
-    <updated>2024-03-17T04:02:10.650Z</updated>
-    
-    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><hr><p>机器上使用了多个 Git 库，比如 GitHub/公司 Git 库等，Git 工具主要使用 Terminal 和 GitKraken，偶尔会出现奇怪的问题。比如前两天在部署 Hexo Blog 时，遇到以下报错：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure><p>通常的解决方案是重新生成 GitHub 的 SSH Key。</p><p>但是我本地的配置是没问题的，可以在 Terminal 和GitKraken正常提交代码。</p><p>猜想可能是哪个环节不通，于是使用：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi &#123;username&#125;! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure><p>再重新部署提交，搞定！</p><p>参考：</p><blockquote><p><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey" target="_blank" rel="noopener">https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey</a></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-
-&lt;hr&gt;
-&lt;p&gt;机器上使用了多个 Git 库，比如 GitHub/公司 Git 库等，Git 工具主要使用 Terminal 和 GitKraken，偶尔会出现奇怪的问题。比如前两天在部署
-      
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="https://amonxu.com/tags/Git/"/>
-    
-      <category term="GitHub" scheme="https://amonxu.com/tags/GitHub/"/>
-    
-      <category term="Hexo" scheme="https://amonxu.com/tags/Hexo/"/>
-    
-      <category term="ssh" scheme="https://amonxu.com/tags/ssh/"/>
-    
-  </entry>
-  
-  <entry>
     <title>How to solve error GitHub Permission denied fatal Could not read from remote repository</title>
     <link href="https://amonxu.com/2023/01/01/en/2023-01-01-GitHub-Permission-denied-fatal-Could-not-read-from-remote-repository/"/>
     <id>https://amonxu.com/2023/01/01/en/2023-01-01-GitHub-Permission-denied-fatal-Could-not-read-from-remote-repository/</id>
@@ -253,6 +224,38 @@
 
 &lt;hr&gt;
 &lt;p&gt;There are multiple Git libraries are used on my machine, such as GitHub/Company Privat
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://amonxu.com/tags/Git/"/>
+    
+      <category term="GitHub" scheme="https://amonxu.com/tags/GitHub/"/>
+    
+      <category term="Hexo" scheme="https://amonxu.com/tags/Hexo/"/>
+    
+      <category term="ssh" scheme="https://amonxu.com/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决错误 GitHub Permission denied fatal Could not read from remote repository</title>
+    <link href="https://amonxu.com/2023/01/01/zh-CN/2023-01-01-GitHub-Permission-denied-fatal-Could-not-read-from-remote-repository/"/>
+    <id>https://amonxu.com/2023/01/01/zh-CN/2023-01-01-GitHub-Permission-denied-fatal-Could-not-read-from-remote-repository/</id>
+    <published>2023-01-01T03:23:55.000Z</published>
+    <updated>2024-03-17T04:02:10.650Z</updated>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><hr><p>机器上使用了多个 Git 库，比如 GitHub/公司 Git 库等，Git 工具主要使用 Terminal 和 GitKraken，偶尔会出现奇怪的问题。比如前两天在部署 Hexo Blog 时，遇到以下报错：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure><p>通常的解决方案是重新生成 GitHub 的 SSH Key。</p><p>但是我本地的配置是没问题的，可以在 Terminal 和GitKraken正常提交代码。</p><p>猜想可能是哪个环节不通，于是使用：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi &#123;username&#125;! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure><p>再重新部署提交，搞定！</p><p>参考：</p><blockquote><p><a href="https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey" target="_blank" rel="noopener">https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+
+&lt;hr&gt;
+&lt;p&gt;机器上使用了多个 Git 库，比如 GitHub/公司 Git 库等，Git 工具主要使用 Terminal 和 GitKraken，偶尔会出现奇怪的问题。比如前两天在部署
       
     
     </summary>
@@ -558,9 +561,9 @@
       <category term="鬼画弧" scheme="https://amonxu.com/categories/%E9%AC%BC%E7%94%BB%E5%BC%A7/"/>
     
     
-      <category term="随笔" scheme="https://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
       <category term="拾忆集" scheme="https://amonxu.com/tags/%E6%8B%BE%E5%BF%86%E9%9B%86/"/>
+    
+      <category term="随笔" scheme="https://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
