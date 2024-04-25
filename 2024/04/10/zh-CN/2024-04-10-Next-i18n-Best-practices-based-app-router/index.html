@@ -51,9 +51,9 @@
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: 'Copy',
-      copy_success: 'Copied',
-      copy_failure: 'Copy failed'
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
     },
     sidebarPadding: 40
   };
@@ -68,7 +68,7 @@
 <meta property="og:description" content="文章导读：本文介绍了在 Next.js 14 (基于App Router) 中实现 i18n 国际化多语言功能，并考虑在真实的场景中，一步步优化将功能完善。通过阅读完本文，你将立即掌握如何在 Next.js 中实现 i18n。  前言在互联网世界越来越扁平化的时代，产品的多语言显得越来越重要。幸运的在 Next.js 中通过简单的配置和代码即可快速支持多语言。但是，当我们在互联网上搜索 Next.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-<meta property="og:updated_time" content="2024-04-25T04:00:33.774Z">
+<meta property="og:updated_time" content="2024-04-25T04:22:36.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一篇文章学会 Next.js 实现 i18n 国际化多语言(基于App Router)">
 <meta name="twitter:description" content="文章导读：本文介绍了在 Next.js 14 (基于App Router) 中实现 i18n 国际化多语言功能，并考虑在真实的场景中，一步步优化将功能完善。通过阅读完本文，你将立即掌握如何在 Next.js 中实现 i18n。  前言在互联网世界越来越扁平化的时代，产品的多语言显得越来越重要。幸运的在 Next.js 中通过简单的配置和代码即可快速支持多语言。但是，当我们在互联网上搜索 Next.">
@@ -162,7 +162,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -182,7 +182,7 @@
       
     
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
   </li>
       
     
@@ -194,7 +194,7 @@
       
     
 
-    <a href="https://about.amonxu.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-user"></i>About</a>
+    <a href="https://about.amonxu.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-user"></i>关于</a>
   </li>
       
     
@@ -218,7 +218,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
   </li>
       
     
@@ -230,7 +230,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
   </li>
       
     
@@ -242,7 +242,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
   </li>
       
     
@@ -419,6 +419,7 @@
 <li><strong>从 HTTP headers 中获取 <code>Accept-Language</code>，如果为空则返回默认语言</strong></li>
 <li><strong>解析 <code>Accept-Language</code> 中的语言列表，并根据配置的语言列表，匹配获取对应的语言（如果没有则返回默认语言）</strong></li>
 </ol>
+<p>安装依赖 <code>@formatjs/intl-localematcher</code>, <code>negotiator</code>, <code>@types/negotiator</code>，并实现如下逻辑：</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLocale</span>(<span class="params">request: NextRequest</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> acceptLang = request.headers.get(<span class="string">"Accept-Language"</span>);</span><br><span class="line">  <span class="keyword">if</span> (!acceptLang) <span class="keyword">return</span> defaultLocale;</span><br><span class="line">  <span class="keyword">const</span> headers = &#123; <span class="string">"accept-language"</span>: acceptLang &#125;;</span><br><span class="line">  <span class="keyword">const</span> languages = <span class="keyword">new</span> Negotiator(&#123; headers &#125;).languages();</span><br><span class="line">	<span class="keyword">return</span> match(languages, locales, defaultLocale);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>通过修改系统的语言，打开 <a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a> 会自动跳转到同系统语言一致的页面，测试成功。</p>
 <h2 id="多语言的其它处理"><a href="#多语言的其它处理" class="headerlink" title="多语言的其它处理"></a>多语言的其它处理</h2><h4 id="存储用户网页语言"><a href="#存储用户网页语言" class="headerlink" title="存储用户网页语言"></a>存储用户网页语言</h4><p>更进一步地，我们可以在 Cookie 中存储用户网页中的语言，并在下次访问时使用：</p>
@@ -430,7 +431,6 @@
 <h4 id="切换多语言（语言选择器或链接）"><a href="#切换多语言（语言选择器或链接）" class="headerlink" title="切换多语言（语言选择器或链接）"></a>切换多语言（语言选择器或链接）</h4><p>可根据实际情况添加语言选择器（下拉框）或不同的链接，从而跳转到对应语言的页面。</p>
 <p>例如通过链接实现多语言切换：</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div className=<span class="string">"space-x-2"</span>&gt;</span><br><span class="line">  &lt;Link href=<span class="string">"/en"</span>&gt;English&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">  &lt;span&gt;|&lt;/</span>span&gt;</span><br><span class="line">  &lt;Link href=<span class="string">"/zh"</span>&gt;Chinese&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
-<hr>
 <h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>通过上述步骤的学习，我们初步熟悉并实践了在 Next.js 中使用多语言。千里之行，始于足下，国际化的工作不止于此，我们当然也还有尚未完善的地方，就留给屏幕前的你吧。</p>
 <p>最后附上 <code>middleware.ts</code> 完整代码：</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Negotiator <span class="keyword">from</span> <span class="string">"negotiator"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; match &#125; <span class="keyword">from</span> <span class="string">"@formatjs/intl-localematcher"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; NextRequest, NextResponse &#125; <span class="keyword">from</span> <span class="string">"next/server"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> locales = [<span class="string">"en"</span>, <span class="string">"zh"</span>];</span><br><span class="line"><span class="keyword">const</span> defaultLocale = <span class="string">"zh"</span>;</span><br><span class="line"><span class="keyword">const</span> cookieName = <span class="string">"i18nlang"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Get the preferred locale, similar to the above or using a library</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLocale</span>(<span class="params">request: NextRequest</span>): <span class="title">string</span> </span>&#123;</span><br><span class="line">  <span class="comment">// Get locale from cookie</span></span><br><span class="line">  <span class="keyword">if</span> (request.cookies.has(cookieName))</span><br><span class="line">    <span class="keyword">return</span> request.cookies.get(cookieName)!.value;</span><br><span class="line">  <span class="comment">// Get accept language from HTTP headers</span></span><br><span class="line">  <span class="keyword">const</span> acceptLang = request.headers.get(<span class="string">"Accept-Language"</span>);</span><br><span class="line">  <span class="keyword">if</span> (!acceptLang) <span class="keyword">return</span> defaultLocale;</span><br><span class="line">  <span class="comment">// Get match locale</span></span><br><span class="line">  <span class="keyword">const</span> headers = &#123; <span class="string">"accept-language"</span>: acceptLang &#125;;</span><br><span class="line">  <span class="keyword">const</span> languages = <span class="keyword">new</span> Negotiator(&#123; headers &#125;).languages();</span><br><span class="line">  <span class="keyword">return</span> match(languages, locales, defaultLocale);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">middleware</span>(<span class="params">request: NextRequest</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (request.nextUrl.pathname.startsWith(<span class="string">"/_next"</span>)) <span class="keyword">return</span> NextResponse.next();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Check if there is any supported locale in the pathname</span></span><br><span class="line">  <span class="keyword">const</span> &#123; pathname &#125; = request.nextUrl;</span><br><span class="line">  <span class="keyword">const</span> pathnameHasLocale = locales.some(</span><br><span class="line">    (locale) =&gt; pathname.startsWith(<span class="string">`/<span class="subst">$&#123;locale&#125;</span>/`</span>) || pathname === <span class="string">`/<span class="subst">$&#123;locale&#125;</span>`</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (pathnameHasLocale) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Redirect if there is no locale</span></span><br><span class="line">  <span class="keyword">const</span> locale = getLocale(request);</span><br><span class="line">  request.nextUrl.pathname = <span class="string">`/<span class="subst">$&#123;locale&#125;</span><span class="subst">$&#123;pathname&#125;</span>`</span>;</span><br><span class="line">  <span class="comment">// e.g. incoming request is /products</span></span><br><span class="line">  <span class="comment">// The new URL is now /en-US/products</span></span><br><span class="line">  <span class="keyword">const</span> response = NextResponse.redirect(request.nextUrl);</span><br><span class="line">  <span class="comment">// Set locale to cookie</span></span><br><span class="line">  response.cookies.set(cookieName, locale);</span><br><span class="line">  <span class="keyword">return</span> response;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> config = &#123;</span><br><span class="line">  matcher: [</span><br><span class="line">    <span class="comment">// Skip all internal paths (_next)</span></span><br><span class="line">    <span class="string">"/((?!_next).*)"</span>,</span><br><span class="line">    <span class="comment">// Optional: only run on root (/) URL</span></span><br><span class="line">    <span class="comment">// '/'</span></span><br><span class="line">  ],</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -587,7 +587,7 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">120</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
     
@@ -600,7 +600,7 @@
           
         
         <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">分类</span>
         </a>
       </div>
     
@@ -613,7 +613,7 @@
           
         
         <span class="site-state-item-count">136</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">标签</span>
         </a>
       </div>
     
@@ -735,12 +735,12 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Amon</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
       
-    Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+    主题 – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
         
