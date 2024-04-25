@@ -296,6 +296,129 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/05/12/zh-CN/2018-05-12-ES-Remark/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Amon">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2018/05/12/zh-CN/2018-05-12-ES-Remark/" class="post-title-link" itemprop="url">ES 备忘</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2018-05-12 16:43:39" itemprop="dateCreated datePublished" datetime="2018-05-12T16:43:39+08:00">2018-05-12</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2018/05/12/zh-CN/2018-05-12-ES-Remark/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/05/12/zh-CN/2018-05-12-ES-Remark/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="Date-Histogram时区："><a href="#Date-Histogram时区：" class="headerlink" title="Date Histogram时区："></a>Date Histogram时区：</h4><p>遇到一个按时间统计数据不一致的bug，怀疑是时区的问题，设置下时区即可。</p>
+<p><strong>查询语句中：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;query&quot;: &#123;&#125;,</span><br><span class="line">  &quot;aggs&quot;: &#123;</span><br><span class="line">    &quot;dateAgg&quot;: &#123;</span><br><span class="line">      &quot;date_histogram&quot;: &#123;</span><br><span class="line">        &quot;field&quot;: &quot;@timestamp&quot;,</span><br><span class="line">        &quot;interval&quot;: &quot;1d&quot;,			//1s/1m/1h/1d/1w/1M/1q/1y</span><br><span class="line">        &quot;format&quot;: &quot;yyyy-MM-dd&quot;,</span><br><span class="line">        &quot;time_zone&quot;: &quot;+08:00&quot;		//时区设置</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Java 中：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AggregationBuilder aggregationBuilder = AggregationBuilders.dateHistogram(<span class="string">"dateAgg"</span>).field(<span class="string">"@timestamp"</span>).dateHistogramInterval(DateHistogramInterval.DAY).format(<span class="string">"yyyy-MM-dd"</span>).timeZone(DateTimeZone.forID(<span class="string">"Asia/Shanghai"</span>));</span><br></pre></td></tr></table></figure>
+<p>参考资料:<a href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/_looking_at_time.html" target="_blank" rel="noopener">官方文档</a></p>
+<hr>
+<h4 id="Date-Histogram统计后再去重"><a href="#Date-Histogram统计后再去重" class="headerlink" title="Date Histogram统计后再去重"></a>Date Histogram统计后再去重</h4><p>查询语句:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&quot;aggs&quot;: &#123;</span><br><span class="line">    &quot;dateAgg&quot;: &#123;</span><br><span class="line">      &quot;date_histogram&quot;: &#123;</span><br><span class="line">        &quot;field&quot;: &quot;@timestamp&quot;,</span><br><span class="line">        &quot;interval&quot;: &quot;1d&quot;,</span><br><span class="line">        &quot;format&quot;: &quot;yyyy-MM-dd&quot;,</span><br><span class="line">        &quot;time_zone&quot;: &quot;+08:00&quot;</span><br><span class="line">      &#125;,</span><br><span class="line">      &quot;aggs&quot;: &#123;</span><br><span class="line">        &quot;distinctUserIdAgg&quot;: &#123;</span><br><span class="line">          &quot;cardinality&quot;: &#123;</span><br><span class="line">            &quot;field&quot;: &quot;user_id&quot;,         //去重字段</span><br><span class="line">            &quot;precision_threshold&quot;: 1000    //精度，范围0-40000</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Java中：</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CardinalityAggregationBuilder userIdAggregationBuilder = AggregationBuilders.cardinality(<span class="string">"userIdAgg"</span>).field(<span class="string">"user_id"</span>).precisionThreshold(<span class="number">40000</span>);</span><br><span class="line">                aggregationBuilder.subAggregation(userIdAggregationBuilder);</span><br></pre></td></tr></table></figure></p>
+<p>参考资料:<a href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/cardinality.html" target="_blank" rel="noopener">官方文档</a></p>
+<hr>
+<h4 id="根据分数区间统计"><a href="#根据分数区间统计" class="headerlink" title="根据分数区间统计"></a>根据分数区间统计</h4><p>例如要统计班级学生考试分数哪个区间的人最多。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;query&quot;: &#123;&#125;,</span><br><span class="line">  &quot;aggs&quot;: &#123;</span><br><span class="line">    &quot;scoreAgg&quot;: &#123;</span><br><span class="line">      &quot;histogram&quot;: &#123;</span><br><span class="line">        &quot;field&quot;: &quot;score&quot;,   //根据哪个字段划分区间</span><br><span class="line">        &quot;interval&quot;: 10,     //划分区间大小</span><br><span class="line">        &quot;order&quot;: &#123;</span><br><span class="line">          &quot;_count&quot;: &quot;desc&quot;  //排序</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>参考资料:<a href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/_building_bar_charts.html" target="_blank" rel="noopener">官方文档</a></p>
+<hr>
+<h4 id="根据分数区间统计后再去重"><a href="#根据分数区间统计后再去重" class="headerlink" title="根据分数区间统计后再去重"></a>根据分数区间统计后再去重</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;query&quot;: &#123;&#125;,</span><br><span class="line">  &quot;aggs&quot;: &#123;</span><br><span class="line">    &quot;scoreAgg&quot;: &#123;</span><br><span class="line">      &quot;histogram&quot;: &#123;</span><br><span class="line">        &quot;field&quot;: &quot;score&quot;,</span><br><span class="line">        &quot;interval&quot;: 10,</span><br><span class="line">        &quot;order&quot;: &#123;</span><br><span class="line">          &quot;_count&quot;: &quot;desc&quot;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      &quot;aggs&quot;: &#123;</span><br><span class="line">        &quot;userIdAgg&quot;: &#123;</span><br><span class="line">          &quot;cardinality&quot;: &#123;</span><br><span class="line">            &quot;field&quot;: &quot;user_id&quot;,</span><br><span class="line">            &quot;precision_threshold&quot;: 1000</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="Fielddata-is-disabled-on-text-fields-by-default-Set-fielddata-true-on-xxx-in-order-to-load-fielddata-in-memory-by-uninverting-the-inverted-index-Note-that-this-can-however-use-significant-memor"><a href="#Fielddata-is-disabled-on-text-fields-by-default-Set-fielddata-true-on-xxx-in-order-to-load-fielddata-in-memory-by-uninverting-the-inverted-index-Note-that-this-can-however-use-significant-memor" class="headerlink" title="Fielddata is disabled on text fields by default. Set fielddata=true on xxx in order to load fielddata in memory by uninverting the inverted index. Note that this can however use significant memor"></a>Fielddata is disabled on text fields by default. Set fielddata=true on xxx in order to load fielddata in memory by uninverting the inverted index. Note that this can however use significant memor</h4><p>这个错误的官方解释在这里: <code>Fielddata can consume a lot of heap space, especially when loading high cardinality text fields. Once fielddata has been loaded into the heap, it remains there for the lifetime of the segment. Also, loading fielddata is an expensive process which can cause users to experience latency hits. This is why fielddata is disabled by default.</code></p>
+<p>解决方案:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">curl -XPUT &apos;http://&#123;ip&#125;:&#123;port&#125;/&#123;index_name&#125;/_mapping/&#123;type_name&#125;&apos; -d &apos;</span><br><span class="line">&#123;       </span><br><span class="line">  &quot;properties&quot;: &#123;</span><br><span class="line">        &quot;&#123;field_name&#125;&quot;: &#123;  </span><br><span class="line">            &quot;type&quot;: &quot;text&quot;,</span><br><span class="line">            &quot;fielddata&quot;: true</span><br><span class="line">        &#125;       </span><br><span class="line">    &#125;         </span><br><span class="line">&#125;&apos;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>type_name:ES中type的值</li>
+<li>field_name:要top统计字段的名字</li>
+</ul>
+<p>参考资料:<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/fielddata.html" target="_blank" rel="noopener">官方文档</a>。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2018/05/10/zh-CN/2018-05-10-Hello-Gitment/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1419,117 +1542,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/01/08/zh-CN/2016-01-08-Tie-Guai-Li-Lost/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2016/01/08/zh-CN/2016-01-08-Tie-Guai-Li-Lost/" class="post-title-link" itemprop="url">符号“铁拐李”的消逝</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2016-01-08 17:17:17" itemprop="dateCreated datePublished" datetime="2016-01-08T17:17:17+08:00">2016-01-08</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2016/01/08/zh-CN/2016-01-08-Tie-Guai-Li-Lost/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/08/zh-CN/2016-01-08-Tie-Guai-Li-Lost/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>  铁拐李，名徐洪富，名字是大富大贵之人。因其有一瘸腿，常以一根竹棍为拐，人称铁拐李。</p>
-<p>  洪富年少之事已去半个世纪，如今都忘了个八八九九，只剩下吃不饱的肚子、玩不完的泥巴、闻不腻的牛屎味，和浑浑噩噩就长大就变老。洪富没想过去想那些苦日子，后来的日子能想吃白饭有米、想吃馒头有面，无疑更让洪富难以想起从前。大概人老的久了，就容易像别人一样以为自己没有年轻过。</p>
-<p>  至少我是这么认为的，自我认识洪富起，他便老了。永远都是一身农村老头标配的蓝黑色中山装和裤子，脚踏一双解放鞋或者黑面白底的单鞋。因为地中海的缘故他总是顶着一顶与衣服同色的帽子。因为瘸的缘故常常瘫坐在路边的大石头上，摘下帽子扇风，地中海边上廖廖几根发丝润出一滴滴汗珠下半截沾满泥土的竹棍侧放在石头沿。</p>
-<p>  洪富年轻时大概是一位相貌堂堂较出众的男子，身材高大威猛，这一点是因为即使多年后看到瘸了一条腿又老了的他，也比普通身高略高出些。双目炯炯有神，瞪若铜铃。可能那时他便已经瘸了，或者之后瘸了。总之他是瘸了。年轻时估计过了一段潇洒的日子，姑娘们都青睐于他，他成了一个瘸了腿的潇洒男子，或者一个潇洒男子后来瘸了腿。年轻时左右逢女人缘，可不见有人和他结婚，说明他不仅潇洒，还是潇洒到姑娘们都不敢托付终身的那种。眼见着身边的姑娘一个个都结婚了，洪富不急：优秀的男人总是不到最后不做决定。</p>
-<p>  后来的故事大概是这样：洪富越老越心气儿高，可是因为他后来瘸了或者随着年纪的增大瘸这个事情愈发显得突出，年轻时可以靠脸和一口伪专业，老了就要靠身体。洪富侊（guàng）了，也许他没有意识到这个问题的严重性，毕竟几十年如一日都面对这个问题说明这个问题已经于他不甚严重了，顶多就是吃饭少道菜缺副碗筷矣。别人结婚了，生娃了，娃长大了，娃结婚了，娃生娃了，我也是其一。如上所说，我认识洪富时，他是一个不可爱的老头，一个瘸了腿的地中海且还是个老光棍，总归不会是一位慈祥的老爷爷。原来他和他哥哥住一起，后来哥哥结婚了便搬去某个小破屋，再后来过继给侄子当父亲。当然这个父亲是没什么价值的，既扛不起家庭重任，也管不了人说不上什么话，只能成了供桌上的一匾“东厨司命神位”，看的见扔不着又不能发挥什么显而易见价值的东西，只能摆那发霉发臭直至烂掉。</p>
-<p>  但洪富终归是发了点光和热的：在发霉之前，侄子的娃大了一些，侄子与侄媳妇为了生计跟着外出务工潮外出务工，照顾孙子的任务就交给他了。当然我想不出他帮孙子洗衣服做饭的样子，但洪富总也享受了一下父亲和爷爷的角色。除此之外，被外人举反例大半辈子的洪富，居然在末了还享受了一把被艳羡的感觉：因为条件的特殊性，在开始施行五保政策时洪富是理所当然的第一个。荣誉没有持续很久，孙子就长大去外面念书了，洪富老无所依，只能作为第一批养老院入住五保进驻新建好的养老院。据说养老院条件不错，冬有热水，夏有空调，就连大米饭吃完也会有厚厚的锅巴，井里的山泉都是甜的，远近闻了名，不少路过的农村妇女常常去里面蹭吃锅巴蹭喝凉水。</p>
-<p>  洪富住进养老院时我大概读高中，一月回一次长假待家里，基本没什么机会看到他。每次见到他都老了一些，背驮了、肩膀弯了、瘸腿走路更慢了，连地中海都泛起了白。每逢过年拜年时，看着洪富端坐在客厅，一副家有一老如有一宝的态度。高中，大学，工作，也快十年了。我十几二十的十年也是洪富生命最后的十年。</p>
-<p>  阳历二零一六年一月四日，收到一条家人微信：铁拐李长世了。长世可能并不是什么特殊名词，但是我们之间大概不会讨论起铁拐李，除非像这样，顺便带起一句铁拐李长世了。我也没有什么惊讶和感叹，看别人的生死就如同花开花落、云卷云舒，只有淡淡的些许哀伤。</p>
-<p>  铁拐李与我而言，在与不在已经没什么不同，他都是投射在我大脑中的一个符号，一个指针，对应和存储的是一个瘸子，有过交集但并不熟的不太可爱的老头，一生未娶，老无所依，五保与养老院。铁拐李走了，也意味着指针要被释放，渐渐消失了。</p>
-<p>  洪富一生，未能如名大富大贵，年轻时放浪形骸，老来坐在石头上笃学，在养老院附近的山林思考人生，无所寄，无所托，来无因，去无终。以成败论他算上一个彻底失败的人，然其未尝成功之喜，遑论失败之悲。</p>
-<p>  洪富代表着上上辈的一代，而现在，正慢慢和我们告别。</p>
-<p>  甚至没有告别。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1582,7 +1594,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">119</span>
+          <span class="site-state-item-count">120</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1608,7 +1620,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">132</span>
+        <span class="site-state-item-count">136</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>

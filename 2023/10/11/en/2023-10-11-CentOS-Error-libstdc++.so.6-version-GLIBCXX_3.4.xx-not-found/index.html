@@ -59,18 +59,18 @@
   };
 </script>
 
-  <meta name="description" content="My personal server uses CentOS 7.9, and there are often strange errors when deploying some AI applications.For example, recently, an error was reported when deploying an application: 1/lib64/libstd">
+  <meta name="description" content="My personal server uses CentOS 7.9, and there are often strange errors when deploying some AI applications.For example, recently, an error was reported when deploying an application: 1/lib64/libstdc+">
 <meta name="keywords" content="Linux,CentOS,gcc,AI,C++,transformer,PyTorch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to solve error on CentOS &quot;&#x2F;lib64&#x2F;libstdc++.so.6 version GLIBCXX_3.4.xx not found&quot;">
 <meta property="og:url" content="https://amonxu.com/2023/10/11/en/2023-10-11-CentOS-Error-libstdc++.so.6-version-GLIBCXX_3.4.xx-not-found/index.html">
 <meta property="og:site_name" content="Amon&#39;s Blog">
-<meta property="og:description" content="My personal server uses CentOS 7.9, and there are often strange errors when deploying some AI applications.For example, recently, an error was reported when deploying an application: 1/lib64/libstd">
+<meta property="og:description" content="My personal server uses CentOS 7.9, and there are often strange errors when deploying some AI applications.For example, recently, an error was reported when deploying an application: 1/lib64/libstdc+">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2024-03-16T14:41:48.282Z">
+<meta property="og:updated_time" content="2024-04-25T03:32:15.448Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to solve error on CentOS &quot;&#x2F;lib64&#x2F;libstdc++.so.6 version GLIBCXX_3.4.xx not found&quot;">
-<meta name="twitter:description" content="My personal server uses CentOS 7.9, and there are often strange errors when deploying some AI applications.For example, recently, an error was reported when deploying an application: 1/lib64/libstd">
+<meta name="twitter:description" content="My personal server uses CentOS 7.9, and there are often strange errors when deploying some AI applications.For example, recently, an error was reported when deploying an application: 1/lib64/libstdc+">
   <link rel="canonical" href="https://amonxu.com/2023/10/11/en/2023-10-11-CentOS-Error-libstdc++.so.6-version-GLIBCXX_3.4.xx-not-found/">
 
 
@@ -359,9 +359,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <meta name="referrer" content="no-referrer">
-
-<hr>
+        <hr>
 <p>My personal server uses <code>CentOS 7.9</code>, and there are often strange errors when deploying some AI applications.<br>For example, recently, an error was reported when deploying an application:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/lib64/libstdc++.so.6: version GLIBCXX_3.4.xx not found</span><br></pre></td></tr></table></figure>
 <p>Online search for solutions, there are different opinions, either reinstall <code>gcc</code>, or recompile and install <code>libstdc++</code>,<code>export LD_LIBRARY_PATH</code> and so on.<br>Several attempts have failed, and there is no way to upgrade the os version. Finally, a suitable solution is found, and it’s worked for me.</p>
@@ -418,20 +416,20 @@
         <div class="reward-container">
   <div>可以请我喝瓶水吗:)</div>
   <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    Donate
+    打赏
   </button>
   <div id="qr" style="display: none;">
         
       
       <div style="display: inline-block;">
-        <img src="/images/wxpay.jpg" alt="Amon WeChat Pay">
-        <p>WeChat Pay</p>
+        <img src="/images/wxpay.jpg" alt="Amon 微信支付">
+        <p>微信支付</p>
       </div>
         
       
       <div style="display: inline-block;">
-        <img src="/images/alipay.jpg" alt="Amon Alipay">
-        <p>Alipay</p>
+        <img src="/images/alipay.jpg" alt="Amon 支付宝">
+        <p>支付宝</p>
       </div>
 
   </div>
@@ -551,7 +549,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">119</span>
+          <span class="site-state-item-count">120</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -577,7 +575,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">132</span>
+        <span class="site-state-item-count">136</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>

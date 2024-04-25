@@ -357,9 +357,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <meta name="referrer" content="no-referrer">
-
-<hr>
+          <hr>
 <p>My personal server uses <code>CentOS 7.9</code>, and there are often strange errors when deploying some AI applications.<br>For example, recently, an error was reported when deploying an application:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/lib64/libstdc++.so.6: version GLIBCXX_3.4.xx not found</span><br></pre></td></tr></table></figure>
 <p>Online search for solutions, there are different opinions, either reinstall <code>gcc</code>, or recompile and install <code>libstdc++</code>,<code>export LD_LIBRARY_PATH</code> and so on.<br>Several attempts have failed, and there is no way to upgrade the os version. Finally, a suitable solution is found, and it’s worked for me.</p>
@@ -479,9 +477,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <meta name="referrer" content="no-referrer">
-
-<hr>
+          <hr>
 <p>In my Hexo blog, when I include special symbols inside the title in posts, it reports this error:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ERROR Process failed: _posts/en/XXX.md</span><br><span class="line">YAMLException: incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 54:</span><br><span class="line">     ...  for Backend System Refactoring\: How to do backend system refac ...</span><br></pre></td></tr></table></figure></p>
 <p><strong>Solution:</strong><br>Include the title in single quotes, like:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: &apos;How to read a book&apos;</span><br><span class="line">lang: en</span><br><span class="line">date: 2023-01-01</span><br></pre></td></tr></table></figure>
@@ -715,9 +711,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <meta name="referrer" content="no-referrer">
-
-<hr>
+          <hr>
 <p>There are multiple Git libraries are used on my machine, such as GitHub/Company Private Git repo, etc., the Git tool mainly uses Terminal and GitKraken, and occasionally strange issues will arise. For example, the following error occurred when deploying the Hexo Blog a few days ago:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
 <p>The usual solution is to regenerate the SSH Key of GitHub.</p>
@@ -936,7 +930,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">119</span>
+          <span class="site-state-item-count">120</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -962,7 +956,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">132</span>
+        <span class="site-state-item-count">136</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>
