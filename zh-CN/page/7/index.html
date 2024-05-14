@@ -1,113 +1,52 @@
 <!DOCTYPE html>
-
-
-
-
-
-<html lang="en,zh-CN,default">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
-<meta name="referrer" content="no-referrer" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
-  <link rel="alternate" href="/atom.xml" title="Amon's Blog" type="application/atom+xml">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '7.4.1',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: 'Copy',
-      copy_success: 'Copied',
-      copy_failure: 'Copy failed'
-    },
-    sidebarPadding: 40
-  };
-</script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"amonxu.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content="Change will not come if we wait for some other person or some other time.We are the ones we&apos;ve been waiting for. We are the change that we seek.">
-<meta name="keywords" content="逐鹿IT,猛猛如玉,amonxu,xumeng,Java,程序员,程序员进阶,程序人生,程序世界,Java开发,Java高级开发,架构师,全栈,后端开发,产品经理,CTO,CIO,CEO,Java进阶,架构,性能调优,数据结构,算法,Spring,微服务,JVM,Docker,K8s,Kubernetes,DevOps,AI,AIGC,LangChain,LLM,ChatGPT,OpenAI,Bard,文心一言,通义千问,机器学习,大数据,人工智能,深度学习,Go,Golang,iOS,SpringCloud,SpringBoot,SpringMVC,Oracle,MySQL,Linux,MongoDB,K8S,职场故事,职场趣事,求职,面试,生涯规划,BAT,一线互联网,编程,云计算,蚂蚁金服,阿里巴巴,腾讯,百度,Google,Facebook,Amazon,重构,互联网,企业智能,项目管理,技术管理,领导力,创新力,企业管理,MBA,开发者,编程,代码,IT,软件工程,软件工程师,软件工程师进阶,高级软件工程师,开源,IT技术博客,IT网站,Developer,Programmer,Coder,Geek,architecture,coding,development,996,信阳,深圳,mengxu,徐猛,猛徐">
+    <meta name="description" content="Change will not come if we wait for some other person or some other time.We are the ones we&#39;ve been waiting for. We are the change that we seek.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Amon&#39;s Blog">
 <meta property="og:url" content="https://amonxu.com/zh-CN/page/7/index.html">
 <meta property="og:site_name" content="Amon&#39;s Blog">
-<meta property="og:description" content="Change will not come if we wait for some other person or some other time.We are the ones we&apos;ve been waiting for. We are the change that we seek.">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:description" content="Change will not come if we wait for some other person or some other time.We are the ones we&#39;ve been waiting for. We are the change that we seek.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Amon Xu">
+<meta property="article:tag" content="逐鹿IT,猛猛如玉,amonxu,xumeng,Java,程序员,程序员进阶,程序人生,程序世界,Java开发,Java高级开发,架构师,全栈,后端开发,产品经理,CTO,CIO,CEO,Java进阶,架构,性能调优,数据结构,算法,Spring,微服务,JVM,Docker,K8s,Kubernetes,DevOps,AI,AIGC,LangChain,LLM,ChatGPT,OpenAI,Bard,文心一言,通义千问,机器学习,大数据,人工智能,深度学习,Go,Golang,iOS,SpringCloud,SpringBoot,SpringMVC,Oracle,MySQL,Linux,MongoDB,K8S,职场故事,职场趣事,求职,面试,生涯规划,BAT,一线互联网,编程,云计算,蚂蚁金服,阿里巴巴,腾讯,百度,Google,Facebook,Amazon,重构,互联网,企业智能,项目管理,技术管理,领导力,创新力,企业管理,MBA,开发者,编程,代码,IT,软件工程,软件工程师,软件工程师进阶,高级软件工程师,开源,IT技术博客,IT网站,Developer,Programmer,Coder,Geek,architecture,coding,development,996,信阳,深圳,mengxu,徐猛,猛徐">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Amon&#39;s Blog">
-<meta name="twitter:description" content="Change will not come if we wait for some other person or some other time.We are the ones we&apos;ve been waiting for. We are the change that we seek.">
-  <link rel="canonical" href="https://amonxu.com/zh-CN/page/7/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
-  };
-</script>
+<link rel="canonical" href="https://amonxu.com/zh-CN/page/7/">
 
-  <title>Amon's Blog</title>
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"zh-CN/page/7/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Amon's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LF5S8MWY7N"></script>
-    <script>
-      var host = window.location.hostname;
-      if (host !== "localhost" || !true) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-LF5S8MWY7N');
-      }
-    </script>
-  
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-LF5S8MWY7N","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
 
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?bb453e3ffbbd5a718313dd9977009208"></script>
 
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?bb453e3ffbbd5a718313dd9977009208";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -115,255 +54,233 @@
 
 
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Amon's Blog" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Amon's Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
-        <p class="site-subtitle">猛猛如玉</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Amon's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">猛猛如玉</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
   </div>
 </div>
+
 
 
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-        
-        
-        <li class="menu-item menu-item-home">
-      
-    
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-about">
-      
-    
-
-    <a href="https://about.amonxu.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-user"></i>About</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-projects">
-      
-    
-
-    <a href="https://about.amonxu.com/en#projects" rel="noopener" target="_blank"><i class="fa fa-fw fa-file"></i>Projects</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-tags">
-      
-    
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-categories">
-      
-    
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-archives">
-      
-    
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-english">
-      
-    
-
-    <a href="/en/" rel="section"><i class="fa fa-fw fa-language"></i>English</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-中文">
-      
-    
-
-    <a href="/zh-CN/" rel="section"><i class="fa fa-fw fa-language"></i>中文</a>
-  </li>
-      
-    
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="https://about.amonxu.com/" rel="section" target="_blank"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-projects"><a href="https://about.amonxu.com/en#projects" rel="section" target="_blank"><i class="fa fa-file fa-fw"></i>Projects</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li><li class="menu-item menu-item-english"><a href="/en/" rel="section"><i class="fa fa-language fa-fw"></i>English</a></li><li class="menu-item menu-item-中文"><a href="/zh-CN/" rel="section"><i class="fa fa-language fa-fw"></i>中文</a></li>
   </ul>
-
-    
-
 </nav>
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-  <a href="https://github.com/xumeng" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div class="content">
-            
 
-  <div class="posts-expand">
+
+</header>
         
   
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Amon Xu"
+      src="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+  <p class="site-author-name" itemprop="name">Amon Xu</p>
+  <div class="site-description" itemprop="description">Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">121</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">136</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xumeng" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xumeng" rel="noopener me" target="_blank"><i class="fa fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:gosuxm@gmail.com" title="E-Mail → mailto:gosuxm@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-inbox fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://zhihu.com/people/amonxu" title="知乎 → http:&#x2F;&#x2F;zhihu.com&#x2F;people&#x2F;amonxu" rel="noopener me" target="_blank"><i class="fa fa-zhihu fa-fw"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://m.okjike.com/users/C230C450-1B24-445E-98DD-0391148DCDC9" title="即刻 → https:&#x2F;&#x2F;m.okjike.com&#x2F;users&#x2F;C230C450-1B24-445E-98DD-0391148DCDC9" rel="noopener me" target="_blank"><i class="fa fa-jike fa-fw"></i>即刻</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.douban.com/people/gosu" title="豆瓣 → https:&#x2F;&#x2F;www.douban.com&#x2F;people&#x2F;gosu" rel="noopener me" target="_blank"><i class="fa fa-douban fa-fw"></i>豆瓣</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/amonxu" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;amonxu" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/3090339/amonxu" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;3090339&#x2F;amonxu" rel="noopener me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://amonxu.com/" title="https:&#x2F;&#x2F;amonxu.com">猛猛如玉</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://www.frontendjs.com/" title="http:&#x2F;&#x2F;www.frontendjs.com" rel="noopener" target="_blank">前站导航</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://geekplux.com/" title="http:&#x2F;&#x2F;geekplux.com" rel="noopener" target="_blank">GeekPlux</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://wmdpd.com/" title="https:&#x2F;&#x2F;wmdpd.com" rel="noopener" target="_blank">完美的胖达</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://blog.forecho.com/" title="https:&#x2F;&#x2F;blog.forecho.com" rel="noopener" target="_blank">forecho</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.lcddjm.com/" title="https:&#x2F;&#x2F;www.lcddjm.com" rel="noopener" target="_blank">lcddjm's website</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.fi-ads.com/" title="https:&#x2F;&#x2F;www.fi-ads.com" rel="noopener" target="_blank">Future iDeal</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://mout.me/" title="https:&#x2F;&#x2F;mout.me&#x2F;" rel="noopener" target="_blank">MouT.me</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2017/10/10/zh-CN/2017-10-10-First-Outsource/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
       <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2017/10/10/zh-CN/2017-10-10-First-Outsource/" class="post-title-link" itemprop="url">复盘 | 初次接项目的血与泪，扎坑了老铁</a>
-          
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/10/10/zh-CN/2017-10-10-First-Outsource/" class="post-title-link" itemprop="url">复盘 | 初次接项目的血与泪，扎坑了老铁</a>
+        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+      <time title="创建时间：2017-10-10 11:11:11" itemprop="dateCreated datePublished" datetime="2017-10-10T11:11:11+08:00">2017-10-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%81%8C%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">职说</span></a>
+        </span>
+    </span>
 
-              <time title="创建时间：2017-10-10 11:11:11" itemprop="dateCreated datePublished" datetime="2017-10-10T11:11:11+08:00">2017-10-10</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/职说/" itemprop="url" rel="index">
-                    <span itemprop="name">职说</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
+  
   
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
+        <i class="far fa-comment"></i>
       </span>
-        
-      
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2017/10/10/zh-CN/2017-10-10-First-Outsource/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/2017/10/10/zh-CN/2017-10-10-First-Outsource/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/10/zh-CN/2017-10-10-First-Outsource/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
+</div>
 
         </div>
       </header>
@@ -372,11 +289,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p><img src="https://static.clouderwork.com/59dc32a2bca09.jpg" alt="cover_img"></p>
 <h5 id="前注"><a href="#前注" class="headerlink" title="前注"></a>前注</h5><blockquote>
-<p>本文原创作者Amon Xu，首发于<a href="https://www.clouderwork.com" target="_blank" rel="noopener">云沃客</a>平台，转载请注明作者与链接，谢谢:D</p>
+<p>本文原创作者Amon Xu，首发于<a target="_blank" rel="noopener" href="https://www.clouderwork.com/">云沃客</a>平台，转载请注明作者与链接，谢谢:D</p>
 </blockquote>
 <p>  谈起外包经历，我的第一次外包源自前两年某天陪着女友逛商场时，接到一个朋友的电话，朋友兴高采烈地跟我介绍一个大项目：需求不多、钱不少，难度不大、口气不小，我一听心动了，原以为要赚一笔 easy money，后面再看看，这次外包踩了大大小小不少的坑，遂想好好记录一下。</p>
 <h3 id="前期沟通"><a href="#前期沟通" class="headerlink" title="前期沟通"></a>前期沟通</h3><p>  电话的第二天，和外包项目需求方简单沟通后，他们发来十几张 App 界面的样例，大概是些软硬件结合、通过 App 界面展示硬件信息和数据统计，以及相关信息的 <code>CRUD</code> Demo，功能不多不过开发时间也有限，要求在月底前做完 App Demo 与后台系统，赶着参加一个会议展示。对方多次强调项目的优势：正处于风口、资源配置各方面都齐备，除了…没有软件技术团队，目前只有硬件团队，软件这边只有零星的两三个，但不堪重用。</p>
@@ -404,9 +319,9 @@
 <h3 id="签订合同"><a href="#签订合同" class="headerlink" title="签订合同"></a>签订合同</h3><p>  不管怎么说，既然给出了报价，本着学习涨姿势的态度，咱就干吧。需要拟订合同时，没看到合适的，最终在网上找了一个软件外包开发合同模板，大致改了一下，将就用着。</p>
 <p>  关于外包合同有很多需要注意的地方，这里就只简单说一点：合同的条款一定要一条条地过，确保自己能完全掌握和理解每一条的内容及背后的含义，确保不要对自己埋有坑，当然也最好不要坑对方。</p>
 <blockquote>
-<h4 id="Tips-4"><a href="#Tips-4" class="headerlink" title="Tips:"></a>Tips:</h4><p>当然现在外包行业发展越来越成熟，外包流程和项目也越来越规范，也诞生了像<a href="https://www.clouderwork.com" target="_blank" rel="noopener">云沃客</a>这种成熟的众包平台，甚至不再需要合作双方私下签订协议，服务方和需求方都能把精力专注于项目上，而把背后的一些琐碎之事和问题交由平台来规范管理，省心很多。</p>
+<h4 id="Tips-4"><a href="#Tips-4" class="headerlink" title="Tips:"></a>Tips:</h4><p>当然现在外包行业发展越来越成熟，外包流程和项目也越来越规范，也诞生了像<a target="_blank" rel="noopener" href="https://www.clouderwork.com/">云沃客</a>这种成熟的众包平台，甚至不再需要合作双方私下签订协议，服务方和需求方都能把精力专注于项目上，而把背后的一些琐碎之事和问题交由平台来规范管理，省心很多。</p>
 </blockquote>
-<p>  签合同远赴对方公司，中午正热时坐了个顺风车过去，下了车一看太阳都快下山了，高楼不见了，眼见之处都是低矮的民房，大爷大妈懒洋洋地支起了小吃摊，第一感觉是从深圳到县城了。对方是一个传统的公司/工厂，这意味着什么互联网、软件开发等等都可能是对牛弹琴，如果对方没有一个专业懂行的对接人员，这个项目的进展将会非常艰难，后面的事情也正出乎我所料。</p>
+<p>  签合同远赴对方公司，中午正热时坐了个顺风车过去，下了车一看太阳都快下山了，高楼不见了，眼见之处都是低矮的民房，大爷大妈懒洋洋地支起了小吃摊，第一感觉是从深圳到县城了。对方是一个传统的公司&#x2F;工厂，这意味着什么互联网、软件开发等等都可能是对牛弹琴，如果对方没有一个专业懂行的对接人员，这个项目的进展将会非常艰难，后面的事情也正出乎我所料。</p>
 <blockquote>
 <h4 id="Tips-5"><a href="#Tips-5" class="headerlink" title="Tips:"></a>Tips:</h4><p>尽可能详细地了解对方公司、项目情况及相关人员背景，如果出现对接人员素质与项目不相符的情况，尽早向合作方提出疑问，把问题抛向对方，不要让这种问题影响项目的进度和后续工作的开展。</p>
 </blockquote>
@@ -439,94 +354,88 @@
 </blockquote>
 <h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>  还没写到项目正式开始，就已经罗罗嗦嗦一大篇了，后续记录一下项目开发过程中的坑和教训，未完待续，欢迎交流。</p>
 
-        
       
     </div>
 
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2017/02/25/zh-CN/2017-02-25-FengYa/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
       <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2017/02/25/zh-CN/2017-02-25-FengYa/" class="post-title-link" itemprop="url">风雅 - 用中国传统色恣意书写</a>
-          
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2017/02/25/zh-CN/2017-02-25-FengYa/" class="post-title-link" itemprop="url">风雅 - 用中国传统色恣意书写</a>
+        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+      <time title="创建时间：2017-02-25 15:00:00" itemprop="dateCreated datePublished" datetime="2017-02-25T15:00:00+08:00">2017-02-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AF%97/" itemprop="url" rel="index"><span itemprop="name">诗</span></a>
+        </span>
+    </span>
 
-              <time title="创建时间：2017-02-25 15:00:00" itemprop="dateCreated datePublished" datetime="2017-02-25T15:00:00+08:00">2017-02-25</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/诗/" itemprop="url" rel="index">
-                    <span itemprop="name">诗</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
+  
   
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
+        <i class="far fa-comment"></i>
       </span>
-        
-      
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2017/02/25/zh-CN/2017-02-25-FengYa/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/2017/02/25/zh-CN/2017-02-25-FengYa/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/25/zh-CN/2017-02-25-FengYa/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
+</div>
 
         </div>
       </header>
@@ -535,98 +444,90 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>书写。<br><a href="http://amonxu.com/fengya/fengya.html">http://amonxu.com/fengya/fengya.html</a></p>
 
-        
       
     </div>
 
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/07/01/zh-CN/2016-07-01-Keep-Fucking/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
       <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2016/07/01/zh-CN/2016-07-01-Keep-Fucking/" class="post-title-link" itemprop="url">继续挖坑</a>
-          
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2016/07/01/zh-CN/2016-07-01-Keep-Fucking/" class="post-title-link" itemprop="url">继续挖坑</a>
+        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+      <time title="创建时间：2016-07-01 16:08:00" itemprop="dateCreated datePublished" datetime="2016-07-01T16:08:00+08:00">2016-07-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Note/" itemprop="url" rel="index"><span itemprop="name">Note</span></a>
+        </span>
+    </span>
 
-              <time title="创建时间：2016-07-01 16:08:00" itemprop="dateCreated datePublished" datetime="2016-07-01T16:08:00+08:00">2016-07-01</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Note/" itemprop="url" rel="index">
-                    <span itemprop="name">Note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
+  
   
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
+        <i class="far fa-comment"></i>
       </span>
-        
-      
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2016/07/01/zh-CN/2016-07-01-Keep-Fucking/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/2016/07/01/zh-CN/2016-07-01-Keep-Fucking/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/01/zh-CN/2016-07-01-Keep-Fucking/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
+</div>
 
         </div>
       </header>
@@ -635,8 +536,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>距离发布上一篇文章已去了三月有余，中间也偶尔良心发现，想着该写点什么了。但是最终理智战胜了良心，加上中间疯狂的老鼠赛跑，以及经历各种生死惊奇，然后就…</p>
 <p>我现在挖了这么些坑：</p>
 <ul>
@@ -656,94 +555,88 @@
 </ul>
 <p>更久之前的就算了，实在填不起来了。<br>试试填吧…</p>
 
-        
       
     </div>
 
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/03/24/zh-CN/2016-03-24-QA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
       <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2016/03/24/zh-CN/2016-03-24-QA/" class="post-title-link" itemprop="url">回答几个问题</a>
-          
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2016/03/24/zh-CN/2016-03-24-QA/" class="post-title-link" itemprop="url">回答几个问题</a>
+        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+      <time title="创建时间：2016-03-24 11:07:11" itemprop="dateCreated datePublished" datetime="2016-03-24T11:07:11+08:00">2016-03-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%8C%9B%E8%A8%80%E7%8C%9B%E8%AF%AD/" itemprop="url" rel="index"><span itemprop="name">猛言猛语</span></a>
+        </span>
+    </span>
 
-              <time title="创建时间：2016-03-24 11:07:11" itemprop="dateCreated datePublished" datetime="2016-03-24T11:07:11+08:00">2016-03-24</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/猛言猛语/" itemprop="url" rel="index">
-                    <span itemprop="name">猛言猛语</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
+  
   
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
+        <i class="far fa-comment"></i>
       </span>
-        
-      
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2016/03/24/zh-CN/2016-03-24-QA/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/2016/03/24/zh-CN/2016-03-24-QA/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/24/zh-CN/2016-03-24-QA/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
+</div>
 
         </div>
       </header>
@@ -752,8 +645,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>很久没有写文章了，第一太懒，第二没时间。连买来的体重称都几天没见到了。</p>
 <p>今天在论坛上看到有人问这三个问题，想了想便回复如下，不知所云。</p>
 <h4 id="Q-你打算一直做程序猿吗？"><a href="#Q-你打算一直做程序猿吗？" class="headerlink" title="Q:你打算一直做程序猿吗？"></a>Q:你打算一直做程序猿吗？</h4><p>A:看怎么理解“做”这个词，以及理解“程序猿”的涵义，甚至如何定义“一直”。</p>
@@ -766,94 +657,88 @@
 <p>理解上句很简单，宇宙空间这么大，人类居然害怕没有住的地方，将一辈子的生命付诸到买那不到一百平方米上。</p>
 <p>嗟夫！这和一只可怜的飞蛾，为了贪图眼前的光明，义无反顾、毫不思考地扑向火苗有何异处。 </p>
 
-        
       
     </div>
 
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/03/02/zh-CN/2016-03-02-God-Of-Gamblers-Is-Dead/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
       <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2016/03/02/zh-CN/2016-03-02-God-Of-Gamblers-Is-Dead/" class="post-title-link" itemprop="url">赌神里皮东的陨落</a>
-          
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2016/03/02/zh-CN/2016-03-02-God-Of-Gamblers-Is-Dead/" class="post-title-link" itemprop="url">赌神里皮东的陨落</a>
+        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+      <time title="创建时间：2016-03-02 11:11:11" itemprop="dateCreated datePublished" datetime="2016-03-02T11:11:11+08:00">2016-03-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%AC%BC%E7%94%BB%E5%BC%A7/" itemprop="url" rel="index"><span itemprop="name">鬼画弧</span></a>
+        </span>
+    </span>
 
-              <time title="创建时间：2016-03-02 11:11:11" itemprop="dateCreated datePublished" datetime="2016-03-02T11:11:11+08:00">2016-03-02</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
+  
   
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
+        <i class="far fa-comment"></i>
       </span>
-        
-      
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2016/03/02/zh-CN/2016-03-02-God-Of-Gamblers-Is-Dead/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/2016/03/02/zh-CN/2016-03-02-God-Of-Gamblers-Is-Dead/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/02/zh-CN/2016-03-02-God-Of-Gamblers-Is-Dead/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
+</div>
 
         </div>
       </header>
@@ -862,8 +747,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>这么看来我快成了一个专业的悼文写作者了。然则想想确实又没什么好写的，独听闻某个曾经真实存在的人突然消失时，觉得有写些什么的必要。</p>
 <p>里皮东是一个方言音调发出的洋气名字。据说是我父亲的老表，所以我应该叫其为表叔。这个表叔我在两年以前从未谋面，只听父亲与其关系甚好。父亲是那种本身老实本分的人，常舍己为人地帮助他人，但同时又有一颗偶尔不安的心。</p>
 <p>里皮东这个名听起来是一个身穿白衣长袖的风度偏偏公子哥，加上传闻他是赌神，靠牌桌上的本事成家立业，娇妻爱子，甚至在南方买了房子，举家搬到南方。在父母口中他是一个成功人士，不是世俗的通过努力工作、时来运转的发财的那种成功，而是通过天赋异禀的赌术与精明过人的智慧获得成功。当然更重要的一天是他还很重情重义，即使身居显贵也不相忘。</p>
@@ -872,94 +755,88 @@
 <p>时间来到2016年，某天突然听到爸妈说里皮东死了，我大感震惊，追问怎么死的，答曰猝死。惊惶之余，细想起来也是情理之中。赌神好堵，赌桌上工作肯定不比朝九晚五，自然是兴致来时酣战成天成夜，风餐露宿，酒足饭饱，早已是四十岁的年纪六十岁的身体。</p>
 <p>人生得意须尽欢，赌神赌场纵横捭阖、挥斥方遒，到头来醉卧沙场、马革裹尸，虽是遗憾，却也不愧为精彩。唏嘘间，方想到赌神的娇妻爱子，经历一番丧父丧夫的痛，怕是难以承受。但最终水还得流，路还得走，娇妻得嫁人，爱子得改口。赌神奋一世之余烈，终落得个红棺木、绿坟地，每逢清明</p>
 
-        
       
     </div>
 
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/01/08/zh-CN/2016-01-08-Tie-Guai-Li-Lost/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
       <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2016/01/08/zh-CN/2016-01-08-Tie-Guai-Li-Lost/" class="post-title-link" itemprop="url">符号“铁拐李”的消逝</a>
-          
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2016/01/08/zh-CN/2016-01-08-Tie-Guai-Li-Lost/" class="post-title-link" itemprop="url">符号“铁拐李”的消逝</a>
+        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+      <time title="创建时间：2016-01-08 17:17:17" itemprop="dateCreated datePublished" datetime="2016-01-08T17:17:17+08:00">2016-01-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%AC%BC%E7%94%BB%E5%BC%A7/" itemprop="url" rel="index"><span itemprop="name">鬼画弧</span></a>
+        </span>
+    </span>
 
-              <time title="创建时间：2016-01-08 17:17:17" itemprop="dateCreated datePublished" datetime="2016-01-08T17:17:17+08:00">2016-01-08</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
+  
   
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
+        <i class="far fa-comment"></i>
       </span>
-        
-      
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2016/01/08/zh-CN/2016-01-08-Tie-Guai-Li-Lost/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/2016/01/08/zh-CN/2016-01-08-Tie-Guai-Li-Lost/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/08/zh-CN/2016-01-08-Tie-Guai-Li-Lost/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
+</div>
 
         </div>
       </header>
@@ -968,8 +845,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>  铁拐李，名徐洪富，名字是大富大贵之人。因其有一瘸腿，常以一根竹棍为拐，人称铁拐李。</p>
 <p>  洪富年少之事已去半个世纪，如今都忘了个八八九九，只剩下吃不饱的肚子、玩不完的泥巴、闻不腻的牛屎味，和浑浑噩噩就长大就变老。洪富没想过去想那些苦日子，后来的日子能想吃白饭有米、想吃馒头有面，无疑更让洪富难以想起从前。大概人老的久了，就容易像别人一样以为自己没有年轻过。</p>
 <p>  至少我是这么认为的，自我认识洪富起，他便老了。永远都是一身农村老头标配的蓝黑色中山装和裤子，脚踏一双解放鞋或者黑面白底的单鞋。因为地中海的缘故他总是顶着一顶与衣服同色的帽子。因为瘸的缘故常常瘫坐在路边的大石头上，摘下帽子扇风，地中海边上廖廖几根发丝润出一滴滴汗珠下半截沾满泥土的竹棍侧放在石头沿。</p>
@@ -983,94 +858,88 @@
 <p>  洪富代表着上上辈的一代，而现在，正慢慢和我们告别。</p>
 <p>  甚至没有告别。</p>
 
-        
       
     </div>
 
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2016/01/01/zh-CN/2016-01-01-New-Year/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
       <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2016/01/01/zh-CN/2016-01-01-New-Year/" class="post-title-link" itemprop="url">旧年新年</a>
-          
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2016/01/01/zh-CN/2016-01-01-New-Year/" class="post-title-link" itemprop="url">旧年新年</a>
+        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+      <time title="创建时间：2016-01-01 00:00:01" itemprop="dateCreated datePublished" datetime="2016-01-01T00:00:01+08:00">2016-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Note/" itemprop="url" rel="index"><span itemprop="name">Note</span></a>
+        </span>
+    </span>
 
-              <time title="创建时间：2016-01-01 00:00:01" itemprop="dateCreated datePublished" datetime="2016-01-01T00:00:01+08:00">2016-01-01</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Note/" itemprop="url" rel="index">
-                    <span itemprop="name">Note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
+  
   
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
+        <i class="far fa-comment"></i>
       </span>
-        
-      
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2016/01/01/zh-CN/2016-01-01-New-Year/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/2016/01/01/zh-CN/2016-01-01-New-Year/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/01/zh-CN/2016-01-01-New-Year/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
+</div>
 
         </div>
       </header>
@@ -1079,8 +948,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>旧年新年</p>
 <p>2015，终于成为历史，一个无关紧要的数字。</p>
 <p>将来是诱惑的，现在是重要的，过去是没用的，就和女人一样。你以为没有追上的女神是遥不可及的，充满可能的，当你拿下了也发现不过如此。你以为现在的会永远在一起，也说不定转眼就成为过去式了。而过去的女人就成了黏在身上的一坨泥巴，虽然擦了洗了泼出去了，也会干了变成灰尘漂浮在你的周围，落在衣服上钻进鼻孔揉进眼睛，不时出现在你边上。</p>
@@ -1103,94 +970,88 @@
 </ul>
 <p>这篇文章啰嗦到此了，赶着写铁拐李。</p>
 
-        
       
     </div>
 
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/12/15/zh-CN/2015-12-15-Eggs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
       <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2015/12/15/zh-CN/2015-12-15-Eggs/" class="post-title-link" itemprop="url">一只忘了下蛋的鸡</a>
-          
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2015/12/15/zh-CN/2015-12-15-Eggs/" class="post-title-link" itemprop="url">一只忘了下蛋的鸡</a>
+        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+      <time title="创建时间：2015-12-15 14:30:33" itemprop="dateCreated datePublished" datetime="2015-12-15T14:30:33+08:00">2015-12-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%AC%BC%E7%94%BB%E5%BC%A7/" itemprop="url" rel="index"><span itemprop="name">鬼画弧</span></a>
+        </span>
+    </span>
 
-              <time title="创建时间：2015-12-15 14:30:33" itemprop="dateCreated datePublished" datetime="2015-12-15T14:30:33+08:00">2015-12-15</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
+  
   
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
+        <i class="far fa-comment"></i>
       </span>
-        
-      
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2015/12/15/zh-CN/2015-12-15-Eggs/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/2015/12/15/zh-CN/2015-12-15-Eggs/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/15/zh-CN/2015-12-15-Eggs/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
+</div>
 
         </div>
       </header>
@@ -1199,10 +1060,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>  以前提到过，我自幼对文字有特殊的感觉。当然这里的以前未必真是以前，因为提及此的文章写于本文之前，却并未发出。故而读者如果感到疑惑，可理解为我在此确定一个如上前提条件，且是全局性的，前后文皆接受此条件，除非局部重新定义。</p>
-<p>  因为擅文字，好卖弄，这让不少人知道我是一个有才的家伙，无论真心的 (true) 和假意的 (false) 。但这一点都无法构成我很牛逼，因为 true &amp;&amp; false = false. 文字哪怕写的很好，也仅此而已了，既无法让你成为一个数理化很牛逼的学霸，也无法成为一个精通历史政治、能谈古说今的家伙。反倒让你看起来是个多长了条胳膊：往乐观了看是三头六臂，往悲观了看却是在你睡觉的时候硌着背，吃饭的时候恐怕会抢碗筷。</p>
+<p>  因为擅文字，好卖弄，这让不少人知道我是一个有才的家伙，无论真心的 (true) 和假意的 (false) 。但这一点都无法构成我很牛逼，因为 true &amp;&amp; false &#x3D; false. 文字哪怕写的很好，也仅此而已了，既无法让你成为一个数理化很牛逼的学霸，也无法成为一个精通历史政治、能谈古说今的家伙。反倒让你看起来是个多长了条胳膊：往乐观了看是三头六臂，往悲观了看却是在你睡觉的时候硌着背，吃饭的时候恐怕会抢碗筷。</p>
 <p>  总之这让别人看来一个穿着长布衫扶着圆片眼镜的 nerd ：既闷而骚，还能写点文字。这里能写点文字就跟老母鸡能下蛋一样不值一提了，老母鸡就是下蛋的，这也算本事嘛？老母鸡会下蛋，所以干嘛不下蛋？你不下蛋我们便会对你老母鸡的身份重新定义。老母鸡之所以是老母鸡，盖因你会下蛋。假使老母鸡不会下蛋，那么与老公鸡无异，不能称之为老母鸡、下蛋的母鸡。老公鸡见到老母鸡便念叨：下只蛋罢，甭管老母鸡当时是心情不好或是刚来月经，或者刚拉完一泡鸡屎压根没想过下蛋。</p>
 <p>  因为上述原因加上自己的懒惰，为自己找来借口什么也不干。加上上述原因是借口之一，由此可见我为找借口是不遗余力的。每次决心写点什么，想好一个故事，确定好主人公的名字和关系，然后就放那了。只顾想不顾写。很多年后写代码这毛病再次复发：定义好 variable 和 Data Type，然后就不往下写了。算下来这么多年写下来的东西就是声明了一大摊 Interface 和 variable，不管实现。至于能遗留下来的，就更少了。所以其实可以算我其实什么也没”写过”，只是”想过”。</p>
 <p>  如果能写文字时写文字，可以姑且算个有才，那么能写文字时不写文字，等到老都再写文字，那么不叫有才，叫自传，写完自是读不到的，别人更不会读到。大家那么忙，自己的一辈子都操心不过来，哪还有时间关心你的一辈子。</p>
@@ -1211,94 +1070,88 @@
 <p>  此文无特殊意义，仅为下蛋的碎碎念、咯咯叫。</p>
 <p>  <em>顺便祝自己 25 岁生日快乐 :)</em></p>
 
-        
       
     </div>
 
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/12/09/zh-CN/2015-12-09-City-Shenzhen-Note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
       <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2015/12/09/zh-CN/2015-12-09-City-Shenzhen-Note/" class="post-title-link" itemprop="url">(城市 & 深圳) · 印象</a>
-          
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2015/12/09/zh-CN/2015-12-09-City-Shenzhen-Note/" class="post-title-link" itemprop="url">(城市 & 深圳) · 印象</a>
+        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+      <time title="创建时间：2015-12-09 15:55:55" itemprop="dateCreated datePublished" datetime="2015-12-09T15:55:55+08:00">2015-12-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%AC%BC%E7%94%BB%E5%BC%A7/" itemprop="url" rel="index"><span itemprop="name">鬼画弧</span></a>
+        </span>
+    </span>
 
-              <time title="创建时间：2015-12-09 15:55:55" itemprop="dateCreated datePublished" datetime="2015-12-09T15:55:55+08:00">2015-12-09</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
+  
   
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
+        <i class="far fa-comment"></i>
       </span>
-        
-      
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2015/12/09/zh-CN/2015-12-09-City-Shenzhen-Note/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/2015/12/09/zh-CN/2015-12-09-City-Shenzhen-Note/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/09/zh-CN/2015-12-09-City-Shenzhen-Note/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
+</div>
 
         </div>
       </header>
@@ -1307,8 +1160,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>  2015 年冬天，某天清早出门。在短促的冬风中听到几声唢呐。<br>  唢呐，大概是最具特色的农村乐器。它没有西洋乐器的雅，也没有锣鼓的闷。它就像老农民一样踏实，从骨子里的有爆发力，安静的在一旁蹲着，没有花里胡哨，没有悦耳和震撼，而它一响起，其它声音便只能当背景。乡下红白喜事都靠它挑起气氛。唢呐大概是比较官方的称呼，我们那里叫它喇叭，演奏者顺当被好笑的称为“吹喇叭的”。</p>
 <p>  一般两个中老年男人坐在矮方桌旁的木凳上，木色的方桌上放上两个装满茶水的白洋瓷缸，两个唢呐小头朝天屁股着地的摆在桌上，红白喜丧的红布白布缠在唢呐的腰部，静静地立在那里像两个待嫁的姑娘披上了嫁衣。临了，两个男人慢悠悠的拿起唢呐，插上喇叭嘴，鼓起两边大腮帮子，像一只生气的蛤蟆，然后两声噪耳的唢呐声便由方桌上的白洋瓷缸边窜起。</p>
 <p>  唢呐演奏不是一种优雅的音乐，自然只有乡下人、老农民们喜欢它，当然前提是他们没有听过优雅的音乐。而我口味比较综杂，比如美食喜欢清淡的粤菜，也喜欢味重的湘菜川菜，画风喜欢小清新也喜欢黑暗系，女人喜欢小萝莉当然也喜欢熟女，我对钢琴曲触动心弦，也会被唢呐引起共振。从小开始每逢喜事的时候，我除了看一眼新娘子就是呆那听唢呐，丧事肯定没有人可以看，我便看着别人穿白衣，然后听着唢呐，想象自己心里下着雨。</p>
@@ -1318,94 +1169,88 @@
 <p>  “走不走啊？”…  “请让一下”…  原来我已经走到天桥上了，周围还是那些陌生熟悉的送葬者的面孔。再往前走时，看到一个衣着破烂的人坐那吹着唢呐乞讨，曲子诙谐的是“小苹果”。</p>
 <p>  我意识到深圳大概不会有吹着唢呐的送葬队伍，甚至大概不会死人，死人显然不符合城市的气质。农村会死人，城市只会活人。</p>
 
-        
       
     </div>
 
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://amonxu.com/2015/12/05/zh-CN/2015-12-05-Jiang-Nan/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
       <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2015/12/05/zh-CN/2015-12-05-Jiang-Nan/" class="post-title-link" itemprop="url">十年前江南，十年后五月春天</a>
-          
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2015/12/05/zh-CN/2015-12-05-Jiang-Nan/" class="post-title-link" itemprop="url">十年前江南，十年后五月春天</a>
+        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
+      <time title="创建时间：2015-12-05 15:56:11" itemprop="dateCreated datePublished" datetime="2015-12-05T15:56:11+08:00">2015-12-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%AC%BC%E7%94%BB%E5%BC%A7/" itemprop="url" rel="index"><span itemprop="name">鬼画弧</span></a>
+        </span>
+    </span>
 
-              <time title="创建时间：2015-12-05 15:56:11" itemprop="dateCreated datePublished" datetime="2015-12-05T15:56:11+08:00">2015-12-05</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/鬼画弧/" itemprop="url" rel="index">
-                    <span itemprop="name">鬼画弧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
+  
   
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
+        <i class="far fa-comment"></i>
       </span>
-        
-      
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2015/12/05/zh-CN/2015-12-05-Jiang-Nan/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/2015/12/05/zh-CN/2015-12-05-Jiang-Nan/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/05/zh-CN/2015-12-05-Jiang-Nan/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
+</div>
 
         </div>
       </header>
@@ -1414,8 +1259,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <h3 id="2005"><a href="#2005" class="headerlink" title="2005"></a>2005</h3><p>  十年前，2005。<br>  回望过去总是容易的，哪怕十年，也只像过场动画一样，一帧一瞬间，一瞬间几年。</p>
 <p>  时间是个奇妙的东西，当我们人类的生命以几十年计时，动物是几年，蚂蚁几天，更小的细胞或其他生物以几秒甚至毫秒微秒乃至人类不能想象的单位计算。而高山，海洋，地球，宇宙的生命则是亿万年。而十年，不多不少，正好是我已有生命的五分之二。</p>
 <h3 id="高一"><a href="#高一" class="headerlink" title="高一"></a>高一</h3><p>  生命中每一段新的旅程都像长大，上幼儿园、升初中、上高中、读大学、找工作。<br>我仔细想想，这么些年一直像只风筝，与故乡一点点飞高飞远。以前还能近近的的看到故乡的模样，再变成只能看到远处的影子，再后来只能遥遥的看到故乡缩小到看不见的一个点，而现在只能看着身上那根线，只有它还提醒着我还有归途，而不是断线的风筝，飘到哪里就是哪里。</p>
@@ -1434,302 +1277,92 @@
 <p>  20岁前一直梦想踏上南方这块土地，看看是不是此地的人们是否如同活在电视上，看看南方和北方是否两个世界。等到时速100多km的火车渐行渐远时，除了一路上渐渐茂盛的树木，房子越建越小，坟墓由等腰三角体变成沿着山坡挖的小洞外，大江南北居然没什么刻意的变化：既没浓烈的风土人情，也不会陌生到让我思念家乡，除了周围换成一群群陌生独立的脸。确实陌生，因为人口一千多万的深圳，我熟悉的人为个位数。</p>
 <h3 id="不想结束的结束"><a href="#不想结束的结束" class="headerlink" title="不想结束的结束"></a>不想结束的结束</h3><p>  信阳，一个旧相识女孩，谈过爱恋说了再见；南方则是一个浓妆艳抹的女人，浑身散发着炽热的气息，一举一动都显得撩人心扉。终有一天，趴在她一对36D的肥乳上，会对刺鼻的奶油味感到绝望，转而怀念起那个简单的洗发水味道。</p>
 <p>而心中的江南，也化作五月春天。</p>
-<p><br></p>
-<h4 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h4><p>  写这篇文章的灵感源于再听到江南这首歌，写作时也反复播放当作背景音乐。起笔时还是2015，落笔已是2016，因为文思泉涌中途陆续写了几篇文章，挖了几个坑，有的填了，有的没填，有的随便乱填。这篇文章也是堆积很久，最终匆匆结尾。</p>
+<br>
+#### 后记
+  写这篇文章的灵感源于再听到江南这首歌，写作时也反复播放当作背景音乐。起笔时还是2015，落笔已是2016，因为文思泉涌中途陆续写了几篇文章，挖了几个坑，有的填了，有的没填，有的随便乱填。这篇文章也是堆积很久，最终匆匆结尾。
+
 <p>   最近的写作于我是一种发泄，发泄脑中喷薄郁积的想法、回忆和吐槽。</p>
 <p>   最后，谨以此文献给十年前的青春，和那个五月春风拂面的信阳。</p>
 
-        
       
     </div>
 
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-  </div>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/zh-CN/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/zh-CN/">1</a><span class="space">&hellip;</span><a class="page-number" href="/zh-CN/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/zh-CN/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/zh-CN/page/12/">12</a><a class="extend next" rel="next" href="/zh-CN/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image"
-      src="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460"
-      alt="Amon">
-  <p class="site-author-name" itemprop="name">Amon</p>
-  <div class="site-description" itemprop="description">Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">121</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-    
       
-      
-      <div class="site-state-item site-state-categories">
-        
-          
-            <a href="/categories/">
-          
-        
-        <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">categories</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-tags">
-        
-          
-            <a href="/tags/">
-          
-        
-        <span class="site-state-item-count">136</span>
-        <span class="site-state-item-name">tags</span>
-        </a>
-      </div>
-    
-  </nav>
-</div>
-  <div class="feed-link motion-element">
-    <a href="/atom.xml" rel="alternate">
-      <i class="fa fa-rss"></i>RSS
-    </a>
-  </div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="https://github.com/xumeng" title="GitHub &rarr; https://github.com/xumeng" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-    
-      <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="mailto:gosuxm@gmail.com" title="E-Mail &rarr; mailto:gosuxm@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-inbox"></i>E-Mail</a>
-      </span>
-    
-      <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="http://zhihu.com/people/amonxu" title="知乎 &rarr; http://zhihu.com/people/amonxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-zhihu"></i>知乎</a>
-      </span>
-    
-      <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="https://www.douban.com/people/gosu" title="豆瓣 &rarr; https://www.douban.com/people/gosu" rel="noopener" target="_blank"><i class="fa fa-fw fa-douban"></i>豆瓣</a>
-      </span>
-    
-  </div>
-
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title">
-      <i class="fa fa-fw fa-link"></i>
-      友情链接
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://amonxu.com" title="https://amonxu.com">猛猛如玉</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="http://www.frontendjs.com" title="http://www.frontendjs.com" rel="noopener" target="_blank">前站导航</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="http://geekplux.com" title="http://geekplux.com" rel="noopener" target="_blank">GeekPlux</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://wmdpd.com" title="https://wmdpd.com" rel="noopener" target="_blank">完美的胖达</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://blog.forecho.com" title="https://blog.forecho.com" rel="noopener" target="_blank">forecho</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://www.lcddjm.com" title="https://www.lcddjm.com" rel="noopener" target="_blank">lcddjm's website</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://www.fi-ads.com" title="https://www.fi-ads.com" rel="noopener" target="_blank">Future iDeal</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://mout.me/" title="https://mout.me/" rel="noopener" target="_blank">MouT.me</a>
-        </li>
-      
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-<div class="copyright">
-  &copy; 2012 – 
-  <span itemprop="copyrightYear">2024</span>
-  <span class="with-love">
-    <i class="fa fa-heartbeat"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Amon</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a>
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">
-      
-    Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        
-      </div>
     </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/zh-CN/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/zh-CN/">1</a><span class="space">&hellip;</span><a class="page-number" href="/zh-CN/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/zh-CN/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/zh-CN/page/12/">12</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/zh-CN/page/8/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2012 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Amon Xu</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-  
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
-<script src="/js/schemes/muse.js?v=7.4.1"></script>
-<script src="/js/next-boot.js?v=7.4.1"></script>
-
-
+    </div>
+  </footer>
 
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
 
+  <a href="https://github.com/xumeng" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
 
   
 
+
+
+
+
+
   
 
-<script>
-  function loadCount() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://amonxu.disqus.com/count.js';
-    s.id = 'dsq-count-scr';
-    (d.head || d.body).appendChild(s);
-  }
-  // defer loading until the whole page loading is completed
-  window.addEventListener('load', loadCount, false);
-</script>
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"amonxu","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

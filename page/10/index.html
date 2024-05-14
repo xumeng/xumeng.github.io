@@ -1,113 +1,52 @@
 <!DOCTYPE html>
-
-
-
-
-
-<html lang="en,zh-CN,default">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
-<meta name="referrer" content="no-referrer" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
-  <link rel="alternate" href="/atom.xml" title="Amon's Blog" type="application/atom+xml">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '7.4.1',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: 'Copy',
-      copy_success: 'Copied',
-      copy_failure: 'Copy failed'
-    },
-    sidebarPadding: 40
-  };
-</script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"amonxu.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content="Change will not come if we wait for some other person or some other time.We are the ones we&apos;ve been waiting for. We are the change that we seek.">
-<meta name="keywords" content="逐鹿IT,猛猛如玉,amonxu,xumeng,Java,程序员,程序员进阶,程序人生,程序世界,Java开发,Java高级开发,架构师,全栈,后端开发,产品经理,CTO,CIO,CEO,Java进阶,架构,性能调优,数据结构,算法,Spring,微服务,JVM,Docker,K8s,Kubernetes,DevOps,AI,AIGC,LangChain,LLM,ChatGPT,OpenAI,Bard,文心一言,通义千问,机器学习,大数据,人工智能,深度学习,Go,Golang,iOS,SpringCloud,SpringBoot,SpringMVC,Oracle,MySQL,Linux,MongoDB,K8S,职场故事,职场趣事,求职,面试,生涯规划,BAT,一线互联网,编程,云计算,蚂蚁金服,阿里巴巴,腾讯,百度,Google,Facebook,Amazon,重构,互联网,企业智能,项目管理,技术管理,领导力,创新力,企业管理,MBA,开发者,编程,代码,IT,软件工程,软件工程师,软件工程师进阶,高级软件工程师,开源,IT技术博客,IT网站,Developer,Programmer,Coder,Geek,architecture,coding,development,996,信阳,深圳,mengxu,徐猛,猛徐">
+    <meta name="description" content="Change will not come if we wait for some other person or some other time.We are the ones we&#39;ve been waiting for. We are the change that we seek.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Amon&#39;s Blog">
 <meta property="og:url" content="https://amonxu.com/page/10/index.html">
 <meta property="og:site_name" content="Amon&#39;s Blog">
-<meta property="og:description" content="Change will not come if we wait for some other person or some other time.We are the ones we&apos;ve been waiting for. We are the change that we seek.">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="Change will not come if we wait for some other person or some other time.We are the ones we&#39;ve been waiting for. We are the change that we seek.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Amon Xu">
+<meta property="article:tag" content="逐鹿IT,猛猛如玉,amonxu,xumeng,Java,程序员,程序员进阶,程序人生,程序世界,Java开发,Java高级开发,架构师,全栈,后端开发,产品经理,CTO,CIO,CEO,Java进阶,架构,性能调优,数据结构,算法,Spring,微服务,JVM,Docker,K8s,Kubernetes,DevOps,AI,AIGC,LangChain,LLM,ChatGPT,OpenAI,Bard,文心一言,通义千问,机器学习,大数据,人工智能,深度学习,Go,Golang,iOS,SpringCloud,SpringBoot,SpringMVC,Oracle,MySQL,Linux,MongoDB,K8S,职场故事,职场趣事,求职,面试,生涯规划,BAT,一线互联网,编程,云计算,蚂蚁金服,阿里巴巴,腾讯,百度,Google,Facebook,Amazon,重构,互联网,企业智能,项目管理,技术管理,领导力,创新力,企业管理,MBA,开发者,编程,代码,IT,软件工程,软件工程师,软件工程师进阶,高级软件工程师,开源,IT技术博客,IT网站,Developer,Programmer,Coder,Geek,architecture,coding,development,996,信阳,深圳,mengxu,徐猛,猛徐">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Amon&#39;s Blog">
-<meta name="twitter:description" content="Change will not come if we wait for some other person or some other time.We are the ones we&apos;ve been waiting for. We are the change that we seek.">
-  <link rel="canonical" href="https://amonxu.com/page/10/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
-  };
-</script>
+<link rel="canonical" href="https://amonxu.com/page/10/">
 
-  <title>Amon's Blog</title>
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"page/10/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Amon's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LF5S8MWY7N"></script>
-    <script>
-      var host = window.location.hostname;
-      if (host !== "localhost" || !true) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-LF5S8MWY7N');
-      }
-    </script>
-  
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-LF5S8MWY7N","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
 
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?bb453e3ffbbd5a718313dd9977009208"></script>
 
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?bb453e3ffbbd5a718313dd9977009208";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -115,1262 +54,58 @@
 
 
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Amon's Blog" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Amon's Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
-        <p class="site-subtitle">猛猛如玉</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Amon's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">猛猛如玉</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
     </div>
   </div>
 </div>
+
 
 
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-        
-        
-        <li class="menu-item menu-item-home">
-      
-    
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-about">
-      
-    
-
-    <a href="https://about.amonxu.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-user"></i>About</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-projects">
-      
-    
-
-    <a href="https://about.amonxu.com/en#projects" rel="noopener" target="_blank"><i class="fa fa-fw fa-file"></i>Projects</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-tags">
-      
-    
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-categories">
-      
-    
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-archives">
-      
-    
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-english">
-      
-    
-
-    <a href="/en/" rel="section"><i class="fa fa-fw fa-language"></i>English</a>
-  </li>
-      
-    
-      
-      
-        
-        
-        <li class="menu-item menu-item-中文">
-      
-    
-
-    <a href="/zh-CN/" rel="section"><i class="fa fa-fw fa-language"></i>中文</a>
-  </li>
-      
-    
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="https://about.amonxu.com/" rel="section" target="_blank"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-projects"><a href="https://about.amonxu.com/en#projects" rel="section" target="_blank"><i class="fa fa-file fa-fw"></i>Projects</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li><li class="menu-item menu-item-english"><a href="/en/" rel="section"><i class="fa fa-language fa-fw"></i>English</a></li><li class="menu-item menu-item-中文"><a href="/zh-CN/" rel="section"><i class="fa fa-language fa-fw"></i>中文</a></li>
   </ul>
-
-    
-
 </nav>
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-  <a href="https://github.com/xumeng" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div class="content">
-            
 
-  <div class="posts-expand">
+
+</header>
         
   
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/12/02/zh-CN/2013-12-02-war3s-time-has-end/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2013/12/02/zh-CN/2013-12-02-war3s-time-has-end/" class="post-title-link" itemprop="url">War3's time has end</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2013-12-02 11:11:11" itemprop="dateCreated datePublished" datetime="2013-12-02T11:11:11+08:00">2013-12-02</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Note/" itemprop="url" rel="index">
-                    <span itemprop="name">Note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2013/12/02/zh-CN/2013-12-02-war3s-time-has-end/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/12/02/zh-CN/2013-12-02-war3s-time-has-end/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>2013年12月01，上海昆山WCG赛场。<br>当Moon被蛋总一波rush下来，心都碎了。<br>月魔最后还是与冠军失之交臂，WCG永远欠他一个冠军。<br>同时，本届也是War3最后一次出现在WCG的舞台上：历经十余载的War3从WCG谢幕了！<br>犹记得2003，Grubby与Inso的决战，伴随着稻草芭比的嗲音。<br>犹记得2004，Grubby封神。<br>犹记得2005，2006，Sky让五星红旗飘扬在WCG的舞台上。<br>犹记得2007，Sky与三冠王错过，泪撒WCG赛场。<br>犹记得2008，木瓜的巅峰之战，月魔离冠军那么近。<br>犹记得2009，Infi和Fly的兽人大战，Infi向世人证明自己不是塔魔。<br>犹记得2010，肉馒头摇断国旗。<br>犹记得2011，打鬼队长Lyn第一次登顶。<br>犹记得2012，Ted抚慰了多少UDer的心。<br>而今2013，蛋总的夺冠代表着中国三大人族都已问鼎WCG。</p>
-<h4 id="Goodbye-Warcraft-III"><a href="#Goodbye-Warcraft-III" class="headerlink" title="Goodbye, Warcraft III!"></a>Goodbye, Warcraft III!</h4><p>WAR3长河，多少英雄好汉，如商周，如三国，如隋唐。<br>中国的CQ2000，guangmo，lyc，xiaoT，magicYang，suho，Like，Sky，Ted，Infi，Th000，Yumi，Fly，Kenshin，Future，Una，Wulin，WFZ，Yumi</p>
-<p>国外的MadFrog，Inso，Tod，Kua，AKM，Rainbow，Shortround，Showtime，apm70，Grubby，Moon，Happy，Check，Who，Soccer，Remind，Lyn，Zacard，Sweet，GoStop，Fov，Lucifer，Sarse？Suria？wise_xy，Focus，Space，Nicker，Hawk？Lucifon。<br>…..<br>太多太多，每一个都曾是响当当的汉子。</p>
-<p>如今，就让他们都成功历史吧！<br>gg,hf!</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/21/zh-CN/2013-10-21-gongqijun-is-good/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2013/10/21/zh-CN/2013-10-21-gongqijun-is-good/" class="post-title-link" itemprop="url">喜欢上宫骑峻的动画</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2013-10-21 11:11:11" itemprop="dateCreated datePublished" datetime="2013-10-21T11:11:11+08:00">2013-10-21</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Note/" itemprop="url" rel="index">
-                    <span itemprop="name">Note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2013/10/21/zh-CN/2013-10-21-gongqijun-is-good/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/10/21/zh-CN/2013-10-21-gongqijun-is-good/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h6 id="开头语-rake-post不支持中文标题，所以只能gongqijun。。。"><a href="#开头语-rake-post不支持中文标题，所以只能gongqijun。。。" class="headerlink" title="开头语:rake post不支持中文标题，所以只能gongqijun。。。"></a>开头语:rake post不支持中文标题，所以只能gongqijun。。。</h6><p>以前我是从来不看日本动漫的，总觉得动漫太幼稚了，且一群操着wataxiwa的人听起来就是在那哇哇叫。</p>
-<p>后来老婆推荐我看宫骑峻的电影，看上一次就喜欢上了。</p>
-<p>里面的画面非常唯美，想象力非常奇特，有很多很可爱的动物，也有很多本来很恐怖很恶心的怪物变得非常可爱。</p>
-<p>宫骑峻电影里面的主题也非常的耐人寻味，真心值得看。</p>
-<p>有机会也得把漫画拿来看看。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/17/zh-CN/2013-10-17-java-binary-search/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2013/10/17/zh-CN/2013-10-17-java-binary-search/" class="post-title-link" itemprop="url">Java二分法查找</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2013-10-17 11:11:11" itemprop="dateCreated datePublished" datetime="2013-10-17T11:11:11+08:00">2013-10-17</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2013/10/17/zh-CN/2013-10-17-java-binary-search/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/10/17/zh-CN/2013-10-17-java-binary-search/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>  最近遇到一个问题：</p>
-<p>  须要在20万号段数据中查找对应的地市，并且这个过程是发生在遍历几百万数据中的。也就是说正常情况下须要执行20万*几百万次。</p>
-<p>这个时间太久了，且因为号段是长数字，执行起来速度超慢。</p>
-<p>后来突然想到可以用二分法。</p>
-<h4 id="二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O-logn-。"><a href="#二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O-logn-。" class="headerlink" title="二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O(logn)。"></a>二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O(logn)。</h4><p>下面两个例子就是二分法的示例，一个是递归，一个是循环。</p>
-<p><em>java二分法循环示例</em><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.sunzn.dichotomy;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DichotomySearch</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; <span class="number">12</span>, <span class="number">23</span>, <span class="number">34</span>, <span class="number">45</span>, <span class="number">56</span>, <span class="number">67</span>, <span class="number">77</span>, <span class="number">89</span>, <span class="number">90</span> &#125;;</span><br><span class="line">       System.out.println(search(arr, <span class="number">12</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">45</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">67</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">89</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">99</span>));</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">int</span> end = arr.length - <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">while</span> (start &lt;= end) &#123;</span><br><span class="line">           <span class="keyword">int</span> middle = (start + end) / <span class="number">2</span>;</span><br><span class="line">           <span class="keyword">if</span> (key &lt; arr[middle]) &#123;</span><br><span class="line">               end = middle - <span class="number">1</span>;</span><br><span class="line">           &#125; <span class="keyword">else</span> <span class="keyword">if</span> (key &gt; arr[middle]) &#123;</span><br><span class="line">               start = middle + <span class="number">1</span>;</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               <span class="keyword">return</span> middle;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><em>java二分法递归示例</em><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 二分法查找，必须对已经排好序的序列进行查找，假设现在有一个递增序列，取中间位置的数及序号midIndex=(beginIndex+endIndex)/2，</span></span><br><span class="line"><span class="comment"> * 然后将一个序列折成两半，beginIndex~midIndex，midIndex~endIndex,如果目标数T等于S[midIndex]，找到，</span></span><br><span class="line"><span class="comment"> * 否则，如果T&lt;S[midIndex]，则在beginIndex~midIndex中继续查找；如果T&gt;S[midIndex],则在midIndex~endIndex</span></span><br><span class="line"><span class="comment"> * 中继续查找，如此反复进行，直到找到目标数据，</span></span><br><span class="line"><span class="comment"> * 初始对传入参数进行约束及避免无效计算的条件为，T&lt;S[beginIndex]或T&gt;S[endIndex]或beginIndex&gt;endIndex</span></span><br><span class="line"><span class="comment"> * 或beginIndex&gt;S.length-1||endIndex&gt;S.length-1||beginIndex&lt;0||endIndex&lt;0</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">package</span> junit.test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySearchTest</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 找到返回索引下标，否则返回-1；</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> index</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> dataset[],<span class="keyword">int</span> target,<span class="keyword">int</span> beginIndex,<span class="keyword">int</span> endIndex)</span></span>&#123;</span><br><span class="line">  <span class="comment">//数组校验</span></span><br><span class="line">  <span class="keyword">if</span>(dataset==<span class="keyword">null</span>||dataset.length==<span class="number">0</span>)&#123;</span><br><span class="line">	  <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//beginIndex,endIndex校验</span></span><br><span class="line">  <span class="keyword">if</span>(beginIndex&gt;endIndex||beginIndex&gt;dataset.length-<span class="number">1</span>||endIndex&gt;dataset.length-<span class="number">1</span>||beginIndex&lt;<span class="number">0</span>||endIndex&lt;<span class="number">0</span>)&#123;</span><br><span class="line">   System.out.println(<span class="string">"error arguments!"</span>);</span><br><span class="line">   <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//无效参数处理</span></span><br><span class="line">  <span class="keyword">if</span>(target&lt;dataset[beginIndex]||target&gt;dataset[endIndex]||beginIndex&gt;endIndex)&#123;</span><br><span class="line">   <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> midIndex=(beginIndex+endIndex)/<span class="number">2</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//System.out.println(midIndex);</span></span><br><span class="line">  <span class="keyword">if</span>(target==dataset[midIndex])&#123;</span><br><span class="line">   <span class="keyword">return</span> midIndex;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(target&lt;dataset[midIndex])&#123;</span><br><span class="line">   <span class="keyword">return</span> binarySearch(dataset,target,beginIndex,midIndex-<span class="number">1</span>);<span class="comment">//注意midIndex-1</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span>&#123;</span><br><span class="line">   <span class="keyword">return</span> binarySearch(dataset,target,midIndex+<span class="number">1</span>,endIndex);<span class="comment">//注意midIndex+1</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">  BinarySearchTest bs=<span class="keyword">new</span> BinarySearchTest();</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">int</span>[] data=<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">12</span>&#125;;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">int</span> index=bs.binarySearch(data,<span class="number">12</span>,<span class="number">0</span>, <span class="number">5</span>);</span><br><span class="line">  </span><br><span class="line">  System.out.println(<span class="string">"The position of the target number in the array is :"</span>+ index);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>后记：算法无穷妙，看来得好好学习下算法。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/15/zh-CN/2013-10-15-xubumeng-on-weixin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2013/10/15/zh-CN/2013-10-15-xubumeng-on-weixin/" class="post-title-link" itemprop="url">折腾了个微信公众号</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2013-10-15 11:11:11" itemprop="dateCreated datePublished" datetime="2013-10-15T11:11:11+08:00">2013-10-15</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2013/10/15/zh-CN/2013-10-15-xubumeng-on-weixin/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/10/15/zh-CN/2013-10-15-xubumeng-on-weixin/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这两天没事折腾了一下微信的公众号，我的公众号(订阅号，不支持自定义菜单)在右边，有兴趣的可以扫下:)</p>
-<h4 id="1-注册并提交自己的手持身份证照片"><a href="#1-注册并提交自己的手持身份证照片" class="headerlink" title="1.   注册并提交自己的手持身份证照片"></a>1.   注册并提交自己的手持身份证照片</h4><h4 id="2-简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。"><a href="#2-简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。" class="headerlink" title="2.   简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。"></a>2.   简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。</h4><h4 id="3-在BAE注册并创建移动web应用，我选择的是PHP的。"><a href="#3-在BAE注册并创建移动web应用，我选择的是PHP的。" class="headerlink" title="3.   在BAE注册并创建移动web应用，我选择的是PHP的。"></a>3.   在BAE注册并创建移动web应用，我选择的是PHP的。</h4><h4 id="4-下载微信接口示例代码，并参考微信接口文档，开启折腾之路。"><a href="#4-下载微信接口示例代码，并参考微信接口文档，开启折腾之路。" class="headerlink" title="4.   下载微信接口示例代码，并参考微信接口文档，开启折腾之路。"></a>4.   下载微信接口示例代码，并参考微信接口文档，开启折腾之路。</h4><h4 id="5-目前采用了很多第三方API，支持有"><a href="#5-目前采用了很多第三方API，支持有" class="headerlink" title="5.   目前采用了很多第三方API，支持有"></a>5.   目前采用了很多第三方API，支持有</h4><pre><code>*    机器人聊天
-*    查天气（发送 城市+天气，如 深圳天气，目前支持全国各省市地区）
-*    查PM2.5（同上，如 珠海空气）
-*    看笑话（发送 笑话，支持分类）
-*    看妹子图（发送 妹子 或者 MM 或者 美女，单次查看妹子图目前有限制:D）
-*    藏头诗（发送 藏头诗+任意字句，如 藏头诗徐不猛）
-*    翻译（发送 翻译+词句，如翻译i love you)
-*    看歌词（发送 歌词+歌曲名，如歌词后来）
-*    查域名信息（发送 域名+域名地址，如域名xubumeng.com，或者直接发送域名地址）
-*    查IP信息（发送 归属+IP地址，如归属192.168.1.111，或者直接发送IP地址）
-*    查看手机归属（同上，如归属13888888888 或者 13888888888）
-*    计算器（发送 计算+计算式，如 计算1+1，该功能暂时有些问题，敬请期待更新:p）
-</code></pre><h4 id="6-更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers"><a href="#6-更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers" class="headerlink" title="6.   更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers:)"></a>6.   更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers:)</h4>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/10/zh-CN/2013-10-10-long-time-no-see/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2013/10/10/zh-CN/2013-10-10-long-time-no-see/" class="post-title-link" itemprop="url">long time no see</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2013-10-10 11:11:11" itemprop="dateCreated datePublished" datetime="2013-10-10T11:11:11+08:00">2013-10-10</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Note/" itemprop="url" rel="index">
-                    <span itemprop="name">Note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2013/10/10/zh-CN/2013-10-10-long-time-no-see/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/10/10/zh-CN/2013-10-10-long-time-no-see/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>好久没写博客了，因为太忙。</p>
-<p>至于忙什么，谁也不知道！</p>
-<h3 id="这大半年经历挺多的"><a href="#这大半年经历挺多的" class="headerlink" title="这大半年经历挺多的:"></a>这大半年经历挺多的:</h3><ul>
-<li>女朋友3月来深圳，开始一起生活的日子。</li>
-<li>7月6号和女友一起去许昌，全家大团圆。</li>
-<li>10月1号和女友一起去同里她妈妈那。</li>
-<li>未完待续</li>
-</ul>
-<p>每天都很累，也多少感觉一些充实。</p>
-<p>时间在过，世界在变。</p>
-<p>当时间走过，如果不能留点什么给将来，简直是个遗憾。</p>
-<p>所以我决定重新写博客，有空的时候写一点点，以备后看。</p>
-<p>加油吧，少年！</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/" class="post-title-link" itemprop="url">Windows xp下创建符号链接</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2013-05-27 11:11:11" itemprop="dateCreated datePublished" datetime="2013-05-27T11:11:11+08:00">2013-05-27</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h6 id="windows-xp下创建符号链接"><a href="#windows-xp下创建符号链接" class="headerlink" title="windows xp下创建符号链接"></a>windows xp下创建符号链接</h6><p>  今天给女友的电脑设置dropbox同步的时候遇到一个问题，就是她想同步指定的文件夹，<br>当时立马就想到了windows中的mklink，可惜她用的是悲剧的xp系统，去网上找了下，找到一个junction的东东。<br><a href="http://technet.microsoft.com/en-us/sysinternals/bb896768.aspx" title="点此下载" target="_blank" rel="noopener">点此下载</a><br>使用方法如下：</p>
-<ol>
-<li>下载刚才那个文件，并解压到c:/windows/system32</li>
-<li>打开cmd，进入比如D盘，输入<code>junction d:/linkdir &quot;d:/srcdir&quot;</code></li>
-<li>删除这个链接可以直接删除链接后的文件夹，也可以用<code>junction -d d:/linkdir</code></li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/05/23/zh-CN/2013-05-22-hello--my-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2013/05/23/zh-CN/2013-05-22-hello--my-blog/" class="post-title-link" itemprop="url">Hello Github Blog！</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2013-05-23 11:11:11" itemprop="dateCreated datePublished" datetime="2013-05-23T11:11:11+08:00">2013-05-23</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2013/05/23/zh-CN/2013-05-22-hello--my-blog/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/23/zh-CN/2013-05-22-hello--my-blog/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Hello-这是我的新博客。"><a href="#Hello-这是我的新博客。" class="headerlink" title="Hello, 这是我的新博客。"></a>Hello, 这是我的新博客。</h3><p>它托管在github上。不定时更新。<br>以前的博客使用wordpress，基于革命同志的俭朴精神，现在使用免费的github+jekyll+markdown。   </p>
-<h4 id="本博客于2013年5月23正式启用。"><a href="#本博客于2013年5月23正式启用。" class="headerlink" title="本博客于2013年5月23正式启用。"></a>本博客于2013年5月23正式启用。</h4><h5 id="于2015年7月21日正式更新2-0，使用免费的github-hexo-markdown"><a href="#于2015年7月21日正式更新2-0，使用免费的github-hexo-markdown" class="headerlink" title="于2015年7月21日正式更新2.0，使用免费的github+hexo+markdown."></a>于2015年7月21日正式更新2.0，使用免费的github+hexo+markdown.</h5>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/04/18/zh-CN/2013-04-18-wordpress-to-github/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2013/04/18/zh-CN/2013-04-18-wordpress-to-github/" class="post-title-link" itemprop="url">准备弃用wp，把blog迁到github上去。</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2013-04-18 18:26:31" itemprop="dateCreated datePublished" datetime="2013-04-18T18:26:31+08:00">2013-04-18</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2013/04/18/zh-CN/2013-04-18-wordpress-to-github/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/04/18/zh-CN/2013-04-18-wordpress-to-github/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>记得有个人说过，开blog的人有几步：<br>1.在csdn，iteye这样的网站上开blog<br>2.自己搞定域名和主机，开blog<br>3.最终会把blog托管给别的地方。<br>现在我已经走到第3步了，因为不想折腾这个wp了，虽然开了一年也没怎么折腾，就是写写blog。<br>本来想搞定域名可以做做自己的网站什么的，但是暂时太忙了，等以后闲下来再说吧。<br>先准备迁到github上去。<br>我的github地址:<a href="http://xumeng.github.io/" target="_blank" rel="noopener">http://xumeng.github.io/</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/03/29/zh-CN/2013-03-29-linux-vm/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2013/03/29/zh-CN/2013-03-29-linux-vm/" class="post-title-link" itemprop="url">创建子虚拟盘后父虚拟盘发生改变</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2013-03-29 11:38:24" itemprop="dateCreated datePublished" datetime="2013-03-29T11:38:24+08:00">2013-03-29</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2013/03/29/zh-CN/2013-03-29-linux-vm/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/03/29/zh-CN/2013-03-29-linux-vm/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>不能打开磁盘vmname- 000001.vmdk或者是所依赖的磁盘快照。原因：创建子磁盘快照后父磁盘被修改过.<br>某次在vm用linux的快照的时候，不能恢复了，提示上述错误，google it的方案是：<br>每个虚拟磁盘都有两个附属VMDK文件，较大的文件名称最后有-flat，是虚拟磁盘的实际原始数据。较小的文件是描述符文件，包含虚拟磁盘配置的基本 信息。使用诸如Nano等文本编辑器打开原始磁盘的描述符文件(通常情况下和虚拟机的名称相同，如myvm.vmdk)，可以看到列出来的CID和父 CID。第一个磁盘的父CID一般是“ffffffff”，在下面的例子中需要注意快照的父CID和原始磁盘的CID并不一致。<br>　　原始磁盘文件：<br>　　CID=37b6f123<br>　　parentCID=ffffffff<br>　　快照磁盘文件：<br>　　CID=afafa03b<br>　　parentCID=ba4f9916<br>　　为了重新关联父子CID，编辑快照的描述符VMDK文件。标识原始磁盘文件的CID，修改快照磁盘文件的父CID，保证两者一致。如下所示：<br>　　原始磁盘文件：<br>　　CID=37b6f123<br>　　parentCID=ffffffff<br>　　快照磁盘文件：<br>　　CID=afafa03b parentCID=37b6f123<br>　　重新启动虚拟机，就可以顺利重新引导系统了。</p>
-<p>PS：如果是分盘的，我们会发现，vmdk1的CID是vmdk2的parentCID，vmdk2的CID是vmdk3的parentCID，依此类推，按顺序修改即可。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/01/25/zh-CN/2013-01-25-flex-cache/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Amon">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2013/01/25/zh-CN/2013-01-25-flex-cache/" class="post-title-link" itemprop="url">Flex的缓存问题</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2013-01-25 14:20:59" itemprop="dateCreated datePublished" datetime="2013-01-25T14:20:59+08:00">2013-01-25</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Technology/" itemprop="url" rel="index">
-                    <span itemprop="name">Technology</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2013/01/25/zh-CN/2013-01-25-flex-cache/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/25/zh-CN/2013-01-25-flex-cache/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>flex下载文件的时候很恶心，第一次下载完后，如果服务器上这个文件又修改了，再下载时是还是取的缓存里第一个文件。<br>通过加随机数（也就是方法二）目测是解决了这个问题，后台仔细测试的时候发现居然在ie中还是不行，在chrome中可以。<br>后台又找了第一种方法，是ok的。</p>
-<p>方法一：<br>本人解决的方法，保证可用。<br>添加过滤器（代码如下）<br>package com.cn.util;</p>
-<p>import java.io.<em> ;<br>import javax.servlet.</em> ;<br>import javax.servlet.http.HttpServletResponse;</p>
-<p>public class ForceNoCacheFilter implements Filter {    </p>
-<p>public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain) throws IOException, ServletException<br>{<br>  ((HttpServletResponse) response).setHeader(“Cache-Control”,”no-cache”);<br>  ((HttpServletResponse) response).setHeader(“Pragma”,”no-cache”);<br>  ((HttpServletResponse) response).setDateHeader (“Expires”, -1);<br>  filterChain.doFilter(request, response);<br>}<br>public void destroy()<br>{<br>}<br>   public void init(FilterConfig filterConfig) throws ServletException<br>{<br>}<br>}    </p>
-<p>然后在web.xml中添加这个过滤器</p>
-<p><filter><br>    <filter-name>NoCache</filter-name><br>    <filter-class>com.cn.util.ForceNoCacheFilter</filter-class><br></filter></p>
-<p><filter-mapping><br>    <filter-name>NoCache</filter-name><br>    <url-pattern>/*</url-pattern><br></filter-mapping></p>
-<p>com.cn.util.ForceNoCacheFilter为刚才过滤器的包名.类名,/*为匹配所有请求。</p>
-<p>这样你所有的请求都将会传到服务器处理，不会查看缓存了。 </p>
-<p>方法二：<br>inComeHttp.url=”familyGroup.do?method=query&amp;tmp=”+Math.random();<br>url上随意传一个随机数</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-  </div>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
   <aside class="sidebar">
-    <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
         </li>
@@ -1379,248 +114,1146 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image"
-      src="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460"
-      alt="Amon">
-  <p class="site-author-name" itemprop="name">Amon</p>
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Amon Xu"
+      src="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+  <p class="site-author-name" itemprop="name">Amon Xu</p>
   <div class="site-description" itemprop="description">Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.</div>
 </div>
-<div class="site-state-wrap motion-element">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
-          <a href="/archives/">
-        
+        <a href="/archives/">
           <span class="site-state-item-count">121</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-categories">
-        
-          
-            <a href="/categories/">
-          
-        
+          <a href="/categories/">
         <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">categories</span>
-        </a>
+        <span class="site-state-item-name">categories</span></a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
-            <a href="/tags/">
-          
-        
+          <a href="/tags/">
         <span class="site-state-item-count">136</span>
-        <span class="site-state-item-name">tags</span>
-        </a>
+        <span class="site-state-item-name">tags</span></a>
       </div>
-    
   </nav>
 </div>
-  <div class="feed-link motion-element">
-    <a href="/atom.xml" rel="alternate">
-      <i class="fa fa-rss"></i>RSS
-    </a>
-  </div>
-  <div class="links-of-author motion-element">
+  <div class="links-of-author animated">
       <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="https://github.com/xumeng" title="GitHub &rarr; https://github.com/xumeng" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/xumeng" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xumeng" rel="noopener me" target="_blank"><i class="fa fa-github fa-fw"></i>GitHub</a>
       </span>
-    
       <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="mailto:gosuxm@gmail.com" title="E-Mail &rarr; mailto:gosuxm@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-inbox"></i>E-Mail</a>
+        <a href="mailto:gosuxm@gmail.com" title="E-Mail → mailto:gosuxm@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-inbox fa-fw"></i>E-Mail</a>
       </span>
-    
       <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="http://zhihu.com/people/amonxu" title="知乎 &rarr; http://zhihu.com/people/amonxu" rel="noopener" target="_blank"><i class="fa fa-fw fa-zhihu"></i>知乎</a>
+        <a href="http://zhihu.com/people/amonxu" title="知乎 → http:&#x2F;&#x2F;zhihu.com&#x2F;people&#x2F;amonxu" rel="noopener me" target="_blank"><i class="fa fa-zhihu fa-fw"></i>知乎</a>
       </span>
-    
       <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="https://www.douban.com/people/gosu" title="豆瓣 &rarr; https://www.douban.com/people/gosu" rel="noopener" target="_blank"><i class="fa fa-fw fa-douban"></i>豆瓣</a>
+        <a href="https://m.okjike.com/users/C230C450-1B24-445E-98DD-0391148DCDC9" title="即刻 → https:&#x2F;&#x2F;m.okjike.com&#x2F;users&#x2F;C230C450-1B24-445E-98DD-0391148DCDC9" rel="noopener me" target="_blank"><i class="fa fa-jike fa-fw"></i>即刻</a>
       </span>
-    
+      <span class="links-of-author-item">
+        <a href="https://www.douban.com/people/gosu" title="豆瓣 → https:&#x2F;&#x2F;www.douban.com&#x2F;people&#x2F;gosu" rel="noopener me" target="_blank"><i class="fa fa-douban fa-fw"></i>豆瓣</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/amonxu" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;amonxu" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/3090339/amonxu" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;3090339&#x2F;amonxu" rel="noopener me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
   </div>
 
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title">
-      <i class="fa fa-fw fa-link"></i>
-      友情链接
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://amonxu.com" title="https://amonxu.com">猛猛如玉</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="http://www.frontendjs.com" title="http://www.frontendjs.com" rel="noopener" target="_blank">前站导航</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="http://geekplux.com" title="http://geekplux.com" rel="noopener" target="_blank">GeekPlux</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://wmdpd.com" title="https://wmdpd.com" rel="noopener" target="_blank">完美的胖达</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://blog.forecho.com" title="https://blog.forecho.com" rel="noopener" target="_blank">forecho</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://www.lcddjm.com" title="https://www.lcddjm.com" rel="noopener" target="_blank">lcddjm's website</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://www.fi-ads.com" title="https://www.fi-ads.com" rel="noopener" target="_blank">Future iDeal</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://mout.me/" title="https://mout.me/" rel="noopener" target="_blank">MouT.me</a>
-        </li>
-      
-    </ul>
-  </div>
-
+        </div>
       </div>
+    </div>
 
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://amonxu.com/" title="https:&#x2F;&#x2F;amonxu.com">猛猛如玉</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://www.frontendjs.com/" title="http:&#x2F;&#x2F;www.frontendjs.com" rel="noopener" target="_blank">前站导航</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://geekplux.com/" title="http:&#x2F;&#x2F;geekplux.com" rel="noopener" target="_blank">GeekPlux</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://wmdpd.com/" title="https:&#x2F;&#x2F;wmdpd.com" rel="noopener" target="_blank">完美的胖达</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://blog.forecho.com/" title="https:&#x2F;&#x2F;blog.forecho.com" rel="noopener" target="_blank">forecho</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.lcddjm.com/" title="https:&#x2F;&#x2F;www.lcddjm.com" rel="noopener" target="_blank">lcddjm's website</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.fi-ads.com/" title="https:&#x2F;&#x2F;www.fi-ads.com" rel="noopener" target="_blank">Future iDeal</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://mout.me/" title="https:&#x2F;&#x2F;mout.me&#x2F;" rel="noopener" target="_blank">MouT.me</a>
+            </li>
+        </ul>
+      </div>
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
 
 
-      </div>
-    </main>
+    </div>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+    <div class="main-inner index posts-expand">
 
-<div class="copyright">
-  &copy; 2012 – 
-  <span itemprop="copyrightYear">2024</span>
-  <span class="with-love">
-    <i class="fa fa-heartbeat"></i>
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/12/02/zh-CN/2013-12-02-war3s-time-has-end/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/12/02/zh-CN/2013-12-02-war3s-time-has-end/" class="post-title-link" itemprop="url">War3's time has end</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2013-12-02 11:11:11" itemprop="dateCreated datePublished" datetime="2013-12-02T11:11:11+08:00">2013-12-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Note/" itemprop="url" rel="index"><span itemprop="name">Note</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2013/12/02/zh-CN/2013-12-02-war3s-time-has-end/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/12/02/zh-CN/2013-12-02-war3s-time-has-end/" itemprop="commentCount"></span>
+    </a>
   </span>
-  <span class="author" itemprop="copyrightHolder">Amon</span>
+  
+  
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a>
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>2013年12月01，上海昆山WCG赛场。<br>当Moon被蛋总一波rush下来，心都碎了。<br>月魔最后还是与冠军失之交臂，WCG永远欠他一个冠军。<br>同时，本届也是War3最后一次出现在WCG的舞台上：历经十余载的War3从WCG谢幕了！<br>犹记得2003，Grubby与Inso的决战，伴随着稻草芭比的嗲音。<br>犹记得2004，Grubby封神。<br>犹记得2005，2006，Sky让五星红旗飘扬在WCG的舞台上。<br>犹记得2007，Sky与三冠王错过，泪撒WCG赛场。<br>犹记得2008，木瓜的巅峰之战，月魔离冠军那么近。<br>犹记得2009，Infi和Fly的兽人大战，Infi向世人证明自己不是塔魔。<br>犹记得2010，肉馒头摇断国旗。<br>犹记得2011，打鬼队长Lyn第一次登顶。<br>犹记得2012，Ted抚慰了多少UDer的心。<br>而今2013，蛋总的夺冠代表着中国三大人族都已问鼎WCG。</p>
+<h4 id="Goodbye-Warcraft-III"><a href="#Goodbye-Warcraft-III" class="headerlink" title="Goodbye, Warcraft III!"></a>Goodbye, Warcraft III!</h4><p>WAR3长河，多少英雄好汉，如商周，如三国，如隋唐。<br>中国的CQ2000，guangmo，lyc，xiaoT，magicYang，suho，Like，Sky，Ted，Infi，Th000，Yumi，Fly，Kenshin，Future，Una，Wulin，WFZ，Yumi</p>
+<p>国外的MadFrog，Inso，Tod，Kua，AKM，Rainbow，Shortround，Showtime，apm70，Grubby，Moon，Happy，Check，Who，Soccer，Remind，Lyn，Zacard，Sweet，GoStop，Fov，Lucifer，Sarse？Suria？wise_xy，Focus，Space，Nicker，Hawk？Lucifon。<br>…..<br>太多太多，每一个都曾是响当当的汉子。</p>
+<p>如今，就让他们都成功历史吧！<br>gg,hf!</p>
+
       
-    Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
+    </div>
 
-        
+    
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-        
-      </div>
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
     </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/21/zh-CN/2013-10-21-gongqijun-is-good/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/10/21/zh-CN/2013-10-21-gongqijun-is-good/" class="post-title-link" itemprop="url">喜欢上宫骑峻的动画</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2013-10-21 11:11:11" itemprop="dateCreated datePublished" datetime="2013-10-21T11:11:11+08:00">2013-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Note/" itemprop="url" rel="index"><span itemprop="name">Note</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2013/10/21/zh-CN/2013-10-21-gongqijun-is-good/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/10/21/zh-CN/2013-10-21-gongqijun-is-good/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h6 id="开头语-rake-post不支持中文标题，所以只能gongqijun。。。"><a href="#开头语-rake-post不支持中文标题，所以只能gongqijun。。。" class="headerlink" title="开头语:rake post不支持中文标题，所以只能gongqijun。。。"></a>开头语:rake post不支持中文标题，所以只能gongqijun。。。</h6><p>以前我是从来不看日本动漫的，总觉得动漫太幼稚了，且一群操着wataxiwa的人听起来就是在那哇哇叫。</p>
+<p>后来老婆推荐我看宫骑峻的电影，看上一次就喜欢上了。</p>
+<p>里面的画面非常唯美，想象力非常奇特，有很多很可爱的动物，也有很多本来很恐怖很恶心的怪物变得非常可爱。</p>
+<p>宫骑峻电影里面的主题也非常的耐人寻味，真心值得看。</p>
+<p>有机会也得把漫画拿来看看。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/17/zh-CN/2013-10-17-java-binary-search/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/10/17/zh-CN/2013-10-17-java-binary-search/" class="post-title-link" itemprop="url">Java二分法查找</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2013-10-17 11:11:11" itemprop="dateCreated datePublished" datetime="2013-10-17T11:11:11+08:00">2013-10-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2013/10/17/zh-CN/2013-10-17-java-binary-search/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/10/17/zh-CN/2013-10-17-java-binary-search/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>  最近遇到一个问题：</p>
+<p>  须要在20万号段数据中查找对应的地市，并且这个过程是发生在遍历几百万数据中的。也就是说正常情况下须要执行20万*几百万次。</p>
+<p>这个时间太久了，且因为号段是长数字，执行起来速度超慢。</p>
+<p>后来突然想到可以用二分法。</p>
+<h4 id="二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O-logn-。"><a href="#二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O-logn-。" class="headerlink" title="二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O(logn)。"></a>二分法的原理就是：把有序的数据分为2段，通过比较得到数据在哪段，然后再把这段的数据分为2段，这样就省去了很多不必要的遍历，复杂度O(logn)。</h4><p>下面两个例子就是二分法的示例，一个是递归，一个是循环。</p>
+<p><em>java二分法循环示例</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.sunzn.dichotomy;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DichotomySearch</span> &#123;</span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">       <span class="type">int</span>[] arr = <span class="keyword">new</span> <span class="title class_">int</span>[] &#123; <span class="number">12</span>, <span class="number">23</span>, <span class="number">34</span>, <span class="number">45</span>, <span class="number">56</span>, <span class="number">67</span>, <span class="number">77</span>, <span class="number">89</span>, <span class="number">90</span> &#125;;</span><br><span class="line">       System.out.println(search(arr, <span class="number">12</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">45</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">67</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">89</span>));</span><br><span class="line">       System.out.println(search(arr, <span class="number">99</span>));</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">search</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> key)</span> &#123;</span><br><span class="line">       <span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">       <span class="type">int</span> <span class="variable">end</span> <span class="operator">=</span> arr.length - <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">while</span> (start &lt;= end) &#123;</span><br><span class="line">           <span class="type">int</span> <span class="variable">middle</span> <span class="operator">=</span> (start + end) / <span class="number">2</span>;</span><br><span class="line">           <span class="keyword">if</span> (key &lt; arr[middle]) &#123;</span><br><span class="line">               end = middle - <span class="number">1</span>;</span><br><span class="line">           &#125; <span class="keyword">else</span> <span class="keyword">if</span> (key &gt; arr[middle]) &#123;</span><br><span class="line">               start = middle + <span class="number">1</span>;</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               <span class="keyword">return</span> middle;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><em>java二分法递归示例</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 二分法查找，必须对已经排好序的序列进行查找，假设现在有一个递增序列，取中间位置的数及序号midIndex=(beginIndex+endIndex)/2，</span></span><br><span class="line"><span class="comment"> * 然后将一个序列折成两半，beginIndex~midIndex，midIndex~endIndex,如果目标数T等于S[midIndex]，找到，</span></span><br><span class="line"><span class="comment"> * 否则，如果T&lt;S[midIndex]，则在beginIndex~midIndex中继续查找；如果T&gt;S[midIndex],则在midIndex~endIndex</span></span><br><span class="line"><span class="comment"> * 中继续查找，如此反复进行，直到找到目标数据，</span></span><br><span class="line"><span class="comment"> * 初始对传入参数进行约束及避免无效计算的条件为，T&lt;S[beginIndex]或T&gt;S[endIndex]或beginIndex&gt;endIndex</span></span><br><span class="line"><span class="comment"> * 或beginIndex&gt;S.length-1||endIndex&gt;S.length-1||beginIndex&lt;0||endIndex&lt;0</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">package</span> junit.test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BinarySearchTest</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 找到返回索引下标，否则返回-1；</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> index</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"> <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">binarySearch</span><span class="params">(<span class="type">int</span> dataset[],<span class="type">int</span> target,<span class="type">int</span> beginIndex,<span class="type">int</span> endIndex)</span>&#123;</span><br><span class="line">  <span class="comment">//数组校验</span></span><br><span class="line">  <span class="keyword">if</span>(dataset==<span class="literal">null</span>||dataset.length==<span class="number">0</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//beginIndex,endIndex校验</span></span><br><span class="line">  <span class="keyword">if</span>(beginIndex&gt;endIndex||beginIndex&gt;dataset.length-<span class="number">1</span>||endIndex&gt;dataset.length-<span class="number">1</span>||beginIndex&lt;<span class="number">0</span>||endIndex&lt;<span class="number">0</span>)&#123;</span><br><span class="line">   System.out.println(<span class="string">&quot;error arguments!&quot;</span>);</span><br><span class="line">   <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//无效参数处理</span></span><br><span class="line">  <span class="keyword">if</span>(target&lt;dataset[beginIndex]||target&gt;dataset[endIndex]||beginIndex&gt;endIndex)&#123;</span><br><span class="line">   <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="type">int</span> midIndex=(beginIndex+endIndex)/<span class="number">2</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//System.out.println(midIndex);</span></span><br><span class="line">  <span class="keyword">if</span>(target==dataset[midIndex])&#123;</span><br><span class="line">   <span class="keyword">return</span> midIndex;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(target&lt;dataset[midIndex])&#123;</span><br><span class="line">   <span class="keyword">return</span> binarySearch(dataset,target,beginIndex,midIndex-<span class="number">1</span>);<span class="comment">//注意midIndex-1</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span>&#123;</span><br><span class="line">   <span class="keyword">return</span> binarySearch(dataset,target,midIndex+<span class="number">1</span>,endIndex);<span class="comment">//注意midIndex+1</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">  <span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">  BinarySearchTest bs=<span class="keyword">new</span> <span class="title class_">BinarySearchTest</span>();</span><br><span class="line">  </span><br><span class="line">  <span class="type">int</span>[] data=<span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">12</span>&#125;;</span><br><span class="line">  </span><br><span class="line">  <span class="type">int</span> index=bs.binarySearch(data,<span class="number">12</span>,<span class="number">0</span>, <span class="number">5</span>);</span><br><span class="line">  </span><br><span class="line">  System.out.println(<span class="string">&quot;The position of the target number in the array is :&quot;</span>+ index);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>后记：算法无穷妙，看来得好好学习下算法。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/15/zh-CN/2013-10-15-xubumeng-on-weixin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/10/15/zh-CN/2013-10-15-xubumeng-on-weixin/" class="post-title-link" itemprop="url">折腾了个微信公众号</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2013-10-15 11:11:11" itemprop="dateCreated datePublished" datetime="2013-10-15T11:11:11+08:00">2013-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2013/10/15/zh-CN/2013-10-15-xubumeng-on-weixin/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/10/15/zh-CN/2013-10-15-xubumeng-on-weixin/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>这两天没事折腾了一下微信的公众号，我的公众号(订阅号，不支持自定义菜单)在右边，有兴趣的可以扫下:)</p>
+<h4 id="1-注册并提交自己的手持身份证照片"><a href="#1-注册并提交自己的手持身份证照片" class="headerlink" title="1.   注册并提交自己的手持身份证照片"></a>1.   注册并提交自己的手持身份证照片</h4><h4 id="2-简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。"><a href="#2-简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。" class="headerlink" title="2.   简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。"></a>2.   简单的订阅的话，可以选择高级功能里面的编辑模式，想要更多功能还是选择开发模式。</h4><h4 id="3-在BAE注册并创建移动web应用，我选择的是PHP的。"><a href="#3-在BAE注册并创建移动web应用，我选择的是PHP的。" class="headerlink" title="3.   在BAE注册并创建移动web应用，我选择的是PHP的。"></a>3.   在BAE注册并创建移动web应用，我选择的是PHP的。</h4><h4 id="4-下载微信接口示例代码，并参考微信接口文档，开启折腾之路。"><a href="#4-下载微信接口示例代码，并参考微信接口文档，开启折腾之路。" class="headerlink" title="4.   下载微信接口示例代码，并参考微信接口文档，开启折腾之路。"></a>4.   下载微信接口示例代码，并参考微信接口文档，开启折腾之路。</h4><h4 id="5-目前采用了很多第三方API，支持有"><a href="#5-目前采用了很多第三方API，支持有" class="headerlink" title="5.   目前采用了很多第三方API，支持有"></a>5.   目前采用了很多第三方API，支持有</h4><pre><code>*	机器人聊天
+*	查天气（发送 城市+天气，如 深圳天气，目前支持全国各省市地区）
+*	查PM2.5（同上，如 珠海空气）
+*	看笑话（发送 笑话，支持分类）
+*	看妹子图（发送 妹子 或者 MM 或者 美女，单次查看妹子图目前有限制:D）
+*	藏头诗（发送 藏头诗+任意字句，如 藏头诗徐不猛）
+*	翻译（发送 翻译+词句，如翻译i love you)
+*	看歌词（发送 歌词+歌曲名，如歌词后来）
+*	查域名信息（发送 域名+域名地址，如域名xubumeng.com，或者直接发送域名地址）
+*	查IP信息（发送 归属+IP地址，如归属192.168.1.111，或者直接发送IP地址）
+*	查看手机归属（同上，如归属13888888888 或者 13888888888）
+*	计算器（发送 计算+计算式，如 计算1+1，该功能暂时有些问题，敬请期待更新:p）
+</code></pre>
+<h4 id="6-更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers"><a href="#6-更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers" class="headerlink" title="6.   更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers:)"></a>6.   更多功能，后续更新，谢谢您的使用，有什么意见和想法可以反馈在下面，cheers:)</h4>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/10/10/zh-CN/2013-10-10-long-time-no-see/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/10/10/zh-CN/2013-10-10-long-time-no-see/" class="post-title-link" itemprop="url">long time no see</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2013-10-10 11:11:11" itemprop="dateCreated datePublished" datetime="2013-10-10T11:11:11+08:00">2013-10-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Note/" itemprop="url" rel="index"><span itemprop="name">Note</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2013/10/10/zh-CN/2013-10-10-long-time-no-see/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/10/10/zh-CN/2013-10-10-long-time-no-see/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>好久没写博客了，因为太忙。</p>
+<p>至于忙什么，谁也不知道！</p>
+<h3 id="这大半年经历挺多的"><a href="#这大半年经历挺多的" class="headerlink" title="这大半年经历挺多的:"></a>这大半年经历挺多的:</h3><ul>
+<li>   女朋友3月来深圳，开始一起生活的日子。</li>
+<li>   7月6号和女友一起去许昌，全家大团圆。</li>
+<li>   10月1号和女友一起去同里她妈妈那。</li>
+<li>   未完待续</li>
+</ul>
+<p>每天都很累，也多少感觉一些充实。</p>
+<p>时间在过，世界在变。</p>
+<p>当时间走过，如果不能留点什么给将来，简直是个遗憾。</p>
+<p>所以我决定重新写博客，有空的时候写一点点，以备后看。</p>
+<p>加油吧，少年！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/" class="post-title-link" itemprop="url">Windows xp下创建符号链接</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2013-05-27 11:11:11" itemprop="dateCreated datePublished" datetime="2013-05-27T11:11:11+08:00">2013-05-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h6 id="windows-xp下创建符号链接"><a href="#windows-xp下创建符号链接" class="headerlink" title="windows xp下创建符号链接"></a>windows xp下创建符号链接</h6><p>  今天给女友的电脑设置dropbox同步的时候遇到一个问题，就是她想同步指定的文件夹，<br>当时立马就想到了windows中的mklink，可惜她用的是悲剧的xp系统，去网上找了下，找到一个junction的东东。<br><a target="_blank" rel="noopener" href="http://technet.microsoft.com/en-us/sysinternals/bb896768.aspx" title="点此下载">点此下载</a><br>使用方法如下：<br> 1.	下载刚才那个文件，并解压到c:&#x2F;windows&#x2F;system32<br> 2. 打开cmd，进入比如D盘，输入<code>junction d:/linkdir &quot;d:/srcdir&quot;</code><br> 3. 删除这个链接可以直接删除链接后的文件夹，也可以用<code>junction -d d:/linkdir</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/05/23/zh-CN/2013-05-22-hello--my-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/05/23/zh-CN/2013-05-22-hello--my-blog/" class="post-title-link" itemprop="url">Hello Github Blog！</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2013-05-23 11:11:11" itemprop="dateCreated datePublished" datetime="2013-05-23T11:11:11+08:00">2013-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2013/05/23/zh-CN/2013-05-22-hello--my-blog/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/23/zh-CN/2013-05-22-hello--my-blog/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Hello-这是我的新博客。"><a href="#Hello-这是我的新博客。" class="headerlink" title="Hello, 这是我的新博客。"></a>Hello, 这是我的新博客。</h3><p>它托管在github上。不定时更新。<br>以前的博客使用wordpress，基于革命同志的俭朴精神，现在使用免费的github+jekyll+markdown。   </p>
+<h4 id="本博客于2013年5月23正式启用。"><a href="#本博客于2013年5月23正式启用。" class="headerlink" title="本博客于2013年5月23正式启用。"></a>本博客于2013年5月23正式启用。</h4><h5 id="于2015年7月21日正式更新2-0，使用免费的github-hexo-markdown"><a href="#于2015年7月21日正式更新2-0，使用免费的github-hexo-markdown" class="headerlink" title="于2015年7月21日正式更新2.0，使用免费的github+hexo+markdown."></a>于2015年7月21日正式更新2.0，使用免费的github+hexo+markdown.</h5>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/04/18/zh-CN/2013-04-18-wordpress-to-github/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/04/18/zh-CN/2013-04-18-wordpress-to-github/" class="post-title-link" itemprop="url">准备弃用wp，把blog迁到github上去。</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2013-04-18 18:26:31" itemprop="dateCreated datePublished" datetime="2013-04-18T18:26:31+08:00">2013-04-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2013/04/18/zh-CN/2013-04-18-wordpress-to-github/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/04/18/zh-CN/2013-04-18-wordpress-to-github/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>记得有个人说过，开blog的人有几步：<br>1.在csdn，iteye这样的网站上开blog<br>2.自己搞定域名和主机，开blog<br>3.最终会把blog托管给别的地方。<br>现在我已经走到第3步了，因为不想折腾这个wp了，虽然开了一年也没怎么折腾，就是写写blog。<br>本来想搞定域名可以做做自己的网站什么的，但是暂时太忙了，等以后闲下来再说吧。<br>先准备迁到github上去。<br>我的github地址:<a target="_blank" rel="noopener" href="http://xumeng.github.io/">http://xumeng.github.io/</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/03/29/zh-CN/2013-03-29-linux-vm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/03/29/zh-CN/2013-03-29-linux-vm/" class="post-title-link" itemprop="url">创建子虚拟盘后父虚拟盘发生改变</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2013-03-29 11:38:24" itemprop="dateCreated datePublished" datetime="2013-03-29T11:38:24+08:00">2013-03-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2013/03/29/zh-CN/2013-03-29-linux-vm/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/03/29/zh-CN/2013-03-29-linux-vm/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>不能打开磁盘vmname- 000001.vmdk或者是所依赖的磁盘快照。原因：创建子磁盘快照后父磁盘被修改过.<br>某次在vm用linux的快照的时候，不能恢复了，提示上述错误，google it的方案是：<br>每个虚拟磁盘都有两个附属VMDK文件，较大的文件名称最后有-flat，是虚拟磁盘的实际原始数据。较小的文件是描述符文件，包含虚拟磁盘配置的基本 信息。使用诸如Nano等文本编辑器打开原始磁盘的描述符文件(通常情况下和虚拟机的名称相同，如myvm.vmdk)，可以看到列出来的CID和父 CID。第一个磁盘的父CID一般是“ffffffff”，在下面的例子中需要注意快照的父CID和原始磁盘的CID并不一致。<br>　　原始磁盘文件：<br>　　CID&#x3D;37b6f123<br>　　parentCID&#x3D;ffffffff<br>　　快照磁盘文件：<br>　　CID&#x3D;afafa03b<br>　　parentCID&#x3D;ba4f9916<br>　　为了重新关联父子CID，编辑快照的描述符VMDK文件。标识原始磁盘文件的CID，修改快照磁盘文件的父CID，保证两者一致。如下所示：<br>　　原始磁盘文件：<br>　　CID&#x3D;37b6f123<br>　　parentCID&#x3D;ffffffff<br>　　快照磁盘文件：<br>　　CID&#x3D;afafa03b parentCID&#x3D;37b6f123<br>　　重新启动虚拟机，就可以顺利重新引导系统了。</p>
+<p>PS：如果是分盘的，我们会发现，vmdk1的CID是vmdk2的parentCID，vmdk2的CID是vmdk3的parentCID，依此类推，按顺序修改即可。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/01/25/zh-CN/2013-01-25-flex-cache/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/01/25/zh-CN/2013-01-25-flex-cache/" class="post-title-link" itemprop="url">Flex的缓存问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2013-01-25 14:20:59" itemprop="dateCreated datePublished" datetime="2013-01-25T14:20:59+08:00">2013-01-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2013/01/25/zh-CN/2013-01-25-flex-cache/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/25/zh-CN/2013-01-25-flex-cache/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>flex下载文件的时候很恶心，第一次下载完后，如果服务器上这个文件又修改了，再下载时是还是取的缓存里第一个文件。<br>通过加随机数（也就是方法二）目测是解决了这个问题，后台仔细测试的时候发现居然在ie中还是不行，在chrome中可以。<br>后台又找了第一种方法，是ok的。</p>
+<p>方法一：<br>本人解决的方法，保证可用。<br>添加过滤器（代码如下）<br>package com.cn.util;</p>
+<p>import java.io.* ;<br>import javax.servlet.* ;<br>import javax.servlet.http.HttpServletResponse;</p>
+<p>public class ForceNoCacheFilter implements Filter {    </p>
+<p>public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain) throws IOException, ServletException<br>{<br>  ((HttpServletResponse) response).setHeader(“Cache-Control”,”no-cache”);<br>  ((HttpServletResponse) response).setHeader(“Pragma”,”no-cache”);<br>  ((HttpServletResponse) response).setDateHeader (“Expires”, -1);<br>  filterChain.doFilter(request, response);<br>}<br>public void destroy()<br>{<br>}<br>   public void init(FilterConfig filterConfig) throws ServletException<br>{<br>}<br>}    </p>
+<p>然后在web.xml中添加这个过滤器<br><filter><br>    <filter-name>NoCache</filter-name><br>    <filter-class>com.cn.util.ForceNoCacheFilter</filter-class><br></filter><br><filter-mapping><br>    <filter-name>NoCache</filter-name><br>    <url-pattern>&#x2F;*</url-pattern><br></filter-mapping></p>
+<p>com.cn.util.ForceNoCacheFilter为刚才过滤器的包名.类名,&#x2F;*为匹配所有请求。</p>
+<p>这样你所有的请求都将会传到服务器处理，不会查看缓存了。 </p>
+<p>方法二：<br>inComeHttp.url&#x3D;”familyGroup.do?method&#x3D;query&amp;tmp&#x3D;”+Math.random();<br>url上随意传一个随机数</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/page/9/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/11/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2012 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Amon Xu</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-  
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
-<script src="/js/schemes/muse.js?v=7.4.1"></script>
-<script src="/js/next-boot.js?v=7.4.1"></script>
-
-
+    </div>
+  </footer>
 
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
 
+  <a href="https://github.com/xumeng" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
 
   
 
+
+
+
+
+
   
 
-<script>
-  function loadCount() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://amonxu.disqus.com/count.js';
-    s.id = 'dsq-count-scr';
-    (d.head || d.body).appendChild(s);
-  }
-  // defer loading until the whole page loading is completed
-  window.addEventListener('load', loadCount, false);
-</script>
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"amonxu","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>
