@@ -6,7 +6,7 @@
   <link href="https://amonxu.com/atom.xml" rel="self"/>
   
   <link href="https://amonxu.com/"/>
-  <updated>2024-04-28T03:43:01.211Z</updated>
+  <updated>2024-05-15T15:39:47.461Z</updated>
   <id>https://amonxu.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>十年磨一剑，今朝更锃亮：把 Hexo blog + hexo-theme-next 博客升级到最新版本</title>
+    <link href="https://amonxu.com/2024/05/14/zh-CN/2024-05-14-Hexo-Blog-Upgrade/"/>
+    <id>https://amonxu.com/2024/05/14/zh-CN/2024-05-14-Hexo-Blog-Upgrade/</id>
+    <published>2024-05-14T15:00:55.000Z</published>
+    <updated>2024-05-15T15:39:47.461Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p><img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==" alt="hexo blog upgrade"></p><center><font size=8>磨剑</font></center><p>现在很有意思，凡事讲究个敏捷、迭代、快。稍微一个不留神，就会发现自己被时代远远甩在后面。</p><p>我的 Blog 托管在 GitHub Pages + Hexo，有段时间没更新 Blog 程序了。这两天心血来潮想试下更新，发现程序落后好几个大版本（当前使用 3.x，最新版本 7.x）。</p><p>今天头铁，备份 Blog 后果断上手开干，先报下总结：</p><p><strong>好消息：升级过程意外地顺利</strong></p><p><strong>坏消息：升级后没感觉到明显变化</strong></p><blockquote><p>升级后的程序版本信息：</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">❯ hexo version</span><br><span class="line">INFO  Validating config</span><br><span class="line">hexo: 7.2.0</span><br><span class="line">hexo-cli: 4.3.2</span><br><span class="line">os: darwin 22.4.0 13.3.1</span><br></pre></td></tr></table></figure><hr><center><font size=10>十年 </font></center><p>Blog 最早大概是 2011、2012 年大学期间随便买了个域名，用 WordPress 搭建。<a href="https://amonxu.com/2012/05/21/zh-CN/2012-05-21-hello-world/">https://amonxu.com/2012/05/21/zh-CN/2012-05-21-hello-world/</a></p><p>2013 年接触了 GitHub Pages，觉得 WordPress 实在太不 Geek 了，马上把 Blog 迁移到 GitHub Pages + Jekyll。 <a href="https://amonxu.com/2013/04/18/zh-CN/2013-04-18-wordpress-to-github/">https://amonxu.com/2013/04/18/zh-CN/2013-04-18-wordpress-to-github/</a></p><p>2015 年时，看到 Hexo 的几个主题很有意思，瞬间又感觉 Jekyll 不够酷了，用 Hexo + Node.js 替代了 Jekyll + Ruby。<a href="https://amonxu.com/2013/05/23/zh-CN/2013-05-22-hello--my-blog/">https://amonxu.com/2013/05/23/zh-CN/2013-05-22-hello--my-blog/</a> 。又换了现在这个域名 <a href="https://amonxu.com/">https://amonxu.com</a> </p><p>后面除了更新文章，换过几个主题，暂时没再继续折腾 Blog，直到今天。</p><p>折腾时看到很多程序停止维护，更新时间动不动就是 8, 9 years ago，感叹光阴易逝。</p><blockquote><p>使用过的的Hexo主题列表</p></blockquote><p><img src="https://img.amonxu.com/file/ba0e37a376c9077f946aa.png" alt="amonxu.com hexo theme list"></p><blockquote><p>GitHub Pages 部署记录</p></blockquote><p><img src="https://img.amonxu.com/file/31f1397d4490036514137.png" alt="amonxu.com github pages deployments history"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&amp;w=2940&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3</summary>
+      
+    
+    
+    
+    
+    <category term="Hexo" scheme="https://amonxu.com/tags/Hexo/"/>
+    
+    <category term="Blog" scheme="https://amonxu.com/tags/Blog/"/>
+    
+    <category term="2024" scheme="https://amonxu.com/tags/2024/"/>
+    
+    <category term="next" scheme="https://amonxu.com/tags/next/"/>
+    
+    <category term="hexo-theme-next" scheme="https://amonxu.com/tags/hexo-theme-next/"/>
+    
+    <category term="upgrade" scheme="https://amonxu.com/tags/upgrade/"/>
+    
+  </entry>
   
   <entry>
     <title>Simply way to support multiple languages i18n in Next.js 14 (Based on App Router)</title>
@@ -572,34 +605,6 @@
     <category term="Redis" scheme="https://amonxu.com/tags/Redis/"/>
     
     <category term="NoSQL" scheme="https://amonxu.com/tags/NoSQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于书包的事</title>
-    <link href="https://amonxu.com/2021/06/03/zh-CN/2021-06-03-School-Bag/"/>
-    <id>https://amonxu.com/2021/06/03/zh-CN/2021-06-03-School-Bag/</id>
-    <published>2021-06-03T15:21:22.000Z</published>
-    <updated>2023-09-04T09:56:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<img src="https://pic2.zhimg.com/80/v2-c1183d4a75bb9d253caee6d1f379094a_1440w.jpg?source=1940ef5c" alt="img" style="zoom:67%;" /><blockquote><p><em>（题图：书包与骨头，取自《阳光灿烂的日子》 &amp; 《2001太空漫游》）</em></p></blockquote><h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>小男孩跟随母亲，步行很远来到热闹的集市。母亲挤在拥挤的人群，对着两旁铺位的商品左顾右盼，男孩从人群的手臂和大腿中钻过，直到停在一家卖箱包的铺位前。男孩的头，刚好超出铺位，能看到上面整齐摆列的包。</p><p>老板是一个擅长使嘴的中年女人，来往的行人，不管男女老幼美丑富贫，都被她喋喋不休的嘴，说得不由流连驻足。男孩听过唾沫横飞之类的词语，但觉得唾沫不应该是横飞的，而是上下翻飞，从老板并不优美的嘴唇里蹦出，跳着并不优美的舞蹈。</p><p>男孩眼光还在被各式各样的书包吸引的目不暇接，但母亲已和老板开始了对价格的彼此试探，于是男孩眼看着心仪的书包们一一从货架上取了下来，又一一挂了回去。最终，一个样式略普通的书包幸运地留了下来，在母亲一阵并不利索的掏钱付款后，老板将包装好的书包拿给男孩。</p><p>男孩接过新书包，欢天喜地地抱在怀里，自然很快将刚才看过那些花花绿绿的书包，通通抛诸脑后。甚至不舍得现在立刻背上它，一定要等到开学的那天，才能享用。</p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>这是一块被压缩存储、且正处于被清理边缘的记忆。来源于周末忽然地，手洗儿童书包。</p><p>一个普通的儿童背包，布料、结构和拉锁都是扎实的，只有边角处曾被洗衣机绞出一个小洞。</p><p>很久没有仔细看过儿童书包，儿童书包的样式，也几十年也鲜有变化。两根带子，几个拉锁分出来不同的包，左右两个口袋，正面再印上小朋友时下喜欢的图案。一个书包就这样制造完毕。</p><p>在我记忆里，小时候书包的种类还有不少：双肩包、挎包、拉锁的、系绳的、粘带的等等，样式各异，价格也差距不小。</p><p>普通一点的书包，自然没什么好看的图案，大多是印着字，比如一个“派”字。每每看到都会疑惑这个派字是何含义，又不免联想到派出所、帮派之意，以致在集市卖书包的铺位上，总会仔细寻找有没有带有“警”或“帮”的书包，以验证自己不成熟的猜测。</p><p>直到初中学了几年英语，才终于明白“派”大抵是由“Style”翻译而来，至于为何不加个“头”，想来便是“派头”虽更容易理解，却无疑就多了一个字的制作成本。</p><p>除了“派”字书包，好一些的便是印有各种图案的书包，这种自然也贵一些，非家境殷实一些的不会买。图案多是些奥特曼、动画角色之类，类似现在的冰雪奇缘与超级飞侠之类。可惜我已忘却我有没有背过这种书包（大概是没有的）。小学时光最后留下的一个书包，是没有图案的系绳书包，我用它来把少时所有的“玩具”都装了进去。（这些玩具且值一提，见又一篇<a href="">《我的玩具史》</a>）</p><h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>这是另一个男孩的故事。王焱，哥哥名叫王垚，兄弟俩五行一个缺火、一个缺土。他们的母亲是一个精明讲究的女人，由为哥俩看生辰八字便可略知一二。除此之外，哥俩稍大了些，她独自带着两兄弟从乡下来到城里上学。</p><p>在城里租房子的同一院内，除了这俩上幼儿园和小学三年级的兄弟，另有一对初三的姐弟和一对高三的姐弟。王家兄弟继承了其母亲的精明，哥哥多了几分正经与狡猾，弟弟则多了些可爱与温柔。平日里大家多喜欢逗弟弟玩。</p><p>每天上学的早上，弟弟准时背上他硕大的书包，大到里面估计装进了他所有的东西，仰着他稚气的脸，一颠一颠地跟在他母亲的后面。他母亲一边赶着那辆不再崭新的自行车，一边对着屋子里的哥哥念念叨叨，嘱咐些什么，直至走出大门，方才听不到她的声音。</p><p>他母亲是不会帮他背书包的，仿佛只有让他背着这个远远超出他年龄的书包，他才能快速长大。每每此时，站在二楼往下看他们背影的我，那个高三的弟弟，总会眼睛跟着一颠一颠的书包，疑惑它里面究竟装了些什么。</p><h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p>我本想同住院里一年半载，能竹筒倒豆搬出一些这哥俩的轶事，但到这里关于他们更多的，竟也憋不出一二。又想到，如今的王家弟弟年纪和我当时一样，在高三升大学的年纪，王家哥哥则应该已踏入社会。而我如今，打工人尔。</p><p>王家弟弟变成那时的我，我变成了那时他们的母亲，他们的母亲变成了那时我的母亲，我的孩子变成那时的他们。</p><p>我们都以为自己不会变，但不知不觉间还是变成了其他人。世界没有变，我们却说世界变了，我们没变。</p><p>—— 2021.6.4.夜</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;img src=&quot;https://pic2.zhimg.com/80/v2-c1183d4a75bb9d253caee6d1f379094a_1440w.jpg?source=1940ef5c&quot; alt=&quot;img&quot; style=&quot;zoom:67%;&quot; /&gt;
-
-&lt;blockquo</summary>
-      
-    
-    
-    
-    <category term="鬼画弧" scheme="https://amonxu.com/categories/%E9%AC%BC%E7%94%BB%E5%BC%A7/"/>
-    
-    
-    <category term="拾忆集" scheme="https://amonxu.com/tags/%E6%8B%BE%E5%BF%86%E9%9B%86/"/>
-    
-    <category term="随笔" scheme="https://amonxu.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

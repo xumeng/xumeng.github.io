@@ -131,7 +131,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">121</span>
+          <span class="site-state-item-count">122</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -142,7 +142,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">136</span>
+        <span class="site-state-item-count">139</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -215,6 +215,98 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/" class="post-title-link" itemprop="url">Windows xp下创建符号链接</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2013-05-27 11:11:11" itemprop="dateCreated datePublished" datetime="2013-05-27T11:11:11+08:00">2013-05-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/05/27/zh-CN/2013-05-27-windows-xp-create-dir-links/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h6 id="windows-xp下创建符号链接"><a href="#windows-xp下创建符号链接" class="headerlink" title="windows xp下创建符号链接"></a>windows xp下创建符号链接</h6><p>  今天给女友的电脑设置dropbox同步的时候遇到一个问题，就是她想同步指定的文件夹，<br>当时立马就想到了windows中的mklink，可惜她用的是悲剧的xp系统，去网上找了下，找到一个junction的东东。<br><a target="_blank" rel="noopener" href="http://technet.microsoft.com/en-us/sysinternals/bb896768.aspx" title="点此下载">点此下载</a><br>使用方法如下：<br> 1.	下载刚才那个文件，并解压到c:&#x2F;windows&#x2F;system32<br> 2. 打开cmd，进入比如D盘，输入<code>junction d:/linkdir &quot;d:/srcdir&quot;</code><br> 3. 删除这个链接可以直接删除链接后的文件夹，也可以用<code>junction -d d:/linkdir</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1063,108 +1155,6 @@
     <div class="post-body" itemprop="articleBody">
           <p>今天在从某个server上取文件，但是本地无法直接连接，只能通过另外一台server连接，再ssh到它的上面。<br>1.在有外网ip的server上:sftp username@ip<br>  get filename<br>2.在本地用secureCRT登录有外网ip的server，alt+P打开sftp标签页，get filename</p>
 <p>附sftp相关command<br>sftp&gt; help<br>可用命令：<br>cd 路径                        更改远程目录到“路径”<br>lcd 路径                       更改本地目录到“路径”<br>chgrp group path               将文件“path”的组更改为“group”<br>chmod mode path                将文件“path”的权限更改为“mode”<br>chown owner path               将文件“path”的属主更改为“owner”<br>exit                           退出 sftp<br>help                           显示这个帮助文本<br>get 远程路径                   下载文件<br>ln existingpath linkpath       符号链接远程文件<br>ls [选项] [路径]               显示远程目录列表<br>lls [选项] [路径]              显示本地目录列表<br>mkdir 路径                     创建远程目录<br>lmkdir 路径                    创建本地目录<br>mv oldpath newpath             移动远程文件<br>open [用户@]主机[:端口]        连接到远程主机<br>put 本地路径                   上传文件<br>pwd                            显示远程工作目录<br>lpwd                           打印本地工作目录<br>quit                           退出 sftp<br>rmdir 路径                     移除远程目录<br>lrmdir 路径                    移除本地目录<br>rm 路径                        删除远程文件<br>lrm 路径                       删除本地文件<br>symlink existingpath linkpath  符号链接远程文件<br>version                        显示协议版本</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/10/24/zh-CN/2012-10-24-oracle-data-page/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-      <meta itemprop="name" content="Amon Xu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Amon's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2012/10/24/zh-CN/2012-10-24-oracle-data-page/" class="post-title-link" itemprop="url">解决oracle分页查询数据重复问题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2012-10-24 10:22:02" itemprop="dateCreated datePublished" datetime="2012-10-24T10:22:02+08:00">2012-10-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/10/24/zh-CN/2012-10-24-oracle-data-page/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/10/24/zh-CN/2012-10-24-oracle-data-page/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>oracle分页查询时，会遇到数据重复的问题，下面就教您一个解决oracle分页查询数据重复问题的方法，希望对您能够有所帮助。</p>
-<p>在oracle分页查询中，我们采用类似以下所示的公认的比较高效的数据库分页查询语句（Effective Oracle by Design中有描述、众多oracle使用者也做过测试）。</p>
-<p>写道</p>
-<p>SELECT * FROM<br>(<br>SELECT A.*, ROWNUM RN<br>FROM (SELECT * FROM TABLE_NAME) A<br>WHERE ROWNUM &lt;&#x3D; n)<br>WHERE RN &gt; m<br>这里的ROWNUM是一个伪列，它是oracle为查询结果所编的一个号，第一行的 ROWNUM为1，第二行为2，以此类推。</p>
-<p>因为oracle是按块进行读取数据的，如果数据按顺序存储，则可能使读取出来的数据是按顺序的，给用户误解为默认排序。事实上，oracle没有进行任何排序操作，如果sql没有要求排序，oracle会顺序的从数据块中读取符合条件的数据返回到客户端。所以在没有使用排序sql的时候，分页返回的数据可能是按顺序的，也可能是杂乱无章的，这都取决与数据的存储位置。在oracle分页查询过程中，如果数据的物理位置发生了改变，就可能会引起分页数据重复的现象。</p>
-<p>所以，要正确使用oracle分页查询，sql语句中必须有排序条件。</p>
-<p>但是，在有排序条件的时候，仍然会出现数据重复的现象，这是为什么呢？</p>
-<p>通过了解oracle的排序机理就会明白，出现这种情况的原因是因为排序列值的不唯一性。 Oracle这里使用的排序算法不具有稳定性，也就是说，对于键值相等的数据，这种算法完成排序后，不保证这些键值相等的数据保持排序前的顺序。</p>
-<p>解决的方法是在后边增加一个唯一性列，比如主键。</p>
-<p>所以解决方法如下（两个条件必须同时满足）：<br>**<br>1.sql语句中需要有排序条件。</p>
-<p>2.排序条件如果没有唯一性，那么必须在后边跟上一个唯一性的条件，比如主键。**</p>
 
       
     </div>

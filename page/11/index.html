@@ -131,7 +131,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">121</span>
+          <span class="site-state-item-count">122</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -142,7 +142,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">136</span>
+        <span class="site-state-item-count">139</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -215,6 +215,106 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2013/01/25/zh-CN/2013-01-25-flex-cache/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2013/01/25/zh-CN/2013-01-25-flex-cache/" class="post-title-link" itemprop="url">Flex的缓存问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2013-01-25 14:20:59" itemprop="dateCreated datePublished" datetime="2013-01-25T14:20:59+08:00">2013-01-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2013/01/25/zh-CN/2013-01-25-flex-cache/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/25/zh-CN/2013-01-25-flex-cache/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>flex下载文件的时候很恶心，第一次下载完后，如果服务器上这个文件又修改了，再下载时是还是取的缓存里第一个文件。<br>通过加随机数（也就是方法二）目测是解决了这个问题，后台仔细测试的时候发现居然在ie中还是不行，在chrome中可以。<br>后台又找了第一种方法，是ok的。</p>
+<p>方法一：<br>本人解决的方法，保证可用。<br>添加过滤器（代码如下）<br>package com.cn.util;</p>
+<p>import java.io.* ;<br>import javax.servlet.* ;<br>import javax.servlet.http.HttpServletResponse;</p>
+<p>public class ForceNoCacheFilter implements Filter {    </p>
+<p>public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain) throws IOException, ServletException<br>{<br>  ((HttpServletResponse) response).setHeader(“Cache-Control”,”no-cache”);<br>  ((HttpServletResponse) response).setHeader(“Pragma”,”no-cache”);<br>  ((HttpServletResponse) response).setDateHeader (“Expires”, -1);<br>  filterChain.doFilter(request, response);<br>}<br>public void destroy()<br>{<br>}<br>   public void init(FilterConfig filterConfig) throws ServletException<br>{<br>}<br>}    </p>
+<p>然后在web.xml中添加这个过滤器<br><filter><br>    <filter-name>NoCache</filter-name><br>    <filter-class>com.cn.util.ForceNoCacheFilter</filter-class><br></filter><br><filter-mapping><br>    <filter-name>NoCache</filter-name><br>    <url-pattern>&#x2F;*</url-pattern><br></filter-mapping></p>
+<p>com.cn.util.ForceNoCacheFilter为刚才过滤器的包名.类名,&#x2F;*为匹配所有请求。</p>
+<p>这样你所有的请求都将会传到服务器处理，不会查看缓存了。 </p>
+<p>方法二：<br>inComeHttp.url&#x3D;”familyGroup.do?method&#x3D;query&amp;tmp&#x3D;”+Math.random();<br>url上随意传一个随机数</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1114,101 +1214,6 @@
 <p>PermSize不可大于Xmx</p>
 <p>&nbsp;</p>
 <p>请参见其它的参数详解的文章,各参数值大小的本文不讨论.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/08/22/zh-CN/2012-08-22-basketball-think/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
-      <meta itemprop="name" content="Amon Xu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Amon's Blog">
-      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Amon's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2012/08/22/zh-CN/2012-08-22-basketball-think/" class="post-title-link" itemprop="url">由打篮球想到的</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2012-08-22 23:12:12" itemprop="dateCreated datePublished" datetime="2012-08-22T23:12:12+08:00">2012-08-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Note/" itemprop="url" rel="index"><span itemprop="name">Note</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2012/08/22/zh-CN/2012-08-22-basketball-think/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/08/22/zh-CN/2012-08-22-basketball-think/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>每周一下午4点是固定的打篮球时间，</p>
-<p>我本不是热爱篮球的人，但是因为这2个小时不必坐在办公室埋头苦干，能多呼吸一点外面虽然不新鲜的空气，所以每周一都是很积极着跟着同事去打篮球。<br>每次打球，无论是抢篮板数还是命中数，都是我最低，不是因为我最不会打，而是我最懒，相比别人不停的奔跑着抢篮板，我更多的是站在那里或者做着小弧度的移动，盯着球，等待着抢篮板的机会。除了偶然的守株待兔捡来个球，我始终是一个围观者。虽然我也告诉自己要动起来，不要怕累，不要怕出汗，不要怕被球砸伤被人碰伤，但身体始终无法执行大脑发的指令。</p>
-<p>这让我想起了打魔兽，我最热爱的游戏，很久以前我是一个小小菜鸟，当然现在也仍然是一个菜鸟。打魔兽的时候，我也是喜欢盯，盯着建筑里面出兵，等待着兵出来我操作；盯着打怪，等待怪被打死然后收宝；盯着部队交战，等待敌人落荒而逃或者自己丢盔弃甲…后来知道了APM这个概念后，我发现我需要动起来，我不能让我的手停下来，一停下来我就会习惯了停，习惯了等待。之后，我的apm由开始的50，在我每打完一局就打开w3gmaster看自己的apm，100，150，200…此时再玩起魔兽，我已然有了一种满满的感觉，再快的节奏，再多的队伍，再复杂的操作也能轻松完成。</p>
-<p>我在想，打球是不是也这样，<span style="color: #ff0000;"><strong>如果我可以动起来，不停的奔跑，不停的追逐，哪怕累一点，哪怕很多时候抢不到球，我仍然可以比之前更出色。</strong></span><br>那么，生活也是同理了，如果我不这么懒，我动起来，我的生活也会出色！<br>如果是这样，那么从这个blog开始，start here！</p>
 
       
     </div>

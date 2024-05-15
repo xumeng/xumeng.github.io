@@ -131,7 +131,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">121</span>
+          <span class="site-state-item-count">122</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -142,7 +142,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">136</span>
+        <span class="site-state-item-count">139</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -215,6 +215,103 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://amonxu.com/2012/06/07/zh-CN/2012-06-07-tomcat-vm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/2187660?v=3&s=460">
+      <meta itemprop="name" content="Amon Xu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amon's Blog">
+      <meta itemprop="description" content="Change will not come if we wait for some other person or some other time.<br>We are the ones we've been waiting for. We are the change that we seek.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Amon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2012/06/07/zh-CN/2012-06-07-tomcat-vm/" class="post-title-link" itemprop="url">Tomcat内存设置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2012-06-07 23:21:23" itemprop="dateCreated datePublished" datetime="2012-06-07T23:21:23+08:00">2012-06-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2012/06/07/zh-CN/2012-06-07-tomcat-vm/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/06/07/zh-CN/2012-06-07-tomcat-vm/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>前言：<br>当上传大数据文件的时候，失败。经验证，出现OOM异常 。</p>
+<p>过程：<br>windows的用绿色版tomcat：<br><span style="color: #ff0000;">set JAVA_OPTS&#x3D;%JAVA_OPTS% -Xms1024m -Xmx1280m -XX:MaxNewSize&#x3D;256m -XX:MaxPermSize&#x3D;256m</span></p>
+<p>windows安装版tomcat（用服务启动tomat）：这个是执行bin&#x2F;tomcat.exe，不读取catalina.bat的配置<br><span style="color: #ff0000;">修改注册表HKEY_LOCAL_MACHINE\SOFTWARE\Apache Software Foundation\Tomcat Service Manager\Tomcat5\Parameters\JavaOptions</span><br><span style="color: #ff0000;"> 原值为</span><br><span style="color: #ff0000;"> -Dcatalina.home&#x3D;”C:\ApacheGroup\Tomcat 5.0”</span><br><span style="color: #ff0000;"> -Djava.endorsed.dirs&#x3D;”C:\ApacheGroup\Tomcat 5.0\common\endorsed”</span><br><span style="color: #ff0000;"> -Xrs</span><br><span style="color: #ff0000;"> 加入 -Xms300m -Xmx350m</span></p>
+<p><span style="color: #ff0000;">linux:</span><br>在&#x2F;usr&#x2F;local&#x2F;apache-tomcat-5.5.23&#x2F;bin目录下的catalina.sh<br>添加：<span style="color: #ff0000;">JAVA_OPTS&#x3D;’-Xms512m -Xmx1024m’</span><br>要加“m”说明是MB，否则就是KB了，在启动tomcat时会报内存不足。<br>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
+<p>remark:<br>设置JVM堆的设置是指java程序运行过程中JVM可以调配使用的内存空间的设置.JVM在启动的时候会自动设置Heap size的值，其初始空间(即-Xms)是物理内存的1&#x2F;64，最大空间(-Xmx)是物理内存的1&#x2F;4。可以利用JVM提供的-Xmn -Xms -Xmx等选项可进行设置。Heap size 的大小是Young Generation 和Tenured Generaion 之和。提示：在JVM中如果98％的时间是用于GC且可用的Heap size 不足2％的时候将抛出此异常信息。提示：Heap Size 最大不要超过可用物理内存的80％，一般的要将-Xms和-Xmx选项设置为相同，而-Xmn为1&#x2F;4的-Xmx值。</p>
+<p>最后跟用户说通过设置tomcat内存和分割excel解决。但是这毕竟不是解决之道。<br>想：<br>代码里面控制分次读取，读取后释放资源继续读取。<br>同时在导出excel的时候遇到OOM的异常的话，也可以使用分次写文件，或者写多个文件最后合并excel。<br>同时我在想，他那个超过65535行数据的excel怎么写的数据，应该是导出的…<br>这样的还是用csv或者txt什么的好。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
