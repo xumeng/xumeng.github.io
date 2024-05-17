@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://amonxu.com/2013/05/23/zh-CN/2013-05-22-hello--my-blog/</loc>
+    
+    <lastmod>2024-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://amonxu.com/2024/05/14/zh-CN/2024-05-14-Hexo-Blog-Upgrade/</loc>
     
     <lastmod>2024-05-16</lastmod>
@@ -327,15 +336,6 @@
   
   <url>
     <loc>https://amonxu.com/2013/04/18/zh-CN/2013-04-18-wordpress-to-github/</loc>
-    
-    <lastmod>2023-09-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://amonxu.com/2013/05/23/zh-CN/2013-05-22-hello--my-blog/</loc>
     
     <lastmod>2023-09-04</lastmod>
     
