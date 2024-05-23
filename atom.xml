@@ -6,7 +6,7 @@
   <link href="https://amonxu.com/atom.xml" rel="self"/>
   
   <link href="https://amonxu.com/"/>
-  <updated>2024-05-16T07:54:50.815Z</updated>
+  <updated>2024-05-23T11:21:26.712Z</updated>
   <id>https://amonxu.com/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在 GitHub README 中插入视频？原来这么简单</title>
+    <link href="https://amonxu.com/2024/05/23/zh-CN/2024-05-23-How-to-embed-a-video-into-GitHub-README/"/>
+    <id>https://amonxu.com/2024/05/23/zh-CN/2024-05-23-How-to-embed-a-video-into-GitHub-README/</id>
+    <published>2024-05-23T10:23:22.000Z</published>
+    <updated>2024-05-23T11:21:26.712Z</updated>
+    
+    <content type="html"><![CDATA[<p>当我们发布一款产品时，通常会制作一个演示视频来展示我们产品的功能和特性。如今，很多 GitHub 仓库也是如此。<br>但是，如何在GitHub README 中插入视频呢？</p><p>在此之前，我们尝试将视频文件添加到代码仓库中，但由于平台的限制，视频文件显示为URL。我们还尝试使用 Markdown 或 HTML 来嵌入视频，但根本不起作用。</p><p>好消息是，如今将本地视频插入到 GitHub README中 非常简单！</p><p>只需如下几步即可：</p><h1 id="1-在-GitHub-在线仓库中编辑-README-文件"><a href="#1-在-GitHub-在线仓库中编辑-README-文件" class="headerlink" title="1. 在 GitHub 在线仓库中编辑 README 文件"></a>1. 在 GitHub 在线仓库中编辑 README 文件</h1><p>编辑页面的链接类似： <code>https://github.com/xumeng/ai-careers/edit/master/README.md</code></p><p><img src="https://i0.wp.com/i.sstatic.net/8Cp7qcTK.png" alt="github readme中插入视频"></p><h1 id="2-把本地视频文件拖到编辑区域内"><a href="#2-把本地视频文件拖到编辑区域内" class="headerlink" title="2. 把本地视频文件拖到编辑区域内"></a>2. 把本地视频文件拖到编辑区域内</h1><p>GitHub 会自动上传视频文件，然后展示一个资源文件的链接地址，类似： <code>https://github.com/xumeng/ai-careers/assets/2187660/7362e4b8-6318-4cfc-af63-b8921455e434</code></p><p><img src="https://i0.wp.com/i.sstatic.net/EDbTWGOZ.png" alt="把视频插入到github readme中"></p><h1 id="3-预览检查效果，然后提交文件更新，搞定！"><a href="#3-预览检查效果，然后提交文件更新，搞定！" class="headerlink" title="3. 预览检查效果，然后提交文件更新，搞定！"></a>3. 预览检查效果，然后提交文件更新，搞定！</h1><p><img src="https://i0.wp.com/i.sstatic.net/0l7Y2vCY.png" alt="职生机jobotai自动生成招聘职位描述"></p><p>GitHub README 示例: <a href="https://github.com/xumeng/ai-careers">https://github.com/xumeng/ai-careers</a></p><h1 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h1><p><a href="https://stackoverflow.com/a/78521560/3090339">https://stackoverflow.com/a/78521560/3090339</a></p><p><a href="https://amonxu.medium.com/how-to-embed-a-video-into-github-readme-so-easy-c298ca92d537">https://amonxu.medium.com/how-to-embed-a-video-into-github-readme-so-easy-c298ca92d537</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;当我们发布一款产品时，通常会制作一个演示视频来展示我们产品的功能和特性。如今，很多 GitHub 仓库也是如此。&lt;br&gt;但是，如何在GitHub README 中插入视频呢？&lt;/p&gt;
+&lt;p&gt;在此之前，我们尝试将视频文件添加到代码仓库中，但由于平台的限制，视频文件显示为URL</summary>
+      
+    
+    
+    
+    
+    <category term="GitHub" scheme="https://amonxu.com/tags/GitHub/"/>
+    
+    <category term="Documents" scheme="https://amonxu.com/tags/Documents/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to embed a video into GitHub-README? So easy!</title>
+    <link href="https://amonxu.com/2024/05/23/en/2024-05-23-How-to-embed-a-video-into-GitHub-README/"/>
+    <id>https://amonxu.com/2024/05/23/en/2024-05-23-How-to-embed-a-video-into-GitHub-README/</id>
+    <published>2024-05-23T10:03:22.000Z</published>
+    <updated>2024-05-23T11:21:23.202Z</updated>
+    
+    <content type="html"><![CDATA[<p>When we launch a product, we usually make a video to show our product’s functions and features. We also do this for our GitHub repository now.</p><p>However, how can we embed a video into a GitHub README?</p><p>In the past, we tried to add a video file to the repository, but the video file showed as a URL given the limitations of the platform. We also tried using markdown or HTML to embed a video, but it did not work at all.</p><p>Good news: <strong>Embedding a local video into a GitHub README is very easy now!</strong></p><p>Just follow these steps: </p><h1 id="1-Edit-the-README-file-on-the-GitHub-online-repository"><a href="#1-Edit-the-README-file-on-the-GitHub-online-repository" class="headerlink" title="1. Edit the README file on the GitHub online repository"></a>1. Edit the README file on the GitHub online repository</h1><p>The edit page url likes <code>https://github.com/xumeng/ai-careers/edit/master/README.md</code></p><p><img src="https://i0.wp.com/i.sstatic.net/8Cp7qcTK.png" alt="embed a video into github readme file"></p><h1 id="2-Drag-the-local-video-file-to-the-edit-panel"><a href="#2-Drag-the-local-video-file-to-the-edit-panel" class="headerlink" title="2. Drag the local video file to the edit panel"></a>2. Drag the local video file to the edit panel</h1><p>GitHub will uploading the file automatically, then it will showing a video asset url likes <code>https://github.com/xumeng/ai-careers/assets/2187660/7362e4b8-6318-4cfc-af63-b8921455e434</code></p><p><img src="https://i0.wp.com/i.sstatic.net/EDbTWGOZ.png" alt="drag the video file into the github readme file"></p><h1 id="3-Preview-and-commit-the-changes-We’re-done"><a href="#3-Preview-and-commit-the-changes-We’re-done" class="headerlink" title="3. Preview and commit the changes, We’re done!"></a>3. Preview and commit the changes, We’re done!</h1><p><img src="https://i0.wp.com/i.sstatic.net/0l7Y2vCY.png" alt="generates job description by 职生机jobotai"></p><p>GitHub README Demo: <a href="https://github.com/xumeng/ai-careers">https://github.com/xumeng/ai-careers</a></p><h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p><a href="https://stackoverflow.com/a/78521560/3090339">https://stackoverflow.com/a/78521560/3090339</a></p><p><a href="https://amonxu.medium.com/how-to-embed-a-video-into-github-readme-so-easy-c298ca92d537">https://amonxu.medium.com/how-to-embed-a-video-into-github-readme-so-easy-c298ca92d537</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;When we launch a product, we usually make a video to show our product’s functions and features. We also do this for our GitHub repository</summary>
+      
+    
+    
+    
+    
+    <category term="GitHub" scheme="https://amonxu.com/tags/GitHub/"/>
+    
+    <category term="Documents" scheme="https://amonxu.com/tags/Documents/"/>
+    
+  </entry>
   
   <entry>
     <title>十年磨一剑，今朝更锃亮：把 Hexo blog + hexo-theme-next 博客升级到最新版本</title>
@@ -547,64 +596,6 @@
     <category term="历史" scheme="https://amonxu.com/tags/%E5%8E%86%E5%8F%B2/"/>
     
     <category term="2022" scheme="https://amonxu.com/tags/2022/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>峥嵘岁月宏图起，东风荡，春来早</title>
-    <link href="https://amonxu.com/2021/12/04/zh-CN/2021-12-04-Mao/"/>
-    <id>https://amonxu.com/2021/12/04/zh-CN/2021-12-04-Mao/</id>
-    <published>2021-12-04T13:00:01.000Z</published>
-    <updated>2023-09-04T09:56:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>革命江山风光好，红旗飘，干劲高，大地争艳，比学赶帮超。磊磊胸怀盛世界，私全抛，难不倒。</p><p>万里征途奋今朝，党领导，人年少，万紫千红竟妖娆。<strong>峥嵘岁月宏图起，东风荡，春来早。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;革命江山风光好，红旗飘，干劲高，大地争艳，比学赶帮超。磊磊胸怀盛世界，私全抛，难不倒。&lt;/p&gt;
-&lt;p&gt;万里征途奋今朝，党领导，人年少，万紫千红竟妖娆。&lt;strong&gt;峥嵘岁月宏图起，东风荡，春来早。&lt;/strong&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Note" scheme="https://amonxu.com/categories/Note/"/>
-    
-    
-    <category term="诗" scheme="https://amonxu.com/tags/%E8%AF%97/"/>
-    
-    <category term="2021" scheme="https://amonxu.com/tags/2021/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《Redis设计与实现》读后感</title>
-    <link href="https://amonxu.com/2021/06/28/zh-CN/2021-06-28-Redis-Book/"/>
-    <id>https://amonxu.com/2021/06/28/zh-CN/2021-06-28-Redis-Book/</id>
-    <published>2021-06-28T14:00:01.000Z</published>
-    <updated>2023-09-04T09:56:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<img src="https://img1.doubanio.com/view/subject/l/public/s27297117.jpg" alt="img" style="zoom: 33%;" /><p>认识这本书是好几年前了，那时候在一个胖胖哒同事桌前翻了几页；第一次看是3年前，看过几章大概到跳表那里；重新看完是3年后的今天，用时13时14分。</p><p>这本书确实是好书，以前对Redis的理解太过浅显（当然现在也未必多佳，但拜本书所赐，必不可同当年而语）。</p><p>书的结构非常好，从底层数据结构讲起，再到基本功能，高级功能，扩展功能。即使是每一节的内容，也非常有趣。从大致说明，基本用法，解释原理，数据结构图示，再到最后的总结。读来不觉乏味，这也和Redis本身清晰简洁的设计相符。</p><p>感谢本书作者，也感谢阅读中那些精彩的读者分享和讨论。 </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;img src=&quot;https://img1.doubanio.com/view/subject/l/public/s27297117.jpg&quot; alt=&quot;img&quot; style=&quot;zoom: 33%;&quot; /&gt;
-
-&lt;p&gt;认识这本书是好几年前了，那时候在一个胖胖哒同事桌前翻了几页；第</summary>
-      
-    
-    
-    
-    <category term="书" scheme="https://amonxu.com/categories/%E4%B9%A6/"/>
-    
-    
-    <category term="读书笔记" scheme="https://amonxu.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="Redis" scheme="https://amonxu.com/tags/Redis/"/>
-    
-    <category term="NoSQL" scheme="https://amonxu.com/tags/NoSQL/"/>
     
   </entry>
   
